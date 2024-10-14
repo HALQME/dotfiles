@@ -1,0 +1,90 @@
+# Rule List - https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md
+--swiftversion 5.9
+
+# file options 除外するディレクトリやファイル
+--exclude Pods
+--exclude Carthage
+--exclude BuildTools
+
+# format options
+--commas inline # trailingCommas 有効時 複数行の配列や辞書などで、最後のカンマを無効化
+
+--operatorfunc spaced
+--semicolons inline
+--wrapparameters preserve
+--indent 4
+--indentcase true
+--importgrouping alpha
+--acronyms
+--shortoptionals always
+--elseposition next-line
+--guardelse next-line
+--maxwidth 160
+--yodaswap always
+
+
+# My Rules
+--disable andOperator
+--disable blockComments
+--enable enumNamespaces
+--enable extensionAccessControl
+--disable preferKeyPath
+--enable redundantExtensionACL
+--enable redundantNilInit
+--enable redundantParens
+--enable redundantRawValues
+--enable redundantReturn
+--enable redundantSelf
+--enable redundantType
+--enable sortDeclarations
+--enable strongOutlets
+
+
+
+--enable assertionFailures
+--enable sortSwitchCases
+
+
+--enable blankLineAfterImports
+--enable blankLinesAtStartOfScope
+--enable blankLinesBetweenChainedFunctions
+--enable blankLinesBetweenImports
+--enable blankLinesBetweenScopes
+--enable braces 
+--enable conditionalAssignment
+--enable consecutiveBlankLines
+--enable consecutiveSpaces
+--enable docComments
+--enable duplicateImports
+--enable elseOnSameLine
+--enable emptyBraces
+--enable extensionAccessControl
+--enable isEmpty
+--enable leadingDelimiters
+--enable modifierOrder
+--enable numberFormatting
+--enable organizeDeclarations
+--enable redundantBreak
+--enable redundantClosure
+--enable redundantExtensionACL
+--enable redundantFileprivate
+--enable redundantGet
+--enable redundantInit
+--enable redundantInternal
+--enable redundantLet
+--enable redundantLetError
+--enable redundantOptionalBinding
+--enable redundantParens
+--enable redundantPattern
+--enable redundantSelf
+--enable redundantVoidReturnType
+--enable sortDeclarations
+--enable spaceAroundParens
+--enable spaceInsideComments
+--enable spaceInsideParens
+--enable todos
+--enable trailingSpace
+--enable unusedArguments
+--enable wrapConditionalBodies
+--disable wrapMultilineStatementBraces
+--enable wrapEnumCases

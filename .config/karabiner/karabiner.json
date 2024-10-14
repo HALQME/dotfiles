@@ -1,0 +1,232 @@
+{
+    "profiles": [
+        {
+            "complex_modifications": {
+                "parameters": {
+                    "basic.simultaneous_threshold_milliseconds": 30,
+                    "basic.to_delayed_action_delay_milliseconds": 400,
+                    "basic.to_if_alone_timeout_milliseconds": 700,
+                    "basic.to_if_held_down_threshold_milliseconds": 400
+                },
+                "rules": [
+                    {
+                        "description": "fn+ Right Controlでcaps lockを送信する",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "right_control",
+                                    "modifiers": {
+                                        "mandatory": ["fn"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "caps_lock" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "fn+ L/R Commandで英数/かなを送信する",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": {
+                                        "mandatory": ["fn"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "japanese_eisuu" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_command",
+                                    "modifiers": {
+                                        "mandatory": ["fn"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "japanese_kana" }],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 834,
+                        "vendor_id": 1452
+                    },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "right_control" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 34304,
+                        "vendor_id": 1452
+                    },
+                    "treat_as_built_in_keyboard": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 50495,
+                        "vendor_id": 1133
+                    },
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "pointing_button": "button4" },
+                            "to": [{ "key_code": "left_command" }]
+                        },
+                        {
+                            "from": { "pointing_button": "button5" },
+                            "to": [{ "key_code": "right_shift" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 50495,
+                        "vendor_id": 1133
+                    },
+                    "ignore": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "pointing_button": "button4" },
+                            "to": [{ "key_code": "left_command" }]
+                        },
+                        {
+                            "from": { "pointing_button": "button5" },
+                            "to": [{ "key_code": "left_control" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 306,
+                        "vendor_id": 1390
+                    },
+                    "simple_modifications": [
+                        {
+                            "from": { "pointing_button": "button4" },
+                            "to": [{ "consumer_key_code": "al_dictionary" }]
+                        },
+                        {
+                            "from": { "pointing_button": "button5" },
+                            "to": [{ "consumer_key_code": "al_word_processor" }]
+                        },
+                        {
+                            "from": { "pointing_button": "button6" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "pointing_button": "button7" },
+                            "to": [{ "key_code": "left_option" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 33,
+                        "vendor_id": 1278
+                    },
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false,
+                    "treat_as_built_in_keyboard": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 514,
+                        "vendor_id": 10429
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false
+                }
+            ],
+            "name": "Default profile",
+            "selected": true,
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        },
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "右コマンドキーを単体で押したときに、かなキーを送信、左コントロールキーを単体で押したときに、英数キーを送信する。 (rev 2)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 100 },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "japanese_eisuu" }],
+                                "to_if_held_down": [{ "key_code": "left_control" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_command",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 100 },
+                                "to": [
+                                    {
+                                        "key_code": "right_command",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "japanese_kana" }],
+                                "to_if_held_down": [{ "key_code": "right_command" }],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name": "Game"
+        },
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "Change spacebar to left_shift if pressed with other keys (Post spacebar when pressed alone)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_shift" }],
+                                "to_if_alone": [{ "key_code": "spacebar" }],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name": "SKK"
+        }
+    ]
+}

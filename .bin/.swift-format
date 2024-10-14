@@ -1,0 +1,12 @@
+{
+  "fileScopedDeclarationPrivacy" : {
+    "accessLevel" : "private"
+  },
+  "indentation" : {
+    "spaces" : 4
+  },
+  "rules" : {
+    "UseEarlyExits" : true,
+    "UseWhereClausesInForLoops" : true, 
+  }
+}

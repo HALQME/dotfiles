@@ -1,0 +1,99 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+    "features": {
+        "inline_completion_provider": "supermaven"
+    },
+    "chat_panel": {
+        "button": false
+    },
+    "notification_panel": {
+        "button": false
+    },
+    "collaboration_panel": {
+        "button": false
+    },
+    "assistant": {
+        "button": true,
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-4o"
+        },
+        "version": "2",
+        "dock": "right"
+    },
+    "autosave": "on_focus_change",
+    "auto_update": true,
+    "theme": "Catppuccin Mocha",
+    "telemetry": {
+        "diagnostics": true,
+        "metrics": true
+    },
+    "vim_mode": true,
+    "ui_font_family": "Moralerspace Argon JPDOC",
+    "indent_guides": {
+        "enabled": true,
+        "coloring": "indent_aware"
+    },
+    "scrollbar": {
+        "show": "never"
+    },
+    "formatter": "auto",
+    "lsp": {
+        "languageserver-csharp": {
+            "command": "omnisharp"
+        },
+        "roff": {
+            "initialization_options": {
+                "settings": {
+                    "lineLength": 80,
+                    "lint": {
+                        "extendSelect": ["I"]
+                    }
+                }
+            }
+        }
+    },
+    "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_parameter_hints": true,
+        "show_other_hints": true
+    },
+    "languages": {
+        "JavaScript": {
+            "tab_size": 2,
+            "formatter": {
+                "external": {
+                    "command": "prettier",
+                    "arguments": ["--stdin-filepath", "{buffer_path}"]
+                }
+            }
+        },
+        "TypeScript": {
+            "inlay_hints": {
+                "show_parameter_hints": true
+            }
+        },
+        "Python": {
+            "language_servers": ["ruff"]
+        }
+    },
+    "terminal": {
+        "font_family": "Moralerspace Krypton HWNF",
+        "font_size": 14
+    },
+    "jupyter": {
+        "kernel_selections": {
+            "typescript": "deno",
+            "javascript": "deno",
+            "r": "ark"
+        }
+    }
+}
