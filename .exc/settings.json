@@ -271,5 +271,6 @@
     "workbench.preferredDarkColorTheme": "Catppuccin Frappe",
     "workbench.preferredLightColorTheme": "Catppuccin Mocha",
     "workbench.settings.applyToAllProfiles": ["workbench.colorTheme"],
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.tree.indent": 20
 }
