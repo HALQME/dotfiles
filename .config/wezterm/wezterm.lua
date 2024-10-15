@@ -49,7 +49,6 @@ local images = {
 	homedir .. "/Pictures/Pictures.library/images/LMLH5N41P8UXZ.info/2560x1440.jpg",
 	homedir .. "/Pictures/Pictures.library/images/LMLH5N41S0K3H.info/2560-1440.png",
 	homedir .. "/Pictures/Pictures.library/images/LMLH5N41FCF42.info/2560-1440.jpg",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N417GZQD.info/1.2KV2_2560x1440.jpg",
 	homedir .. "/Pictures/Pictures.library/images/LMLH5N41FQWSN.info/Fm_cCB6XoAMk_BU.png",
 	homedir .. "/Pictures/Pictures.library/images/LMLH5N4168JB8.info/張家界2560x1440.jpg",
 	homedir .. "/Pictures/Pictures.library/images/LMLH5N41UD4ZN.info/2560-1440.jpg",
@@ -57,6 +56,7 @@ local images = {
 	homedir .. "/Pictures/Pictures.library/images/LMLH5N41CD99W.info/2560-1440.jpg",
 	homedir .. "/Pictures/Pictures.library/images/LMLH5N41R6RDW.info/FlPR8l1akAAtHaN.jpg",
 	homedir .. "/Pictures/Pictures.library/images/LMLH5N41P5QW7.info/2560-1440.jpg",
+	homedir .. "/Pictures/Pictures.library/images/LMLH5N417GZQD.info/1.2KV2_2560x1440.jpg",
 }
 
 -- 配列からランダムな画像を選択する関数
@@ -98,8 +98,8 @@ wezterm.on("window-config-reloaded", function(window, pane)
 end)
 
 -- fonts
-config.font = wezterm.font_with_fallback({ "Moralerspace Argon HWNF" })
-config.font_size = 13
+config.font = wezterm.font_with_fallback({ "Moralerspace Xenon NF" })
+config.font_size = 14.5
 config.adjust_window_size_when_changing_font_size = false
 
 -- cursor conf
