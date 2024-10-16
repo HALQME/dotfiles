@@ -50,7 +50,6 @@
         "coffeescript": "coffee",
         "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "crystal": "crystal",
-        "csharp": "mcs $fullFileName && cd $dir && mono $fileNameWithoutExt.exe && rm -f $fileNameWithoutExt.exe ; cd $workspaceRoot",
         "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
         "dart": "dart",
         "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
