@@ -10,35 +10,32 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- This is where you actually apply your config choices
-
 -- imput method
 config.use_ime = true
 
 -- tab_bar
-config.use_fancy_tab_bar = true
-config.show_tabs_in_tab_bar = true
 config.show_new_tab_button_in_tab_bar = false
-config.enable_tab_bar = true
-config.hide_tab_bar_if_only_one_tab = true
+config.enable_tab_bar = false
+config.hide_tab_bar_if_only_one_tab = false
 config.show_tab_index_in_tab_bar = false
 
 -- windows setting
-config.initial_rows = 60
+config.initial_rows = 64
 config.initial_cols = 192
-config.window_decorations = "RESIZE"
+config.window_decorations = "INTEGRATED_BUTTONS"
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = {
-	left = 0,
-	right = 0,
-	top = 0,
-	bottom = 0,
+	left = '0px',
+	right = '0px',
+	bottom = '0px',
+	top = '24pt',
 }
+config.enable_scroll_bar = false
 
 -- color scheme and face:
 config.color_scheme = "Catppuccin Mocha"
-config.text_background_opacity = 0.7
-config.window_background_opacity = 0.6
+config.text_background_opacity = 1
+config.window_background_opacity = 0.8
 
 -- Background pics
 local homedir = os.getenv("HOME")
@@ -67,7 +64,7 @@ local function get_random_image()
 end
 
 -- ウィンドウが再読み込みされるたびにランダムな画像を設定
-wezterm.on("window-focus-changed", function(window, pane)
+local function set_background_image(window, pane)
 	local overrides = window:get_config_overrides() or {}
 	local random_image = get_random_image()
 	overrides.background = {
@@ -75,26 +72,19 @@ wezterm.on("window-focus-changed", function(window, pane)
 			source = {
 				File = random_image,
 			},
-			opacity = 0.75,
-			hsb = { brightness = 0.05 },
+			opacity = 0.80,
+			hsb = { brightness = 0.04 },
 		},
 	}
 	window:set_config_overrides(overrides)
-end)
+	pane:set_config_overrides(overrides)
+end
 
+wezterm.on("window-focus-changed", function(window, pane)
+	set_background_image(window, pane)
+end)
 wezterm.on("window-config-reloaded", function(window, pane)
-	local overrides = window:get_config_overrides() or {}
-	local random_image = get_random_image()
-	overrides.background = {
-		{
-			source = {
-				File = random_image,
-			},
-			opacity = 0.75,
-			hsb = { brightness = 0.05 },
-		},
-	}
-	window:set_config_overrides(overrides)
+	set_background_image(window, pane)
 end)
 
 -- fonts
@@ -105,39 +95,9 @@ config.adjust_window_size_when_changing_font_size = false
 -- cursor conf
 config.default_cursor_style = "BlinkingBar"
 config.cursor_blink_rate = 750
--- key binding
-local act = wezterm.action
+
+-- leader
 config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 1000 }
-config.keys = {
-	{ key = "-", mods = "CTRL", action = act.DecreaseFontSize },
-	{ key = "+", mods = "SHIFT|CTRL", action = act.IncreaseFontSize },
-	{ key = "0", mods = "CTRL", action = act.ResetFontSize },
-	{ key = "Enter", mods = "ALT", action = act.ToggleFullScreen },
-	{ key = "F", mods = "SHIFT|CTRL", action = act.Search("CurrentSelectionOrEmptyString") },
-	{ key = "h", mods = "ALT", action = act.ActivatePaneDirection("Left") },
-	{ key = "H", mods = "ALT", action = act.AdjustPaneSize({ "Left", 1 }) },
-	{ key = "h", mods = "SHIFT|CTRL", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) }, -- Ctrl+Shift+hで新しいペインを作成(画面を分割)
-	{ key = "j", mods = "ALT", action = act.ActivatePaneDirection("Down") },
-	{ key = "J", mods = "ALT", action = act.AdjustPaneSize({ "Down", 1 }) },
-	{ key = "k", mods = "ALT", action = act.ActivatePaneDirection("Up") },
-	{ key = "K", mods = "ALT", action = act.AdjustPaneSize({ "Up", 1 }) },
-	{ key = "l", mods = "ALT", action = act.ActivatePaneDirection("Right") },
-	{ key = "L", mods = "ALT", action = act.AdjustPaneSize({ "Right", 1 }) },
-	{ key = "t", mods = "CMD", action = act.SpawnTab("CurrentPaneDomain") },
-	{ key = "Tab", mods = "CTRL", action = act.ActivateTabRelative(1) },
-	{ key = "Tab", mods = "SHIFT|CTRL", action = act.ActivateTabRelative(-1) },
-	{ key = "v", mods = "SHIFT|CTRL", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) }, -- Ctrl+Shift+vで新しいペインを作成(画面を分割)
-	{ key = "w", mods = "CMD", action = act.CloseCurrentTab({ confirm = true }) },
-	{ key = "w", mods = "SHIFT|CTRL", action = act.CloseCurrentPane({ confirm = true }) },
-	{ key = "c", mods = "CMD", action = act.CopyTo("ClipboardAndPrimarySelection") },
-	{ key = "v", mods = "CMD", action = act.PasteFrom("Clipboard") },
-	{ key = " ", mods = "LEADER", action = act.QuickSelect },
-	{ key = "x", mods = "CTRL", action = act.ActivateCopyMode },
-	{ key = "q", mods = "LEADER|CTRL", action = act.ActivateCommandPalette },
-	{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
-	{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
-	{ key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
-	{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
-}
+
 -- and finally, return the configuration to wezterm
 return config
