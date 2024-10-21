@@ -20,8 +20,8 @@ config.hide_tab_bar_if_only_one_tab = false
 config.show_tab_index_in_tab_bar = false
 
 -- windows setting
-config.initial_rows = 64
-config.initial_cols = 192
+config.initial_rows = 50
+config.initial_cols = 150
 config.window_decorations = "INTEGRATED_BUTTONS"
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = {
