@@ -271,5 +271,8 @@
     "workbench.preferredLightColorTheme": "Catppuccin Mocha",
     "workbench.settings.applyToAllProfiles": ["workbench.colorTheme"],
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.tree.indent": 20
+    "workbench.tree.indent": 20,
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode"
+    }
 }
