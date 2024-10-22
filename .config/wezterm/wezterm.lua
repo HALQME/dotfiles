@@ -72,7 +72,7 @@ local function set_background_image(window, pane)
 			source = {
 				File = random_image,
 			},
-			opacity = 0.80,
+			opacity = 0.8,
 			hsb = { brightness = 0.04 },
 		},
 	}
