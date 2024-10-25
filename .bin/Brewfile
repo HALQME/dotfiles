@@ -345,8 +345,6 @@ cask "aural"
 cask "avast-secure-browser"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
-# App for managing battery charging. (Also installs a CLI on first use.)
-cask "battery"
 # Replacement of the default battery indicator in the menu bar
 cask "battery-buddy"
 # Tool to customise input devices and automate computer systems
@@ -501,6 +499,8 @@ cask "lapce"
 cask "libndi"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
+# Discover, download, and run local LLMs
+cask "lm-studio"
 # Support for Logitech G gear
 cask "logitech-g-hub"
 # Privacy-first, open-source platform for knowledge sharing and management
@@ -695,6 +695,7 @@ mas "Affinity Designer 2", id: 1616831348
 mas "Affinity Photo 2", id: 1616822987
 mas "Affinity Publisher 2", id: 1606941598
 mas "Baking Soda", id: 1601151613
+mas "Balatro+", id: 6502451661
 mas "Blackmagic RAW Player", id: 1435415804
 mas "Blackmagic RAW Speed Test", id: 1466185689
 mas "Bluebird", id: 1478757472
@@ -762,11 +763,13 @@ mas "Pages", id: 409201541
 mas "Pastel", id: 413897608
 mas "Patterns", id: 429449079
 mas "People翻訳", id: 6451377502
+mas "Perplexity", id: 6714467650
 mas "Photomator", id: 1444636541
 mas "Physics 101", id: 435293897
 mas "Physics Latex Editor", id: 6453889446
 mas "Piccolo", id: 1561230039
 mas "Pixelmator Pro", id: 1289583905
+mas "Planny", id: 1515324201
 mas "Playgrounds", id: 1496833156
 mas "Plot2", id: 846509360
 mas "Poolsuite FM", id: 1514817810
@@ -813,6 +816,7 @@ vscode "bierner.markdown-mermaid"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
+vscode "continue.continue"
 vscode "cweijan.vscode-office"
 vscode "dart-code.dart-code"
 vscode "dart-code.flutter"
