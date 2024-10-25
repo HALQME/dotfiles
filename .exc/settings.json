@@ -36,7 +36,7 @@
     "apple-swift-format.configSearchPaths": ["~/.swift-format"],
     "apple-swift-format.path": ["/opt/homebrew/bin//swift-format"],
     "atomKeymap.promptV3Features": true,
-    "chat.editor.fontSize": 14,
+    "chat.editor.fontSize": 13,
     "cmake.configureOnOpen": false,
     "cmake.showOptionsMovedNotification": false,
     "code-runner.cwd": "$dirWithoutTraillingSlash",
@@ -107,7 +107,6 @@
     "css.styleSheets": [],
     "cssPeek.trace.server": "messages",
     "debug.allowBreakpointsEverywhere": true,
-    "debug.console.fontSize": 13,
     "debug.terminal.clearBeforeReusing": true,
     "diffEditor.codeLens": true,
     "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
@@ -160,9 +159,10 @@
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
         "*": true,
-        "markdown": false,
         "plaintext": false,
-        "scminput": false
+        "markdown": false,
+        "scminput": false,
+        "csharp": true
     },
     "gitlens.advanced.messages": {
         "suppressLineUncommittedWarning": true
@@ -220,7 +220,7 @@
     "swift.sourcekit-lsp.trace.server": "verbose",
     "swiftformat.configSearchPaths": ["~/.swiftformat"],
     "tabnine.experimentalAutoImports": true,
-    "terminal.external.osxExec": "iterm.app",
+    "terminal.external.osxExec": "",
     "terminal.external.windowsExec": "",
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.cursorStyle": "line",
@@ -230,7 +230,7 @@
         "Q_NEW_SESSION": "1"
     },
     "terminal.integrated.fontFamily": "Moralerspace Neon HWNF",
-    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontSize": 13,
     "terminal.integrated.macOptionClickForcesSelection": true,
     "terminal.integrated.minimumContrastRatio": 1,
     "update.showReleaseNotes": false,
@@ -274,5 +274,8 @@
     "workbench.tree.indent": 20,
     "[astro]": {
         "editor.defaultFormatter": "astro-build.astro-vscode"
-    }
+    },
+    "terminal.integrated.enableImages": true,
+    "csv-edit.fontSizeInPx": 13,
+    "screencastMode.fontSize": 24
 }
