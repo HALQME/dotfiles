@@ -37,6 +37,7 @@
   },
   "vim_mode": true,
   "ui_font_family": "Moralerspace Argon JPDOC",
+  "buffer_font_family": "Moralerspace Xenon HWNF",
   "indent_guides": {
     "enabled": true,
     "coloring": "indent_aware"
