@@ -125,3 +125,4 @@ fi
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/miharu.k/.cache/lm-studio/bin"
+. "$HOME/.cargo/env"
