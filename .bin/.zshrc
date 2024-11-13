@@ -182,6 +182,7 @@ alias mp='multipass'
 alias python="python3"
 alias rm='rm -i'
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias trans='trans -b'
 alias transEn='\trans en:ja -b'
 alias transJa='\trans ja:en -b'
@@ -233,12 +234,10 @@ function pdfmin()
 
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
-
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/miharu.k/.cache/lm-studio/bin"
 export DOTNET_ROOT="/usr/local/share/dotnet"
 export PATH="$PATH:$DOTNET_ROOT"
+
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
