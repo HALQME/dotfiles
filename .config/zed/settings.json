@@ -22,8 +22,8 @@
   "assistant": {
     "button": true,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "provider": "copilot_chat",
+      "model": "o1-preview"
     },
     "version": "2",
     "dock": "right"
