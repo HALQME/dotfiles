@@ -154,8 +154,6 @@
     "git.enableSmartCommit": true,
     "git.openRepositoryInParentFolders": "never",
     "github.copilot.advanced": {},
-    "github.copilot.chat.experimental.codeGeneration.useInstructionFiles": true,
-    "github.copilot.chat.experimental.generateTests.codeLens": true,
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
         "*": true,
@@ -181,7 +179,7 @@
     "keyboard.touchbar.enabled": false,
     "liveServer.settings.donotShowInfoMsg": true,
     "lldb.launch.expressions": "native",
-    "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+    "lldb.library": "/Applications/Xcode-16.1.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
     "markdown-preview-enhanced.codeBlockTheme": "monokai.css",
     "markdownlint.config": {
         "MD007": false
@@ -277,5 +275,8 @@
     },
     "terminal.integrated.enableImages": true,
     "csv-edit.fontSizeInPx": 13,
-    "screencastMode.fontSize": 24
+    "screencastMode.fontSize": 24,
+    "zig.path": "zig",
+    "zig.zls.path": "zls",
+    "zig.initialSetupDone": true
 }
