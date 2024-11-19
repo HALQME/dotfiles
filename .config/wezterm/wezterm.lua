@@ -12,6 +12,7 @@ end
 
 -- imput method
 config.use_ime = true
+config.macos_forward_to_ime_modifier_mask = "SHIFT|CTRL"
 
 -- tab_bar
 config.show_new_tab_button_in_tab_bar = false
@@ -35,7 +36,7 @@ config.enable_scroll_bar = false
 -- color scheme and face:
 config.color_scheme = "Catppuccin Mocha"
 config.text_background_opacity = 1
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.1
 
 -- Background pics
 local homedir = os.getenv("HOME")
@@ -72,8 +73,8 @@ local function set_background_image(window, pane)
 			source = {
 				File = random_image,
 			},
-			opacity = 0.90,
-			hsb = { brightness = 0.015 },
+			opacity = 0.75,
+			hsb = { brightness = 0.02 },
 		},
 	}
 	window:set_config_overrides(overrides)
