@@ -3,12 +3,15 @@ tap "apple/apple", "http://github.com/apple/homebrew-apple"
 tap "charmbracelet/tap"
 tap "cirruslabs/cli"
 tap "fsouza/prettierd"
+tap "halqme/versions"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "humansignal/tap"
 tap "jesseduffield/lazygit"
 tap "k1low/tap"
 tap "modularml/packages"
+tap "mtgto/macskk"
 tap "tk04/tap"
 # Run your GitHub Actions locally
 brew "act"
@@ -34,6 +37,8 @@ brew "coreutils"
 brew "tmux"
 # Text-based window manager and terminal multiplexer
 brew "byobu"
+# GNU Emacs text editor
+brew "emacs"
 # Emacs dependency management
 brew "cask"
 # CD/DVD/Blu-ray premastering and recording software
@@ -92,6 +97,8 @@ brew "fzf"
 brew "gat"
 # R7RS Scheme implementation, developed to be a handy script interpreter
 brew "gauche"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # GNOME text editor
 brew "gedit"
 # Nonsense activity generator
@@ -108,6 +115,10 @@ brew "git-lfs"
 brew "gitui"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
+# Cross-platform application and UI framework
+brew "qt"
+# Command-driven, interactive function plotting
+brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Gorgeous metric visualizations and dashboards for timeseries databases
@@ -148,6 +159,8 @@ brew "libgpg-error"
 brew "libimobiledevice"
 # SIXEL encoder/decoder implementation
 brew "libsixel"
+# Linux virtual machines
+brew "lima"
 # Next-gen compiler infrastructure
 brew "llvm"
 # Rainbows and unicorns in your console!
@@ -212,8 +225,6 @@ brew "pwgen"
 brew "python@3.11"
 # Generic machine emulator and virtualizer
 brew "qemu"
-# Cross-platform application and UI framework
-brew "qt"
 # Software environment for statistical computing
 brew "r"
 # File browser
@@ -228,6 +239,8 @@ brew "ruff"
 brew "rust"
 # Experimental Rust compiler front-end for IDEs
 brew "rust-analyzer"
+# Rust toolchain installer
+brew "rustup"
 # JVM-based programming language
 brew "scala"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -290,6 +303,10 @@ brew "xh"
 brew "yt-dlp"
 # Suite of barcodes-reading tools
 brew "zbar"
+# Programming language designed for robustness, optimality, and clarity
+brew "zig"
+# Language Server for Zig
+brew "zls"
 # Feature-rich syntax highlighting for Zsh
 brew "zsh-fast-syntax-highlighting"
 # Informative git prompt for zsh
@@ -302,6 +319,8 @@ brew "cirruslabs/cli/tart"
 brew "fsouza/prettierd/prettierd"
 # Packer
 brew "hashicorp/tap/packer"
+# Multi-type data labeling and annotation tool with standardized output format
+brew "humansignal/tap/label-studio"
 # A simple terminal UI for git commands, written in Go
 brew "jesseduffield/lazygit/lazygit"
 # tbls is a CI-Friendly tool for document a database, written in Go.
@@ -345,8 +364,6 @@ cask "aural"
 cask "avast-secure-browser"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
-# Replacement of the default battery indicator in the menu bar
-cask "battery-buddy"
 # Tool to customise input devices and automate computer systems
 cask "bettertouchtool"
 # Edit and manage bibliographies
@@ -367,8 +384,6 @@ cask "chatgpt"
 cask "chromedriver"
 # Free and open-source web browser
 cask "chromium"
-# Tool to remove unnecessary files and folders from disk
-cask "cleanmymac"
 # Code editor
 cask "codeedit"
 # Multi-language programming editor
@@ -399,8 +414,10 @@ cask "devtoys"
 cask "diffusionbee"
 # Voice and text chat software
 cask "discord"
+# NDI integration for OBS Studio
+cask "distroav"
 # Developer platform
-cask "dotnet-sdk"
+cask "dotnet-sdk@8"
 # Online diagram software
 cask "drawio"
 # Client for the Dropbox cloud storage service
@@ -493,24 +510,28 @@ cask "keyboardcleantool"
 cask "keyclu"
 # GPU-based terminal emulator
 cask "kitty"
+# Data visualization and analysis software
+cask "labplot"
 # Open source code editor written in Rust
 cask "lapce"
 # NDI SDK
 cask "libndi"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
+# Collection of alternate languages for LibreOffice
+cask "libreoffice-language-pack"
 # Discover, download, and run local LLMs
 cask "lm-studio"
 # Support for Logitech G gear
 cask "logitech-g-hub"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
-# Window manager
-cask "loop"
 # File system integration
 cask "macfuse"
 # Controls and monitors all fans on Apple computers
 cask "macs-fan-control"
+# Yet Another macOS SKK Input Method
+cask "macskk"
 # Full TeX Live distribution without GUI applications
 cask "mactex-no-gui"
 # Speech recognition tool
@@ -525,8 +546,12 @@ cask "masscode"
 cask "mi"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
+# Multi-platform web browser
+cask "microsoft-edge"
 # Spreadsheet software
 cask "microsoft-excel"
+# Presentation software
+cask "microsoft-powerpoint"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
 # Word processor
@@ -557,12 +582,10 @@ cask "obs"
 cask "obs-advanced-scene-switcher"
 # iOS camera plugin for OBS Studio
 cask "obs-ios-camera-source"
-# NDI integration for OBS Studio
-cask "obs-ndi"
-# Remote-control OBS Studio through WebSockets
-cask "obs-websocket"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Get up and running with large language models locally
+cask "ollama"
 # Securely and anonymously share files, host websites, and chat with friends
 cask "onionshare"
 # Document editor
@@ -583,8 +606,6 @@ cask "popsql"
 cask "processing"
 # HTTP debugging proxy
 cask "proxyman"
-# Text editor
-cask "pulsar"
 # Sound, video and lighting control
 cask "qlab"
 # Quick Look generator for Markdown files
@@ -599,12 +620,8 @@ cask "raycast"
 cask "rectangle-pro"
 # Spaced-repetition powered note-taking tool
 cask "remnote"
-# Hardware-accelerated GPU terminal emulator
-cask "rio"
 # Data science software focusing on R and Python
 cask "rstudio"
-# Screen saver for custom video files
-cask "save-hollywood"
 # Notepad software
 cask "scapple"
 # Word processing software with a typewriter style
@@ -640,8 +657,6 @@ cask "suspicious-package"
 cask "sweet-home3d"
 # Quicklook extension for source files
 cask "syntax-highlight"
-# Terminal emulator, SSH and serial client
-cask "tabby"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
 # Customizable email client
@@ -725,7 +740,6 @@ mas "Expenses", id: 1492055171
 mas "Final Cut Pro", id: 424389933
 mas "FirstSeed Calendar", id: 1348617240
 mas "FirstSeed Tasks", id: 1627018604
-mas "Gemini 2", id: 1090488118
 mas "GeoGebra Classic 6", id: 1182481622
 mas "Gifski", id: 1351639930
 mas "Goodnotes", id: 1444383602
@@ -748,6 +762,7 @@ mas "MachineProfile", id: 530194517
 mas "Mactracker", id: 430255202
 mas "MainStage", id: 634159523
 mas "Memento", id: 1200227397
+mas "Mercury", id: 1621800675
 mas "Mini Metro+", id: 1550663539
 mas "Mini Motorways", id: 1456188526
 mas "Momentum", id: 1564329434
@@ -769,7 +784,6 @@ mas "Physics 101", id: 435293897
 mas "Physics Latex Editor", id: 6453889446
 mas "Piccolo", id: 1561230039
 mas "Pixelmator Pro", id: 1289583905
-mas "Planny", id: 1515324201
 mas "Playgrounds", id: 1496833156
 mas "Plot2", id: 846509360
 mas "Poolsuite FM", id: 1514817810
@@ -787,6 +801,7 @@ mas "sort.photos: AI Photo and PDF Renamer", id: 6480457357
 mas "Spark Desktop", id: 6445813049
 mas "stone", id: 1230288277
 mas "Structured", id: 1499198946
+mas "Tailscale", id: 1475387142
 mas "Telegram", id: 747648890
 mas "Teleprompter", id: 6463623914
 mas "TestFlight", id: 899247664
@@ -799,6 +814,7 @@ mas "URL Linker", id: 1289119450
 mas "Usage", id: 1561788435
 mas "Velja", id: 1607635845
 mas "Vinegar", id: 1591303229
+mas "virtualOS", id: 1614659226
 mas "VirusBarrier Scanner", id: 1200445649
 mas "waifu2x", id: 1286485858
 mas "Wavebar", id: 6450398808
@@ -865,9 +881,11 @@ vscode "ms-vscode.vscode-typescript-next"
 vscode "mtxr.sqltools"
 vscode "oderwat.indent-rainbow"
 vscode "qwtel.sqlite-viewer"
+vscode "reditorsupport.r"
 vscode "rust-lang.rust-analyzer"
 vscode "shardulm94.trailing-spaces"
 vscode "shd101wyy.markdown-preview-enhanced"
+vscode "shopify.ruby-lsp"
 vscode "sswg.swift-lang"
 vscode "tauri-apps.tauri-vscode"
 vscode "tomoki1207.pdf"
@@ -876,3 +894,4 @@ vscode "visualstudioexptteam.intellicode-api-usage-examples"
 vscode "visualstudioexptteam.vscodeintellicode"
 vscode "vknabel.vscode-apple-swift-format"
 vscode "vknabel.vscode-swiftformat"
+vscode "ziglang.vscode-zig"
