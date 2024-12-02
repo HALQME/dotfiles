@@ -3,7 +3,7 @@ tap "apple/apple", "http://github.com/apple/homebrew-apple"
 tap "charmbracelet/tap"
 tap "cirruslabs/cli"
 tap "fsouza/prettierd"
-tap "halqme/versions"
+tap "halqme/versions", "https://github.com/HALQME/homebrew-versions.git"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
@@ -69,6 +69,8 @@ brew "duckdb"
 brew "duf"
 # More intuitive version of du in rust
 brew "dust"
+# DVD-authoring toolset
+brew "dvdauthor"
 # Perl lib for reading and writing EXIF metadata
 brew "exiftool"
 # Like neofetch, but much faster because written mostly in C
@@ -370,6 +372,8 @@ cask "bettertouchtool"
 cask "bibdesk"
 # Record and process your ideas
 cask "bike"
+# Desktop password and login vault
+cask "bitwarden"
 # Virtual Audio Driver
 cask "blackhole-2ch"
 # 3D creation suite
@@ -452,6 +456,8 @@ cask "font-kiwi-maru"
 cask "font-plemol-jp-nf"
 cask "font-source-code-pro"
 cask "font-yusei-magic"
+# 3D parametric modeller
+cask "freecad"
 # Free and open-source image editor
 cask "gimp"
 # Desktop client for GitHub repositories
@@ -526,6 +532,8 @@ cask "lm-studio"
 cask "logitech-g-hub"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
+# Clipboard manager
+cask "maccy"
 # File system integration
 cask "macfuse"
 # Controls and monitors all fans on Apple computers
@@ -632,6 +640,8 @@ cask "sentinel-app"
 cask "sequel-ace"
 # Screenshot measurement and annotation tool
 cask "shottr"
+# Web browser
+cask "sigmaos"
 # Instant messaging application focusing on security
 cask "signal"
 # PDF reader and note-taking application
@@ -701,8 +711,6 @@ cask "xppen-pentablet"
 cask "xquartz"
 # Multiplayer code editor
 cask "zed"
-# Open-source markdown editor
-cask "zettlr"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "Actions", id: 1586435171
@@ -718,11 +726,9 @@ mas "Boop", id: 1518425043
 mas "Bushel", id: 1642807785
 mas "ByeGraph", id: 6467188044
 mas "Capo", id: 696977615
-mas "Codelime", id: 1622145140
 mas "Codye", id: 1516894961
 mas "Collections", id: 1568395334
 mas "Color Picker", id: 1545870783
-mas "com.jeremyvizzini.screentolayers.osx", id: 1077317077
 mas "Command X", id: 6448461551
 mas "Compressor", id: 424390742
 mas "Craft", id: 1487937127
@@ -743,7 +749,6 @@ mas "FirstSeed Tasks", id: 1627018604
 mas "GeoGebra Classic 6", id: 1182481622
 mas "Gifski", id: 1351639930
 mas "Goodnotes", id: 1444383602
-mas "Habit Tracker", id: 6466580414
 mas "Helm", id: 1099472017
 mas "HextEdit", id: 1557247094
 mas "Hush", id: 1544743900
@@ -792,11 +797,13 @@ mas "QuickFTP", id: 1451646819
 mas "QuickMIDI", id: 1459790045
 mas "School", id: 1465687472
 mas "Scratchpad", id: 6504040051
+mas "ScreenToLayers", id: 1077317077
 mas "Secrets", id: 1591056366
 mas "shakepin", id: 6599856142
 mas "Shareful", id: 1522267256
 mas "Showdown", id: 6504288864
 mas "Snap Converter", id: 431094796
+mas "SnippetsLab", id: 1006087419
 mas "sort.photos: AI Photo and PDF Renamer", id: 6480457357
 mas "Spark Desktop", id: 6445813049
 mas "stone", id: 1230288277
@@ -828,6 +835,7 @@ vscode "aaron-bond.better-comments"
 vscode "adpyke.codesnap"
 vscode "amazonwebservices.codewhisperer-for-command-line-companion"
 vscode "astro-build.astro-vscode"
+vscode "atommaterial.a-file-icon-vscode"
 vscode "bierner.markdown-mermaid"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
 vscode "catppuccin.catppuccin-vsc"
@@ -836,6 +844,7 @@ vscode "continue.continue"
 vscode "cweijan.vscode-office"
 vscode "dart-code.dart-code"
 vscode "dart-code.flutter"
+vscode "dioxuslabs.dioxus"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
 vscode "formulahendry.code-runner"
