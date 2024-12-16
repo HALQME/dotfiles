@@ -1,0 +1,52 @@
+theme = "base16_transparent"
+[editor]
+true-color = true
+cursorline = false
+color-modes = true
+auto-completion = true
+auto-save = false
+
+[editor.file-picker]
+max-depth = 6
+hidden = false
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "all"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.whitespace.characters]
+space = "."
+nbsp = "⍽"
+tab = "→"
+newline = "↲"
+# newline = "✔" # やろうと思えばこういうのもできる
+
+[editor.indent-guides]
+render = true # 個人の好みで、スペースよりもガイド派はこちらをtrueにする
+character = "|" # バーティカルバーも好きにできるので:とかにしても良いかも
+
+[keys.insert]
+j = { j = "normal_mode"} # jjでノーマルモードj
+C-m = "completion" # Ctrl + spaceで補完
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│" 
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-inlay-hints = true # 型を表示
+
+[editor.soft-wrap]
+enable = true # ソフトラップによる改行を追加
+
