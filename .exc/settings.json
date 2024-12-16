@@ -279,5 +279,11 @@
     "zig.initialSetupDone": true,
     "zig.path": "zig",
     "zig.zls.path": "zls",
-    "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme"
+    "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
+    "calva.paredit.defaultKeyMap": "strict",
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    },
+    "chat.editing.alwaysSaveWithGeneratedChanges": true,
+    "typescript.updateImportsOnFileMove.enabled": "always"
 }

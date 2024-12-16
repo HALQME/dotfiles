@@ -42,7 +42,7 @@ call jetpack#begin()
     Jetpack 'Shougo/ddc-matcher_head', { 'event': ['BufRead']}
     Jetpack 'Shougo/ddc-sorter_rank', { 'event': ['BufRead']}
     Jetpack 'Shougo/ddc-converter_remove_overlap', { 'event': ['BufRead']}
-    "" Copilot
+    " Copilot
     Jetpack 'github/copilot.vim', { 'event': ['BufRead'] }
     " LSP
     Jetpack 'mattn/vim-lsp-settings', { 'event': ['BufRead']}
@@ -77,8 +77,8 @@ let s:sourceOptions = {
   \   'isVolatile': v:true,
   \   'forceCompletionPattern': '\S/\S*',
   \ }}
-call ddc#custom#patch_global('sources', s:sources)
-call ddc#custom#patch_global('sourceOptions', s:sourceOptions)
+"call ddc#custom#patch_global('sources', s:sources)
+"call ddc#custom#patch_global('sourceOptions', s:sourceOptions)
 
 call ddc#custom#patch_global('sourceParams', {
     \ 'buffer': {
