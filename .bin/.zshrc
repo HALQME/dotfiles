@@ -239,5 +239,7 @@ export PATH="$PATH:/Users/miharu.k/.cache/lm-studio/bin"
 export DOTNET_ROOT="/usr/local/share/dotnet"
 export PATH="$PATH:$DOTNET_ROOT"
 
+export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
+
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

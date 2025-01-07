@@ -8,6 +8,9 @@
     "[astro]": {
         "editor.defaultFormatter": "astro-build.astro-vscode"
     },
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    },
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -43,6 +46,8 @@
     "apple-swift-format.path": ["/opt/homebrew/bin//swift-format"],
     "atomKeymap.promptV3Features": true,
     "cSpell.userWords": ["Cica", "miharu"],
+    "calva.paredit.defaultKeyMap": "original",
+    "chat.editing.alwaysSaveWithGeneratedChanges": true,
     "chat.editor.fontSize": 13,
     "cmake.configureOnOpen": false,
     "cmake.showOptionsMovedNotification": false,
@@ -161,13 +166,14 @@
     "git.enableSmartCommit": true,
     "git.openRepositoryInParentFolders": "never",
     "github.copilot.advanced": {},
-    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.editor.enableAutoCompletions": false,
     "github.copilot.enable": {
         "*": true,
-        "plaintext": false,
-        "markdown": false,
+        "plaintext": true,
+        "markdown": true,
         "scminput": false,
-        "csharp": false
+        "csharp": false,
+        "iapresenter": true
     },
     "gitlens.advanced.messages": {
         "suppressLineUncommittedWarning": true
@@ -237,6 +243,7 @@
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.macOptionClickForcesSelection": true,
     "terminal.integrated.minimumContrastRatio": 1,
+    "typescript.updateImportsOnFileMove.enabled": "always",
     "update.showReleaseNotes": false,
     "vim.autoSwitchInputMethod.defaultIM": "com.kawasemi4.keylayout.US",
     "vim.cursorStylePerMode.insert": "line-thin",
@@ -273,17 +280,30 @@
     "workbench.iconTheme": "a-file-icon-vscode",
     "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
     "workbench.preferredLightColorTheme": "Catppuccin Mocha",
+    "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
     "workbench.settings.applyToAllProfiles": ["workbench.colorTheme"],
     "workbench.startupEditor": "newUntitledFile",
     "workbench.tree.indent": 20,
     "zig.initialSetupDone": true,
     "zig.path": "zig",
     "zig.zls.path": "zls",
-    "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
-    "calva.paredit.defaultKeyMap": "strict",
-    "[csharp]": {
-        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "continue.enableTabAutocomplete": false,
+    "continue.showInlineTip": false,
+    "cody.commandCodeLenses": true,
+    "cody.autocomplete.disableInsideComments": true,
+    "cody.chat.defaultLocation": "editor",
+    "calva.prettyPrintingOptions": {
+        "printEngine": "pprint",
+        "enabled": false,
+        "width": 120,
+        "maxLength": 50
     },
-    "chat.editing.alwaysSaveWithGeneratedChanges": true,
-    "typescript.updateImportsOnFileMove.enabled": "always"
+    "remote.portsAttributes": {
+        "4321": {
+            "protocol": "https"
+        }
+    },
+    "githubPullRequests.createOnPublishBranch": "never"
 }

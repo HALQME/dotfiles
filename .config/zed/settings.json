@@ -7,94 +7,126 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "features": {
-    "inline_completion_provider": "copilot"
-  },
-  "chat_panel": {
-    "button": false
-  },
-  "notification_panel": {
-    "button": false
-  },
-  "collaboration_panel": {
-    "button": false
-  },
-  "assistant": {
-    "button": true,
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "o1-preview"
+    "outline_panel": {
+        "dock": "right"
     },
-    "version": "2",
-    "dock": "right"
-  },
-  "autosave": "on_focus_change",
-  "auto_update": true,
-  "theme": "Catppuccin Frappé",
-  "telemetry": {
-    "diagnostics": true,
-    "metrics": true
-  },
-  "vim_mode": true,
-  "ui_font_family": "Moralerspace Argon JPDOC",
-  "buffer_font_family": "Moralerspace Xenon HWNF",
-  "indent_guides": {
-    "enabled": true,
-    "coloring": "indent_aware"
-  },
-  "scrollbar": {
-    "show": "never"
-  },
-  "formatter": "auto",
-  "lsp": {
-    "languageserver-csharp": {
-      "command": "omnisharp"
+    "features": {
+        "inline_completion_provider": "copilot"
     },
-    "roff": {
-      "initialization_options": {
-        "settings": {
-          "lineLength": 80,
-          "lint": {
-            "extendSelect": ["I"]
-          }
+    "chat_panel": {
+        "button": false
+    },
+    "notification_panel": {
+        "button": false
+    },
+    "collaboration_panel": {
+        "button": false
+    },
+    "assistant": {
+        "button": true,
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "claude-3-5-sonnet"
+        },
+        "version": "2",
+        "dock": "right"
+    },
+    "autosave": "on_focus_change",
+    "auto_update": true,
+    "theme": "Catppuccin Macchiato",
+    "telemetry": {
+        "diagnostics": true,
+        "metrics": true
+    },
+    "vim_mode": true,
+    "ui_font_family": "Moralerspace Argon JPDOC",
+    "tab_size": 4,
+    "buffer_font_family": "Moralerspace Xenon HWNF",
+    "indent_guides": {
+        "enabled": true,
+        "coloring": "indent_aware"
+    },
+    "scrollbar": {
+        "show": "never"
+    },
+    "formatter": "auto",
+    "lsp": {
+        "languageserver-csharp": {
+            "command": "omnisharp"
+        },
+        "roff": {
+            "initialization_options": {
+                "settings": {
+                    "lineLength": 80,
+                    "lint": {
+                        "extendSelect": ["I"]
+                    }
+                }
+            }
+        },
+        "typescript-language-server": {
+            "initialization_options": {
+                // These are not supported (VSCode dotted style):
+                // "preferences.strictNullChecks": true,
+                // "preferences.target": "ES2020"
+                //
+                // These is correct (nested notation):
+                "preferences": {
+                    "strictNullChecks": true,
+                    "tab_size": 4
+                }
+            }
         }
-      }
-    }
-  },
-  "inlay_hints": {
-    "enabled": true,
-    "show_type_hints": true,
-    "show_parameter_hints": true,
-    "show_other_hints": true
-  },
-  "languages": {
-    "JavaScript": {
-      "tab_size": 2,
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
+    },
+    "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_parameter_hints": true,
+        "show_other_hints": true
+    },
+    "languages": {
+        "JavaScript": {
+            "tab_size": 4,
+            "formatter": {
+                "external": {
+                    "command": "prettier",
+                    "arguments": [
+                        "--stdin-filepath",
+                        "{buffer_path}",
+                        "--tab-width 4"
+                    ]
+                }
+            }
+        },
+        "TypeScript": {
+            "tab_size": 4,
+            "inlay_hints": {
+                "show_parameter_hints": true
+            },
+            "formatter": {
+                "external": {
+                    "command": "prettier",
+                    "arguments": [
+                        "--stdin-filepath",
+                        "{buffer_path}",
+                        "--tab-width 4"
+                    ]
+                }
+            }
+        },
+        "Python": {
+            "language_servers": ["ruff"]
         }
-      }
     },
-    "TypeScript": {
-      "inlay_hints": {
-        "show_parameter_hints": true
-      }
+    "terminal": {
+        "font_family": "Moralerspace Krypton HWNF",
+        "font_size": 14
     },
-    "Python": {
-      "language_servers": ["ruff"]
+    "jupyter": {
+        "kernel_selections": {
+            "typescript": "deno",
+            "javascript": "deno",
+            "r": "ark"
+        }
     }
-  },
-  "terminal": {
-    "font_family": "Moralerspace Krypton HWNF",
-    "font_size": 14
-  },
-  "jupyter": {
-    "kernel_selections": {
-      "typescript": "deno",
-      "javascript": "deno",
-      "r": "ark"
-    }
-  }
 }

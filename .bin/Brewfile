@@ -12,6 +12,7 @@ tap "jesseduffield/lazygit"
 tap "k1low/tap"
 tap "modularml/packages"
 tap "mtgto/macskk"
+tap "swiftwasm/tap"
 tap "tk04/tap"
 # Run your GitHub Actions locally
 brew "act"
@@ -69,6 +70,8 @@ brew "duckdb"
 brew "duf"
 # More intuitive version of du in rust
 brew "dust"
+# Select default apps for documents and URL schemes on macOS
+brew "duti"
 # DVD-authoring toolset
 brew "dvdauthor"
 # Perl lib for reading and writing EXIF metadata
@@ -135,6 +138,10 @@ brew "handbrake"
 brew "helix"
 # Improved top (interactive process viewer)
 brew "htop"
+# Platform built on V8 to build network applications
+brew "node"
+# Simple zero-configuration command-line HTTP server
+brew "http-server"
 # Configurable static site generator
 brew "hugo"
 # Command-line benchmarking tool
@@ -173,8 +180,6 @@ brew "lsd"
 brew "lynx"
 # Apple Silicon Monitor Top written in Golang
 brew "mactop"
-# Platform built on V8 to build network applications
-brew "node"
 # Easily convert Marp Markdown files into static HTML/CSS, PDF, PPT and images
 brew "marp-cli"
 # Mac App Store command-line interface
@@ -191,6 +196,8 @@ brew "micro"
 brew "mint"
 # Mac command-line tool that automatically downloads macOS Firmwares / Installers
 brew "mist-cli"
+# Cross platform, open source .NET development framework
+brew "mono"
 # Free (GNU) replacement for the Pico text editor
 brew "nano"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -199,8 +206,8 @@ brew "neovim"
 brew "ninja"
 # Network Kanji code conversion Filter (NKF)
 brew "nkf"
-# Node.js version manager
-brew "nodebrew"
+# Platform built on V8 to build network applications
+brew "node@22"
 # Open source suite of directory software
 brew "openldap"
 # OpenBSD freely-licensed SSH connectivity tools
@@ -215,6 +222,8 @@ brew "pinentry-mac"
 brew "pkl"
 # PNG image optimizing utility
 brew "pngquant"
+# Fast, disk space efficient package manager
+brew "pnpm"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
 # Modern replacement for ps written in Rust
@@ -251,6 +260,8 @@ brew "shellcheck"
 brew "sl"
 # Prometheus SLO generator
 brew "sloth"
+# Ruby language server
+brew "solargraph"
 # Opinionated Lua code formatter
 brew "stylua"
 # Version control system designed to be a better CVS
@@ -329,6 +340,8 @@ brew "jesseduffield/lazygit/lazygit"
 brew "k1low/tap/tbls"
 # Modular developer CLI tool
 brew "modularml/packages/modular"
+# Watcher, bundler, and test runner for your SwiftWasm apps
+brew "swiftwasm/tap/carton"
 # Stand alone ad blocker
 cask "adguard"
 # VPN for privacy and security
@@ -388,6 +401,8 @@ cask "chatgpt"
 cask "chromedriver"
 # Free and open-source web browser
 cask "chromium"
+# Anthropic's official Claude AI desktop app
+cask "claude"
 # Code editor
 cask "codeedit"
 # Multi-language programming editor
@@ -400,8 +415,6 @@ cask "coteditor"
 cask "crossover"
 # UI for creating Windows installer ISO from UUPDump
 cask "crystalfetch"
-# Write, edit, and chat about your code with AI
-cask "cursor"
 # Server and cloud storage browser
 cask "cyberduck"
 # Browser for SQLite databases
@@ -458,6 +471,8 @@ cask "font-source-code-pro"
 cask "font-yusei-magic"
 # 3D parametric modeller
 cask "freecad"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Free and open-source image editor
 cask "gimp"
 # Desktop client for GitHub repositories
@@ -713,144 +728,32 @@ cask "xquartz"
 cask "zed"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "Actions", id: 1586435171
-mas "Affinity Designer 2", id: 1616831348
-mas "Affinity Photo 2", id: 1616822987
-mas "Affinity Publisher 2", id: 1606941598
-mas "Baking Soda", id: 1601151613
-mas "Balatro+", id: 6502451661
-mas "Blackmagic RAW Player", id: 1435415804
-mas "Blackmagic RAW Speed Test", id: 1466185689
-mas "Bluebird", id: 1478757472
-mas "Boop", id: 1518425043
-mas "Bushel", id: 1642807785
-mas "ByeGraph", id: 6467188044
-mas "Capo", id: 696977615
-mas "Codye", id: 1516894961
-mas "Collections", id: 1568395334
-mas "Color Picker", id: 1545870783
-mas "Command X", id: 6448461551
-mas "Compressor", id: 424390742
-mas "Craft", id: 1487937127
-mas "DaisyDisk", id: 411643860
-mas "DaVinci Resolve", id: 571213070
-mas "Developer", id: 640199958
-mas "DevHub", id: 6476452351
-mas "Drafts", id: 1435957248
-mas "DuckDuckGo Privacy for Safari", id: 1482920575
-mas "Eagle for Safari", id: 1526651672
-mas "egword Universal 2", id: 1272842196
-mas "Enchanted", id: 6474268307
-mas "Encrypto", id: 935235287
-mas "Expenses", id: 1492055171
-mas "Final Cut Pro", id: 424389933
-mas "FirstSeed Calendar", id: 1348617240
-mas "FirstSeed Tasks", id: 1627018604
-mas "GeoGebra Classic 6", id: 1182481622
-mas "Gifski", id: 1351639930
-mas "Goodnotes", id: 1444383602
-mas "Helm", id: 1099472017
-mas "HextEdit", id: 1557247094
-mas "Hush", id: 1544743900
-mas "Hyperduck", id: 6444667067
-mas "iA Writer", id: 775737590
-mas "Just Press Record", id: 1033342465
-mas "JuxtaText", id: 6504801865
-mas "Keepa - Price Tracker", id: 1533805339
-mas "Keynote", id: 409183694
-mas "Kindle", id: 302584613
-mas "LadioCast", id: 411213048
-mas "LINE", id: 539883307
-mas "Lockera Widgets", id: 6466819847
-mas "Logic Pro", id: 634148309
-mas "MachineProfile", id: 530194517
-mas "Mactracker", id: 430255202
-mas "MainStage", id: 634159523
-mas "Memento", id: 1200227397
-mas "Mercury", id: 1621800675
-mas "Mini Metro+", id: 1550663539
-mas "Mini Motorways", id: 1456188526
-mas "Momentum", id: 1564329434
-mas "Money Pro", id: 972572731
-mas "Motion", id: 434290957
-mas "Multi Page Print", id: 6443749435
-mas "NotesHub", id: 1621210753
-mas "Numbers", id: 409203825
-mas "Omnivore", id: 1564031042
-mas "OneDrive", id: 823766827
-mas "Online Check", id: 6504709660
-mas "Pages", id: 409201541
-mas "Pastel", id: 413897608
-mas "Patterns", id: 429449079
-mas "People翻訳", id: 6451377502
-mas "Perplexity", id: 6714467650
-mas "Photomator", id: 1444636541
-mas "Physics 101", id: 435293897
-mas "Physics Latex Editor", id: 6453889446
-mas "Piccolo", id: 1561230039
-mas "Pixelmator Pro", id: 1289583905
-mas "Playgrounds", id: 1496833156
-mas "Plot2", id: 846509360
-mas "Poolsuite FM", id: 1514817810
-mas "Prime Video", id: 545519333
-mas "QuickFTP", id: 1451646819
-mas "QuickMIDI", id: 1459790045
-mas "School", id: 1465687472
-mas "Scratchpad", id: 6504040051
-mas "ScreenToLayers", id: 1077317077
-mas "Secrets", id: 1591056366
-mas "shakepin", id: 6599856142
-mas "Shareful", id: 1522267256
-mas "Showdown", id: 6504288864
-mas "Snap Converter", id: 431094796
-mas "SnippetsLab", id: 1006087419
-mas "sort.photos: AI Photo and PDF Renamer", id: 6480457357
-mas "Spark Desktop", id: 6445813049
-mas "stone", id: 1230288277
-mas "Structured", id: 1499198946
-mas "Tailscale", id: 1475387142
-mas "Telegram", id: 747648890
-mas "Teleprompter", id: 6463623914
-mas "TestFlight", id: 899247664
-mas "Things", id: 904280696
-mas "TimeDeposit", id: 6445899149
-mas "Transporter", id: 1450874784
-mas "Twitter", id: 1482454543
-mas "Upsies", id: 6475957299
-mas "URL Linker", id: 1289119450
-mas "Usage", id: 1561788435
-mas "Velja", id: 1607635845
-mas "Vinegar", id: 1591303229
-mas "virtualOS", id: 1614659226
-mas "VirusBarrier Scanner", id: 1200445649
-mas "waifu2x", id: 1286485858
-mas "Wavebar", id: 6450398808
-mas "WiFi Signal Strength Explorer", id: 1177934624
-mas "Windows App", id: 1295203466
-mas "Yoink", id: 457622435
-mas "ちゃちゃっとリネーマー", id: 6462363612
-mas "六法", id: 1272669652
-mas "辞書 by 物書堂", id: 1380563956
+vscode "42crunch.vscode-openapi"
 vscode "aaron-bond.better-comments"
 vscode "adpyke.codesnap"
 vscode "amazonwebservices.codewhisperer-for-command-line-companion"
 vscode "astro-build.astro-vscode"
 vscode "atommaterial.a-file-icon-vscode"
+vscode "austenc.tailwind-docs"
+vscode "betterthantomorrow.calva"
+vscode "betterthantomorrow.calva-spritz"
 vscode "bierner.markdown-mermaid"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
+vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
 vscode "continue.continue"
-vscode "cweijan.vscode-office"
 vscode "dart-code.dart-code"
 vscode "dart-code.flutter"
 vscode "dioxuslabs.dioxus"
+vscode "dsznajder.es7-react-js-snippets"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
 vscode "formulahendry.code-runner"
 vscode "github.codespaces"
 vscode "github.copilot"
 vscode "github.copilot-chat"
+vscode "github.remotehub"
 vscode "github.vscode-pull-request-github"
 vscode "ibm.output-colorizer"
 vscode "janisdd.vscode-edit-csv"
@@ -879,28 +782,38 @@ vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode-remote.vscode-remote-extensionpack"
+vscode "ms-vscode.azure-repos"
 vscode "ms-vscode.cmake-tools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.hexeditor"
+vscode "ms-vscode.live-server"
 vscode "ms-vscode.mono-debug"
 vscode "ms-vscode.remote-explorer"
+vscode "ms-vscode.remote-repositories"
 vscode "ms-vscode.remote-server"
 vscode "ms-vscode.vscode-typescript-next"
 vscode "mtxr.sqltools"
 vscode "oderwat.indent-rainbow"
+vscode "prisma.prisma"
 vscode "qwtel.sqlite-viewer"
+vscode "redhat.vscode-yaml"
 vscode "reditorsupport.r"
 vscode "rust-lang.rust-analyzer"
 vscode "shardulm94.trailing-spaces"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "shopify.ruby-lsp"
+vscode "sourcegraph.cody-ai"
 vscode "sswg.swift-lang"
+vscode "supabase.vscode-supabase-extension"
 vscode "tauri-apps.tauri-vscode"
 vscode "tomoki1207.pdf"
+vscode "tyriar.lorem-ipsum"
+vscode "unifiedjs.vscode-mdx"
 vscode "vadimcn.vscode-lldb"
 vscode "visualstudioexptteam.intellicode-api-usage-examples"
 vscode "visualstudioexptteam.vscodeintellicode"
+vscode "vitest.explorer"
 vscode "vknabel.vscode-apple-swift-format"
 vscode "vknabel.vscode-swiftformat"
 vscode "ziglang.vscode-zig"
