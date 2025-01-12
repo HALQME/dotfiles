@@ -1,0 +1,27 @@
+font-family= Moralerspace Radon HW Regular
+font-size=14
+
+theme = catppuccin-mocha
+background-opacity = 0.8
+background-blur-radius = 3
+cursor-style=block_hollow
+
+window-padding-x = 5
+window-padding-y = 2
+window-height=38
+window-width=113
+initial-window=true
+window-decoration = true
+macos-titlebar-style = tabs
+macos-non-native-fullscreen = true
+
+resize-overlay=always
+window-step-resize=true
+
+quit-after-last-window-closed=false
+confirm-close-surface=false
+
+shell-integration=zsh
+macos-auto-secure-input=true
+
+keybind = command+shift+f=toggle_fullscreen
