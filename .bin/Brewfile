@@ -202,8 +202,6 @@ brew "pinentry-mac"
 brew "pkl"
 # PNG image optimizing utility
 brew "pngquant"
-# Fast, disk space efficient package manager
-brew "pnpm"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
 # Modern replacement for ps written in Rust
@@ -298,6 +296,8 @@ brew "zbar"
 brew "zig"
 # Language Server for Zig
 brew "zls"
+# UNIX shell (command interpreter)
+brew "zsh"
 # Feature-rich syntax highlighting for Zsh
 brew "zsh-fast-syntax-highlighting"
 # Informative git prompt for zsh
@@ -334,8 +334,6 @@ cask "affinity-publisher"
 cask "amazon-photos"
 # AI-powered productivity tool for the command-line
 cask "amazon-q"
-# Transfer files from and to an Android smartphone
-cask "android-file-transfer"
 # Local-first and end-to-end encrypted notes app
 cask "anytype"
 # Inspect application bundles
@@ -370,6 +368,8 @@ cask "burn"
 cask "chatgpt"
 # Automated testing of webapps for Google Chrome
 cask "chromedriver"
+# Tool to remove unnecessary files and folders from disk
+cask "cleanmymac"
 # Code editor
 cask "codeedit"
 # Multi-language programming editor
@@ -378,8 +378,6 @@ cask "coderunner"
 cask "coteditor"
 # Tool to run Windows software
 cask "crossover"
-# UI for creating Windows installer ISO from UUPDump
-cask "crystalfetch"
 # Server and cloud storage browser
 cask "cyberduck"
 # Trains AIs to understand and translate texts
@@ -400,12 +398,8 @@ cask "drawio"
 cask "dropbox"
 # Web browser focusing on privacy
 cask "duckduckgo"
-# Find files, folders, or contents in any file
-cask "easyfind"
 # Launcher for *Epic Games* games
 cask "epic-games"
-# Status monitoring
-cask "eul"
 # Network scanner
 cask "fing"
 # Web browser
@@ -421,8 +415,6 @@ cask "font-moralerspace-nf"
 cask "font-plemol-jp-nf"
 # 3D parametric modeller
 cask "freecad"
-# Terminal emulator that uses platform-native UI and GPU acceleration
-cask "ghostty"
 # Desktop client for GitHub repositories
 cask "github"
 # Web browser
@@ -503,10 +495,10 @@ cask "obs"
 cask "obs-advanced-scene-switcher"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Organise all your reference images in one place
+cask "ogdesign-eagle"
 # Get up and running with large language models locally
 cask "ollama"
-# Securely and anonymously share files, host websites, and chat with friends
-cask "onionshare"
 # Document editor
 cask "onlyoffice"
 # Replacement for Docker Desktop
@@ -519,16 +511,12 @@ cask "popclip"
 cask "popsql"
 # Sound, video and lighting control
 cask "qlab"
-# Quick Look generator for Markdown files
-cask "qlmarkdown"
 # HTTP client that helps testing and describing APIs
 cask "rapidapi"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Window snapping tool
 cask "rectangle-pro"
-# Spaced-repetition powered note-taking tool
-cask "remnote"
 # Data science software focusing on R and Python
 cask "rstudio"
 # Notepad software
@@ -561,8 +549,6 @@ cask "textsniper"
 cask "thunderbird"
 # Web browser focusing on security
 cask "tor-browser"
-# Open-source BitTorrent client
-cask "transmission"
 # Virtual machines UI using QEMU
 cask "utm"
 # Virtualization tool
@@ -573,6 +559,8 @@ cask "visual-studio-code"
 cask "vivaldi"
 # Create, manage, and run virtual machines
 cask "vmware-fusion"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
 # Wine wrapper built with SwiftUI
 cask "whisky"
 # Install and switch between multiple versions of Xcode
@@ -584,6 +572,7 @@ cask "zed"
 vscode "42crunch.vscode-openapi"
 vscode "aaron-bond.better-comments"
 vscode "adpyke.codesnap"
+vscode "amazonwebservices.codewhisperer-for-command-line-companion"
 vscode "astro-build.astro-vscode"
 vscode "atommaterial.a-file-icon-vscode"
 vscode "austenc.tailwind-docs"
