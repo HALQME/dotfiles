@@ -1,1 +1,0 @@
-/Users/miharu.k/fig-export/dotfiles/dotfile.fish
