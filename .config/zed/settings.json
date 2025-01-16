@@ -25,8 +25,8 @@
     "assistant": {
         "button": true,
         "default_model": {
-            "provider": "copilot_chat",
-            "model": "claude-3-5-sonnet"
+            "provider": "ollama",
+            "model": "phi4:latest"
         },
         "version": "2",
         "dock": "right"
