@@ -26,7 +26,7 @@
         "button": true,
         "default_model": {
             "provider": "ollama",
-            "model": "phi4:latest"
+            "model": "phi4-cline:latest"
         },
         "version": "2",
         "dock": "right"
