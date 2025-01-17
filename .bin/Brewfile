@@ -70,8 +70,6 @@ brew "felinks"
 brew "ffmpeg"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
-# User-friendly command-line shell for UNIX-like operating systems
-brew "fish"
 # Command-line outline and bitmap font editor/converter
 brew "fontforge"
 # Infamous electronic fortune-cookie generator
@@ -429,6 +427,8 @@ cask "gstreamer-runtime"
 cask "heroic"
 # Testing client for REST, GraphQL, and HTTP APIs
 cask "httpie"
+# Chat client for models on HuggingFace
+cask "huggingchat"
 # All-in-One Project Management Platform
 cask "huly"
 # Create presentation slides from a Markdown document
@@ -497,6 +497,8 @@ cask "obsidian"
 cask "ogdesign-eagle"
 # Get up and running with large language models locally
 cask "ollama"
+# Interact with Ollama models
+cask "ollamac"
 # Document editor
 cask "onlyoffice"
 # Replacement for Docker Desktop
@@ -545,6 +547,8 @@ cask "suspicious-package"
 cask "syntax-highlight"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
+# LaTeX and TeX editor and previewer
+cask "texshop"
 # Extract text from images and other digital documents
 cask "textsniper"
 # Customizable email client
@@ -571,6 +575,57 @@ cask "xcodes"
 cask "xquartz"
 # Multiplayer code editor
 cask "zed"
+mas "Bluebird", id: 1478757472
+mas "ByeGraph", id: 6467188044
+mas "Codye", id: 1516894961
+mas "Compressor", id: 424390742
+mas "Craft", id: 1487937127
+mas "DaisyDisk", id: 411643860
+mas "DaVinci Resolve", id: 571213070
+mas "egword Universal 2", id: 1272842196
+mas "Expenses", id: 1492055171
+mas "Final Cut Pro", id: 424389933
+mas "FirstSeed Calendar", id: 1348617240
+mas "FirstSeed Tasks", id: 1627018604
+mas "Goodnotes", id: 1444383602
+mas "Hyperduck", id: 6444667067
+mas "iA Writer", id: 775737590
+mas "Keynote", id: 409183694
+mas "LadioCast", id: 411213048
+mas "LINE", id: 539883307
+mas "Logic Pro", id: 634148309
+mas "MainStage", id: 634159523
+mas "Mercury", id: 1621800675
+mas "Momentum", id: 1564329434
+mas "Money Pro", id: 972572731
+mas "Motion", id: 434290957
+mas "NotesHub", id: 1621210753
+mas "Numbers", id: 409203825
+mas "OneDrive", id: 823766827
+mas "Pages", id: 409201541
+mas "Patterns", id: 429449079
+mas "Perplexity", id: 6714467650
+mas "Photomator", id: 1444636541
+mas "Pixelmator Pro", id: 1289583905
+mas "Prime Video", id: 545519333
+mas "Proofread AI", id: 6705131596
+mas "Secrets", id: 1591056366
+mas "Shareful", id: 1522267256
+mas "Shazam", id: 897118787
+mas "SnippetsLab", id: 1006087419
+mas "Spark Desktop", id: 6445813049
+mas "stone", id: 1230288277
+mas "Structured", id: 1499198946
+mas "Tailscale", id: 1475387142
+mas "Telegram", id: 747648890
+mas "TestFlight", id: 899247664
+mas "Things", id: 904280696
+mas "Transcribe", id: 1434184098
+mas "Usage", id: 1561788435
+mas "Velja", id: 1607635845
+mas "Yata", id: 1631370175
+mas "Yoink", id: 457622435
+mas "辞書 by 物書堂", id: 1380563956
 vscode "42crunch.vscode-openapi"
 vscode "aaron-bond.better-comments"
 vscode "adpyke.codesnap"
@@ -585,7 +640,7 @@ vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
 vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
-vscode "continue.continue"
+vscode "coolcline.coolcline"
 vscode "dart-code.dart-code"
 vscode "dart-code.flutter"
 vscode "dioxuslabs.dioxus"
@@ -599,13 +654,16 @@ vscode "github.copilot-chat"
 vscode "github.remotehub"
 vscode "github.vscode-pull-request-github"
 vscode "ibm.output-colorizer"
+vscode "james-yu.latex-workshop"
 vscode "janisdd.vscode-edit-csv"
 vscode "jebbs.plantuml"
 vscode "jrebocho.vscode-random"
+vscode "mammothb.gnuplot"
 vscode "marp-team.marp-vscode"
-vscode "mathematic.vscode-latex"
 vscode "modular-mojotools.vscode-mojo"
 vscode "mohammadbaqer.better-folding"
+vscode "mr-konn.catex"
+vscode "mr-konn.generic-input-method"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-ceintl.vscode-language-pack-ja"
 vscode "ms-dotnettools.csdevkit"
@@ -650,7 +708,7 @@ vscode "sourcegraph.cody-ai"
 vscode "sswg.swift-lang"
 vscode "supabase.vscode-supabase-extension"
 vscode "tauri-apps.tauri-vscode"
-vscode "tomoki1207.pdf"
+vscode "torn4dom4n.latex-support"
 vscode "twxs.cmake"
 vscode "tyriar.lorem-ipsum"
 vscode "unifiedjs.vscode-mdx"
