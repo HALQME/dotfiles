@@ -176,6 +176,8 @@ brew "mint"
 brew "mist-cli"
 # Cross platform, open source .NET development framework
 brew "mono"
+# GDI+-compatible API on non-Windows operating systems
+brew "mono-libgdiplus"
 # Free (GNU) replacement for the Pico text editor
 brew "nano"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -190,6 +192,8 @@ brew "openldap"
 brew "openssh"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# Utility which converts PDF files into HTML and XML formats
+brew "pdftohtml"
 # General-purpose scripting language
 brew "php"
 # Pinentry for GPG on Mac
@@ -390,8 +394,6 @@ cask "discord"
 cask "dotnet-sdk@8"
 # Online diagram software
 cask "drawio"
-# Client for the Dropbox cloud storage service
-cask "dropbox"
 # Web browser focusing on privacy
 cask "duckduckgo"
 # Launcher for *Epic Games* games
@@ -631,20 +633,12 @@ vscode "aaron-bond.better-comments"
 vscode "adpyke.codesnap"
 vscode "amazonwebservices.codewhisperer-for-command-line-companion"
 vscode "astro-build.astro-vscode"
-vscode "atommaterial.a-file-icon-vscode"
-vscode "austenc.tailwind-docs"
-vscode "betterthantomorrow.calva"
-vscode "betterthantomorrow.calva-spritz"
 vscode "bierner.markdown-mermaid"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
-vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
 vscode "coolcline.coolcline"
-vscode "dart-code.dart-code"
-vscode "dart-code.flutter"
 vscode "dioxuslabs.dioxus"
-vscode "dsznajder.es7-react-js-snippets"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
 vscode "formulahendry.code-runner"
@@ -703,7 +697,6 @@ vscode "qwtel.sqlite-viewer"
 vscode "redhat.vscode-yaml"
 vscode "reditorsupport.r"
 vscode "shardulm94.trailing-spaces"
-vscode "shopify.ruby-lsp"
 vscode "sourcegraph.cody-ai"
 vscode "sswg.swift-lang"
 vscode "supabase.vscode-supabase-extension"
