@@ -33,7 +33,7 @@
     },
     "autosave": "on_focus_change",
     "auto_update": true,
-    "theme": "Catppuccin Macchiato",
+    "theme": "Catppuccin Frappé",
     "telemetry": {
         "diagnostics": true,
         "metrics": true
