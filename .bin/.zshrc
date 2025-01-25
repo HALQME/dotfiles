@@ -179,6 +179,7 @@ alias lg="lazygit"
 alias mkdir="mkdir -p"
 alias mv='mv -i'
 alias mp='multipass'
+alias pdftohtml='pdftohtml -enc UTF-8 -noframes'
 alias python="python3"
 alias rm='rm -i'
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
