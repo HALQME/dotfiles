@@ -286,8 +286,6 @@ brew "wireguard-go"
 brew "xauth"
 # Generate your Xcode project from a spec file and your folder structure
 brew "xcodegen"
-# Best command-line tool to install and switch between multiple versions of Xcode
-brew "xcodes"
 # Friendly and fast tool for sending HTTP requests
 brew "xh"
 # Feature-rich command-line audio/video downloader
@@ -483,6 +481,8 @@ cask "motrix"
 cask "musescore"
 # Multi-file renaming tool
 cask "name-mangler"
+# Allows video downloads from the Web
+cask "netdownloadhelpercoapp"
 # Free and open-source RSS reader
 cask "netnewswire"
 # Handy utility to manage and customize the notch area
@@ -507,6 +507,8 @@ cask "onlyoffice"
 cask "orbstack"
 # Mimic the aesthetic of ray-oscilloscopes
 cask "oscilloscope"
+# Utility to uninstall apps and remove leftover files from old/uninstalled apps
+cask "pearcleaner"
 # Used to access context-specific actions when text is selected
 cask "popclip"
 # Collaborative SQL editor
@@ -571,8 +573,6 @@ cask "vmware-fusion"
 cask "wezterm"
 # Wine wrapper built with SwiftUI
 cask "whisky"
-# Install and switch between multiple versions of Xcode
-cask "xcodes"
 # Open-source version of the X.Org X Window System
 cask "xquartz"
 # Multiplayer code editor
@@ -625,6 +625,7 @@ mas "Things", id: 904280696
 mas "Transcribe", id: 1434184098
 mas "Usage", id: 1561788435
 mas "Velja", id: 1607635845
+mas "Xcode", id: 497799835
 mas "Yata", id: 1631370175
 mas "Yoink", id: 457622435
 mas "辞書 by 物書堂", id: 1380563956
