@@ -311,5 +311,6 @@
     "r.lsp.debug": true,
     "vscode-pets.petColor": "gray",
     "vscode-pets.petSize": "small",
-    "vscode-pets.throwBallWithMouse": true
+    "vscode-pets.throwBallWithMouse": true,
+    "chat.editing.confirmEditRequestRemoval": false
 }
