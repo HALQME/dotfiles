@@ -7,11 +7,6 @@
         }
     },
     {
-        "context": "Editor",
-        "bindings": {
-            "%": [
-                "editor::MatchBrace"
-            ]
-        }
+        "context": "Editor"
     }
 ]

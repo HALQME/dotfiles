@@ -11,10 +11,10 @@
         "dock": "right"
     },
     "features": {
-        "inline_completion_provider": "copilot"
+        "edit_prediction_provider": "zed"
     },
     "chat_panel": {
-        "button": false
+        "button": "never"
     },
     "notification_panel": {
         "button": false
@@ -25,8 +25,8 @@
     "assistant": {
         "button": true,
         "default_model": {
-            "provider": "ollama",
-            "model": "phi4-cline:latest"
+            "provider": "copilot_chat",
+            "model": "o1"
         },
         "version": "2",
         "dock": "right"
