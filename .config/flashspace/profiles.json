@@ -1,0 +1,145 @@
+{
+  "profiles" : [
+    {
+      "id" : "DED4BAEB-AB62-4FF4-BD2F-91D6B89F6E43",
+      "name" : "Default",
+      "workspaces" : [
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.vivaldi.Vivaldi",
+              "iconPath" : "/Applications/Vivaldi.app/Contents/Resources/app.icns",
+              "name" : "Vivaldi"
+            }
+          ],
+          "display" : "LG HDR 4K",
+          "id" : "797F6AA2-BADC-45D8-94C1-6DE5D9509A6F",
+          "name" : "Home",
+          "symbolIconName" : "house.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "org.mozilla.firefoxdeveloperedition",
+              "iconPath" : "/Applications/Firefox Developer Edition.app/Contents/Resources/firefox.icns",
+              "name" : "Firefox Developer Edition"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.VSCode",
+              "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
+              "name" : "Code"
+            }
+          ],
+          "display" : "LG HDR 4K",
+          "id" : "E8AB0372-0C31-434B-8507-83518F9E3934",
+          "name" : "Coding",
+          "symbolIconName" : "apple.terminal"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "dev.zed.Zed",
+              "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
+              "name" : "Zed"
+            }
+          ],
+          "display" : "LG HDR 4K",
+          "id" : "D60D542A-B84A-4852-A89D-4C4CC5312283",
+          "name" : "Programing",
+          "symbolIconName" : "apple.terminal.on.rectangle.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "company.thebrowser.Browser",
+              "iconPath" : "/Applications/Arc.app/Contents/Resources/AppIcon.icns",
+              "name" : "Arc"
+            }
+          ],
+          "display" : "LG HDR 4K",
+          "id" : "3952AE0C-59C0-418F-B3CE-2C5EC3D8E38F",
+          "name" : "Club",
+          "symbolIconName" : "suit.club.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.google.Chrome",
+              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
+              "name" : "Google Chrome"
+            }
+          ],
+          "display" : "LG HDR 4K",
+          "id" : "D141723B-90EE-4AE0-A54D-39E6F2A7061F",
+          "name" : "Z",
+          "symbolIconName" : "hazardsign.fill"
+        }
+      ]
+    },
+    {
+      "id" : "DCB70B13-67AE-42F9-A0D8-B8130BEDB115",
+      "name" : "University",
+      "workspaces" : [
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.vivaldi.Vivaldi",
+              "iconPath" : "/Applications/Vivaldi.app/Contents/Resources/app.icns",
+              "name" : "Vivaldi"
+            }
+          ],
+          "display" : "LG HDR 4K",
+          "id" : "191FA38B-1AD6-4502-AE6F-9EA9FD0C701A",
+          "name" : "Home",
+          "symbolIconName" : "house.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "org.mozilla.firefoxdeveloperedition",
+              "iconPath" : "/Applications/Firefox Developer Edition.app/Contents/Resources/firefox.icns",
+              "name" : "Firefox Developer Edition"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.VSCode",
+              "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
+              "name" : "Code"
+            }
+          ],
+          "display" : "LG HDR 4K",
+          "id" : "8C34CF76-BE15-4672-AD17-F5133AB9D479",
+          "name" : "Coding",
+          "symbolIconName" : "apple.terminal"
+        },
+        {
+          "apps" : [
+
+          ],
+          "display" : "LG HDR 4K",
+          "id" : "A627098B-6E3D-4439-AA8E-6EDAA058034A",
+          "name" : "Programing",
+          "symbolIconName" : "apple.terminal.on.rectangle.fill"
+        },
+        {
+          "apps" : [
+
+          ],
+          "display" : "LG HDR 4K",
+          "id" : "A1A32350-654A-4B56-8286-41421A32D966",
+          "name" : "Club",
+          "symbolIconName" : "suit.club.fill"
+        },
+        {
+          "apps" : [
+
+          ],
+          "display" : "LG HDR 4K",
+          "id" : "629B2B57-B7FC-45C1-914D-E3259933FB6F",
+          "name" : "Z",
+          "symbolIconName" : "hazardsign.fill"
+        }
+      ]
+    }
+  ],
+  "selectedProfileId" : "DED4BAEB-AB62-4FF4-BD2F-91D6B89F6E43"
+}

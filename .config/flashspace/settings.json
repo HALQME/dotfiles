@@ -1,0 +1,40 @@
+{
+  "centerCursorOnFocusChange" : true,
+  "centerCursorOnWorkspaceChange" : true,
+  "changeWorkspaceOnAppAssign" : false,
+  "checkForUpdatesAutomatically" : true,
+  "enableFocusManagement" : true,
+  "enableIntegrations" : false,
+  "enablePictureInPictureSupport" : true,
+  "enableSpaceControl" : true,
+  "enableSpaceControlAnimations" : true,
+  "floatingApps" : [
+    {
+      "bundleIdentifier" : "com.github.wez.wezterm",
+      "iconPath" : "/Applications/WezTerm.app/Contents/Resources/terminal.icns",
+      "name" : "WezTerm"
+    },
+    {
+      "bundleIdentifier" : "com.apple.Passwords",
+      "iconPath" : "/System/Applications/Passwords.app/Contents/Resources/AppIcon.icns",
+      "name" : "Passwords"
+    }
+  ],
+  "focusDown" : "cmd+down",
+  "focusLeft" : "cmd+left",
+  "focusNextWorkspaceWindow" : "opt+tab",
+  "focusPreviousWorkspaceWindow" : "opt+shift+tab",
+  "focusRight" : "cmd+right",
+  "focusUp" : "cmd+up",
+  "menuBarDisplayAliases" : "",
+  "menuBarTitleTemplate" : "$WORKSPACE",
+  "runScriptOnLaunch" : "",
+  "runScriptOnProfileChange" : "sketchybar --reload",
+  "runScriptOnWorkspaceChange" : "sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
+  "showFloatingNotifications" : true,
+  "showMenuBarTitle" : false,
+  "showSpaceControl" : "ctrl+up",
+  "spaceControlCurrentDisplayWorkspaces" : false,
+  "switchToNextWorkspace" : "ctrl+right",
+  "switchToPreviousWorkspace" : "ctrl+left"
+}
