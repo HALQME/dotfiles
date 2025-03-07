@@ -1,7 +1,7 @@
 {
   "centerCursorOnFocusChange" : true,
   "centerCursorOnWorkspaceChange" : true,
-  "changeWorkspaceOnAppAssign" : false,
+  "changeWorkspaceOnAppAssign" : true,
   "checkForUpdatesAutomatically" : true,
   "enableFocusManagement" : true,
   "enableIntegrations" : false,
@@ -27,7 +27,7 @@
   "focusRight" : "cmd+right",
   "focusUp" : "cmd+up",
   "menuBarDisplayAliases" : "",
-  "menuBarTitleTemplate" : "$WORKSPACE",
+  "menuBarTitleTemplate" : "",
   "runScriptOnLaunch" : "",
   "runScriptOnProfileChange" : "sketchybar --reload",
   "runScriptOnWorkspaceChange" : "sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
@@ -36,5 +36,6 @@
   "showSpaceControl" : "ctrl+up",
   "spaceControlCurrentDisplayWorkspaces" : false,
   "switchToNextWorkspace" : "ctrl+right",
-  "switchToPreviousWorkspace" : "ctrl+left"
+  "switchToPreviousWorkspace" : "ctrl+left",
+  "switchToRecentWorkspace" : "ctrl+down"
 }
