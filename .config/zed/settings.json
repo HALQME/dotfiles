@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+    "icon_theme": "Catppuccin Macchiato",
     "outline_panel": {
         "dock": "right"
     },
@@ -33,7 +34,7 @@
     },
     "autosave": "on_focus_change",
     "auto_update": true,
-    "theme": "Catppuccin Frappé",
+    "theme": "Catppuccin Macchiato",
     "telemetry": {
         "diagnostics": true,
         "metrics": true
