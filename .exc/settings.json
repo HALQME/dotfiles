@@ -156,6 +156,7 @@
   "debug.allowBreakpointsEverywhere": true,
   "debug.terminal.clearBeforeReusing": true,
   "diffEditor.codeLens": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.wordWrap": "off",
   "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
   "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
@@ -184,6 +185,7 @@
   "editor.formatOnType": true,
   "editor.inlayHints.fontFamily": "Moralerspace Neon NF",
   "editor.inlineSuggest.suppressSuggestions": true,
+  "editor.minimap.size": "fit",
   "editor.multiCursorMergeOverlapping": false,
   "editor.renderControlCharacters": true,
   "editor.renderLineHighlight": "none",
@@ -212,13 +214,29 @@
   },
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    ".clinerules": "markdown",
+    ".clinerules-code": "markdown",
+    ".swiftformat": "swift"
+  },
   "files.autoGuessEncoding": true,
   "files.autoSave": "onFocusChange",
+  "geminicodeassist.beta.enableGeneratedCodeDocumentationView": true,
+  "geminicodeassist.codeGenerationPaneViewEnabled": true,
+  "geminicodeassist.project": "",
+  "geminicodeassist.updateChannel": "Default",
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.openRepositoryInParentFolders": "always",
   "github.copilot.advanced": {},
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "github.copilot.chat.edits.temporalContext.enabled": true,
+  "github.copilot.chat.generateTests.codeLens": true,
+  "github.copilot.chat.languageContext.typescript.enabled": true,
+  "github.copilot.chat.newWorkspaceCreation.enabled": true,
+  "github.copilot.chat.search.semanticTextResults": true,
   "github.copilot.enable": {
     "*": true,
     "csharp": false,
@@ -227,6 +245,7 @@
     "plaintext": true,
     "scminput": false
   },
+  "github.copilot.nextEditSuggestions.enabled": true,
   "githubPullRequests.createOnPublishBranch": "never",
   "githubPullRequests.pushBranch": "always",
   "gitlens.advanced.messages": {
@@ -287,6 +306,14 @@
       "protocol": "https"
     }
   },
+  "roo-cline.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
   "rust-analyzer.assist.emitMustUse": true,
   "rust-analyzer.check.command": "clippy",
   "screencastMode.fontSize": 24,
@@ -295,7 +322,10 @@
     "-swift.sanitizer"
   ],
   "swift.diagnostics": true,
+  "swift.diagnosticsCollection": "keepAll",
+  "swift.diagnosticsStyle": "swift",
   "swift.sanitizer": "thread",
+  "swift.searchSubfoldersForPackages": true,
   "swift.sourcekit-lsp.serverPath": "/usr/bin/sourcekit-lsp",
   "swift.sourcekit-lsp.trace.server": "verbose",
   "swiftformat.configSearchPaths": [
@@ -307,6 +337,7 @@
   "terminal.external.windowsExec": "",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.defaultProfile.osx": "bash",
   "terminal.integrated.enableImages": true,
   "terminal.integrated.env.osx": {
     "CW_NEW_SESSION": 1,

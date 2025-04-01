@@ -10,16 +10,22 @@ tap "homebrew/services"
 tap "humansignal/tap"
 tap "jesseduffield/lazygit"
 tap "k1low/tap"
+tap "libsql/sqld"
 tap "modularml/packages"
 tap "mtgto/macskk"
 tap "swiftwasm/tap"
 tap "tk04/tap"
+tap "tursodatabase/tap"
 # Run your GitHub Actions locally
 brew "act"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # General-purpose data compression with high compression ratio
 brew "xz"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
+# Next-gen compiler infrastructure
+brew "llvm"
 # Download with resuming and segmented downloading
 brew "aria2"
 # Aquarium animation in ASCII art
@@ -28,6 +34,8 @@ brew "asciiquarium"
 brew "bashdb"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Backend processor for BibLaTeX
+brew "biber"
 # Yet another cross-platform graphical process/system monitor
 brew "bottom"
 # GNU File, Shell, and Text utilities
@@ -80,8 +88,12 @@ brew "fzf"
 brew "gat"
 # R7RS Scheme implementation, developed to be a handy script interpreter
 brew "gauche"
+# Common error values for all GnuPG components
+brew "libgpg-error"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Geospatial Data Abstraction Library
+brew "gdal"
 # GNOME text editor
 brew "gedit"
 # Nonsense activity generator
@@ -126,8 +138,6 @@ brew "hugo"
 brew "hyperfine"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
-# Install and debug iPhone apps from the command-line
-brew "ios-deploy"
 # Git-compatible distributed version control system
 brew "jj"
 # Lightweight and flexible command-line JSON processor
@@ -140,16 +150,10 @@ brew "latex2html"
 brew "latex2rtf"
 # Compare and mark up LaTeX file differences
 brew "latexdiff"
-# Common error values for all GnuPG components
-brew "libgpg-error"
 # Library to communicate with iOS devices natively
 brew "libimobiledevice"
 # SIXEL encoder/decoder implementation
 brew "libsixel"
-# Linux virtual machines
-brew "lima"
-# Next-gen compiler infrastructure
-brew "llvm"
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Clone of ls with colorful output, file type icons, and more
@@ -170,6 +174,8 @@ brew "mecab-ipadic"
 brew "mediamtx"
 # Modern and intuitive terminal-based text editor
 brew "micro"
+# Run a Kubernetes cluster locally
+brew "minikube"
 # Dependency manager that installs and runs Swift command-line tool packages
 brew "mint"
 # Mac command-line tool that automatically downloads macOS Firmwares / Installers
@@ -192,8 +198,6 @@ brew "openldap"
 brew "openssh"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
-# Utility which converts PDF files into HTML and XML formats
-brew "pdftohtml"
 # General-purpose scripting language
 brew "php"
 # Pinentry for GPG on Mac
@@ -206,8 +210,6 @@ brew "pngquant"
 brew "prettier"
 # Modern replacement for ps written in Rust
 brew "procs"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
 # Password generator
 brew "pwgen"
 # Interpreted, interactive, object-oriented programming language
@@ -270,6 +272,8 @@ brew "tree"
 brew "typescript"
 # Markup-based typesetting system
 brew "typst"
+# Unidata unit conversion library
+brew "udunits"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Vi 'workalike' with many additional features
@@ -318,6 +322,7 @@ brew "jesseduffield/lazygit/lazygit"
 brew "k1low/tap/tbls"
 # Modular developer CLI tool
 brew "modularml/packages/modular"
+brew "tursodatabase/tap/turso"
 # Stand alone ad blocker
 cask "adguard"
 # VPN for privacy and security
@@ -348,6 +353,8 @@ cask "archaeology"
 cask "audacity"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
+# Cross platform SQL editor and database management app
+cask "beekeeper-studio"
 # Tool to customise input devices and automate computer systems
 cask "bettertouchtool"
 # Edit and manage bibliographies
@@ -364,8 +371,12 @@ cask "box-drive"
 cask "burn"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# Text and code editor
+cask "chime"
 # Automated testing of webapps for Google Chrome
 cask "chromedriver"
+# Anthropic's official Claude AI desktop app
+cask "claude"
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
 # Code editor
@@ -402,6 +413,8 @@ cask "fing"
 cask "firefox"
 # Web browser
 cask "firefox@developer-edition"
+# Virtual workspace manager
+cask "flashspace"
 cask "font-moralerspace"
 cask "font-moralerspace-hw"
 cask "font-moralerspace-hw-jpdoc"
@@ -411,6 +424,8 @@ cask "font-moralerspace-nf"
 cask "font-plemol-jp-nf"
 # 3D parametric modeller
 cask "freecad"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Desktop client for GitHub repositories
 cask "github"
 # Web browser
@@ -419,12 +434,16 @@ cask "google-chrome"
 cask "google-drive"
 # Tools to protect your emails and files
 cask "gpg-suite"
+# Genealogy software
+cask "gramps"
 # Open Source Multimedia Framework
 cask "gstreamer-development"
 # Open Source Multimedia Framework
 cask "gstreamer-runtime"
 # Game launcher
 cask "heroic"
+# Allows keymap customization on HHKB HYBRID Type-S and HYBRID models
+cask "hhkb"
 # Testing client for REST, GraphQL, and HTTP APIs
 cask "httpie"
 # Chat client for models on HuggingFace
@@ -455,6 +474,8 @@ cask "keyboardcleantool"
 cask "keyclu"
 # Data visualization and analysis software
 cask "labplot"
+# Open source code editor written in Rust
+cask "lapce"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
 # Controls and monitors all fans on Apple computers
@@ -473,10 +494,16 @@ cask "microsoft-excel"
 cask "microsoft-powerpoint"
 # Word processor
 cask "microsoft-word"
+# Sandbox construction video game
+cask "minecraft"
+# Educational version of Minecraft
+cask "minecraft-education"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # Open-source download manager
 cask "motrix"
+# Orchestrates virtual Ubuntu instances
+cask "multipass"
 # Open-source music notation software
 cask "musescore"
 # Multi-file renaming tool
@@ -497,12 +524,14 @@ cask "obs-advanced-scene-switcher"
 cask "obsidian"
 # Organise all your reference images in one place
 cask "ogdesign-eagle"
-# Get up and running with large language models locally
-cask "ollama"
 # Interact with Ollama models
 cask "ollamac"
 # Document editor
 cask "onlyoffice"
+# Web browser
+cask "opera-air"
+# Web browser
+cask "opera@developer"
 # Replacement for Docker Desktop
 cask "orbstack"
 # Mimic the aesthetic of ray-oscilloscopes
@@ -511,8 +540,6 @@ cask "oscilloscope"
 cask "pearcleaner"
 # Used to access context-specific actions when text is selected
 cask "popclip"
-# Collaborative SQL editor
-cask "popsql"
 # Sound, video and lighting control
 cask "qlab"
 # Quick Look plug-in that renders source code with syntax highlighting
@@ -547,10 +574,14 @@ cask "sublime-merge"
 cask "sublime-text"
 # Application for inspecting installer packages
 cask "suspicious-package"
+# Interior design application
+cask "sweet-home3d"
 # Quicklook extension for source files
 cask "syntax-highlight"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
+# LaTeX editor
+cask "texifier"
 # LaTeX and TeX editor and previewer
 cask "texshop"
 # Extract text from images and other digital documents
@@ -567,6 +598,8 @@ cask "virtualbuddy"
 cask "visual-studio-code"
 # Web browser with built-in email client focusing on customization and control
 cask "vivaldi"
+# Web browser with built-in email client focusing on customization and control
+cask "vivaldi@snapshot"
 # Create, manage, and run virtual machines
 cask "vmware-fusion"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
@@ -577,58 +610,6 @@ cask "whisky"
 cask "xquartz"
 # Multiplayer code editor
 cask "zed"
-mas "Bluebird", id: 1478757472
-mas "ByeGraph", id: 6467188044
-mas "Codye", id: 1516894961
-mas "Compressor", id: 424390742
-mas "Craft", id: 1487937127
-mas "DaisyDisk", id: 411643860
-mas "DaVinci Resolve", id: 571213070
-mas "egword Universal 2", id: 1272842196
-mas "Expenses", id: 1492055171
-mas "Final Cut Pro", id: 424389933
-mas "FirstSeed Calendar", id: 1348617240
-mas "FirstSeed Tasks", id: 1627018604
-mas "Goodnotes", id: 1444383602
-mas "Hyperduck", id: 6444667067
-mas "iA Writer", id: 775737590
-mas "Keynote", id: 409183694
-mas "LadioCast", id: 411213048
-mas "LINE", id: 539883307
-mas "Logic Pro", id: 634148309
-mas "MainStage", id: 634159523
-mas "Mercury", id: 1621800675
-mas "Momentum", id: 1564329434
-mas "Money Pro", id: 972572731
-mas "Motion", id: 434290957
-mas "NotesHub", id: 1621210753
-mas "Numbers", id: 409203825
-mas "OneDrive", id: 823766827
-mas "Pages", id: 409201541
-mas "Patterns", id: 429449079
-mas "Perplexity", id: 6714467650
-mas "Photomator", id: 1444636541
-mas "Pixelmator Pro", id: 1289583905
-mas "Prime Video", id: 545519333
-mas "Proofread AI", id: 6705131596
-mas "Secrets", id: 1591056366
-mas "Shareful", id: 1522267256
-mas "Shazam", id: 897118787
-mas "SnippetsLab", id: 1006087419
-mas "Spark Desktop", id: 6445813049
-mas "stone", id: 1230288277
-mas "Structured", id: 1499198946
-mas "Tailscale", id: 1475387142
-mas "Telegram", id: 747648890
-mas "TestFlight", id: 899247664
-mas "Things", id: 904280696
-mas "Transcribe", id: 1434184098
-mas "Usage", id: 1561788435
-mas "Velja", id: 1607635845
-mas "Xcode", id: 497799835
-mas "Yata", id: 1631370175
-mas "Yoink", id: 457622435
-mas "辞書 by 物書堂", id: 1380563956
 vscode "42crunch.vscode-openapi"
 vscode "aaron-bond.better-comments"
 vscode "adpyke.codesnap"
@@ -636,9 +617,12 @@ vscode "amazonwebservices.codewhisperer-for-command-line-companion"
 vscode "astro-build.astro-vscode"
 vscode "bierner.markdown-mermaid"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
+vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
-vscode "coolcline.coolcline"
+vscode "continue.continue"
+vscode "cweijan.dbclient-jdbc"
+vscode "cweijan.vscode-database-client2"
 vscode "dioxuslabs.dioxus"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
@@ -647,18 +631,19 @@ vscode "github.codespaces"
 vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "github.remotehub"
+vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
+vscode "google.geminicodeassist"
 vscode "ibm.output-colorizer"
 vscode "james-yu.latex-workshop"
 vscode "janisdd.vscode-edit-csv"
 vscode "jebbs.plantuml"
 vscode "jrebocho.vscode-random"
+vscode "luizzak.swifttestfilegen"
 vscode "mammothb.gnuplot"
 vscode "marp-team.marp-vscode"
 vscode "modular-mojotools.vscode-mojo"
 vscode "mohammadbaqer.better-folding"
-vscode "mr-konn.catex"
-vscode "mr-konn.generic-input-method"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-ceintl.vscode-language-pack-ja"
 vscode "ms-dotnettools.csdevkit"
@@ -690,17 +675,17 @@ vscode "ms-vscode.mono-debug"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-repositories"
 vscode "ms-vscode.remote-server"
-vscode "ms-vscode.vscode-typescript-next"
-vscode "mtxr.sqltools"
 vscode "oderwat.indent-rainbow"
+vscode "openai.chatgpt"
 vscode "prisma.prisma"
 vscode "qwtel.sqlite-viewer"
 vscode "redhat.vscode-yaml"
 vscode "reditorsupport.r"
+vscode "rooveterinaryinc.roo-cline"
 vscode "shardulm94.trailing-spaces"
-vscode "sourcegraph.cody-ai"
-vscode "sswg.swift-lang"
-vscode "supabase.vscode-supabase-extension"
+vscode "stripe.markdoc-language-support"
+vscode "sweetpad.sweetpad"
+vscode "swiftlang.swift-vscode"
 vscode "tauri-apps.tauri-vscode"
 vscode "torn4dom4n.latex-support"
 vscode "twxs.cmake"

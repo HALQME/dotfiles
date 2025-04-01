@@ -51,6 +51,11 @@
               "bundleIdentifier" : "com.vivaldi.Vivaldi.snapshot",
               "iconPath" : "/Applications/Vivaldi Snapshot.app/Contents/Resources/app.icns",
               "name" : "Vivaldi Snapshot"
+            },
+            {
+              "bundleIdentifier" : "com.apple.dt.Xcode",
+              "iconPath" : "/Applications/Xcode.app/Contents/Resources/Xcode.icns",
+              "name" : "Xcode"
             }
           ],
           "display" : "LG HDR 4K",
