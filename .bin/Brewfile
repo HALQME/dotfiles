@@ -323,6 +323,10 @@ brew "k1low/tap/tbls"
 # Modular developer CLI tool
 brew "modularml/packages/modular"
 brew "tursodatabase/tap/turso"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line interface for 1Password
+cask "1password-cli"
 # Stand alone ad blocker
 cask "adguard"
 # VPN for privacy and security
