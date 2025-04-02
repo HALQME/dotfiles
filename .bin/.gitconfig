@@ -1,6 +1,7 @@
 [user]
 	name = HAL
 	email = 68320771+HALQME@users.noreply.github.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICo87LAYNrYhv5xPCLFgZedT+hBWUBMJrG3WLW6GFnfM
 [core]
 	excludesfile = ~/.gitignore_global
     fsmonitor = true
@@ -34,6 +35,7 @@
     autocorrect = prompt
 [commit]
     verbose = true
+	gpgsign = true
 [rerere]
     enabled = true
     autoupdate = true
@@ -48,3 +50,7 @@
 	process = git-lfs filter-process
 [merge "our"]
 	driver = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
