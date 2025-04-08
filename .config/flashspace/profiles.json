@@ -112,6 +112,11 @@
               "bundleIdentifier" : "com.google.Chrome",
               "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
               "name" : "Google Chrome"
+            },
+            {
+              "bundleIdentifier" : "notion.id",
+              "iconPath" : "/Applications/Notion.app/Contents/Resources/electron.icns",
+              "name" : "Notion"
             }
           ],
           "display" : "LG HDR 4K",
@@ -137,14 +142,9 @@
               "name" : "Zed"
             },
             {
-              "bundleIdentifier" : "com.sublimemerge",
-              "iconPath" : "/Applications/Sublime Merge.app/Contents/Resources/Sublime Merge.icns",
-              "name" : "Sublime Merge"
-            },
-            {
-              "bundleIdentifier" : "com.sublimetext.4",
-              "iconPath" : "/Applications/Sublime Text.app/Contents/Resources/Sublime Text.icns",
-              "name" : "Sublime Text"
+              "bundleIdentifier" : "com.vivaldi.Vivaldi.snapshot",
+              "iconPath" : "/Applications/Vivaldi Snapshot.app/Contents/Resources/app.icns",
+              "name" : "Vivaldi Snapshot"
             }
           ],
           "display" : "LG HDR 4K",
@@ -168,5 +168,5 @@
       ]
     }
   ],
-  "selectedProfileId" : "DED4BAEB-AB62-4FF4-BD2F-91D6B89F6E43"
+  "selectedProfileId" : "DCB70B13-67AE-42F9-A0D8-B8130BEDB115"
 }
