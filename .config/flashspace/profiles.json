@@ -33,6 +33,11 @@
               "bundleIdentifier" : "com.operasoftware.OperaDeveloper",
               "iconPath" : "/Applications/Opera Developer.app/Contents/Resources/app-developer.icns",
               "name" : "Opera Developer"
+            },
+            {
+              "bundleIdentifier" : "com.vivaldi.Vivaldi.snapshot",
+              "iconPath" : "/Applications/Vivaldi Snapshot.app/Contents/Resources/app.icns",
+              "name" : "Vivaldi Snapshot"
             }
           ],
           "display" : "LG HDR 4K",
