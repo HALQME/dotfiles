@@ -160,7 +160,6 @@ alias d="docker"
 alias datestamp="date +%Y%m%d%H%M%S"
 alias desktop="cd ~/Desktop"
 alias df="df -h"
-alias diff="/Applications/Text\ Differ.app/Contents/MacOS/Text\ Differ"
 alias documents="cd ~/Documents"
 alias dots="cd ~/.dotfiles"
 alias downloads="cd ~/Downloads"
@@ -236,15 +235,23 @@ function pdfmin()
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/miharu.k/.cache/lm-studio/bin"
+export PATH="$PATH:${HOME}/.cache/lm-studio/bin"
 export DOTNET_ROOT="/usr/local/share/dotnet"
 export PATH="$PATH:$DOTNET_ROOT"
 
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="${HOME}/.ghcup/bin:$PATH"
 
+export SWIFTLY_HOME_DIR="${HOME}/.swiftly"
+export SWIFTLY_BIN_DIR="${HOME}/.swiftly/bin"
+if [[ ":$PATH:" != *":$SWIFTLY_BIN_DIR:"* ]]; then
+    export PATH="$SWIFTLY_BIN_DIR:$PATH"
+fi
 
-[ -f "/Users/hal/.ghcup/env" ] && . "/Users/hal/.ghcup/env" # ghcup-env
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
