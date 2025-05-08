@@ -232,6 +232,8 @@ function pdfmin()
     wait && return 0
 }
 
+## OrbStack Completion
+
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 # Added by LM Studio CLI (lms)
@@ -252,6 +254,7 @@ fi
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"

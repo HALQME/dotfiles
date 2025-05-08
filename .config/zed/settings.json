@@ -10,25 +10,15 @@
     "ssh_connections": [
     {
       "host": "orb",
-      "projects": [],
-      "nickname": "openSUSE Tumbleweed"
-    },
-    {
-      "host": "orb",
-      "username": "nix",
+      "username": "admin@debian",
       "projects": [
         {
           "paths": [
-            "/etc"
-          ]
-        },
-        {
-          "paths": [
-            "/home/admin"
+            "~/.bashrc"
           ]
         }
       ],
-      "nickname": "NixOS"
+      "nickname": "debian (amd64)"
     }
   ],
     "icon_theme": "Catppuccin Macchiato",

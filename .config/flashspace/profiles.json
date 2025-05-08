@@ -38,6 +38,11 @@
               "bundleIdentifier" : "com.vivaldi.Vivaldi.snapshot",
               "iconPath" : "/Applications/Vivaldi Snapshot.app/Contents/Resources/app.icns",
               "name" : "Vivaldi Snapshot"
+            },
+            {
+              "bundleIdentifier" : "app.zen-browser.zen",
+              "iconPath" : "/Applications/Zen.app/Contents/Resources/firefox.icns",
+              "name" : "Zen"
             }
           ],
           "display" : "LG HDR 4K",
@@ -61,6 +66,16 @@
               "bundleIdentifier" : "com.apple.dt.Xcode",
               "iconPath" : "/Applications/Xcode.app/Contents/Resources/Xcode.icns",
               "name" : "Xcode"
+            },
+            {
+              "bundleIdentifier" : "app.zen-browser.zen",
+              "iconPath" : "/Applications/Zen.app/Contents/Resources/firefox.icns",
+              "name" : "Zen"
+            },
+            {
+              "bundleIdentifier" : "com.github.CopilotForXcode",
+              "iconPath" : "/Applications/GitHub Copilot for Xcode.app/Contents/Resources/AppIcon.icns",
+              "name" : "GitHub Copilot for Xcode"
             }
           ],
           "display" : "LG HDR 4K",
@@ -172,6 +187,5 @@
         }
       ]
     }
-  ],
-  "selectedProfileId" : "DED4BAEB-AB62-4FF4-BD2F-91D6B89F6E43"
+  ]
 }
