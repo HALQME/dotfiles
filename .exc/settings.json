@@ -323,10 +323,10 @@
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.enableImages": true,
     "terminal.integrated.env.osx": {
-			"CW_NEW_SESSION": 1,
-			"FIG_NEW_SESSION": 1,
-			"Q_NEW_SESSION": "1"
-		},
+        "CW_NEW_SESSION": 1,
+        "FIG_NEW_SESSION": 1,
+        "Q_NEW_SESSION": "1"
+    },
     "terminal.integrated.fontFamily": "Moralerspace Neon HWNF",
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.macOptionClickForcesSelection": true,
@@ -378,7 +378,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.tree.indent": 20,
     "yaml.schemas": {
-        "/Users/hal/.vscode/extensions/continue.continue-1.0.7-darwin-arm64/config-yaml-schema.json": [
+        "~/.vscode/extensions/continue.continue-1.0.7-darwin-arm64/config-yaml-schema.json": [
             ".continue/**/*.yaml"
         ]
     },
