@@ -10,6 +10,11 @@
               "bundleIdentifier" : "com.vivaldi.Vivaldi",
               "iconPath" : "/Applications/Vivaldi.app/Contents/Resources/app.icns",
               "name" : "Vivaldi"
+            },
+            {
+              "bundleIdentifier" : "dev.zed.Zed",
+              "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
+              "name" : "Zed"
             }
           ],
           "display" : "Built-in Retina Display",
@@ -19,44 +24,6 @@
         },
         {
           "apps" : [
-            {
-              "bundleIdentifier" : "com.microsoft.VSCode",
-              "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
-              "name" : "Code"
-            },
-            {
-              "bundleIdentifier" : "org.mozilla.firefoxdeveloperedition",
-              "iconPath" : "/Applications/Firefox Developer Edition.app/Contents/Resources/firefox.icns",
-              "name" : "Firefox Developer Edition"
-            },
-            {
-              "bundleIdentifier" : "com.operasoftware.OperaDeveloper",
-              "iconPath" : "/Applications/Opera Developer.app/Contents/Resources/app-developer.icns",
-              "name" : "Opera Developer"
-            },
-            {
-              "bundleIdentifier" : "com.vivaldi.Vivaldi.snapshot",
-              "iconPath" : "/Applications/Vivaldi Snapshot.app/Contents/Resources/app.icns",
-              "name" : "Vivaldi Snapshot"
-            },
-            {
-              "bundleIdentifier" : "app.zen-browser.zen",
-              "iconPath" : "/Applications/Zen.app/Contents/Resources/firefox.icns",
-              "name" : "Zen"
-            }
-          ],
-          "display" : "LG HDR 4K",
-          "id" : "E8AB0372-0C31-434B-8507-83518F9E3934",
-          "name" : "Coding",
-          "symbolIconName" : "apple.terminal"
-        },
-        {
-          "apps" : [
-            {
-              "bundleIdentifier" : "dev.zed.Zed",
-              "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
-              "name" : "Zed"
-            },
             {
               "bundleIdentifier" : "com.vivaldi.Vivaldi.snapshot",
               "iconPath" : "/Applications/Vivaldi Snapshot.app/Contents/Resources/app.icns",
@@ -76,6 +43,26 @@
               "bundleIdentifier" : "com.github.CopilotForXcode",
               "iconPath" : "/Applications/GitHub Copilot for Xcode.app/Contents/Resources/AppIcon.icns",
               "name" : "GitHub Copilot for Xcode"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.VSCode",
+              "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
+              "name" : "Code"
+            },
+            {
+              "bundleIdentifier" : "com.todesktop.230313mzl4w4u92",
+              "iconPath" : "/Applications/Cursor.app/Contents/Resources/Cursor.icns",
+              "name" : "Cursor"
+            },
+            {
+              "bundleIdentifier" : "com.krill.CodeRunner",
+              "iconPath" : "/Applications/CodeRunner.app/Contents/Resources/CodeRunner.icns",
+              "name" : "CodeRunner"
+            },
+            {
+              "bundleIdentifier" : "dev.zed.Zed",
+              "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
+              "name" : "Zed"
             }
           ],
           "display" : "LG HDR 4K",
@@ -157,14 +144,14 @@
               "name" : "Code"
             },
             {
-              "bundleIdentifier" : "dev.zed.Zed",
-              "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
-              "name" : "Zed"
-            },
-            {
               "bundleIdentifier" : "com.vivaldi.Vivaldi.snapshot",
               "iconPath" : "/Applications/Vivaldi Snapshot.app/Contents/Resources/app.icns",
               "name" : "Vivaldi Snapshot"
+            },
+            {
+              "bundleIdentifier" : "com.todesktop.230313mzl4w4u92",
+              "iconPath" : "/Applications/Cursor.app/Contents/Resources/Cursor.icns",
+              "name" : "Cursor"
             }
           ],
           "display" : "LG HDR 4K",
@@ -184,6 +171,18 @@
           "id" : "A1A32350-654A-4B56-8286-41421A32D966",
           "name" : "Club",
           "symbolIconName" : "suit.club.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.vivaldi.Vivaldi",
+              "iconPath" : "/Applications/Vivaldi.app/Contents/Resources/app.icns",
+              "name" : "Vivaldi"
+            }
+          ],
+          "display" : "Built-in Retina Display",
+          "id" : "D86592F6-8112-4788-9BF5-4E258989D50C",
+          "name" : "Not For Work"
         }
       ]
     }

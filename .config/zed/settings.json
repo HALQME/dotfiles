@@ -7,20 +7,6 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    "ssh_connections": [
-    {
-      "host": "orb",
-      "username": "admin@debian",
-      "projects": [
-        {
-          "paths": [
-            "~/.bashrc"
-          ]
-        }
-      ],
-      "nickname": "debian (amd64)"
-    }
-  ],
     "icon_theme": "Catppuccin Macchiato",
     "outline_panel": {
         "dock": "right"
@@ -37,11 +23,16 @@
     "collaboration_panel": {
         "button": false
     },
-    "assistant": {
+    "agent": {
+        "always_allow_tool_actions": true,
+        "inline_assistant_model": {
+            "provider": "copilot_chat",
+            "model": "claude-sonnet-4"
+        },
         "button": true,
         "default_model": {
-            "provider": "zed.dev",
-            "model": "claude-3-7-sonnet-latest"
+            "provider": "copilot_chat",
+            "model": "claude-sonnet-4"
         },
         "version": "2",
         "dock": "right"
