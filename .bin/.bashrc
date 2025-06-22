@@ -130,3 +130,9 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/bashrc.post.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/bashrc.post.bash"
 
+export PATH=$HOME/.progate/bin:$PATH
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/hal/.lmstudio/bin"
+# End of LM Studio CLI section
+
