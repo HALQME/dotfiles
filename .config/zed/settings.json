@@ -18,7 +18,7 @@
         "button": "never"
     },
     "notification_panel": {
-        "button": false
+        "button": true
     },
     "collaboration_panel": {
         "button": false

@@ -13,33 +13,44 @@
   "enableWorkspaceTransitions" : false,
   "floatingApps" : [
     {
-      "bundleIdentifier" : "com.github.wez.wezterm",
-      "iconPath" : "/Applications/WezTerm.app/Contents/Resources/terminal.icns",
-      "name" : "WezTerm"
+      "bundleIdentifier" : "com.1password.1password",
+      "iconPath" : "/Applications/1Password.app/Contents/Resources/icon.icns",
+      "name" : "1Password"
     },
     {
-      "bundleIdentifier" : "com.apple.Passwords",
-      "iconPath" : "/System/Applications/Passwords.app/Contents/Resources/AppIcon.icns",
-      "name" : "Passwords"
+      "bundleIdentifier" : "com.culturedcode.ThingsMac",
+      "iconPath" : "/Applications/Things3.app/Contents/Resources/App-Release.icns",
+      "name" : "Things"
+    },
+    {
+      "bundleIdentifier" : "com.chabomakers.Antinote",
+      "iconPath" : "/Applications/Antinote.app/Contents/Resources/AppIcon.icns",
+      "name" : "Antinote"
+    },
+    {
+      "bundleIdentifier" : "com.raycast.macos",
+      "iconPath" : "/Applications/Raycast.app/Contents/Resources/AppIcon-Release.icns",
+      "name" : "Raycast"
     }
   ],
   "focusDown" : "cmd+down",
   "focusFrontmostWindow" : false,
   "focusLeft" : "cmd+left",
-  "focusNextWorkspaceWindow" : "opt+tab",
-  "focusPreviousWorkspaceWindow" : "opt+shift+tab",
   "focusRight" : "cmd+right",
   "focusUp" : "cmd+up",
+  "keepUnassignedAppsOnSwitch" : false,
   "menuBarDisplayAliases" : "",
   "menuBarTitleTemplate" : "",
   "pipApps" : [
 
   ],
   "pipScreenCornerOffset" : 15,
+  "restoreHiddenAppsOnSwitch" : true,
   "runScriptOnLaunch" : "",
   "runScriptOnProfileChange" : "sketchybar --reload",
   "runScriptOnWorkspaceChange" : "sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
   "showFloatingNotifications" : true,
+  "showMenuBarIcon" : true,
   "showMenuBarTitle" : false,
   "showSpaceControl" : "ctrl+up",
   "skipEmptyWorkspacesOnSwitch" : false,
