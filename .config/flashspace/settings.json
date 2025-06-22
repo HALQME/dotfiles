@@ -31,6 +31,11 @@
       "bundleIdentifier" : "com.raycast.macos",
       "iconPath" : "/Applications/Raycast.app/Contents/Resources/AppIcon-Release.icns",
       "name" : "Raycast"
+    },
+    {
+      "bundleIdentifier" : "com.raphaelamorim.rio",
+      "iconPath" : "/Applications/rio.app/Contents/Resources/icon.icns",
+      "name" : "Rio"
     }
   ],
   "focusDown" : "cmd+down",
