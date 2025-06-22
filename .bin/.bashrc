@@ -133,6 +133,6 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH=$HOME/.progate/bin:$PATH
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/hal/.lmstudio/bin"
+export PATH="$PATH:${HOME}/.lmstudio/bin"
 # End of LM Studio CLI section
 

@@ -263,6 +263,6 @@ export PATH=$HOME/.progate/bin:$PATH
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/hal/.lmstudio/bin"
+export PATH="$PATH:${HOME}/.lmstudio/bin"
 # End of LM Studio CLI section
 
