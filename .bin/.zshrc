@@ -189,6 +189,7 @@ alias transJa='\trans ja:en -b'
 alias untar="tar -zxvf"
 alias weather="curl wttr.in"
 alias yt-dlp-f="yt-dlp --no-check-certificate"
+alias zj="zellij"
 
 # End of lines configured by zsh-newuser-install
 
