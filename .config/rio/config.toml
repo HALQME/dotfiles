@@ -25,11 +25,11 @@ macos-use-unified-titlebar = false
 content = ""
 
 [renderer]
-# performance = "high"
+performance = "low"
 backend = "Automatic"
-# disable-unfocused-render = false
+disable-unfocused-render = true
 # level = 1
-# filters = []
+# filters = ["newpixiecrt"]
 
 [keyboard]
 use-kitty-keyboard-protocol = true
