@@ -1,19 +1,10 @@
-tap "alienator88/cask"
 tap "apple/apple", "http://github.com/apple/homebrew-apple"
-tap "charmbracelet/tap"
 tap "cirruslabs/cli"
-tap "fsouza/prettierd"
 tap "halqme/versions", "https://github.com/HALQME/homebrew-versions.git"
-tap "hashicorp/tap"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "humansignal/tap"
-tap "k1low/tap"
 tap "libsql/sqld"
 tap "modularml/packages"
-tap "mtgto/macskk"
 tap "r-lib/rig"
-tap "swiftwasm/tap"
 tap "tk04/tap"
 tap "tursodatabase/tap"
 # Run your GitHub Actions locally
@@ -253,7 +244,7 @@ brew "shellcheck"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
 # Prometheus SLO generator
-brew "sloth"
+brew "sloth-cli"
 # Ruby language server
 brew "solargraph"
 # Opinionated Lua code formatter
@@ -324,22 +315,12 @@ brew "zsh"
 brew "zsh-fast-syntax-highlighting"
 # Informative git prompt for zsh
 brew "zsh-git-prompt"
-# Generate images of code and terminal output.
-brew "charmbracelet/tap/freeze"
 # Run macOS and Linux VMs on Apple Hardware
 brew "cirruslabs/cli/tart"
-# prettier, on SPEED!
-brew "fsouza/prettierd/prettierd"
-# Packer
-brew "hashicorp/tap/packer"
 # Multi-type data labeling and annotation tool with standardized output format
 brew "humansignal/tap/label-studio"
-# tbls is a CI-Friendly tool for document a database, written in Go.
-brew "k1low/tap/tbls"
 # Modular developer CLI tool
 brew "modularml/packages/modular"
-# Watcher, bundler, and test runner for your SwiftWasm apps
-brew "swiftwasm/tap/carton"
 brew "tursodatabase/tap/turso"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
@@ -357,6 +338,8 @@ cask "affinity-designer"
 cask "affinity-photo"
 # Professional desktop publishing software
 cask "affinity-publisher"
+# Configure Gatekeeper, unquarantine and self-sign apps
+cask "alienator88-sentinel"
 # Photo storage and sharing service
 cask "amazon-photos"
 # AI-powered productivity tool for the command-line
@@ -421,7 +404,7 @@ cask "crossover"
 cask "cursor"
 # Server and cloud storage browser
 cask "cyberduck"
-# Trains AIs to understand and translate texts
+# AI-powered translator
 cask "deepl"
 # Virtual monitor for screen sharing
 cask "deskpad"
@@ -475,7 +458,7 @@ cask "gstreamer-runtime"
 # Allows keymap customization on HHKB HYBRID Type-S and HYBRID models
 cask "hhkb"
 # Testing client for REST, GraphQL, and HTTP APIs
-cask "httpie"
+cask "httpie-desktop"
 # Chat client for models on HuggingFace
 cask "huggingchat"
 # All-in-One Project Management Platform
@@ -520,8 +503,6 @@ cask "macs-fan-control"
 cask "macskk"
 # Speech recognition tool
 cask "macwhisper"
-# Research management tool
-cask "mendeley"
 # Text editor
 cask "mi"
 # Provides updates to various Microsoft products
@@ -559,7 +540,7 @@ cask "obsidian"
 # Organise all your reference images in one place
 cask "ogdesign-eagle"
 # Get up and running with large language models locally
-cask "ollama"
+cask "ollama-app"
 # Interact with Ollama models
 cask "ollamac"
 # Document editor
@@ -596,8 +577,6 @@ cask "rstudio"
 cask "scapple"
 # Word processing software with a typewriter style
 cask "scrivener"
-# Utility to control Gatekeeper via a GUI
-cask "sentinel-app"
 # Collection of apps available by subscription
 cask "setapp"
 # Screenshot measurement and annotation tool
@@ -650,10 +629,8 @@ cask "visual-studio-code"
 cask "vivaldi"
 # Web browser with built-in email client focusing on customization and control
 cask "vivaldi@snapshot"
-# Create, manage, and run virtual machines
-cask "vmware-fusion"
 # Install and switch between multiple versions of Xcode
-cask "xcodes"
+cask "xcodes-app"
 # Open-source version of the X.Org X Window System
 cask "xquartz"
 # Multiplayer code editor
