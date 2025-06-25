@@ -257,9 +257,6 @@ export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
-
 export PATH=$HOME/.progate/bin:$PATH
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 
@@ -267,3 +264,5 @@ export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 export PATH="$PATH:${HOME}/.lmstudio/bin"
 # End of LM Studio CLI section
 
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
