@@ -8,115 +8,6 @@ notify() {
     fi
 }
 
-os_icon=""
-#brew
-if [ "$(uname -s)" = "Darwin" ]; then
-    os_icon=""
-    typeset -U path PATH
-    os_arch_prompt="%F{6}macOS%f⟨%F{5}$(uname -m)%f⟩"
-    if [ "$(uname -m)" = "arm64" ]; then
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-        path=(
-                /opt/homebrew/bin(N-/)
-                /opt/homebrew/sbin(N-/)
-                /usr/bin
-                /usr/sbin
-                /bin
-                /sbin
-                /usr/local/bin(N-/)
-                /usr/local/sbin(N-/)
-                /Library/Apple/usr/bin
-                ~/.local/bin
-                ~/.cargo/bin
-            )
-    # zsh-syntax-highlighting
-    source $(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-    # zsh-git-prompt
-    source $(brew --prefix)/opt/zsh-git-prompt/zshrc.sh
-    elif [ "$(uname -m)" = "x86_64" ]; then
-        eval "$(/usr/local/bin/brew shellenv)"
-        path=(
-                /usr/local/bin/(N-/)
-                /usr/local/sbin(N-/)
-                /usr/bin
-                /usr/sbin
-                /bin
-                /sbin
-                /Library/Apple/usr/bin
-                /opt/homebrew/bin(N-/)
-                /opt/homebrew/sbin(N-/)
-                $HOME/.local/bin
-                $HOME/.cargo/bin
-            )
-    fi
-elif [ "$(uname -s)" = "Linux" ]; then
-    os_icon=""
-    os_arch_prompt="%F{6}$(uname -s)%f⟨%F{5}$(uname -m)%f⟩"
-    path=(
-            /usr/bin
-            /usr/sbin
-            /bin
-            /sbin
-            ~/.local/bin
-            ~/.cargo/bin
-        )
-    eval "$(/home/linuxbrew/.linuxbrew/Homebrew/bin/brew shellenv)"
-else
-    os_icon=""
-fi
-
-
-recentCommandWas=09
-function checkPreCommandError {
-    if [ $? = 0 ]; then
-        recentCommandWas=4
-    else
-        recentCommandWas=1
-    fi
-}
-# add newline
-function add_line {
-    if [[ -z $PS1_NEWLINE_LOGIN ]]; then
-        PS1_NEWLINE_LOGIN=true
-    else
-        printf '\n'
-    fi
-}
-
-# Promptの設定変更フラグ
-PS1_DISPLAY_MODE=true
-# プロンプトのプレビューモードを切り替える
-function display_mode {
-    if [ "$PS1_DISPLAY_MODE" = true ]; then
-        PS1_DISPLAY_MODE=false
-    else
-        PS1_DISPLAY_MODE=true
-    fi
-}
-
-# git super statusの存在チェック
-function gen_gitstatus {
-    if [ -d "$(brew --prefix)/opt/zsh-git-prompt/" ]; then
-        GIT_STATUS=$(git_super_status)
-    else
-        GIT_STATUS=""
-    fi
-}
-
-# フック
-precmd() {
-    checkPreCommandError
-    gen_gitstatus
-    add_line
-    if [ "$PS1_DISPLAY_MODE" = true ]; then
-        PROMPT="${os_icon} %F{4}%B%n%b%F{15}@%f%F{3}%m%F{7}:%B${os_arch_prompt}%b ${GIT_STATUS}%f%F{250}[%*]
-%F{123}%U %d%u
-%F{$recentCommandWas}❯ %f"
-    else
-        PROMPT="%F{$recentCommandWas}❯ %f"
-    fi
-}
-
 # others
 ## colors
 autoload -Uz colors
@@ -237,8 +128,6 @@ function pdfmin()
 
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:${HOME}/.cache/lm-studio/bin"
 export DOTNET_ROOT="/usr/local/share/dotnet"
 export PATH="$PATH:$DOTNET_ROOT"
 
@@ -260,9 +149,9 @@ export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH=$HOME/.progate/bin:$PATH
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:${HOME}/.lmstudio/bin"
-# End of LM Studio CLI section
-
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(starship init zsh)"
+eval "$(zellij setup --generate-auto-start zsh)"

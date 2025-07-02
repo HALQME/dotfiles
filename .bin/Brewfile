@@ -95,6 +95,10 @@ brew "hdf5"
 brew "gdal"
 # GNOME text editor
 brew "gedit"
+# Platform built on V8 to build network applications
+brew "node"
+# Interact with Google Gemini AI models from the command-line
+brew "gemini-cli"
 # Nonsense activity generator
 brew "genact"
 # GitHub command-line tool
@@ -129,8 +133,6 @@ brew "handbrake"
 brew "helix"
 # Improved top (interactive process viewer)
 brew "htop"
-# Platform built on V8 to build network applications
-brew "node"
 # Simple zero-configuration command-line HTTP server
 brew "http-server"
 # Configurable static site generator
@@ -183,6 +185,8 @@ brew "micro"
 brew "minikube"
 # Dependency manager that installs and runs Swift command-line tool packages
 brew "mint"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # Mac command-line tool that automatically downloads macOS Firmwares / Installers
 brew "mist-cli"
 # Cross platform, open source .NET development framework
@@ -243,10 +247,10 @@ brew "scala"
 brew "shellcheck"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
-# Prometheus SLO generator
-brew "sloth-cli"
 # Ruby language server
 brew "solargraph"
+# Cross-shell prompt for astronauts
+brew "starship"
 # Opinionated Lua code formatter
 brew "stylua"
 # Version control system designed to be a better CVS
@@ -255,6 +259,8 @@ brew "subversion"
 brew "swift-format"
 # Formatting tool for reformatting Swift code
 brew "swiftformat"
+# Swift toolchain installer and manager
+brew "swiftly"
 # Feature-rich console based todo list manager
 brew "task"
 # User interface to the TELNET protocol
@@ -311,10 +317,8 @@ brew "zig"
 brew "zls"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Feature-rich syntax highlighting for Zsh
-brew "zsh-fast-syntax-highlighting"
-# Informative git prompt for zsh
-brew "zsh-git-prompt"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
 # Run macOS and Linux VMs on Apple Hardware
 brew "cirruslabs/cli/tart"
 # Multi-type data labeling and annotation tool with standardized output format
@@ -344,8 +348,6 @@ cask "alienator88-sentinel"
 cask "amazon-photos"
 # AI-powered productivity tool for the command-line
 cask "amazon-q"
-# Temporary notes with calculations and extensible features
-cask "antinote"
 # Local-first and end-to-end encrypted notes app
 cask "anytype"
 # Inspect application bundles
@@ -360,10 +362,6 @@ cask "arc"
 cask "audacity"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
-# App for managing battery charging. (Also installs a CLI on first use.)
-cask "battery"
-# Replacement of the default battery indicator in the menu bar
-cask "battery-buddy"
 # Cross platform SQL editor and database management app
 cask "beekeeper-studio"
 # Tool to customise input devices and automate computer systems
@@ -396,6 +394,8 @@ cask "cleanmymac"
 cask "codeedit"
 # Multi-language programming editor
 cask "coderunner"
+# Create and run Linux containers using lightweight virtual machines
+cask "container"
 # Plain-text editor for web pages, program source codes and more
 cask "coteditor"
 # Tool to run Windows software
@@ -439,24 +439,18 @@ cask "font-moralerspace-hw-nf"
 cask "font-moralerspace-jpdoc"
 cask "font-moralerspace-nf"
 cask "font-plemol-jp-nf"
-# Disk space cleaner that finds and deletes duplicated and similar files
-cask "gemini"
 # Desktop client for GitHub repositories
 cask "github"
 # Web browser
 cask "google-chrome"
 # Client for the Google Drive storage service
 cask "google-drive"
-# Tools to protect your emails and files
-cask "gpg-suite"
 # Genealogy software
 cask "gramps"
 # Open Source Multimedia Framework
 cask "gstreamer-development"
 # Open Source Multimedia Framework
 cask "gstreamer-runtime"
-# Allows keymap customization on HHKB HYBRID Type-S and HYBRID models
-cask "hhkb"
 # Testing client for REST, GraphQL, and HTTP APIs
 cask "httpie-desktop"
 # Chat client for models on HuggingFace
@@ -495,8 +489,6 @@ cask "lapce"
 cask "lm-studio"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
-# Clipboard manager
-cask "maccy"
 # Controls and monitors all fans on Apple computers
 cask "macs-fan-control"
 # SKK Input Method
@@ -543,18 +535,16 @@ cask "ogdesign-eagle"
 cask "ollama-app"
 # Interact with Ollama models
 cask "ollamac"
+# Cloud storage client
+cask "onedrive"
 # Document editor
 cask "onlyoffice"
 # Web browser
 cask "opera-air"
-# Web browser
-cask "opera@developer"
 # Replacement for Docker Desktop
 cask "orbstack"
 # Mimic the aesthetic of ray-oscilloscopes
 cask "oscilloscope"
-# Utility to uninstall apps and remove leftover files from old/uninstalled apps
-cask "pearcleaner"
 # Used to access context-specific actions when text is selected
 cask "popclip"
 # Sound, video and lighting control
@@ -577,46 +567,26 @@ cask "rstudio"
 cask "scapple"
 # Word processing software with a typewriter style
 cask "scrivener"
-# Collection of apps available by subscription
-cask "setapp"
 # Screenshot measurement and annotation tool
 cask "shottr"
 # Instant messaging application focusing on security
 cask "signal"
-# PDF reader and note-taking application
-cask "skim"
 # Team communication and collaboration software
 cask "slack"
-# Application to control your PlayStation 4 or PlayStation 5
-cask "sony-ps-remote-play"
+# Displays all open files and sockets in use by all running processes
+cask "sloth"
 # Notepad with a built-in calculator
 cask "soulver"
 # Open source cross-platform file explorer
 cask "spacedrive"
 # Video game digital distribution service
 cask "steam"
-# Git client
-cask "sublime-merge"
-# Text editor for code, markup and prose
-cask "sublime-text"
 # Application for inspecting installer packages
 cask "suspicious-package"
-# Interior design application
-cask "sweet-home3d"
 # Quicklook extension for source files
 cask "syntax-highlight"
-# Native GUI tool for relational databases
-cask "tableplus"
-# JDK from the Eclipse Foundation (Adoptium)
-cask "temurin"
-# LaTeX editor
-cask "texifier"
-# LaTeX and TeX editor and previewer
-cask "texshop"
 # Extract text from images and other digital documents
 cask "textsniper"
-# Customizable email client
-cask "thunderbird"
 # Web browser focusing on security
 cask "tor-browser"
 # Virtual machines UI using QEMU
@@ -629,26 +599,24 @@ cask "visual-studio-code"
 cask "vivaldi"
 # Web browser with built-in email client focusing on customization and control
 cask "vivaldi@snapshot"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
 # Install and switch between multiple versions of Xcode
 cask "xcodes-app"
-# Open-source version of the X.Org X Window System
-cask "xquartz"
 # Multiplayer code editor
 cask "zed"
 # Gecko based web browser
 cask "zen"
+# Video communication and virtual meeting platform
+cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "AdGuard Mail", id: 6499493699
-mas "Balatro", id: 6502451661
+mas "Baking Soda", id: 1601151613
 mas "Bluebird", id: 1478757472
-mas "ByeGraph", id: 6467188044
 mas "Codye", id: 1516894961
 mas "Compressor", id: 424390742
-mas "Copilot", id: 6738511300
 mas "DaisyDisk", id: 411643860
-mas "DaVinci Resolve", id: 571213070
 mas "egword Universal 2", id: 1272842196
-mas "Evo", id: 6475402655
 mas "Expenses", id: 1492055171
 mas "Final Cut Pro", id: 424389933
 mas "FirstSeed Calendar", id: 1348617240
@@ -657,14 +625,12 @@ mas "Goodnotes", id: 1444383602
 mas "HextEdit", id: 1557247094
 mas "Hyperduck", id: 6444667067
 mas "iA Writer", id: 775737590
-mas "JuxtaText", id: 6504801865
 mas "Keynote", id: 409183694
 mas "LadioCast", id: 411213048
 mas "LINE", id: 539883307
 mas "Logic Pro", id: 634148309
 mas "MainStage", id: 634159523
 mas "Mercury", id: 1621800675
-mas "Momentum", id: 1564329434
 mas "Money Pro", id: 972572731
 mas "Motion", id: 434290957
 mas "NotesHub", id: 1621210753
@@ -673,7 +639,6 @@ mas "OneDrive", id: 823766827
 mas "Orb", id: 6477840170
 mas "Pages", id: 409201541
 mas "Palworld", id: 6503918400
-mas "Paraphraser AI", id: 6691888246
 mas "Patterns", id: 429449079
 mas "Perplexity", id: 6714467650
 mas "Photomator", id: 1444636541
@@ -683,11 +648,10 @@ mas "Prime Video", id: 545519333
 mas "ProofreadAI", id: 6705131596
 mas "QuickMIDI", id: 1459790045
 mas "Raycast Companion", id: 6738274497
+mas "RunCat", id: 1429033973
 mas "Shareful", id: 1522267256
 mas "Shazam", id: 897118787
 mas "SnippetsLab", id: 1006087419
-mas "Solid Diary", id: 6448245802
-mas "Solid Notes", id: 6448245914
 mas "stone", id: 1230288277
 mas "Structured", id: 1499198946
 mas "Tailscale", id: 1475387142
@@ -697,6 +661,7 @@ mas "Things", id: 904280696
 mas "Transcribe", id: 1434184098
 mas "Usage", id: 1561788435
 mas "Velja", id: 1607635845
+mas "Vinegar", id: 1591303229
 mas "Yata", id: 1631370175
 mas "Yoink", id: 457622435
 mas "辞書 by 物書堂", id: 1380563956
@@ -704,7 +669,7 @@ vscode "42crunch.vscode-openapi"
 vscode "aaron-bond.better-comments"
 vscode "adpyke.codesnap"
 vscode "alefragnani.project-manager"
-vscode "amazonwebservices.codewhisperer-for-command-line-companion"
+vscode "amazonwebservices.amazon-q-vscode"
 vscode "astro-build.astro-vscode"
 vscode "bierner.markdown-mermaid"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
@@ -719,6 +684,7 @@ vscode "docker.docker"
 vscode "dtsvet.vscode-wasm"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
+vscode "formulahendry.auto-rename-tag"
 vscode "formulahendry.code-runner"
 vscode "github.codespaces"
 vscode "github.copilot"
@@ -780,7 +746,6 @@ vscode "svelte.svelte-vscode"
 vscode "sweetpad.sweetpad"
 vscode "swiftlang.swift-vscode"
 vscode "tauri-apps.tauri-vscode"
-vscode "torn4dom4n.latex-support"
 vscode "tyriar.lorem-ipsum"
 vscode "unifiedjs.vscode-mdx"
 vscode "vadimcn.vscode-lldb"

@@ -23,11 +23,6 @@
       "name" : "Things"
     },
     {
-      "bundleIdentifier" : "com.chabomakers.Antinote",
-      "iconPath" : "/Applications/Antinote.app/Contents/Resources/AppIcon.icns",
-      "name" : "Antinote"
-    },
-    {
       "bundleIdentifier" : "com.raycast.macos",
       "iconPath" : "/Applications/Raycast.app/Contents/Resources/AppIcon-Release.icns",
       "name" : "Raycast"
@@ -36,6 +31,16 @@
       "bundleIdentifier" : "com.raphaelamorim.rio",
       "iconPath" : "/Applications/rio.app/Contents/Resources/icon.icns",
       "name" : "Rio"
+    },
+    {
+      "bundleIdentifier" : "com.github.wez.wezterm",
+      "iconPath" : "/Applications/WezTerm.app/Contents/Resources/terminal.icns",
+      "name" : "WezTerm"
+    },
+    {
+      "bundleIdentifier" : "com.apple.finder",
+      "iconPath" : "/System/Library/CoreServices/Finder.app/Contents/Resources/Finder.icns",
+      "name" : "Finder"
     }
   ],
   "focusDown" : "cmd+down",
@@ -47,7 +52,11 @@
   "menuBarDisplayAliases" : "",
   "menuBarTitleTemplate" : "",
   "pipApps" : [
-
+    {
+      "bundleIdentifier" : "com.vivaldi.Vivaldi",
+      "name" : "Vivaldi",
+      "pipWindowTitleRegex" : ".*"
+    }
   ],
   "pipScreenCornerOffset" : 15,
   "restoreHiddenAppsOnSwitch" : true,

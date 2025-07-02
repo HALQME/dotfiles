@@ -2,6 +2,7 @@ set shiftwidth=4
 set tabstop=4
 set autoindent
 set relativenumber
+set rtp+=/opt/homebrew/opt/fzf
 
 set noswapfile
 

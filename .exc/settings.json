@@ -17,9 +17,7 @@
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.rulers": [
-      80
-    ],
+    "editor.rulers": [80],
     "editor.selectionHighlight": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
@@ -45,17 +43,14 @@
   "[swift]": {
     "editor.defaultFormatter": "swiftlang.swift-vscode"
   },
-  "apple-swift-format.configSearchPaths": [
-    "~/.swift-format"
-  ],
-  "apple-swift-format.path": [
-    "/opt/homebrew/bin//swift-format"
-  ],
+  "amazonQ.suppressPrompts": {
+    "amazonQChatDisclaimer": true,
+    "amazonQChatPairProgramming": true
+  },
+  "apple-swift-format.configSearchPaths": ["~/.swift-format"],
+  "apple-swift-format.path": ["/opt/homebrew/bin//swift-format"],
   "atomKeymap.promptV3Features": true,
-  "cSpell.userWords": [
-    "Cica",
-    "miharu"
-  ],
+  "cSpell.userWords": ["Cica", "miharu"],
   "calva.paredit.defaultKeyMap": "original",
   "calva.prettyPrintingOptions": {
     "enabled": false,
@@ -127,23 +122,6 @@
   },
   "code-runner.ignoreSelection": true,
   "code-runner.runInTerminal": true,
-  "cody.autocomplete.disableInsideComments": true,
-  "cody.chat.defaultLocation": "editor",
-  "cody.commandCodeLenses": true,
-  "continue.enableTabAutocomplete": false,
-  "continue.telemetryEnabled": false,
-  "coolcline.allowedCommands": [
-    "npm test",
-    "npm install",
-    "tsc",
-    "git log",
-    "git diff",
-    "git show"
-  ],
-  "coolcline.vsCodeLmModelSelector": {
-    "family": "deepseek-r1",
-    "vendor": "ollama"
-  },
   "csharp.debug.console": "externalTerminal",
   "csharp.debug.hotReloadVerbosity": "diagnostic",
   "csharp.inlayHints.enableInlayHintsForImplicitObjectCreation": true,
@@ -151,8 +129,6 @@
   "css.format.spaceAroundSelectorSeparator": true,
   "css.lint.float": "warning",
   "css.lint.important": "warning",
-  "css.styleSheets": [],
-  "cssPeek.trace.server": "messages",
   "csv-edit.fontSizeInPx": 13,
   "database-client.autoSync": true,
   "debug.allowBreakpointsEverywhere": true,
@@ -225,10 +201,6 @@
   },
   "files.autoGuessEncoding": true,
   "files.autoSave": "onFocusChange",
-  "geminicodeassist.beta.enableGeneratedCodeDocumentationView": true,
-  "geminicodeassist.codeGenerationPaneViewEnabled": true,
-  "geminicodeassist.project": "",
-  "geminicodeassist.updateChannel": "Default",
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
@@ -240,22 +212,16 @@
   "github.copilot.chat.generateTests.codeLens": true,
   "github.copilot.chat.languageContext.typescript.enabled": true,
   "github.copilot.chat.newWorkspaceCreation.enabled": true,
-  "github.copilot.chat.search.semanticTextResults": true,
   "github.copilot.enable": {
-    "*": true,
-    "csharp": false,
-    "iapresenter": true,
-    "markdown": true,
-    "plaintext": true,
-    "scminput": false
+    "*": false
   },
   "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.nextEditSuggestions.fixes": false,
   "githubPullRequests.createOnPublishBranch": "never",
   "githubPullRequests.pushBranch": "always",
   "gitlens.advanced.messages": {
     "suppressLineUncommittedWarning": true
   },
-  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7YmFzaWM7YXJyb3dzMjtjbGlwYXJ0O2Zsb3djaGFydDtpb3M7bmV0d29yaztjYWJpbmV0cztlbGVjdHJpY2FsO2Zsb29ycGxhblwiLFwiY3VzdG9tTGlicmFyaWVzXCI6W10sXCJwbHVnaW5zXCI6W10sXCJyZWNlbnRDb2xvcnNcIjpbXCIzMDMwMzBcIixcIkYwRjBGMFwiLFwiNkU2RTZFXCIsXCIwMDAwMDBcIixcIjAwMDA2NlwiLFwiOTlDQ0ZGXCIsXCJGRkZGRkZcIixcIjdBN0E3QVwiLFwiN0M3OTdFXCIsXCIyNDI0MjRcIixcIjRENEQ0RFwiXSxcImZvcm1hdFdpZHRoXCI6XCIyNDBcIixcImNyZWF0ZVRhcmdldFwiOmZhbHNlLFwicGFnZUZvcm1hdFwiOntcInhcIjowLFwieVwiOjAsXCJ3aWR0aFwiOjgyNyxcImhlaWdodFwiOjExNjl9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiNDQ0NDQ0NcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
   "hexeditor.columnWidth": 16,
   "hexeditor.defaultEndianness": "little",
   "hexeditor.inspectorType": "aside",
@@ -263,20 +229,9 @@
   "html.format.wrapLineLength": 60,
   "indentRainbow.colorOnWhiteSpaceOnly": true,
   "intellicode-completions-cdk.runAlongsideCopilot": true,
-  "java.selectionRange.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "jupyter.askForKernelRestart": false,
-  "jupyter.interactiveWindow.creationMode": "perFile",
-  "keyboard.touchbar.enabled": false,
-  "liveServer.settings.donotShowInfoMsg": true,
   "lldb.launch.expressions": "native",
   "lldb.library": "/Applications/Xcode-16.2.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
-  "markdown-preview-enhanced.codeBlockTheme": "monokai.css",
-  "markdownlint.config": {
-    "MD007": false
-  },
-  "material-icon-theme.activeIconPack": "react",
-  "mojo.modularHomePath": "~/.modular/",
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -286,23 +241,13 @@
   "notebook.lineNumbers": "on",
   "notebook.output.scrolling": true,
   "notebook.output.textLineLimit": 15,
-  "oneDarkPro.vivid": false,
-  "python.analysis.cacheFolderPath": "~/.pyenv/shims/python",
-  "python.analysis.extraPaths": [
-    "~/.pyenv/shims/python"
-  ],
-  "python.analysis.typeshedPaths": [
-    "~/.pyenv/shims/python"
-  ],
-  "python.autoComplete.extraPaths": [
-    "~/.pyenv/shims/python"
-  ],
-  "python.pythonPath": "/usr/local/bin/python3",
+  "python.analysis.extraPaths": ["~/.pyenv/shims/python"],
+  "python.analysis.typeshedPaths": ["~/.pyenv/shims/python"],
+  "python.autoComplete.extraPaths": ["~/.pyenv/shims/python"],
   "r.alwaysUseActiveTerminal": true,
   "r.bracketedPaste": true,
   "r.helpPanel.cacheIndexFiles": "Workspace",
   "r.lsp.debug": true,
-  "razor.trace": "Messages",
   "redhat.telemetry.enabled": false,
   "remote.portsAttributes": {
     "4321": {
@@ -321,31 +266,24 @@
   "rust-analyzer.check.command": "clippy",
   "screencastMode.fontSize": 24,
   "security.workspace.trust.untrustedFiles": "open",
-  "settingsSync.ignoredSettings": [
-    "-swift.sanitizer"
-  ],
+  "settingsSync.ignoredSettings": ["-swift.sanitizer"],
   "swift.diagnostics": true,
   "swift.diagnosticsCollection": "keepAll",
   "swift.diagnosticsStyle": "swift",
   "swift.path": "/usr/bin/",
   "swift.sanitizer": "thread",
   "swift.searchSubfoldersForPackages": true,
-  "swift.sourcekit-lsp.serverPath": "/usr/bin/sourcekit-lsp",
   "swift.sourcekit-lsp.trace.server": "verbose",
-  "swiftformat.configSearchPaths": [
-    "~/.swiftformat"
-  ],
-  "tabnine.experimentalAutoImports": true,
   "telemetry.telemetryLevel": "off",
-  "terminal.external.osxExec": "",
+  "terminal.external.osxExec": "zellij a vscode || zellij -s vscode ",
   "terminal.external.windowsExec": "",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.enableImages": true,
   "terminal.integrated.env.osx": {
-    "CW_NEW_SESSION": 1,
-    "FIG_NEW_SESSION": 1,
+    "CW_NEW_SESSION": "1",
+    "FIG_NEW_SESSION": "1",
     "Q_NEW_SESSION": "1"
   },
   "terminal.integrated.fontFamily": "Moralerspace Neon HWNF",
@@ -354,29 +292,8 @@
   "terminal.integrated.minimumContrastRatio": 1,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "update.showReleaseNotes": false,
-  "vim.autoSwitchInputMethod.defaultIM": "com.kawasemi4.keylayout.US",
-  "vim.cursorStylePerMode.insert": "line-thin",
-  "vim.cursorStylePerMode.normal": "block",
-  "vim.cursorStylePerMode.replace": "line",
-  "vim.cursorStylePerMode.visual": "block-outline",
-  "vim.cursorStylePerMode.visualblock": "block-outline",
-  "vim.cursorStylePerMode.visualline": "underline",
-  "vim.easymotion": true,
-  "vs-kubernetes": {
-    "vs-kubernetes.draft-path.mac": "~/.vs-kubernetes/tools/draft/darwin-amd64/draft",
-    "vs-kubernetes.helm-path.mac": "~/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-    "vs-kubernetes.kubectl-path.mac": "~/.vs-kubernetes/tools/kubectl/kubectl",
-    "vs-kubernetes.minikube-path.mac": "~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-    "vscode-kubernetes.helm-path.mac": "~/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-    "vscode-kubernetes.kubectl-path.mac": "~/.vs-kubernetes/tools/kubectl/kubectl",
-    "vscode-kubernetes.minikube-path.mac": "~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
-  },
   "vscode-office.editorTheme": "Light",
   "vscode-office.openOutline": true,
-  "vscode-pets.petColor": "gray",
-  "vscode-pets.petSize": "small",
-  "vscode-pets.throwBallWithMouse": true,
-  "vscode-w3cvalidation.validator-token": "Fri, 25 Jun 2021 22:00:00 GMT",
   "window.autoDetectColorScheme": true,
   "window.autoDetectHighContrast": false,
   "workbench.activityBar.iconClickBehavior": "focus",
@@ -389,6 +306,7 @@
     "*.ipynb": "jupyter-notebook",
     "*.md": "default",
     "*.pdf": "latex-workshop-pdf-hook",
+    "*.svg": "default",
     "{hexdiff}:/**/*.*": "hexEditor.hexedit"
   },
   "workbench.iconTheme": "catppuccin-macchiato",
@@ -396,9 +314,8 @@
   "workbench.preferredHighContrastColorTheme": "Catppuccin Mocha",
   "workbench.preferredHighContrastLightColorTheme": "Catppuccin Frappé",
   "workbench.preferredLightColorTheme": "Catppuccin Frappé",
-  "workbench.settings.applyToAllProfiles": [
-    "workbench.colorTheme"
-  ],
+  "workbench.secondarySideBar.showLabels": false,
+  "workbench.settings.applyToAllProfiles": ["workbench.colorTheme"],
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.indent": 20,
   "yaml.schemas": {
@@ -406,7 +323,14 @@
       ".continue/**/*.yaml"
     ]
   },
-  "zig.initialSetupDone": true,
   "zig.path": "zig",
-  "zig.zls.path": "zls"
+  "zig.zls.path": "zls",
+  "kilo-code.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ]
 }

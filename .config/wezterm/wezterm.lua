@@ -23,7 +23,8 @@ config.show_tab_index_in_tab_bar = false
 -- windows setting
 config.initial_rows = 50
 config.initial_cols = 150
-config.window_decorations = "INTEGRATED_BUTTONS"
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+config.macos_window_background_blur = 10
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = {
 	left = '0px',
@@ -55,6 +56,7 @@ local images = {
 	homedir .. "/Pictures/Pictures.library/images/LMLH5N41R6RDW.info/FlPR8l1akAAtHaN.jpg",
 	homedir .. "/Pictures/Pictures.library/images/LMLH5N41P5QW7.info/2560-1440.jpg",
 	homedir .. "/Pictures/Pictures.library/images/LMLH5N417GZQD.info/1.2KV2_2560x1440.jpg",
+	homedir .. "/Pictures/Pictures.library/images/LMLH5N41P47AG.info/2560-1440.jpg",
 }
 
 -- 配列からランダムな画像を選択する関数
@@ -73,8 +75,8 @@ local function set_background_image(window, pane)
 			source = {
 				File = random_image,
 			},
-			opacity = 0.75,
-			hsb = { brightness = 0.02 },
+			opacity = 0.80,
+			hsb = { brightness = 0.05 },
 		},
 	}
 	window:set_config_overrides(overrides)

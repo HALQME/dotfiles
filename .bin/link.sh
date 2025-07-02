@@ -22,9 +22,6 @@ fi
 
 # check brew
 command brew -v
-if [ $? = 0 ]; then
-  cp -f $HOME/.dotfiles/.exc/zshrc.sh $(brew --prefix)/opt/zsh-git-prompt/
-fi
 
 if [ $? = 0 ]; then
   echo "done"
