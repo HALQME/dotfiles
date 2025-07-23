@@ -80,7 +80,6 @@ alias transJa='\trans ja:en -b'
 alias untar="tar -zxvf"
 alias weather="curl wttr.in"
 alias yt-dlp-f="yt-dlp --no-check-certificate"
-alias zj="zellij"
 
 # End of lines configured by zsh-newuser-install
 
@@ -149,9 +148,19 @@ export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH=$HOME/.progate/bin:$PATH
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
-
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(starship init zsh)"
-eval "$(zellij setup --generate-auto-start zsh)"
+
+# tmux auto-attach
+if [ -z "$TMUX" ]; then
+	case "$TERM_PROGRAM" in
+		vscode|zed|Wrap)
+			;;
+		*)
+		tmux attach || tmux new
+		;;
+	esac
+fi
+
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

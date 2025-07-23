@@ -235,8 +235,6 @@ brew "rename"
 brew "ripgrep-all"
 # Extremely fast Python linter, written in Rust
 brew "ruff"
-# Safe, concurrent, practical language
-brew "rust"
 # Experimental Rust compiler front-end for IDEs
 brew "rust-analyzer"
 # Rust toolchain installer
@@ -271,6 +269,8 @@ brew "texinfo"
 brew "texlive"
 # Programmatically correct mistyped console commands
 brew "thefuck"
+# Terminal multiplexer
+brew "tmux"
 # Color-based alternative to figlet (uses libcaca)
 brew "toilet"
 # Command-line translator using Google Translate and more
@@ -309,8 +309,6 @@ brew "xh"
 brew "yt-dlp"
 # Suite of barcodes-reading tools
 brew "zbar"
-# Pluggable terminal workspace, with terminal multiplexer as the base feature
-brew "zellij"
 # Programming language designed for robustness, optimality, and clarity
 brew "zig"
 # Language Server for Zig
@@ -507,10 +505,6 @@ cask "microsoft-excel"
 cask "microsoft-powerpoint"
 # Word processor
 cask "microsoft-word"
-# Sandbox construction video game
-cask "minecraft"
-# Educational version of Minecraft
-cask "minecraft-education"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # Open-source download manager
@@ -525,6 +519,8 @@ cask "netnewswire"
 cask "notion"
 # Calendar for professionals and teams
 cask "notion-calendar"
+# Email client integrated with Notion workspace
+cask "notion-mail"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Automated scene switcher for OBS Studio
@@ -537,8 +533,6 @@ cask "ogdesign-eagle"
 cask "ollama-app"
 # Interact with Ollama models
 cask "ollamac"
-# Cloud storage client
-cask "onedrive"
 # Document editor
 cask "onlyoffice"
 # Web browser
@@ -627,6 +621,7 @@ mas "Goodnotes", id: 1444383602
 mas "HextEdit", id: 1557247094
 mas "Hyperduck", id: 6444667067
 mas "iA Writer", id: 775737590
+mas "Inky", id: 6748526665
 mas "Keynote", id: 409183694
 mas "LadioCast", id: 411213048
 mas "LINE", id: 539883307
@@ -640,7 +635,6 @@ mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "Orb", id: 6477840170
 mas "Pages", id: 409201541
-mas "Palworld", id: 6503918400
 mas "Patterns", id: 429449079
 mas "Perplexity", id: 6714467650
 mas "Photomator", id: 1444636541
@@ -682,6 +676,7 @@ vscode "catppuccin.catppuccin-vsc-icons"
 vscode "cweijan.dbclient-jdbc"
 vscode "cweijan.vscode-database-client2"
 vscode "cweijan.vscode-office"
+vscode "dbaeumer.vscode-eslint"
 vscode "dioxuslabs.dioxus"
 vscode "docker.docker"
 vscode "dtsvet.vscode-wasm"
@@ -695,6 +690,7 @@ vscode "github.copilot-chat"
 vscode "github.remotehub"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
+vscode "google.geminicodeassist"
 vscode "ibm.output-colorizer"
 vscode "james-yu.latex-workshop"
 vscode "janisdd.vscode-edit-csv"
@@ -715,9 +711,11 @@ vscode "ms-dotnettools.csdevkit"
 vscode "ms-dotnettools.csharp"
 vscode "ms-dotnettools.vscode-dotnet-runtime"
 vscode "ms-dotnettools.vscodeintellicode-csharp"
+vscode "ms-playwright.playwright"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
@@ -746,7 +744,6 @@ vscode "reditorsupport.r-syntax"
 vscode "shardulm94.trailing-spaces"
 vscode "stripe.markdoc-language-support"
 vscode "svelte.svelte-vscode"
-vscode "sweetpad.sweetpad"
 vscode "swiftlang.swift-vscode"
 vscode "tauri-apps.tauri-vscode"
 vscode "tyriar.lorem-ipsum"

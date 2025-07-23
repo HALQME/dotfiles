@@ -7,132 +7,129 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    "icon_theme": "Catppuccin Macchiato",
-    "outline_panel": {
-        "dock": "right"
-    },
-    "features": {
-        "edit_prediction_provider": "zed"
-    },
-    "chat_panel": {
-        "button": "never"
-    },
-    "notification_panel": {
-        "button": true
-    },
-    "collaboration_panel": {
-        "button": false
-    },
-    "agent": {
-        "always_allow_tool_actions": true,
-        "inline_assistant_model": {
-            "provider": "copilot_chat",
-            "model": "claude-sonnet-4"
-        },
-        "button": true,
-        "default_model": {
-            "provider": "copilot_chat",
-            "model": "claude-sonnet-4"
-        },
-        "version": "2",
-        "dock": "right"
-    },
-    "autosave": "on_focus_change",
-    "auto_update": true,
-    "theme": "Catppuccin Macchiato",
-    "telemetry": {
-        "diagnostics": true,
-        "metrics": true
-    },
-    "vim_mode": true,
-    "ui_font_family": "Moralerspace Argon JPDOC",
-    "tab_size": 4,
-    "buffer_font_family": "Moralerspace Xenon HWNF",
-    "indent_guides": {
-        "enabled": true,
-        "coloring": "indent_aware"
-    },
-    "scrollbar": {
-        "show": "never"
-    },
-    "formatter": "auto",
-    "lsp": {
-        "languageserver-csharp": {
-            "command": "omnisharp"
-        },
-        "roff": {
-            "initialization_options": {
-                "settings": {
-                    "lineLength": 80,
-                    "lint": {
-                        "extendSelect": ["I"]
-                    }
-                }
-            }
-        },
-        "typescript-language-server": {
-            "initialization_options": {
-                // These are not supported (VSCode dotted style):
-                // "preferences.strictNullChecks": true,
-                // "preferences.target": "ES2020"
-                //
-                // These is correct (nested notation):
-                "preferences": {
-                    "strictNullChecks": true,
-                    "tab_size": 4
-                }
-            }
-        }
-    },
-    "inlay_hints": {
-        "enabled": true,
-        "show_type_hints": true,
-        "show_parameter_hints": true,
-        "show_other_hints": true
-    },
-    "languages": {
-        "JavaScript": {
-            "tab_size": 4,
-            "formatter": {
-                "external": {
-                    "command": "prettier",
-                    "arguments": [
-                        "--stdin-filepath",
-                        "{buffer_path}",
-                        "--tab-width 4"
-                    ]
-                }
-            }
-        },
-        "TypeScript": {
-            "tab_size": 4,
-            "inlay_hints": {
-                "show_parameter_hints": true
-            },
-            "formatter": {
-                "external": {
-                    "command": "prettier",
-                    "arguments": [
-                        "--stdin-filepath",
-                        "{buffer_path}",
-                        "--tab-width 4"
-                    ]
-                }
-            }
-        },
-        "Python": {
-            "language_servers": ["ruff"]
-        }
-    },
-    "terminal": {
-        "font_family": "Moralerspace Krypton HWNF",
-        "font_size": 14
-    },
-    "jupyter": {
-        "kernel_selections": {
-            "typescript": "deno",
-            "javascript": "deno",
-            "r": "ark"
-        }
+  "context_servers": {
+    "mcp-server-context7": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        "default_minimum_tokens": "10000"
+      }
     }
+  },
+  "icon_theme": "Catppuccin Macchiato",
+  "outline_panel": {
+    "dock": "right"
+  },
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "chat_panel": {
+    "button": "never"
+  },
+  "notification_panel": {
+    "button": true
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "agent": {
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
+    "button": true,
+    "default_model": {
+      "provider": "mistral",
+      "model": "codestral-latest"
+    },
+    "dock": "right"
+  },
+  "autosave": "on_focus_change",
+  "auto_update": true,
+  "theme": "Catppuccin Macchiato",
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true
+  },
+  "vim_mode": true,
+  "ui_font_family": "Moralerspace Neon NF",
+  "tab_size": 2,
+  "buffer_font_family": "Moralerspace Xenon NF",
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+  "scrollbar": {
+    "show": "always",
+    "diagnostics": "warning",
+    "cursors": false,
+    "git_diff": true
+  },
+  "minimap": {
+    "show": "always",
+    "thumb": "always",
+    "display_in": "active_editor",
+    "thumb_border": "none",
+    "current_line_highlight": "line"
+  },
+  "formatter": "auto",
+  "lsp": {
+    "roff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 80,
+          "lint": {
+            "extendSelect": ["I"]
+          }
+        }
+      }
+    },
+    "typescript-language-server": {
+      "initialization_options": {
+        // These are not supported (VSCode dotted style):
+        // "preferences.strictNullChecks": true,
+        // "preferences.target": "ES2020"
+        //
+        // These is correct (nested notation):
+        "preferences": {
+          "strictNullChecks": true,
+          "tab_size": 4
+        }
+      }
+    }
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
+  },
+  "languages": {
+    "JavaScript": {
+      "tab_size": 4,
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}", "--tab-width 4"]
+        }
+      }
+    },
+    "TypeScript": {
+      "tab_size": 4,
+      "inlay_hints": {
+        "show_parameter_hints": true
+      },
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}", "--tab-width 4"]
+        }
+      }
+    },
+    "Python": {
+      "language_servers": ["ruff"]
+    }
+  },
+  "terminal": {
+    "font_family": "Moralerspace Krypton HWNF",
+    "font_size": 14
+  }
 }

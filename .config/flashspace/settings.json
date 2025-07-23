@@ -1,9 +1,11 @@
 {
+  "activeWorkspaceOnFocusChange" : true,
   "alternativeDisplays" : "",
   "centerCursorOnFocusChange" : true,
   "centerCursorOnWorkspaceChange" : true,
   "changeWorkspaceOnAppAssign" : true,
   "checkForUpdatesAutomatically" : true,
+  "displayMode" : "static",
   "enableFocusManagement" : true,
   "enableIntegrations" : false,
   "enablePictureInPictureSupport" : true,
@@ -41,6 +43,16 @@
       "bundleIdentifier" : "com.apple.finder",
       "iconPath" : "/System/Library/CoreServices/Finder.app/Contents/Resources/Finder.icns",
       "name" : "Finder"
+    },
+    {
+      "bundleIdentifier" : "com.apple.FaceTime",
+      "iconPath" : "/System/Applications/FaceTime.app/Contents/Resources/AppIcon.icns",
+      "name" : "FaceTime"
+    },
+    {
+      "bundleIdentifier" : "com.blitzit.app",
+      "iconPath" : "/Applications/Blitzit.app/Contents/Resources/icon.icns",
+      "name" : "Blitzit"
     }
   ],
   "focusDown" : "cmd+down",
@@ -49,6 +61,7 @@
   "focusRight" : "cmd+right",
   "focusUp" : "cmd+up",
   "keepUnassignedAppsOnSwitch" : false,
+  "loopWorkspaces" : true,
   "menuBarDisplayAliases" : "",
   "menuBarTitleTemplate" : "",
   "pipApps" : [
@@ -59,6 +72,7 @@
     }
   ],
   "pipScreenCornerOffset" : 15,
+  "restartAppOnWakeUp" : false,
   "restoreHiddenAppsOnSwitch" : true,
   "runScriptOnLaunch" : "",
   "runScriptOnProfileChange" : "sketchybar --reload",
@@ -82,6 +96,7 @@
   "switchToNextWorkspace" : "ctrl+right",
   "switchToPreviousWorkspace" : "ctrl+left",
   "switchToRecentWorkspace" : "ctrl+down",
+  "switchWorkspaceWhenPipCloses" : true,
   "workspaceTransitionDimming" : 0.2,
   "workspaceTransitionDuration" : 0.3
 }

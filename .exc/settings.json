@@ -17,7 +17,9 @@
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.rulers": [80],
+    "editor.rulers": [
+      80
+    ],
     "editor.selectionHighlight": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
@@ -43,14 +45,35 @@
   "[swift]": {
     "editor.defaultFormatter": "swiftlang.swift-vscode"
   },
+  "accessibility.verbosity.terminal": false,
+  "amazonQ.importRecommendationForInlineCodeSuggestions": false,
+  "amazonQ.shareContentWithAWS": false,
   "amazonQ.suppressPrompts": {
     "amazonQChatDisclaimer": true,
-    "amazonQChatPairProgramming": true
+    "amazonQChatPairProgramming": true,
+    "amazonQLspManifestMessage": false,
+    "amazonQSelectDeveloperProfile": false,
+    "amazonQSessionConfigurationMessage": true,
+    "amazonQWelcomePage": false,
+    "amazonQWorkspaceLspManifestMessage": true,
+    "codeWhispererConnectionExpired": true,
+    "codeWhispererNewWelcomeMessage": false,
+    "createCredentialsProfile": true,
+    "minIdeVersion": false,
+    "ssoCacheError": false
   },
-  "apple-swift-format.configSearchPaths": ["~/.swift-format"],
-  "apple-swift-format.path": ["/opt/homebrew/bin//swift-format"],
+  "amazonQ.workspaceIndex": true,
+  "apple-swift-format.configSearchPaths": [
+    "~/.swift-format"
+  ],
+  "apple-swift-format.path": [
+    "/opt/homebrew/bin//swift-format"
+  ],
   "atomKeymap.promptV3Features": true,
-  "cSpell.userWords": ["Cica", "miharu"],
+  "cSpell.userWords": [
+    "Cica",
+    "miharu"
+  ],
   "calva.paredit.defaultKeyMap": "original",
   "calva.prettyPrintingOptions": {
     "enabled": false,
@@ -136,6 +159,7 @@
   "diffEditor.codeLens": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.wordWrap": "off",
+  "docker.extension.enableComposeLanguageServer": false,
   "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
   "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
   "dotnet.inlayHints.suppressInlayHintsForParametersThatMatchArgumentName": true,
@@ -201,6 +225,8 @@
   },
   "files.autoGuessEncoding": true,
   "files.autoSave": "onFocusChange",
+  "geminicodeassist.inlineSuggestions.enableAuto": false,
+  "geminicodeassist.updateChannel": "Insiders",
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
@@ -213,7 +239,11 @@
   "github.copilot.chat.languageContext.typescript.enabled": true,
   "github.copilot.chat.newWorkspaceCreation.enabled": true,
   "github.copilot.enable": {
-    "*": false
+    "*": true,
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false,
+    "typescript": true
   },
   "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.nextEditSuggestions.fixes": false,
@@ -222,6 +252,8 @@
   "gitlens.advanced.messages": {
     "suppressLineUncommittedWarning": true
   },
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:claude-sonnet-4",
   "hexeditor.columnWidth": 16,
   "hexeditor.defaultEndianness": "little",
   "hexeditor.inspectorType": "aside",
@@ -230,6 +262,15 @@
   "indentRainbow.colorOnWhiteSpaceOnly": true,
   "intellicode-completions-cdk.runAlongsideCopilot": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "kilo-code.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "kilo-code.deniedCommands": [],
   "lldb.launch.expressions": "native",
   "lldb.library": "/Applications/Xcode-16.2.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
   "notebook.cellToolbarLocation": {
@@ -241,9 +282,17 @@
   "notebook.lineNumbers": "on",
   "notebook.output.scrolling": true,
   "notebook.output.textLineLimit": 15,
-  "python.analysis.extraPaths": ["~/.pyenv/shims/python"],
-  "python.analysis.typeshedPaths": ["~/.pyenv/shims/python"],
-  "python.autoComplete.extraPaths": ["~/.pyenv/shims/python"],
+  "playwright.reuseBrowser": false,
+  "playwright.showTrace": false,
+  "python.analysis.extraPaths": [
+    "~/.pyenv/shims/python"
+  ],
+  "python.analysis.typeshedPaths": [
+    "~/.pyenv/shims/python"
+  ],
+  "python.autoComplete.extraPaths": [
+    "~/.pyenv/shims/python"
+  ],
   "r.alwaysUseActiveTerminal": true,
   "r.bracketedPaste": true,
   "r.helpPanel.cacheIndexFiles": "Workspace",
@@ -266,7 +315,9 @@
   "rust-analyzer.check.command": "clippy",
   "screencastMode.fontSize": 24,
   "security.workspace.trust.untrustedFiles": "open",
-  "settingsSync.ignoredSettings": ["-swift.sanitizer"],
+  "settingsSync.ignoredSettings": [
+    "-swift.sanitizer"
+  ],
   "swift.diagnostics": true,
   "swift.diagnosticsCollection": "keepAll",
   "swift.diagnosticsStyle": "swift",
@@ -275,8 +326,10 @@
   "swift.searchSubfoldersForPackages": true,
   "swift.sourcekit-lsp.trace.server": "verbose",
   "telemetry.telemetryLevel": "off",
-  "terminal.external.osxExec": "zellij a vscode || zellij -s vscode ",
+  "terminal.explorerKind": "external",
+  "terminal.external.osxExec": "usr/bin/bash",
   "terminal.external.windowsExec": "",
+  "terminal.integrated.accessibleViewFocusOnCommandExecution": true,
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.defaultProfile.osx": "zsh",
@@ -315,7 +368,9 @@
   "workbench.preferredHighContrastLightColorTheme": "Catppuccin Frappé",
   "workbench.preferredLightColorTheme": "Catppuccin Frappé",
   "workbench.secondarySideBar.showLabels": false,
-  "workbench.settings.applyToAllProfiles": ["workbench.colorTheme"],
+  "workbench.settings.applyToAllProfiles": [
+    "workbench.colorTheme"
+  ],
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.indent": 20,
   "yaml.schemas": {
@@ -324,13 +379,5 @@
     ]
   },
   "zig.path": "zig",
-  "zig.zls.path": "zls",
-  "kilo-code.allowedCommands": [
-    "npm test",
-    "npm install",
-    "tsc",
-    "git log",
-    "git diff",
-    "git show"
-  ]
+  "zig.zls.path": "zls"
 }
