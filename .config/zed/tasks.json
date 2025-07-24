@@ -1,0 +1,9 @@
+[
+  {
+    "label": "LazyGit",
+    "command": "lazygit",
+    "hide": "always",
+    "allow_concurrent_runs": false,
+    "use_new_terminal": false
+  }
+]
