@@ -50,7 +50,7 @@
     "inactive_opacity": 0.8
   },
   "scroll_beyond_last_line": "one_page",
-  "bottom_dock_layout": "left_aligned",
+  "bottom_dock_layout": "contained",
   // Tab Configuration
   "tab_bar": {
     "show": true,
@@ -179,8 +179,8 @@
   "completions": {
     "words": "fallback",
     "lsp": true,
-    "lsp_fetch_timeout_ms": 5,
-    "lsp_insert_mode": "replace_suffix"
+    "lsp_fetch_timeout_ms": 100,
+    "lsp_insert_mode": "insert"
   },
   "show_completions_on_input": true,
   "show_completion_documentation": true,
