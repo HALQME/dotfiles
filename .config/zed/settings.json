@@ -30,7 +30,7 @@
     "dark": "Catppuccin Macchiato"
   },
   // Font Configuration
-  "buffer_font_family": "PlemolJP Console NF",
+  "buffer_font_family": "Moralerspace Xenon NF",
   "buffer_font_features": {
     "calt": true,
     "liga": true,
@@ -40,7 +40,7 @@
     "ss05": true,
     "zero": true
   },
-  "ui_font_family": "Moralerspace Argon NF",
+  "ui_font_family": "Moralerspace Neon NF",
   // ============================================================================
   // EDITOR INTERFACE & LAYOUT
   // ============================================================================
@@ -205,27 +205,6 @@
       "function": true
     }
   },
-  // ============================================================================
-  // AI & PREDICTIONS
-  // ============================================================================
-  // Edit Predictions
-  "edit_predictions": {
-    "disabled_globs": [
-      "**/.env*",
-      "**/.dev.vars",
-      "**/*.key",
-      "**/*.cart",
-      "**/*.lock",
-      "**/*.crt",
-      "**/secrets.yml"
-    ],
-    "enabled_in_text_threads": true
-  },
-  "edit_predictions_disabled_in": [
-    "comment",
-    "string"
-  ],
-  "show_edit_predictions": false,
   // ============================================================================
   // DIAGNOSTICS & ERROR HANDLING
   // ============================================================================
@@ -412,17 +391,63 @@
     "default_width": 380
   },
   // ============================================================================
+  // AI & PREDICTIONS
+  // ============================================================================
+  // Edit Predictions
+  "edit_predictions": {
+    "disabled_globs": [
+      "**/.env*",
+      "**/.dev.vars",
+      "**/*.key",
+      "**/*.cart",
+      "**/*.lock",
+      "**/*.crt",
+      "**/secrets.yml"
+    ],
+    "enabled_in_text_threads": false,
+    "mode": "subtle"
+  },
+  "edit_predictions_disabled_in": [
+    "comment",
+    "string"
+  ],
+  "show_edit_predictions": true,
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  // ============================================================================
   // AI AGENT & ASSISTANCE
   // ============================================================================
   "agent": {
-    "play_sound_when_agent_done": true,
-    "enabled": true,
-    "button": true,
-    "dock": "right",
     "always_allow_tool_actions": true,
+    "button": true,
+    "default_profile": "write",
+    "default_view": "text_thread",
+    "dock": "right",
+    "enabled": true,
+    "expand_edit_card": true,
+    "expand_terminal_card": true,
+    "play_sound_when_agent_done": true,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet"
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
+    },
+    "inline_assistant_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash"
+    },
+    "commit_message_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash"
+    },
+    "thread_summary_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash"
+    }
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://localhost:11434"
     }
   },
   // ============================================================================

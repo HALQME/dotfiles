@@ -479,7 +479,6 @@
       "i": "vim::InsertBefore",
       "a": "vim::InsertAfter",
       "ctrl-[": "editor::Cancel",
-      ":": "command_palette::Toggle",
       "c": "vim::PushChange",
       "shift-c": "vim::ChangeToEndOfLine",
       "d": "vim::PushDelete",
@@ -692,7 +691,6 @@
     "context": "vim_mode == helix_normal && !menu",
     "bindings": {
       "ctrl-[": "editor::Cancel",
-      ":": "command_palette::Toggle",
       "left": "vim::WrappingLeft",
       "right": "vim::WrappingRight",
       "h": "vim::WrappingLeft",
@@ -1379,7 +1377,6 @@
   {
     "context": "!Editor && !Terminal",
     "bindings": {
-      ":": "command_palette::Toggle",
       "g /": "pane::DeploySearch"
     }
   },
@@ -1387,7 +1384,6 @@
     // netrw compatibility
     "context": "ProjectPanel && not_editing",
     "bindings": {
-      ":": "command_palette::Toggle",
       "%": "project_panel::NewFile",
       "/": "project_panel::NewSearchInDirectory",
       "escape": "project_panel::ToggleFocus",
