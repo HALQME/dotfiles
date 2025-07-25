@@ -15,6 +15,13 @@
           "task_name": "LazyGit",
           "reveal_target": "center"
         }
+      ],
+      "ctrl-`": [
+        "task::Spawn",
+        {
+          "task_name": "tmux",
+          "reveal_target": "center"
+        }
       ]
     }
   },
@@ -40,8 +47,7 @@
   {
     "context": "vim_mode == insert",
     "bindings": {
-      "ctrl-d": null,
-      "ctrl-t": null
+      "ctrl-d": null
     }
   },
   {
@@ -1480,6 +1486,12 @@
     "context": "Editor",
     "bindings": {
       "ctrl-space": null
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-`": null
     }
   }
 ]

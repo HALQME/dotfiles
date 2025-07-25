@@ -4,6 +4,43 @@
     "command": "lazygit",
     "hide": "always",
     "allow_concurrent_runs": false,
-    "use_new_terminal": false
+    "use_new_terminal": false,
+    "reveal_target": "center"
+  },
+  {
+    "label": "tmux",
+    "command": "tmux attach || tmux new",
+    "allow_concurrent_runs": true,
+    "use_new_terminal": false,
+    "reveal_target": "center"
+  },
+  {
+    "label": "act::run",
+    "command": "act",
+    "show_command": true,
+    "allow_concurrent_runs": true,
+    "args": [
+      "-s GITHUB_TOKEN=\"$(gh auth token)\"",
+      "--container-architecture tinux/amd64"
+    ],
+    "reveal_target": "center",
+    "shell": "system",
+    "show_summary": true,
+    "reveal": "always"
+  },
+  {
+    "label": "act::debug",
+    "command": "act",
+    "show_command": true,
+    "allow_concurrent_runs": true,
+    "args": [
+      "-n",
+      "-s GITHUB_TOKEN=\"$(gh auth token)\"",
+      "--container-architecture tinux/amd64"
+    ],
+    "reveal_target": "center",
+    "shell": "system",
+    "show_summary": true,
+    "reveal": "always"
   }
 ]

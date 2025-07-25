@@ -493,7 +493,7 @@
       "regture": true
     },
     "font_size": 13,
-    "line_height": "comfortable",
+    "line_height": "standard",
     "option_as_meta": true,
     "button": true,
     "shell": "system",
