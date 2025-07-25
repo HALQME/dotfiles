@@ -34,21 +34,13 @@
       "x": "project_panel::Cut",
       "y": "project_panel::Copy",
       "p": "project_panel::Paste",
-      "d": "project_panel::Delete",
-      // Directory expansion
-      "l": "project_panel::ExpandSelectedEntry",
-      "h": "project_panel::CollapseSelectedEntry",
-      // Move up and down
-      "j": "menu::SelectNext",
-      "k": "menu::SelectPrevious"
+      "d": "project_panel::Delete"
     }
   },
   {
     "context": "vim_mode == insert",
     "bindings": {
-      "shift-tab": "vim::Outdent",
       "ctrl-d": null,
-      "tab": "vim::Indent",
       "ctrl-t": null
     }
   },
@@ -642,7 +634,6 @@
       "ctrl-x ctrl-z": "editor::Cancel",
       "ctrl-w": "editor::DeleteToPreviousWordStart",
       "ctrl-u": "editor::DeleteToBeginningOfLine",
-      "ctrl-d": "vim::Outdent",
       "ctrl-k": [
         "vim::PushDigraph",
         {}
@@ -789,7 +780,6 @@
       "space shift-s": "project_symbols::Toggle",
       "space d": "editor::GoToDiagnostic",
       "space r": "editor::Rename",
-      "space a": "editor::ToggleCodeActions",
       "space h": "editor::SelectAllMatches",
       "space c": "editor::ToggleComments",
       "space y": "editor::Copy",
@@ -1400,20 +1390,14 @@
       ":": "command_palette::Toggle",
       "%": "project_panel::NewFile",
       "/": "project_panel::NewSearchInDirectory",
-      "d": "project_panel::NewDirectory",
-      "enter": "project_panel::OpenPermanent",
       "escape": "project_panel::ToggleFocus",
       "h": "project_panel::CollapseSelectedEntry",
       "j": "menu::SelectNext",
       "k": "menu::SelectPrevious",
       "l": "project_panel::ExpandSelectedEntry",
-      "o": "project_panel::OpenPermanent",
       "shift-d": "project_panel::Delete",
       "shift-r": "project_panel::Rename",
       "t": "project_panel::OpenPermanent",
-      "v": "project_panel::OpenPermanent",
-      "p": "project_panel::Open",
-      "x": "project_panel::RevealInFileManager",
       "s": "project_panel::OpenWithSystem",
       "] c": "project_panel::SelectNextGitEntry",
       "[ c": "project_panel::SelectPrevGitEntry",
@@ -1494,6 +1478,12 @@
     "context": "os != macos && Editor && edit_prediction_conflict",
     "bindings": {
       "alt-l": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-space": null
     }
   }
 ]

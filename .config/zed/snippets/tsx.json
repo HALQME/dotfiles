@@ -1,0 +1,46 @@
+{
+  "React Component": {
+    "prefix": "rc",
+    "body": [
+      "export function ${1:Component}({$2}:{$2}){",
+      "\t$6",
+      "\treturn(",
+      "\t\t$0",
+      "}"
+    ],
+    "description": "React Component"
+  },
+  "React Router Component": {
+    "prefix": "rrc",
+    "body": [
+      "import type { Route } from \"./+type/$1\"",
+      "",
+      "import { useFetcher } from \"react-router\"",
+      "",
+      "export async function loader({ request, params, context } : Route.LoaderArgs) {",
+      "\treturn ()",
+      "}",
+      "",
+      "export function meta(args : Route.MetaArgs) {",
+      "\t return [",
+      "\t\t{ title: \"\"}",
+      "\t\t{ neme: \"description\", content: \"\"",
+      "\t]",
+      "}",
+      "",
+      "export async function actoin({ request, params, context } : Route.ActionArgs) {",
+      "\treturn {}",
+      "}",
+      "",
+      "export default function $1(props: Route.ComponentProps){",
+      "\tconst fetcher = useFetcher()",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t)",
+      "}"
+    ],
+    "description": "React Router Component"
+  }
+}

@@ -195,7 +195,7 @@
     "show_parameter_hints": true,
     "show_other_hints": true,
     "show_background": false,
-    "edit_debounce_ms": 700,
+    "edit_debounce_ms": 500,
     "scroll_debounce_ms": 50,
     "toggle_on_modifiers_press": {
       "control": true,
@@ -307,7 +307,7 @@
     "inline_blame": {
       "enabled": true,
       "min_column": 80,
-      "delay_ms": 500
+      "delay_ms": 100
     },
     "hunk_style": "unstaged_hollow"
   },
