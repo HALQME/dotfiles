@@ -3,7 +3,7 @@
   // CORE EDITOR SETTINGS
   // ============================================================================
   // Workspace & Session Management
-  "restore_on_startup": "last_workspace",
+  "restore_on_startup": "last_session",
   "auto_update": false,
   "load_direnv": "direct",
   // File Management
@@ -21,24 +21,23 @@
   // Theme & Color Scheme
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "Catppuccin Macchiato"
+    "light": "Fireworks Light",
+    "dark": "Fireworks Dark"
   },
   "icon_theme": {
     "mode": "system",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Macchiato"
+    "dark": "Catppuccin Frappé"
   },
   // Font Configuration
   "buffer_font_family": "Moralerspace Xenon NF",
   "buffer_font_features": {
     "calt": true,
-    "liga": true,
-    "ss02": true,
+    "liga": false,
+    "ss02": false,
     "ss03": true,
-    "ss04": true,
-    "ss05": true,
-    "zero": true
+    "ss04": false,
+    "ss05": true
   },
   "ui_font_family": "Moralerspace Neon NF",
   // ============================================================================
