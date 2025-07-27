@@ -1,6 +1,6 @@
 [
   {
-    "label": "LazyGit",
+    "label": "lazygit",
     "command": "lazygit",
     "hide": "always",
     "allow_concurrent_runs": false,
@@ -15,32 +15,23 @@
     "reveal_target": "center"
   },
   {
-    "label": "act::run",
-    "command": "act",
+    "label": "act",
+    "command": "act --container-architecture linux/amd64 -s GITHUB_TOKEN=\"$(gh auth token)\"",
     "show_command": true,
-    "allow_concurrent_runs": true,
-    "args": [
-      "-s GITHUB_TOKEN=\"$(gh auth token)\"",
-      "--container-architecture tinux/amd64"
-    ],
+    "allow_concurrent_runs": false,
     "reveal_target": "center",
     "shell": "system",
     "show_summary": true,
     "reveal": "always"
   },
   {
-    "label": "act::debug",
-    "command": "act",
-    "show_command": true,
-    "allow_concurrent_runs": true,
-    "args": [
-      "-n",
-      "-s GITHUB_TOKEN=\"$(gh auth token)\"",
-      "--container-architecture tinux/amd64"
-    ],
+    "label": "btm",
+    "command": "btm",
+    "show_command": false,
+    "allow_concurrent_runs": false,
     "reveal_target": "center",
     "shell": "system",
-    "show_summary": true,
+    "show_summary": false,
     "reveal": "always"
   }
 ]

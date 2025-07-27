@@ -12,7 +12,7 @@
       "ctrl-l": [
         "task::Spawn",
         {
-          "task_name": "LazyGit",
+          "task_name": "lazygit",
           "reveal_target": "center"
         }
       ],
