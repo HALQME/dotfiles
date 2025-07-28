@@ -1,165 +1,212 @@
 # Amazon Q pre block. Keep at the top of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
-notify() {
-    if [ "$?" = 0 ]; then
-        say -i -v 'Samantha' "The task was successful."
-    else
-        say -i -v 'Ava (Premium)' "The task failed."
-    fi
-}
 
-# others
-## colors
-autoload -Uz colors
-colors
+# ==============================================================================
+# Shell Configuration
+# ==============================================================================
 
+## Options
+# Enable colors
+autoload -Uz colors && colors
+# Set keybindings to Emacs mode
 bindkey -e
 
-## setopt
-setopt print_eight_bit
-setopt interactive_comments
-setopt auto_cd
-setopt extended_history
-setopt RM_STAR_SILENT
-setopt share_history
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
-setopt hist_reduce_blanks
+# Various Zsh options for a better user experience
+setopt \
+  PRINT_EIGHT_BIT \
+  INTERACTIVE_COMMENTS \
+  AUTO_CD \
+  EXTENDED_HISTORY \
+  RM_STAR_SILENT \
+  SHARE_HISTORY \
+  HIST_IGNORE_ALL_DUPS \
+  HIST_IGNORE_SPACE \
+  HIST_REDUCE_BLANKS
 
-# alias
+# ==============================================================================
+# Aliases
+# ==============================================================================
+
+## Global Aliases (can be used anywhere in a command)
 alias -g C=" | tee >(pbcopy)"
-alias -g Cloud="$HOME/Library/CloudStorage/"
 alias -g G=" | grep"
-alias -g iCloud="$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias -g L=" | less"
-alias -g my-game-prefix=".wine"
 alias -g N=" ; notify"
 alias -g P=" | pbpaste"
+alias -g Cloud="$HOME/Library/CloudStorage/"
+alias -g iCloud="$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/"
+
+## Suffix Aliases (run a command based on file extension)
 alias -s {png,jpg,PNG,JPG,jpeg,JPEG}="imgcat"
-alias -s py="python"
+alias -s py="python3"
 alias -s sh="bash"
 alias -s swift="swift"
+
+## Regular Aliases
 alias ..="cd .."
 alias ..2="cd ../.."
 alias ..3="cd ../../.."
 alias ~="cd ~"
-alias brew-backup="brew bundle dump --force --file $HOME/.dotfiles/.bin/Brewfile --describe"
 alias c="clear"
-alias calc="bc -l"
-alias cp='cp -i'
+alias ls="lsd"
+alias ll="lsd -la"
+alias lg="lazygit"
 alias d="docker"
-alias datestamp="date +%Y%m%d%H%M%S"
-alias desktop="cd ~/Desktop"
-alias df="df -h"
-alias documents="cd ~/Documents"
-alias dots="cd ~/.dotfiles"
-alias downloads="cd ~/Downloads"
-alias du="du -h"
+alias mp='multipass'
 alias edit="nvim"
+
+# Overwrite built-ins with safer/better versions
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias mkdir="mkdir -p"
+alias history='history -t "%F %T"'
+
+# System / Utility aliases
+alias df="df -h"
+alias du="du -h"
+alias free="free -h" # Note: `free` is not native to macOS
+alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias free="free -h"
-alias gptk="gameportingtoolkit-no-hud ~/.wine"
-alias grep='grep --color=auto'
-alias history='history -t "%F %T"'
+alias calc="bc -l"
+alias datestamp="date +%Y%m%d%H%M%S"
 alias ipinfo="curl ipinfo.io"
-alias ll="lsd -la"
-alias ls="lsd"
-alias lg="lazygit"
-alias mkdir="mkdir -p"
-alias mv='mv -i'
-alias mp='multipass'
-alias pdftohtml='pdftohtml -enc UTF-8 -noframes'
+alias weather="curl wttr.in"
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
+alias untar="tar -zxvf"
 alias python="python3"
-alias rm='rm -i'
-alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+
+# App/Tool specific aliases
+alias brew-backup="brew bundle dump --force --file $HOME/.dotfiles/.bin/Brewfile --describe"
+alias gptk="gameportingtoolkit-no-hud ~/$MY_GAME_PREFIX"
+alias pdftohtml='pdftohtml -enc UTF-8 -noframes'
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias trans='trans -b'
-alias transEn='\trans en:ja -b'
-alias transJa='\trans ja:en -b'
-alias untar="tar -zxvf"
-alias weather="curl wttr.in"
+alias transe2j='\trans en:ja -b'
+alias transj2e='\trans ja:en -b'
 alias yt-dlp-f="yt-dlp --no-check-certificate"
 
-# End of lines configured by zsh-newuser-install
+# ==============================================================================
+# Functions
+# ==============================================================================
 
+## Post-command notification
+notify() {
+  if [ "$?" = 0 ]; then
+    say -i -v 'Samantha' "The task was successful."
+  else
+    say -i -v 'Ava (Premium)' "The task failed."
+  fi
+}
+
+## Minimize PDF file size using Ghostscript
+pdfmin() {
+  local cnt=0
+  for i in "$@"; do
+    gs -sDEVICE=pdfwrite \
+      -dCompatibilityLevel=1.4 \
+      -dPDFSETTINGS=/ebook \
+      -dNOPAUSE -dQUIET -dBATCH \
+      -sOutputFile="${i%%.*}.min.pdf" "${i}" &
+    # Wait every 4 jobs to avoid overwhelming the system
+    (( (cnt += 1) % 4 == 0 )) && wait
+  done
+  wait && return 0
+}
+
+## The Fuck: command-line corrector
+fuck() {
+  TF_PYTHONIOENCODING=$PYTHONIOENCODING;
+  export TF_SHELL=zsh;
+  export TF_ALIAS=fuck;
+  TF_SHELL_ALIASES=$(alias);
+  export TF_SHELL_ALIASES;
+  TF_HISTORY="$(fc -ln -10)";
+  export TF_HISTORY;
+  export PYTHONIOENCODING=utf-8;
+  TF_CMD=$(
+    thefuck THEFUCK_ARGUMENT_PLACEHOLDER "$@"
+  ) && eval "$TF_CMD";
+  unset TF_HISTORY;
+  export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
+  test -n "$TF_CMD" && print -s "$TF_CMD"
+}
+
+# ==============================================================================
+# Environment Variables & PATH
+# ==============================================================================
+# Using the `path` array is the recommended Zsh way to manage your PATH.
+# `typeset -U` ensures that all elements are unique, preventing duplicates.
+typeset -U path
+
+# Define tool-specific variables
+export VOLTA_HOME="$HOME/.volta"
+export SWIFTLY_HOME_DIR="${HOME}/.swiftly"
+export DOTNET_ROOT="/usr/local/share/dotnet"
 export MODULAR_HOME="$HOME/.modular"
-export PATH="$HOME/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+export BAT_THEME="OneHalfDark"
+export MY_GAME_PREFIX=".wine" # For Game Porting Toolkit
+
+# Prepend directories to PATH. Order matters; first entry is checked first.
+path=(
+  # Development Tools & SDKs
+  "$HOME/.rd/bin" # Rancher Desktop
+  "$MODULAR_HOME/pkg/packages.modular.com_mojo/bin" # Modular Mojo
+  "$VOLTA_HOME/bin" # Volta
+  "$SWIFTLY_HOME_DIR/bin" # Swift
+  "$HOME/.ghcup/bin" # Haskell
+  "$HOME/.progate/bin" # Progate Path
+
+  # Homebrew-installed tools
+  "/opt/homebrew/opt/llvm/bin"
+  "/opt/homebrew/opt/rustup/bin"
+  "/opt/homebrew/opt/ruby/bin"
+
+  # Keep existing system paths
+  $path
+)
+
+# Append directories to PATH
+path+=(
+  "$DOTNET_ROOT"
+)
+
+# Compiler Flags for Homebrew LLVM
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+
+# The `path` array is automatically tied to the $PATH variable.
+export PATH
+
+# ==============================================================================
+# Initializations (should be at the end)
+# ==============================================================================
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="$HOME/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
-export BAT_THEME="OneHalfDark"
-eval
-fuck () {
-    TF_PYTHONIOENCODING=$PYTHONIOENCODING;
-    export TF_SHELL=zsh;
-    export TF_ALIAS=fuck;
-    TF_SHELL_ALIASES=$(alias);
-    export TF_SHELL_ALIASES;
-    TF_HISTORY="$(fc -ln -10)";
-    export TF_HISTORY;
-    export PYTHONIOENCODING=utf-8;
-    TF_CMD=$(
-        thefuck THEFUCK_ARGUMENT_PLACEHOLDER $@
-    ) && eval $TF_CMD;
-    unset TF_HISTORY;
-    export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
-    test -n "$TF_CMD" && print -s $TF_CMD
-}
-## PDF Minimalizer
-function pdfmin()
-{
-    local cnt=0
-    for i in $@; do
-        gs -sDEVICE=pdfwrite \
-           -dCompatibilityLevel=1.4 \
-           -dPDFSETTINGS=/ebook \
-           -dNOPAUSE -dQUIET -dBATCH \
-           -sOutputFile=${i%%.*}.min.pdf ${i} &
-        (( (cnt += 1) % 4 == 0 )) && wait
-    done
-    wait && return 0
-}
-
-## OrbStack Completion
-
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-
-export DOTNET_ROOT="/usr/local/share/dotnet"
-export PATH="$PATH:$DOTNET_ROOT"
-
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-export PATH="${HOME}/.ghcup/bin:$PATH"
-
-export SWIFTLY_HOME_DIR="${HOME}/.swiftly"
-export SWIFTLY_BIN_DIR="${HOME}/.swiftly/bin"
-if [[ ":$PATH:" != *":$SWIFTLY_BIN_DIR:"* ]]; then
-    export PATH="$SWIFTLY_BIN_DIR:$PATH"
-fi
-
-export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
-export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
-
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-
-export PATH=$HOME/.progate/bin:$PATH
-export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
-
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+## Starship Prompt
 eval "$(starship init zsh)"
 
-# tmux auto-attach
+## Zsh Syntax Highlighting
+ZSH_SYNTAX_HIGHLIGHTING_FILE="/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+if [[ -f "$ZSH_SYNTAX_HIGHLIGHTING_FILE" ]]; then
+  source "$ZSH_SYNTAX_HIGHLIGHTING_FILE"
+fi
+
+## tmux auto-attach
+# Attach to an existing tmux session or create a new one,
+# but skip this behavior in terminal editors like VS Code, Zed, or Wrap.
 if [ -z "$TMUX" ]; then
-	case "$TERM_PROGRAM" in
-		vscode|zed|Wrap)
-			;;
-		*)
-		tmux attach || tmux new
-		;;
-	esac
+  case "$TERM_PROGRAM" in
+    vscode|zed|Wrap)
+      ;; # Do nothing
+    *)
+      tmux attach -t default || tmux new -s default
+      ;;
+  esac
 fi
 
 # Amazon Q post block. Keep at the bottom of this file.
