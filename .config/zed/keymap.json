@@ -3,7 +3,13 @@
     "context": "Workspace",
     "bindings": {
       "shift shift": "file_finder::Toggle",
-      "ctrl ctrl": "command_palette::Toggle"
+      "ctrl ctrl": "command_palette::Toggle",
+      "ctrl-/": [
+        "task::Spawn",
+        {
+          "reveal_target": "center"
+        }
+      ]
     }
   },
   {
@@ -19,7 +25,7 @@
       "ctrl-`": [
         "task::Spawn",
         {
-          "task_name": "tmux",
+          "task_name": "zsh",
           "reveal_target": "center"
         }
       ]
@@ -1492,6 +1498,12 @@
     "context": "Workspace",
     "bindings": {
       "ctrl-`": null
+    }
+  },
+  {
+    "context": "(Workspace && !Terminal)",
+    "bindings": {
+      "ctrl-alt-shift-r": null
     }
   }
 ]
