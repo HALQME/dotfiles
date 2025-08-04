@@ -1,0 +1,76 @@
+checkForUpdatesAutomatically: true
+showFloatingNotifications: true
+showMenuBarTitle: false
+showMenuBarIcon: true
+menuBarTitleTemplate: ''
+menuBarDisplayAliases: ''
+enableFocusManagement: true
+centerCursorOnFocusChange: true
+focusNextWorkspaceWindow: cmd+right
+focusPreviousWorkspaceWindow: cmd+left
+focusFrontmostWindow: false
+enableSwipeGestures: true
+swipeThreshold: 2e-1
+restartAppOnWakeUp: false
+swipeLeft3FingerAction: previousWorkspace
+swipeRight3FingerAction: nextWorkspace
+swipeUp3FingerAction: none
+swipeDown3FingerAction: none
+swipeLeft4FingerAction: none
+swipeRight4FingerAction: none
+swipeUp4FingerAction: none
+swipeDown4FingerAction: none
+displayMode: static
+centerCursorOnWorkspaceChange: true
+changeWorkspaceOnAppAssign: true
+activeWorkspaceOnFocusChange: true
+skipEmptyWorkspacesOnSwitch: false
+keepUnassignedAppsOnSwitch: false
+restoreHiddenAppsOnSwitch: true
+loopWorkspaces: true
+switchToPreviousWorkspace: ctrl+left
+switchToNextWorkspace: ctrl+right
+switchToRecentWorkspace: ctrl+down
+alternativeDisplays: ''
+enablePictureInPictureSupport: true
+switchWorkspaceWhenPipCloses: true
+pipApps:
+- name: Vivaldi
+  bundleIdentifier: com.vivaldi.Vivaldi
+  pipWindowTitleRegex: "\u30D4\u30AF\u30C1\u30E3\u30FC\u30A4\u30F3 \u30D4\u30AF\u30C1\u30E3\u30FC"
+pipScreenCornerOffset: 15
+floatingApps:
+- name: 1Password
+  bundleIdentifier: com.1password.1password
+  iconPath: /Applications/1Password.app/Contents/Resources/icon.icns
+- name: Things
+  bundleIdentifier: com.culturedcode.ThingsMac
+  iconPath: /Applications/Things3.app/Contents/Resources/App-Release.icns
+- name: Raycast
+  bundleIdentifier: com.raycast.macos
+  iconPath: /Applications/Raycast.app/Contents/Resources/AppIcon-Release.icns
+- name: Rio
+  bundleIdentifier: com.raphaelamorim.rio
+  iconPath: /Applications/rio.app/Contents/Resources/icon.icns
+- name: WezTerm
+  bundleIdentifier: com.github.wez.wezterm
+  iconPath: /Applications/WezTerm.app/Contents/Resources/terminal.icns
+- name: Finder
+  bundleIdentifier: com.apple.finder
+  iconPath: /System/Library/CoreServices/Finder.app/Contents/Resources/Finder.icns
+- name: FaceTime
+  bundleIdentifier: com.apple.FaceTime
+  iconPath: /System/Applications/FaceTime.app/Contents/Resources/AppIcon.icns
+enableSpaceControl: true
+showSpaceControl: ctrl+up
+enableSpaceControlAnimations: true
+spaceControlCurrentDisplayWorkspaces: false
+spaceControlMaxColumns: 6
+enableWorkspaceTransitions: false
+workspaceTransitionDuration: 3e-1
+workspaceTransitionDimming: 2e-1
+enableIntegrations: false
+runScriptOnLaunch: ''
+runScriptOnWorkspaceChange: sketchybar --trigger flashspace_workspace_change WORKSPACE="$WORKSPACE"
+  DISPLAY="$DISPLAY"
+runScriptOnProfileChange: sketchybar --reload

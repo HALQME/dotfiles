@@ -1,0 +1,84 @@
+profiles:
+- id: DED4BAEB-AB62-4FF4-BD2F-91D6B89F6E43
+  name: Default
+  workspaces:
+  - id: 797F6AA2-BADC-45D8-94C1-6DE5D9509A6F
+    name: Home
+    display: Built-in Retina Display
+    apps:
+    - name: Vivaldi
+      bundleIdentifier: com.vivaldi.Vivaldi
+      iconPath: /Applications/Vivaldi.app/Contents/Resources/app.icns
+    symbolIconName: house.fill
+  - id: D60D542A-B84A-4852-A89D-4C4CC5312283
+    name: Programing
+    display: LG HDR 4K
+    apps:
+    - name: Vivaldi Snapshot
+      bundleIdentifier: com.vivaldi.Vivaldi.snapshot
+      iconPath: /Applications/Vivaldi Snapshot.app/Contents/Resources/app.icns
+    - name: Zen
+      bundleIdentifier: app.zen-browser.zen
+      iconPath: /Applications/Zen.app/Contents/Resources/firefox.icns
+    - name: Code
+      bundleIdentifier: com.microsoft.VSCode
+      iconPath: /Applications/Visual Studio Code.app/Contents/Resources/Code.icns
+    - name: Cursor
+      bundleIdentifier: com.todesktop.230313mzl4w4u92
+      iconPath: /Applications/Cursor.app/Contents/Resources/Cursor.icns
+    - name: CodeRunner
+      bundleIdentifier: com.krill.CodeRunner
+      iconPath: /Applications/CodeRunner.app/Contents/Resources/CodeRunner.icns
+    - name: Firefox Developer Edition
+      bundleIdentifier: org.mozilla.firefoxdeveloperedition
+      iconPath: /Applications/Firefox Developer Edition.app/Contents/Resources/firefox.icns
+    symbolIconName: apple.terminal.on.rectangle.fill
+- id: DCB70B13-67AE-42F9-A0D8-B8130BEDB115
+  name: University
+  workspaces:
+  - id: 191FA38B-1AD6-4502-AE6F-9EA9FD0C701A
+    name: Home
+    display: LG HDR 4K
+    apps:
+    - name: Goodnotes
+      bundleIdentifier: com.goodnotesapp.x
+      iconPath: /Applications/Goodnotes.app/Contents/Resources/AppIcon.icns
+    - name: Google Chrome
+      bundleIdentifier: com.google.Chrome
+      iconPath: /Applications/Google Chrome.app/Contents/Resources/app.icns
+    - name: Notion
+      bundleIdentifier: notion.id
+      iconPath: /Applications/Notion.app/Contents/Resources/electron.icns
+    symbolIconName: house.fill
+  - id: 8C34CF76-BE15-4672-AD17-F5133AB9D479
+    name: Coding
+    display: LG HDR 4K
+    apps:
+    - name: Firefox Developer Edition
+      bundleIdentifier: org.mozilla.firefoxdeveloperedition
+      iconPath: /Applications/Firefox Developer Edition.app/Contents/Resources/firefox.icns
+    - name: Code
+      bundleIdentifier: com.microsoft.VSCode
+      iconPath: /Applications/Visual Studio Code.app/Contents/Resources/Code.icns
+    - name: Vivaldi Snapshot
+      bundleIdentifier: com.vivaldi.Vivaldi.snapshot
+      iconPath: /Applications/Vivaldi Snapshot.app/Contents/Resources/app.icns
+    - name: Cursor
+      bundleIdentifier: com.todesktop.230313mzl4w4u92
+      iconPath: /Applications/Cursor.app/Contents/Resources/Cursor.icns
+    symbolIconName: apple.terminal
+  - id: A1A32350-654A-4B56-8286-41421A32D966
+    name: Club
+    display: LG HDR 4K
+    apps:
+    - name: Arc
+      bundleIdentifier: company.thebrowser.Browser
+      iconPath: /Applications/Arc.app/Contents/Resources/AppIcon.icns
+    symbolIconName: suit.club.fill
+  - id: D86592F6-8112-4788-9BF5-4E258989D50C
+    name: Not For Work
+    display: Built-in Retina Display
+    apps:
+    - name: Vivaldi
+      bundleIdentifier: com.vivaldi.Vivaldi
+      iconPath: /Applications/Vivaldi.app/Contents/Resources/app.icns
