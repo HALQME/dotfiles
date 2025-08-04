@@ -291,6 +291,8 @@ brew "uv"
 brew "vim"
 # JavaScript toolchain manager for reproducible environments
 brew "volta"
+# Web Assembly Binary Toolkit
+brew "wabt"
 # Standalone JIT-style runtime for WebAssembly, using Cranelift
 brew "wasmtime"
 # Internet file retriever
@@ -321,8 +323,6 @@ brew "zsh-syntax-highlighting"
 brew "cirruslabs/cli/tart"
 # Multi-type data labeling and annotation tool with standardized output format
 brew "humansignal/tap/label-studio"
-# Modular developer CLI tool
-brew "modularml/packages/modular"
 brew "tursodatabase/tap/turso"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
@@ -487,8 +487,6 @@ cask "keyclu"
 cask "labplot"
 # Open source code editor written in Rust
 cask "lapce"
-# Discover, download, and run local LLMs
-cask "lm-studio"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
 # Controls and monitors all fans on Apple computers
@@ -533,8 +531,6 @@ cask "obsidian"
 cask "ogdesign-eagle"
 # Get up and running with large language models locally
 cask "ollama-app"
-# Interact with Ollama models
-cask "ollamac"
 # Document editor
 cask "onlyoffice"
 # Web browser
@@ -658,7 +654,6 @@ mas "Tailscale", id: 1475387142
 mas "Telegram", id: 747648890
 mas "TestFlight", id: 899247664
 mas "Things", id: 904280696
-mas "Transcribe", id: 1434184098
 mas "Usage", id: 1561788435
 mas "Velja", id: 1607635845
 mas "Vinegar", id: 1591303229
@@ -684,7 +679,6 @@ vscode "dbaeumer.vscode-eslint"
 vscode "dioxuslabs.dioxus"
 vscode "docker.docker"
 vscode "dtsvet.vscode-wasm"
-vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "formulahendry.auto-rename-tag"
@@ -695,6 +689,7 @@ vscode "github.copilot-chat"
 vscode "github.remotehub"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
+vscode "golang.go"
 vscode "google.geminicodeassist"
 vscode "ibm.output-colorizer"
 vscode "james-yu.latex-workshop"

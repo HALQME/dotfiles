@@ -228,10 +228,13 @@
   "geminicodeassist.inlineSuggestions.enableAuto": false,
   "geminicodeassist.updateChannel": "Insiders",
   "git.autofetch": true,
+  "git.blame.editorDecoration.enabled": true,
+  "git.closeDiffOnOperation": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.ignoreRebaseWarning": true,
   "git.openRepositoryInParentFolders": "always",
+  "git.showInlineOpenFileAction": false,
   "github.copilot.chat.codesearch.enabled": true,
   "github.copilot.chat.editor.temporalContext.enabled": true,
   "github.copilot.chat.edits.temporalContext.enabled": true,
@@ -254,6 +257,11 @@
   },
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:claude-sonnet-4",
+  "gitlens.currentLine.enabled": false,
+  "gitlens.currentLine.format": "",
+  "gitlens.currentLine.pullRequests.enabled": false,
+  "gitlens.currentLine.scrollable": false,
+  "gitlens.views.openChangesInMultiDiffEditor": false,
   "hexeditor.columnWidth": 16,
   "hexeditor.defaultEndianness": "little",
   "hexeditor.inspectorType": "aside",
@@ -263,14 +271,16 @@
   "intellicode-completions-cdk.runAlongsideCopilot": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "kilo-code.allowedCommands": [
-    "npm test",
-    "npm install",
     "tsc",
     "git log",
     "git diff",
-    "git show"
+    "git show",
+    "pnpm"
   ],
-  "kilo-code.deniedCommands": [],
+  "kilo-code.deniedCommands": [
+    "rm",
+    "npm"
+  ],
   "lldb.launch.expressions": "native",
   "lldb.library": "/Applications/Xcode-16.2.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
   "notebook.cellToolbarLocation": {
