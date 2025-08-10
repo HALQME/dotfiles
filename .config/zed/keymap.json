@@ -57,7 +57,7 @@
     }
   },
   {
-    "context": "VimControl && !menu",
+    "context": "VimControl && !menu && !insert",
     "bindings": {
       "i": [
         "vim::PushObject",
@@ -92,7 +92,7 @@
       "$": "vim::EndOfLine",
       "^": "vim::FirstNonWhitespace",
       "_": "vim::StartOfLineDownward",
-      "g _": "vim::EndOfLineDownward",
+      "G _": "vim::EndOfLineDownward",
       "shift-g": "vim::EndOfDocument",
       "{": "vim::StartOfParagraph",
       "}": "vim::EndOfParagraph",
@@ -132,7 +132,7 @@
       "w": "vim::NextWordStart",
       "e": "vim::NextWordEnd",
       "b": "vim::PreviousWordStart",
-      "g e": "vim::PreviousWordEnd",
+      "G e": "vim::PreviousWordEnd",
       // Subword motions
       // "w": "vim::NextSubwordStart",
       // "b": "vim::PreviousSubwordStart",
@@ -156,14 +156,14 @@
           "ignore_punctuation": true
         }
       ],
-      "g shift-e": [
+      "G shift-e": [
         "vim::PreviousWordEnd",
         {
           "ignore_punctuation": true
         }
       ],
       "/": "vim::Search",
-      "g /": "pane::DeploySearch",
+      "G /": "pane::DeploySearch",
       "?": [
         "vim::Search",
         {
@@ -264,122 +264,122 @@
       "ctrl-u": "vim::ScrollUp",
       "ctrl-y": "vim::LineUp",
       // "g" commands
-      "g shift-r": "vim::PushReplaceWithRegister",
-      "g r n": "editor::Rename",
-      "g r r": "editor::FindAllReferences",
-      "g r i": "editor::GoToImplementation",
-      "g r a": "editor::ToggleCodeActions",
-      "g g": "vim::StartOfDocument",
-      "g h": "editor::Hover",
-      "g t": "pane::ActivateNextItem",
-      "g shift-t": "pane::ActivatePreviousItem",
-      "g d": "editor::GoToDefinition",
-      "g shift-d": "editor::GoToDeclaration",
-      "g y": "editor::GoToTypeDefinition",
-      "g shift-i": "editor::GoToImplementation",
-      "g x": "editor::OpenUrl",
-      "g f": "editor::OpenSelectedFilename",
-      "g n": "vim::SelectNextMatch",
-      "g shift-n": "vim::SelectPreviousMatch",
-      "g l": "vim::SelectNext",
-      "g shift-l": "vim::SelectPrevious",
-      "g >": [
+      "G shift-r": "vim::PushReplaceWithRegister",
+      "G r n": "editor::Rename",
+      "G r r": "editor::FindAllReferences",
+      "G r i": "editor::GoToImplementation",
+      "G r a": "editor::ToggleCodeActions",
+      "G g": "vim::StartOfDocument",
+      "G h": "editor::Hover",
+      "G t": "pane::ActivateNextItem",
+      "G shift-t": "pane::ActivatePreviousItem",
+      "G d": "editor::GoToDefinition",
+      "G shift-d": "editor::GoToDeclaration",
+      "G y": "editor::GoToTypeDefinition",
+      "G shift-i": "editor::GoToImplementation",
+      "G x": "editor::OpenUrl",
+      "G f": "editor::OpenSelectedFilename",
+      "G n": "vim::SelectNextMatch",
+      "G shift-n": "vim::SelectPreviousMatch",
+      "G l": "vim::SelectNext",
+      "G shift-l": "vim::SelectPrevious",
+      "G >": [
         "editor::SelectNext",
         {
           "replace_newest": true
         }
       ],
-      "g <": [
+      "G <": [
         "editor::SelectPrevious",
         {
           "replace_newest": true
         }
       ],
-      "g a": "editor::SelectAllMatches",
-      "g s": "outline::Toggle",
-      "g shift-o": "outline::Toggle",
-      "g shift-s": "project_symbols::Toggle",
-      "g .": "editor::ToggleCodeActions", // zed specific
-      "g shift-a": "editor::FindAllReferences", // zed specific
-      "g space": "editor::OpenExcerpts", // zed specific
-      "g *": [
+      "G a": "editor::SelectAllMatches",
+      "G s": "outline::Toggle",
+      "G shift-o": "outline::Toggle",
+      "G shift-s": "project_symbols::Toggle",
+      "G .": "editor::ToggleCodeActions", // zed specific
+      "G shift-a": "editor::FindAllReferences", // zed specific
+      "G space": "editor::OpenExcerpts", // zed specific
+      "G *": [
         "vim::MoveToNext",
         {
           "partial_word": true
         }
       ],
-      "g #": [
+      "G #": [
         "vim::MoveToPrevious",
         {
           "partial_word": true
         }
       ],
-      "g j": [
+      "G j": [
         "vim::Down",
         {
           "display_lines": true
         }
       ],
-      "g down": [
+      "G down": [
         "vim::Down",
         {
           "display_lines": true
         }
       ],
-      "g k": [
+      "G k": [
         "vim::Up",
         {
           "display_lines": true
         }
       ],
-      "g up": [
+      "G up": [
         "vim::Up",
         {
           "display_lines": true
         }
       ],
-      "g $": [
+      "G $": [
         "vim::EndOfLine",
         {
           "display_lines": true
         }
       ],
-      "g end": [
+      "G end": [
         "vim::EndOfLine",
         {
           "display_lines": true
         }
       ],
-      "g 0": [
+      "G 0": [
         "vim::StartOfLine",
         {
           "display_lines": true
         }
       ],
-      "g home": [
+      "G home": [
         "vim::StartOfLine",
         {
           "display_lines": true
         }
       ],
-      "g shift-m": [
+      "G shift-m": [
         "vim::MiddleOfLine",
         {
           "display_lines": true
         }
       ],
-      "g ^": [
+      "G ^": [
         "vim::FirstNonWhitespace",
         {
           "display_lines": true
         }
       ],
-      "g v": "vim::RestoreVisualSelection",
-      "g ]": "editor::GoToDiagnostic",
-      "g [": "editor::GoToPreviousDiagnostic",
-      "g i": "vim::InsertAtPrevious",
-      "g ,": "vim::ChangeListNewer",
-      "g ;": "vim::ChangeListOlder",
+      "G v": "vim::RestoreVisualSelection",
+      "G ]": "editor::GoToDiagnostic",
+      "G [": "editor::GoToPreviousDiagnostic",
+      "G i": "vim::InsertAtPrevious",
+      "G ,": "vim::ChangeListNewer",
+      "G ;": "vim::ChangeListOlder",
       "shift-h": "vim::WindowTop",
       "shift-m": "vim::WindowMiddle",
       "shift-l": "vim::WindowBottom",
@@ -495,7 +495,7 @@
       "shift-c": "vim::ChangeToEndOfLine",
       "d": "vim::PushDelete",
       "delete": "vim::DeleteRight",
-      "g shift-j": "vim::JoinLinesNoWhitespace",
+      "G shift-j": "vim::JoinLinesNoWhitespace",
       "y": "vim::PushYank",
       "x": "vim::DeleteRight",
       "shift-x": "vim::DeleteLeft",
@@ -506,13 +506,13 @@
       "<": "vim::PushOutdent",
       "=": "vim::PushAutoIndent",
       "!": "vim::PushShellCommand",
-      "g u": "vim::PushLowercase",
-      "g shift-u": "vim::PushUppercase",
-      "g ~": "vim::PushOppositeCase",
-      "g ?": "vim::PushRot13",
+      "G u": "vim::PushLowercase",
+      "G shift-u": "vim::PushUppercase",
+      "G ~": "vim::PushOppositeCase",
+      "G ?": "vim::PushRot13",
       // "g ?": "vim::PushRot47",
-      "g w": "vim::PushRewrap",
-      "g q": "vim::PushRewrap",
+      "G w": "vim::PushRewrap",
+      "G q": "vim::PushRewrap",
       "insert": "vim::InsertBefore",
       // tree-sitter related commands
       "[ x": "vim::SelectLargerSyntaxNode",
@@ -521,7 +521,7 @@
       "[ d": "editor::GoToPreviousDiagnostic",
       "] c": "editor::GoToHunk",
       "[ c": "editor::GoToPreviousHunk",
-      "g c": "vim::PushToggleComments"
+      "G c": "vim::PushToggleComments"
     }
   },
   {
@@ -576,13 +576,13 @@
       ],
       "ctrl-a": "vim::Increment",
       "ctrl-x": "vim::Decrement",
-      "g ctrl-a": [
+      "G ctrl-a": [
         "vim::Increment",
         {
           "step": true
         }
       ],
-      "g ctrl-x": [
+      "G ctrl-x": [
         "vim::Decrement",
         {
           "step": true
@@ -590,10 +590,10 @@
       ],
       "shift-i": "vim::InsertBefore",
       "shift-a": "vim::InsertAfter",
-      "g shift-i": "vim::VisualInsertFirstNonWhiteSpace",
-      "g shift-a": "vim::VisualInsertEndOfLine",
+      "G shift-i": "vim::VisualInsertFirstNonWhiteSpace",
+      "G shift-a": "vim::VisualInsertEndOfLine",
       "shift-j": "vim::JoinLines",
-      "g shift-j": "vim::JoinLinesNoWhitespace",
+      "G shift-j": "vim::JoinLinesNoWhitespace",
       "r": "vim::PushReplace",
       "ctrl-c": "vim::SwitchToNormalMode",
       "ctrl-[": "vim::SwitchToNormalMode",
@@ -614,16 +614,16 @@
           "around": true
         }
       ],
-      "g shift-r": [
+      "G shift-r": [
         "vim::Paste",
         {
           "preserve_clipboard": true
         }
       ],
-      "g c": "vim::ToggleComments",
-      "g q": "vim::Rewrap",
-      "g w": "vim::Rewrap",
-      "g ?": "vim::ConvertToRot13",
+      "G c": "vim::ToggleComments",
+      "G q": "vim::Rewrap",
+      "G w": "vim::Rewrap",
+      "G ?": "vim::ConvertToRot13",
       // "g ?": "vim::ConvertToRot47",
       "\"": "vim::PushRegister",
       // tree-sitter related commands
@@ -665,7 +665,8 @@
       "ctrl-r": "vim::PushRegister",
       "insert": "vim::ToggleReplace",
       "ctrl-o": "vim::TemporaryNormal",
-      "ctrl-s": "editor::ShowSignatureHelp"
+      "ctrl-s": "editor::ShowSignatureHelp",
+      "g": null
     }
   },
   {
@@ -741,11 +742,11 @@
       ">": "vim::Indent",
       "<": "vim::Outdent",
       "=": "vim::AutoIndent",
-      "g u": "vim::PushLowercase",
-      "g shift-u": "vim::PushUppercase",
-      "g ~": "vim::PushOppositeCase",
-      "g q": "vim::PushRewrap",
-      "g w": "vim::PushRewrap",
+      "G u": "vim::PushLowercase",
+      "G shift-u": "vim::PushUppercase",
+      "G ~": "vim::PushOppositeCase",
+      "G q": "vim::PushRewrap",
+      "G w": "vim::PushRewrap",
       "insert": "vim::InsertBefore",
       "alt-.": "vim::RepeatFind",
       // tree-sitter related commands
@@ -756,20 +757,20 @@
       "] c": "editor::GoToHunk",
       "[ c": "editor::GoToPreviousHunk",
       // Goto mode
-      "g n": "pane::ActivateNextItem",
-      "g p": "pane::ActivatePreviousItem",
+      "G n": "pane::ActivateNextItem",
+      "G p": "pane::ActivatePreviousItem",
       // "tab": "pane::ActivateNextItem",
       // "shift-tab": "pane::ActivatePrevItem",
       "shift-h": "pane::ActivatePreviousItem",
       "shift-l": "pane::ActivateNextItem",
-      "g l": "vim::EndOfLine",
-      "g h": "vim::StartOfLine",
-      "g s": "vim::FirstNonWhitespace", // "g s" default behavior is "space s"
-      "g e": "vim::EndOfDocument",
-      "g r": "editor::FindAllReferences", // zed specific
-      "g t": "vim::WindowTop",
-      "g c": "vim::WindowMiddle",
-      "g b": "vim::WindowBottom",
+      "G l": "vim::EndOfLine",
+      "G h": "vim::StartOfLine",
+      "G s": "vim::FirstNonWhitespace", // "g s" default behavior is "space s"
+      "G e": "vim::EndOfDocument",
+      "G r": "editor::FindAllReferences", // zed specific
+      "G t": "vim::WindowTop",
+      "G c": "vim::WindowMiddle",
+      "G b": "vim::WindowBottom",
       "x": "editor::SelectLine",
       "shift-x": "editor::SelectLine",
       "%": "editor::SelectAll",
@@ -885,7 +886,7 @@
       "ctrl-c": "vim::ClearOperators",
       "ctrl-[": "vim::ClearOperators",
       "escape": "vim::ClearOperators",
-      "g c": "vim::Comment"
+      "G c": "vim::Comment"
     }
   },
   {
@@ -964,37 +965,37 @@
   {
     "context": "vim_operator == gu",
     "bindings": {
-      "g u": "vim::CurrentLine",
+      "G u": "vim::CurrentLine",
       "u": "vim::CurrentLine"
     }
   },
   {
     "context": "vim_operator == gU",
     "bindings": {
-      "g shift-u": "vim::CurrentLine",
+      "G shift-u": "vim::CurrentLine",
       "shift-u": "vim::CurrentLine"
     }
   },
   {
     "context": "vim_operator == g~",
     "bindings": {
-      "g ~": "vim::CurrentLine",
+      "G ~": "vim::CurrentLine",
       "~": "vim::CurrentLine"
     }
   },
   {
     "context": "vim_operator == g?",
     "bindings": {
-      "g ?": "vim::CurrentLine",
+      "G ?": "vim::CurrentLine",
       "?": "vim::CurrentLine"
     }
   },
   {
     "context": "vim_operator == gq",
     "bindings": {
-      "g q": "vim::CurrentLine",
+      "G q": "vim::CurrentLine",
       "q": "vim::CurrentLine",
-      "g w": "vim::CurrentLine",
+      "G w": "vim::CurrentLine",
       "w": "vim::CurrentLine"
     }
   },
@@ -1389,7 +1390,7 @@
   {
     "context": "!Editor && !Terminal",
     "bindings": {
-      "g /": "pane::DeploySearch"
+      "G /": "pane::DeploySearch"
     }
   },
   {
@@ -1414,7 +1415,7 @@
       "}": "project_panel::SelectNextDirectory",
       "{": "project_panel::SelectPrevDirectory",
       "shift-g": "menu::SelectLast",
-      "g g": "menu::SelectFirst",
+      "G g": "menu::SelectFirst",
       "-": "project_panel::SelectParent"
     }
   },
@@ -1424,7 +1425,7 @@
       "j": "menu::SelectNext",
       "k": "menu::SelectPrevious",
       "shift-g": "menu::SelectLast",
-      "g g": "menu::SelectFirst"
+      "G g": "menu::SelectFirst"
     }
   },
   {
@@ -1433,13 +1434,13 @@
     "bindings": {
       "k": "menu::SelectPrevious",
       "j": "menu::SelectNext",
-      "g g": "menu::SelectFirst",
+      "G g": "menu::SelectFirst",
       "shift-g": "menu::SelectLast",
-      "g f": "menu::Confirm",
+      "G f": "menu::Confirm",
       "i": "git_panel::FocusEditor",
       "x": "git::ToggleStaged",
       "shift-x": "git::StageAll",
-      "g x": "git::StageRange",
+      "G x": "git::StageRange",
       "shift-u": "git::UnstageAll"
     }
   },

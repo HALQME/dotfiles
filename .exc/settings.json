@@ -275,7 +275,8 @@
     "git log",
     "git diff",
     "git show",
-    "pnpm"
+    "pnpm",
+    "NODE_ENV=test pnpm"
   ],
   "kilo-code.deniedCommands": [
     "rm",
@@ -389,5 +390,6 @@
     ]
   },
   "zig.path": "zig",
-  "zig.zls.path": "zls"
+  "zig.zls.path": "zls",
+  "chat.agent.maxRequests": 50
 }

@@ -21,7 +21,7 @@
   // Theme & Color Scheme
   "theme": {
     "mode": "system",
-    "light": "Fireworks Light",
+    "light": "One Light",
     "dark": "Fireworks Dark"
   },
   "icon_theme": {
@@ -30,14 +30,14 @@
     "dark": "Catppuccin Frappé"
   },
   // Font Configuration
-  "buffer_font_family": "Moralerspace Xenon NF",
+  "buffer_font_family": "Moralerspace Xenon HWNF",
   "buffer_font_features": {
     "calt": true,
     "liga": false,
     "ss02": false,
     "ss03": true,
     "ss04": false,
-    "ss05": true
+    "ss05": false
   },
   "ui_font_family": "Moralerspace Neon NF",
   // ============================================================================
@@ -418,9 +418,9 @@
   // AI AGENT & ASSISTANCE
   // ============================================================================
   "agent": {
-    "always_allow_tool_actions": true,
+    "always_allow_tool_actions": false,
     "button": true,
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_view": "text_thread",
     "dock": "right",
     "enabled": true,
@@ -429,11 +429,11 @@
     "play_sound_when_agent_done": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4.1"
+      "model": "gpt-5"
     },
     "inline_assistant_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash"
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
     },
     "commit_message_model": {
       "provider": "google",
@@ -444,9 +444,13 @@
       "model": "gemini-2.5-flash"
     }
   },
-  "language_models": {
-    "ollama": {
-      "api_url": "http://localhost:11434"
+  "context_servers": {
+    "mcp-server-context7": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        "default_minimum_tokens": "10000"
+      }
     }
   },
   // ============================================================================
@@ -461,7 +465,7 @@
   },
   // Journal
   "journal": {
-    "path": "~/Library/Mobile Documents/iCloud~md~obsidian/Documents",
+    "path": "~/Library/Mobile Documents/iCloud~com~talex~www~noteshub/Documents/Knowledge",
     "hour_format": "hour24"
   },
   // ============================================================================
@@ -487,7 +491,7 @@
       }
     },
     "env": {},
-    "font_family": "Moralerspace Krypton NF",
+    "font_family": "Moralerspace Krypton HWNF",
     "font_features": {
       "regture": true
     },

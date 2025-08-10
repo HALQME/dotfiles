@@ -3,7 +3,7 @@
     "label": "lazygit",
     "command": "lazygit",
     "reveal_target": "center",
-    "hide": "always"
+    "hide": "on_success"
   },
   {
     "label": "tmux",
@@ -16,19 +16,49 @@
     "label": "act",
     "command": "act --container-architecture linux/amd64 -s GITHUB_TOKEN=\"$(gh auth token)\"",
     "reveal_target": "center",
-    "hide": "always"
+    "hide": "on_success"
   },
   {
     "label": "btm",
     "command": "btm",
     "reveal_target": "center",
-    "hide": "always"
+    "hide": "on_success"
   },
   {
     "label": "zsh",
+    "args": [
+      "--no-rcs"
+    ],
     "command": "zsh",
     "use_new_terminal": true,
     "allow_concurrent_runs": true,
-    "reveal_target": "center"
+    "reveal_target": "center",
+    "hide": "on_success"
+  },
+  {
+    "label": "lualatex build",
+    "command": "mkdir -p $(echo $ZED_DIRNAME)/dist && lualatex",
+    "args": [
+      "--recorder",
+      "--output-directory=$(echo $ZED_DIRNAME)/dist",
+      "$ZED_FILENAME"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "tags": [
+      "latex-build"
+    ],
+    "reveal": "no_focus"
+  },
+  {
+    "label": "biber build",
+    "command": "mkdir -p $(echo $ZED_DIRNAME)/dist && biber $(echo $ZED_FILENAME | sed 's/\\.bib//')",
+    "args": [
+      "--output-directory=$ZED_DIRNAME/dist"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "tags": [
+      "latex-build"
+    ],
+    "reveal": "no_focus"
   }
 ]
