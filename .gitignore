@@ -1,4 +1,6 @@
-.config/zed/prompts/**/*
-!.config/zed/prompts/*.md
-.config/zed/conversations/*
 .DS_Store
+
+.config/zed/prompts/**/*
+.config/zed/conversations/*
+
+**/history/**

@@ -6,9 +6,9 @@ for dotfile in "$CONF_DIR"/*; do
   ln -sfnv "$dotfile" "$HOME/.config"
 done
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-for dotfile in "${SCRIPT_DIR}"/.??*; do
-  [[ "$dotfile" == "${CONF_DIR}/.git" || "$dotfile" == "${CONF_DIR}/.github" || "$dotfile" == "${CONF_DIR}/.DS_Store" ]] && continue
+HOMEFILE_DIR="$(cd .. && pwd)/.dotfiles/.home"
+for dotfile in "${HOMEFILE_DIR}"/.??*; do
+  [[ "$dotfile" == "${HOMEFILE_DIR}/.git" || "$dotfile" == "${HOMEFILE_DIR}/.github" || "$dotfile" == "${HOMEFILE_DIR}/.DS_Store" ]] && continue
   ln -fnsv "$dotfile" "$HOME"
 done
 

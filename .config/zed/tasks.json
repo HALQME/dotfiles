@@ -36,6 +36,18 @@
     "hide": "on_success"
   },
   {
+    "label": "qchat",
+    "args": [],
+    "command": "qchat",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": true,
+    "reveal": "always",
+    "reveal_target": "center",
+    "show_command": false,
+    "show_summary": false,
+    "hide": "on_success"
+  },
+  {
     "label": "lualatex build",
     "command": "mkdir -p $(echo $ZED_DIRNAME)/dist && lualatex",
     "args": [

@@ -441,7 +441,7 @@
   "agent": {
     "always_allow_tool_actions": false,
     "button": true,
-    "default_profile": "container-use",
+    "default_profile": "write",
     "default_view": "thread",
     "dock": "right",
     "enabled": true,
@@ -451,7 +451,7 @@
     "play_sound_when_agent_done": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "model": "gpt-4.1"
     },
     "inline_assistant_model": {
       "provider": "copilot_chat",
@@ -486,7 +486,11 @@
         "context_servers": {
           "serena": {
             "tools": {
-              "write_memory": false,
+              "create_text_file": false,
+              "execute_shell_command": false,
+              "replace_symbol_body": false,
+              "replace_regex": false,
+              "write_memory": true,
               "think_about_whether_you_are_done": true,
               "think_about_task_adherence": true,
               "think_about_collected_information": true,
@@ -506,7 +510,7 @@
           },
           "mcp-server-context7": {
             "tools": {
-              "resolve-library-id": false,
+              "resolve-library-id": true,
               "get-library-docs": true
             }
           }

@@ -1,0 +1,64 @@
+# OS関連
+.DS_Store
+Thumbs.db
+
+# Python関連
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node.js/JavaScript関連
+node_modules/
+bower_components/
+jspm_packages/
+
+# エディタ・IDE関連
+.idea/
+*.iml
+*.swp
+*.swo
+*.orig
+
+# ログ・キャッシュ・一時ファイル
+*.log
+*.log.*
+*.cache
+*.tmp
+tmp/
+temp/
+cache/
+logs/
+*.bak
+*.out
+
+# PID・DB・バックアップ
+*.pid
+*.pid.lock
+*.pid.*
+*.pid.lock.*
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# アーカイブ・圧縮ファイル
+*.tgz
+*.gz
+*.zip
+*.tar
+*.rar
+*.7z
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+
+# ビルド・カバレッジ・配布物
+dist/
+coverage/
+build/
+
+# その他
+.env
+.note.md
