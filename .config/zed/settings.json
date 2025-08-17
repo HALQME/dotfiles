@@ -330,16 +330,37 @@
   // EXTENSIONS & PLUGINS
   // ============================================================================
   "auto_install_extensions": {
+    // Languages
     "c": true,
+    "csharp": true,
     "docker-compose": true,
     "dockerfile": true,
     "haskell": true,
     "html": true,
     "java": false,
+    "latex": true,
     "javascript": true,
+    "lua": false,
+    "make": false,
     "typescript": true,
     "python": true,
-    "swift": true
+    "swift": true,
+    "color-lsp": true,
+    "git-firefly": true,
+    "nix": false,
+    "pkl": false,
+    "rainbow-csv": true,
+    "sql": false,
+    "ruby": false,
+    "r": false,
+    "toml": true,
+    "wat": true,
+    "xml": true,
+    "zig": false,
+    // Themes, Icon Themes
+    "catppuccin-icons": true,
+    // Context Servers
+    "mcp-server-context7": true
   },
   // ============================================================================
   // PANELS & DOCK CONFIGURATION
@@ -420,28 +441,150 @@
   "agent": {
     "always_allow_tool_actions": false,
     "button": true,
-    "default_profile": "ask",
-    "default_view": "text_thread",
+    "default_profile": "container-use",
+    "default_view": "thread",
     "dock": "right",
     "enabled": true,
+    "use_modifier_to_send": true,
     "expand_edit_card": true,
     "expand_terminal_card": true,
     "play_sound_when_agent_done": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5"
+      "model": "gpt-4o"
     },
     "inline_assistant_model": {
       "provider": "copilot_chat",
       "model": "gpt-4.1"
     },
     "commit_message_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash"
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini"
     },
     "thread_summary_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash"
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini"
+    },
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "contents": true,
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": false,
+          "project_notifications": true,
+          "now": true,
+          "find_path": false,
+          "read_file": false,
+          "open": false,
+          "grep": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {
+          "serena": {
+            "tools": {
+              "write_memory": false,
+              "think_about_whether_you_are_done": true,
+              "think_about_task_adherence": true,
+              "think_about_collected_information": true,
+              "search_for_pattern": true,
+              "switch_modes": true,
+              "read_memory": true,
+              "read_file": true,
+              "list_memories": true,
+              "list_dir": true,
+              "get_symbols_overview": true,
+              "find_symbol": true,
+              "find_referencing_symbols": true,
+              "find_file": true,
+              "check_onboarding_performed": true,
+              "activate_project": true
+            }
+          },
+          "mcp-server-context7": {
+            "tools": {
+              "resolve-library-id": false,
+              "get-library-docs": true
+            }
+          }
+        }
+      },
+      "container-use": {
+        "name": "Container Use",
+        "tools": {
+          "fetch": true,
+          "thinking": true,
+          "copy_path": false,
+          "find_path": false,
+          "delete_path": false,
+          "create_directory": false,
+          "list_directory": false,
+          "diagnostics": false,
+          "read_file": false,
+          "open": false,
+          "move_path": false,
+          "grep": false,
+          "edit_file": false,
+          "terminal": false
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "serena": {
+            "tools": {
+              "write_memory": false,
+              "think_about_whether_you_are_done": true,
+              "think_about_task_adherence": true,
+              "think_about_collected_information": true,
+              "switch_modes": true,
+              "search_for_pattern": true,
+              "replace_regex": false,
+              "replace_symbol_body": false,
+              "read_memory": true,
+              "read_file": true,
+              "prepare_for_new_conversation": true,
+              "onboarding": false,
+              "list_memories": true,
+              "insert_before_symbol": true,
+              "list_dir": true,
+              "insert_after_symbol": true,
+              "get_symbols_overview": true,
+              "find_symbol": true,
+              "find_referencing_symbols": true,
+              "find_file": true,
+              "execute_shell_command": false,
+              "delete_memory": false,
+              "create_text_file": true,
+              "check_onboarding_performed": false,
+              "activate_project": true
+            }
+          },
+          "mcp-server-context7": {
+            "tools": {
+              "resolve-library-id": true,
+              "get-library-docs": true
+            }
+          },
+          "container-use": {
+            "tools": {
+              "environment_add_service": true,
+              "environment_checkpoint": true,
+              "environment_config": true,
+              "environment_create": true,
+              "environment_file_delete": true,
+              "environment_file_edit": true,
+              "environment_file_list": true,
+              "environment_file_read": true,
+              "environment_file_write": true,
+              "environment_open": true,
+              "environment_run_cmd": true,
+              "environment_update_metadata": true
+            }
+          }
+        }
+      }
     }
   },
   "context_servers": {
@@ -451,6 +594,26 @@
       "settings": {
         "default_minimum_tokens": "10000"
       }
+    },
+    "serena": {
+      "source": "custom",
+      "enabled": true,
+      "command": "/opt/homebrew/bin/uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server"
+      ],
+      "env": {}
+    },
+    "container-use": {
+      "source": "custom",
+      "command": "container-use",
+      "args": [
+        "stdio"
+      ],
+      "env": {}
     }
   },
   // ============================================================================

@@ -157,6 +157,7 @@ path=(
   "$SWIFTLY_HOME_DIR/bin" # Swift
   "$HOME/.ghcup/bin" # Haskell
   "$HOME/.progate/bin" # Progate Path
+  "$HOME/.lmstudio/bin" # LM Studio CLI
 
   # Homebrew-installed tools
   "/opt/homebrew/opt/llvm/bin"
