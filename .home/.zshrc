@@ -12,6 +12,7 @@ autoload -Uz colors && colors
 bindkey -e
 
 # Various Zsh options for a better user experience
+
 setopt \
   PRINT_EIGHT_BIT \
   INTERACTIVE_COMMENTS \
@@ -53,7 +54,7 @@ alias ll="lsd -la"
 alias lg="lazygit"
 alias d="docker"
 alias mp='multipass'
-alias edit="nvim"
+alias edit="vim"
 
 # Overwrite built-ins with safer/better versions
 alias cp='cp -i'
@@ -86,6 +87,7 @@ alias trans='trans -b'
 alias transe2j='\trans en:ja -b'
 alias transj2e='\trans ja:en -b'
 alias yt-dlp-f="yt-dlp --no-check-certificate"
+alias zj="zellij attach default || zellij --session default"
 
 # ==============================================================================
 # Functions
@@ -142,6 +144,7 @@ typeset -U path
 
 # Define tool-specific variables
 export VOLTA_HOME="$HOME/.volta"
+export GO_HOME="$HOME/.go"
 export SWIFTLY_HOME_DIR="${HOME}/.swiftly"
 export DOTNET_ROOT="/usr/local/share/dotnet"
 export MODULAR_HOME="$HOME/.modular"
@@ -151,19 +154,21 @@ export MY_GAME_PREFIX=".wine" # For Game Porting Toolkit
 # Prepend directories to PATH. Order matters; first entry is checked first.
 path=(
   # Development Tools & SDKs
-  "$HOME/.rd/bin" # Rancher Desktop
   "$MODULAR_HOME/pkg/packages.modular.com_mojo/bin" # Modular Mojo
   "$VOLTA_HOME/bin" # Volta
+  "$GO_HOME/bin" # Go
   "$SWIFTLY_HOME_DIR/bin" # Swift
   "$HOME/.ghcup/bin" # Haskell
   "$HOME/.progate/bin" # Progate Path
   "$HOME/.lmstudio/bin" # LM Studio CLI
 
   # Homebrew-installed tools
+  "/opt/homebrew/bin"
+  "/opt/homebrew/sbin"
   "/opt/homebrew/opt/llvm/bin"
   "/opt/homebrew/opt/rustup/bin"
   "/opt/homebrew/opt/ruby/bin"
-
+  
   # Keep existing system paths
   $path
 )
@@ -184,10 +189,6 @@ export PATH
 # Initializations (should be at the end)
 # ==============================================================================
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="$HOME/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 ## Starship Prompt
 eval "$(starship init zsh)"
 
@@ -195,19 +196,6 @@ eval "$(starship init zsh)"
 ZSH_SYNTAX_HIGHLIGHTING_FILE="/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 if [[ -f "$ZSH_SYNTAX_HIGHLIGHTING_FILE" ]]; then
   source "$ZSH_SYNTAX_HIGHLIGHTING_FILE"
-fi
-
-## tmux auto-attach
-# Attach to an existing tmux session or create a new one,
-# but skip this behavior in terminal editors like VS Code, Zed, or Wrap.
-if [ -z "$TMUX" ]; then
-  case "$TERM_PROGRAM" in
-    vscode|zed|Wrap)
-      ;; # Do nothing
-    *)
-      tmux attach -t default || tmux new -s default
-      ;;
-  esac
 fi
 
 # Amazon Q post block. Keep at the bottom of this file.
