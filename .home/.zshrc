@@ -79,7 +79,7 @@ alias untar="tar -zxvf"
 alias python="python3"
 
 # App/Tool specific aliases
-alias brew-backup="brew bundle dump --force --file $HOME/.dotfiles/.bin/Brewfile --describe"
+alias brew-backup="brew bundle dump --force --file $HOME/.dotfiles/.home/Brewfile --describe"
 alias gptk="gameportingtoolkit-no-hud ~/$MY_GAME_PREFIX"
 alias pdftohtml='pdftohtml -enc UTF-8 -noframes'
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"

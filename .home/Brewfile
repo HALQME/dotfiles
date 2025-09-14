@@ -1,10 +1,11 @@
 tap "apple/apple", "http://github.com/apple/homebrew-apple"
+tap "charmbracelet/tap"
 tap "cirruslabs/cli"
-tap "halqme/versions", "https://github.com/HALQME/homebrew-versions.git"
 tap "humansignal/tap"
 tap "libsql/sqld"
 tap "modularml/packages"
 tap "r-lib/rig"
+tap "sst/tap"
 tap "tk04/tap"
 tap "tursodatabase/tap"
 # Run your GitHub Actions locally
@@ -17,8 +18,6 @@ brew "xz"
 brew "openssl@3"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
-# Next-gen compiler infrastructure
-brew "llvm"
 # Download with resuming and segmented downloading
 brew "aria2"
 # Aquarium animation in ASCII art
@@ -31,6 +30,8 @@ brew "bat"
 brew "biber"
 # Yet another cross-platform graphical process/system monitor
 brew "bottom"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
 # Freely available high-quality data compressor
 brew "bzip2"
 # GNU File, Shell, and Text utilities
@@ -45,10 +46,20 @@ brew "chrome-cli"
 brew "ruby"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
+# Next-gen compiler infrastructure
+brew "llvm"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# Fast and statically typed, compiled language with Ruby-like syntax
+brew "crystal"
+# Language Server Protocol implementation for Crystal
+brew "crystalline"
 # Command-line csv viewer
 brew "csvlens"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Modern diagram scripting language that turns text to diagrams
+brew "d2"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # Embeddable SQL OLAP Database Management System
@@ -87,8 +98,6 @@ brew "gauche"
 brew "gcc"
 # Common error values for all GnuPG components
 brew "libgpg-error"
-# Package compiler and linker metadata toolkit
-brew "pkgconf"
 # File format designed to store large amounts of data
 brew "hdf5"
 # Geospatial Data Abstraction Library
@@ -127,10 +136,10 @@ brew "grafana"
 brew "graphviz"
 # GNU troff text-formatting system
 brew "groff"
-# Open-source video transcoder available for Linux, Mac, and Windows
-brew "handbrake"
 # Post-modern modal text editor
 brew "helix"
+# Easy plain text accounting with command-line, terminal and web UIs
+brew "hledger"
 # Improved top (interactive process viewer)
 brew "htop"
 # Simple zero-configuration command-line HTTP server
@@ -185,8 +194,6 @@ brew "micro"
 brew "minikube"
 # Dependency manager that installs and runs Swift command-line tool packages
 brew "mint"
-# Polyglot runtime manager (asdf rust clone)
-brew "mise"
 # Mac command-line tool that automatically downloads macOS Firmwares / Installers
 brew "mist-cli"
 # Cross platform, open source .NET development framework
@@ -311,6 +318,8 @@ brew "xh"
 brew "yt-dlp"
 # Suite of barcodes-reading tools
 brew "zbar"
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
+brew "zellij"
 # Programming language designed for robustness, optimality, and clarity
 brew "zig"
 # Language Server for Zig
@@ -319,10 +328,12 @@ brew "zls"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# A powerful terminal-based AI assistant for developers, providing intelligent coding assistance directly in your terminal.
+brew "charmbracelet/tap/crush"
 # Run macOS and Linux VMs on Apple Hardware
 brew "cirruslabs/cli/tart"
-# Multi-type data labeling and annotation tool with standardized output format
-brew "humansignal/tap/label-studio"
+# The AI coding agent built for the terminal.
+brew "sst/tap/opencode"
 brew "tursodatabase/tap/turso"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
@@ -346,6 +357,8 @@ cask "alienator88-sentinel"
 cask "amazon-photos"
 # AI-powered productivity tool for the command-line
 cask "amazon-q"
+# Temporary notes with calculations and extensible features
+cask "antinote"
 # Local-first and end-to-end encrypted notes app
 cask "anytype"
 # Inspect application bundles
@@ -354,8 +367,8 @@ cask "apparency"
 cask "appflowy"
 # User-friendly GUI app for Homebrew
 cask "applite"
-# Chromium based browser
-cask "arc"
+# Manage team projects and tasks
+cask "asana"
 # Multi-track audio editor and recorder
 cask "audacity"
 # Japanese input method
@@ -378,8 +391,6 @@ cask "blender"
 cask "box-drive"
 # CD burning application
 cask "burn"
-# App to write and organise your ideas
-cask "capacities"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
 # Text and code editor
@@ -400,8 +411,6 @@ cask "container"
 cask "coteditor"
 # Tool to run Windows software
 cask "crossover"
-# Write, edit, and chat about your code with AI
-cask "cursor"
 # Server and cloud storage browser
 cask "cyberduck"
 # AI-powered translator
@@ -414,8 +423,6 @@ cask "devtoys"
 cask "diffusionbee"
 # Voice and text chat software
 cask "discord"
-# Developer platform
-cask "dotnet-sdk@8"
 # Downloads videos from different websites
 cask "downie"
 # Online diagram software
@@ -424,6 +431,8 @@ cask "drawio"
 cask "duckduckgo"
 # Matrix collaboration client
 cask "element"
+# Collaborative team software
+cask "figma"
 # Network scanner
 cask "fing"
 # Web browser
@@ -434,6 +443,8 @@ cask "firefox@developer-edition"
 cask "flashspace"
 # Hybrid IDE and text editor
 cask "fleet"
+cask "font-ipaexfont"
+cask "font-ipamjmincho"
 cask "font-moralerspace"
 cask "font-moralerspace-hw"
 cask "font-moralerspace-hw-jpdoc"
@@ -441,8 +452,12 @@ cask "font-moralerspace-hw-nf"
 cask "font-moralerspace-jpdoc"
 cask "font-moralerspace-nf"
 cask "font-plemol-jp-nf"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Desktop client for GitHub repositories
 cask "github"
+# Game development engine
+cask "godot"
 # Web browser
 cask "google-chrome"
 # Client for the Google Drive storage service
@@ -453,12 +468,18 @@ cask "gramps"
 cask "gstreamer-development"
 # Open Source Multimedia Framework
 cask "gstreamer-runtime"
+# Open-source video transcoder
+cask "handbrake-app"
+# Allows keymap customization on HHKB HYBRID Type-S and HYBRID models
+cask "hhkb"
 # Testing client for REST, GraphQL, and HTTP APIs
 cask "httpie-desktop"
 # Chat client for models on HuggingFace
 cask "huggingchat"
 # All-in-One Project Management Platform
 cask "huly"
+# Markdown dictionary for Dictionary.app
+cask "ia-markdown-dictionary"
 # Create presentation slides from a Markdown document
 cask "ia-presenter"
 # Free and open-source media player
@@ -533,14 +554,18 @@ cask "ogdesign-eagle"
 cask "ollama-app"
 # Document editor
 cask "onlyoffice"
-# Web browser
-cask "opera-air"
+# Alternate version of the Opera web browser to complement gaming
+cask "opera-gx"
 # Replacement for Docker Desktop
 cask "orbstack"
 # Mimic the aesthetic of ray-oscilloscopes
 cask "oscilloscope"
 # Used to access context-specific actions when text is selected
 cask "popclip"
+# Minecraft launcher
+cask "prismlauncher"
+# Apple Notes extension
+cask "pronotes"
 # Sound, video and lighting control
 cask "qlab"
 # Quick Look plug-in that renders source code with syntax highlighting
@@ -579,6 +604,8 @@ cask "steam"
 cask "suspicious-package"
 # Quicklook extension for source files
 cask "syntax-highlight"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
 # Extract text from images and other digital documents
 cask "textsniper"
 # Web browser focusing on security
@@ -587,12 +614,12 @@ cask "tor-browser"
 cask "utm"
 # Virtualization tool
 cask "virtualbuddy"
-# Open-source code editor
-cask "visual-studio-code"
 # Web browser with built-in email client focusing on customization and control
 cask "vivaldi"
 # Web browser with built-in email client focusing on customization and control
 cask "vivaldi@snapshot"
+# Binary releases of VS Code without MS branding/telemetry/licensing
+cask "vscodium"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
 # Install and switch between multiple versions of Xcode
@@ -607,6 +634,7 @@ mas "1Password for Safari", id: 1569813296
 mas "AdGuard Mail", id: 6499493699
 mas "Baking Soda", id: 1601151613
 mas "Bluebird", id: 1478757472
+mas "Boop", id: 1518425043
 mas "Codye", id: 1516894961
 mas "Color Picker", id: 1545870783
 mas "Compressor", id: 424390742
@@ -644,13 +672,14 @@ mas "Prime Video", id: 545519333
 mas "ProofreadAI", id: 6705131596
 mas "QuickMIDI", id: 1459790045
 mas "Raycast Companion", id: 6738274497
+mas "Refined GitHub", id: 1519867270
 mas "RunCat", id: 1429033973
+mas "ScreenToLayers", id: 1077317077
 mas "Shareful", id: 1522267256
 mas "Shazam", id: 897118787
 mas "SnippetsLab", id: 1006087419
 mas "stone", id: 1230288277
 mas "Structured", id: 1499198946
-mas "Tailscale", id: 1475387142
 mas "Telegram", id: 747648890
 mas "TestFlight", id: 899247664
 mas "Things", id: 904280696
@@ -659,98 +688,15 @@ mas "Velja", id: 1607635845
 mas "Vinegar", id: 1591303229
 mas "Yata", id: 1631370175
 mas "Yoink", id: 457622435
+mas "ちゃちゃっとリネーマー", id: 6462363612
 mas "辞書 by 物書堂", id: 1380563956
-vscode "42crunch.vscode-openapi"
-vscode "aaron-bond.better-comments"
-vscode "adpyke.codesnap"
-vscode "alefragnani.project-manager"
 vscode "amazonwebservices.amazon-q-vscode"
 vscode "amazonwebservices.codewhisperer-for-command-line-companion"
-vscode "astro-build.astro-vscode"
-vscode "bierner.markdown-mermaid"
-vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
-vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
-vscode "cweijan.dbclient-jdbc"
-vscode "cweijan.vscode-database-client2"
-vscode "cweijan.vscode-office"
-vscode "dbaeumer.vscode-eslint"
-vscode "dioxuslabs.dioxus"
-vscode "docker.docker"
-vscode "dtsvet.vscode-wasm"
-vscode "editorconfig.editorconfig"
-vscode "esbenp.prettier-vscode"
-vscode "formulahendry.auto-rename-tag"
-vscode "formulahendry.code-runner"
-vscode "github.codespaces"
-vscode "github.copilot"
-vscode "github.copilot-chat"
-vscode "github.remotehub"
+vscode "github.vscode-codeql"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
-vscode "golang.go"
-vscode "google.geminicodeassist"
-vscode "ibm.output-colorizer"
 vscode "james-yu.latex-workshop"
-vscode "janisdd.vscode-edit-csv"
-vscode "jebbs.plantuml"
-vscode "johnnymorganz.stylua"
-vscode "jrebocho.vscode-random"
 vscode "kilocode.kilo-code"
-vscode "llvm-vs-code-extensions.lldb-dap"
-vscode "luizzak.swifttestfilegen"
-vscode "mammothb.gnuplot"
-vscode "marp-team.marp-vscode"
-vscode "modular-mojotools.vscode-mojo"
-vscode "mohammadbaqer.better-folding"
-vscode "ms-azuretools.vscode-containers"
-vscode "ms-azuretools.vscode-docker"
-vscode "ms-ceintl.vscode-language-pack-ja"
-vscode "ms-dotnettools.csdevkit"
-vscode "ms-dotnettools.csharp"
-vscode "ms-dotnettools.vscode-dotnet-runtime"
-vscode "ms-dotnettools.vscodeintellicode-csharp"
-vscode "ms-playwright.playwright"
-vscode "ms-python.debugpy"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "ms-python.vscode-python-envs"
-vscode "ms-vscode-remote.remote-containers"
-vscode "ms-vscode-remote.remote-ssh"
-vscode "ms-vscode-remote.remote-ssh-edit"
-vscode "ms-vscode-remote.remote-wsl"
-vscode "ms-vscode-remote.vscode-remote-extensionpack"
-vscode "ms-vscode.azure-repos"
-vscode "ms-vscode.cmake-tools"
-vscode "ms-vscode.cpptools"
-vscode "ms-vscode.cpptools-extension-pack"
-vscode "ms-vscode.cpptools-themes"
 vscode "ms-vscode.hexeditor"
-vscode "ms-vscode.live-server"
-vscode "ms-vscode.mono-debug"
-vscode "ms-vscode.remote-explorer"
-vscode "ms-vscode.remote-repositories"
-vscode "ms-vscode.remote-server"
-vscode "ms-vsliveshare.vsliveshare"
-vscode "oakessoftware.headers"
-vscode "oderwat.indent-rainbow"
-vscode "openai.chatgpt"
-vscode "prisma.prisma"
-vscode "qwtel.sqlite-viewer"
-vscode "redhat.vscode-yaml"
-vscode "reditorsupport.r"
-vscode "reditorsupport.r-syntax"
-vscode "shardulm94.trailing-spaces"
-vscode "stripe.markdoc-language-support"
-vscode "svelte.svelte-vscode"
-vscode "swiftlang.swift-vscode"
-vscode "tauri-apps.tauri-vscode"
-vscode "tyriar.lorem-ipsum"
-vscode "unifiedjs.vscode-mdx"
-vscode "vadimcn.vscode-lldb"
-vscode "visualstudioexptteam.intellicode-api-usage-examples"
-vscode "visualstudioexptteam.vscodeintellicode"
-vscode "vitest.explorer"
-vscode "vknabel.vscode-apple-swift-format"
-vscode "ziglang.vscode-zig"
