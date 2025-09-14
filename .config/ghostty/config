@@ -8,8 +8,8 @@ cursor-style=block_hollow
 
 window-padding-x = 5
 window-padding-y = 2
-window-height=38
-window-width=113
+window-height=42
+window-width=150
 initial-window=true
 window-decoration = true
 macos-titlebar-style = tabs

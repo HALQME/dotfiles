@@ -16,7 +16,7 @@ program = "vi"
 width = 1200
 height = 800
 mode = "windowed"
-opacity = 0.95
+opacity = 0.85
 blur = true
 decorations = "Enabled"
 macos-use-unified-titlebar = false
@@ -52,10 +52,10 @@ weight = 800
 
 [navigation]
 mode = "Plain"
-clickable = false
+clickable = true
 hide-if-single = false
 use-current-path = false
-use-split = false
+use-split = true
 
 [platform]
 # # Microsoft Windows overwrite

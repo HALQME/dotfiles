@@ -2,38 +2,19 @@
 
 format = """
 $os\
-$directory
-$character 
+$directory\
+$git_branch\
+$fill $git_status
+$character
 """
+
 right_format = """
 $time
 """
 
+continuation_prompt = " ❯❯ "
+
 palette = "catppuccin_macchiato"
-add_newline = true
-
-[character]
-format = "$symbol"
-success_symbol = "[[󰄛](sky) ❯](sapphire)"
-error_symbol = "[[󰄛](red) ❯](peach)"
-vimcmd_symbol = "[󰄛 ❮](subtext1)" # For use with zsh-vi-mode
-
-[directory]
-truncation_length = 0
-truncation_symbol = "../"
-style = "bold lavender"
-read_only = " 󰌾"
-
-[os]
-disabled = false
-style = "green"
-format = "[$symbol]($style)"
-
-[time]
-disabled = false
-format = '[\[ $time \]](subtext0) '
-time_format = '%T'
-utc_time_offset = '+9'
 
 [palettes.catppuccin_macchiato]
 rosewater = "#f4dbd6"
@@ -63,108 +44,51 @@ base = "#24273a"
 mantle = "#1e2030"
 crust = "#181926"
 
-[aws]
-symbol = "  "
+[fill]
+symbol = ' '
+style = 'subtext0'
 
-[buf]
-symbol = " "
-
-[bun]
-symbol = " "
-
-[c]
-symbol = " "
-
-[cpp]
-symbol = " "
-
-[cmake]
-symbol = " "
-
-[conda]
-symbol = " "
-
-[crystal]
-symbol = " "
-
-[dart]
-symbol = " "
-
-[deno]
-symbol = " "
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-[fennel]
-symbol = " "
-
-[fossil_branch]
-symbol = " "
-
-[gcloud]
-symbol = "  "
+[character]
+format = "$symbol"
+success_symbol = "[[󰄛](sky) ❯ ](sapphire)"
+error_symbol = "[[󰄛](red) ❯ ](peach)"
+vimcmd_symbol = "[󰄛 ❮ ](subtext1)" # For use with zsh-vi-mode
 
 [git_branch]
 symbol = " "
 style = "bold mauve"
+format = "[$symbol$branch]($style) "
 
-[git_commit]
-tag_symbol = '  '
+[git_status]
+conflicted = '[ $count ](green)'
+ahead = '[ $count ](green)'
+behind = '[ $count ](yellow)'
+diverged = '[$count ](yellow)'
+up_to_date = '✓'
+untracked = '[󱀶 $count ](orange)'
+stashed = '[󱎤$count ](green)'
+modified = '[ $count ](blue)'
+staged = '[ $count ](green)'
+renamed = '[ $count ](orange)'
+deleted = '[ $count](red)'
+format='[$conflict$ahead$behind$diverged$up_to_date$untracked$stashed$modified$staged$renamed$deleted]($format)'
 
-[golang]
-symbol = " "
+[directory]
+truncation_length = 0
+truncation_symbol = "../"
+style = "bold lavender"
+read_only = " 󰌾"
 
-[guix_shell]
-symbol = " "
+[os]
+disabled = false
+style = "green"
+format = "[$symbol]($style)"
 
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
-[hostname]
-ssh_symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[kotlin]
-symbol = " "
-
-[lua]
-symbol = " "
-
-[memory_usage]
-symbol = "󰍛 "
-
-[meson]
-symbol = "󰔷 "
-
-[nim]
-symbol = "󰆥 "
-
-[nix_shell]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[ocaml]
-symbol = " "
+[time]
+disabled = false
+format = '[\[$time\]](subtext0)'
+time_format = '%T'
+utc_time_offset = '+9'
 
 [os.symbols]
 Alpaquita = " "
@@ -212,42 +136,3 @@ Ubuntu = " "
 Unknown = " "
 Void = " "
 Windows = "󰍲 "
-
-[package]
-symbol = "󰏗 "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
-[pijul_channel]
-symbol = " "
-
-[pixi]
-symbol = "󰏗 "
-
-[python]
-symbol = " "
-
-[rlang]
-symbol = "󰟔 "
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = "󱘗 "
-
-[scala]
-symbol = " "
-
-[swift]
-symbol = " "
-
-[zig]
-symbol = " "
-
-[gradle]
-symbol = " "
