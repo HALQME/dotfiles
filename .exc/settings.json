@@ -82,6 +82,7 @@
     "width": 120
   },
   "chat.agent.enabled": true,
+  "chat.agent.maxRequests": 50,
   "chat.editing.alwaysSaveWithGeneratedChanges": true,
   "chat.editing.confirmEditRequestRemoval": false,
   "chat.editing.confirmEditRequestRetry": false,
@@ -186,6 +187,7 @@
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.formatOnType": true,
   "editor.inlayHints.fontFamily": "Moralerspace Neon NF",
+  "editor.inlineSuggest.showToolbar": "always",
   "editor.inlineSuggest.suppressSuggestions": true,
   "editor.minimap.size": "fit",
   "editor.multiCursorMergeOverlapping": false,
@@ -276,7 +278,8 @@
     "git diff",
     "git show",
     "pnpm",
-    "NODE_ENV=test pnpm"
+    "NODE_ENV=test pnpm",
+    "npx"
   ],
   "kilo-code.deniedCommands": [
     "rm",
@@ -293,7 +296,7 @@
   "notebook.lineNumbers": "on",
   "notebook.output.scrolling": true,
   "notebook.output.textLineLimit": 15,
-  "playwright.reuseBrowser": false,
+  "playwright.reuseBrowser": true,
   "playwright.showTrace": false,
   "python.analysis.extraPaths": [
     "~/.pyenv/shims/python"
@@ -390,6 +393,5 @@
     ]
   },
   "zig.path": "zig",
-  "zig.zls.path": "zls",
-  "chat.agent.maxRequests": 50
+  "zig.zls.path": "zls"
 }
