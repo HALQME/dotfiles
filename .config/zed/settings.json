@@ -21,7 +21,7 @@
   // Theme & Color Scheme
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "Fireworks Light",
     "dark": "Fireworks Dark"
   },
   "icon_theme": {
@@ -29,6 +29,7 @@
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Frappé"
   },
+  "use_system_window_tabs": true,
   // Font Configuration
   "buffer_font_family": "Moralerspace Xenon HWNF",
   "buffer_font_features": {
@@ -130,15 +131,15 @@
   },
   // Minimap
   "minimap": {
-    "show": "always",
-    "thumb": "always",
+    "show": "never",
+    "thumb": "hover",
     "thumb_border": "left_only"
   },
   // Indent Guides
   "indent_guides": {
     "enabled": true,
-    "line_width": 1,
-    "active_line_width": 2,
+    "line_width": 2,
+    "active_line_width": 3,
     "background_coloring": "disabled",
     "coloring": "indent_aware"
   },
@@ -151,11 +152,21 @@
   "lsp": {
     "eslint": {
       "settings": {
+        "require_config_file": true,
         "codeActionOnSave": {
           "rules": [
             "import/order"
           ]
+        },
+        "code_actions": {
+          "source.fixAll.eslint": true
         }
+      }
+    },
+    "biome": {
+      "settings": {
+        "require_config_file": true,
+        "config_path": "<path>/biome.json"
       }
     }
   },
@@ -163,12 +174,8 @@
   "format_on_save": "on",
   "formatter": [
     {
-      "language_server": {}
-    },
-    {
       "code_actions": {
-        "source.formatDocument": true,
-        "source.fixAll.eslint": true,
+        "source.fixAll": true,
         "source.organizeImports": true
       }
     }
@@ -297,19 +304,36 @@
       "code_actions_on_format": {
         "source.organizeImports": true
       },
-      "format_on_save": "off"
+      "format_on_save": "off",
+      "auto_indent_on_paste": true
     },
     "JavaScript": {
       "code_actions_on_format": {
         "source.organizeImports": true
       },
-      "format_on_save": "off"
+      "format_on_save": "off",
+      "auto_indent_on_paste": true
+    },
+    "JSON": {
+      "formatter": {
+        "language_server": {
+          "name": "json-language-server"
+        }
+      }
+    },
+    "JSONC": {
+      "formatter": {
+        "language_server": {
+          "name": "json-language-server"
+        }
+      }
     },
     "TSX": {
       "code_actions_on_format": {
         "source.organizeImports": true
       },
-      "format_on_save": "off"
+      "format_on_save": "off",
+      "auto_indent_on_paste": true
     },
     "Haskell": {
       "indent_guides": {
@@ -324,6 +348,18 @@
         "background_coloring": "indent_aware",
         "coloring": "disabled"
       }
+    },
+    "Crystal": {
+      "formatter": {
+        "external": {
+          "command": "crystal",
+          "arguments": [
+            "tool",
+            "format",
+            "-"
+          ]
+        }
+      }
     }
   },
   // ============================================================================
@@ -331,29 +367,29 @@
   // ============================================================================
   "auto_install_extensions": {
     // Languages
-    "c": true,
-    "csharp": true,
+    "c": false,
+    "color-lsp": true,
+    "crystal": true,
+    "csharp": false,
+    "csv": true,
+    "d2": true,
     "docker-compose": true,
     "dockerfile": true,
+    "git-firefly": false,
     "haskell": true,
     "html": true,
+    "ini": true,
     "java": false,
-    "latex": true,
     "javascript": true,
+    "latex": true,
     "lua": false,
-    "make": false,
-    "typescript": true,
-    "python": true,
-    "swift": true,
-    "color-lsp": true,
-    "git-firefly": true,
-    "nix": false,
     "pkl": false,
-    "rainbow-csv": true,
-    "sql": false,
-    "ruby": false,
+    "python": true,
     "r": false,
+    "rainbow-csv": true,
+    "swift": true,
     "toml": true,
+    "typescript": true,
     "wat": true,
     "xml": true,
     "zig": false,
@@ -433,7 +469,7 @@
   ],
   "show_edit_predictions": true,
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "zed"
   },
   // ============================================================================
   // AI AGENT & ASSISTANCE
@@ -441,7 +477,7 @@
   "agent": {
     "always_allow_tool_actions": false,
     "button": true,
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_view": "thread",
     "dock": "right",
     "enabled": true,
@@ -451,11 +487,11 @@
     "play_sound_when_agent_done": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4.1"
+      "model": "gpt-5-mini"
     },
     "inline_assistant_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4.1"
+      "model": "gpt-5-mini"
     },
     "commit_message_model": {
       "provider": "copilot_chat",
@@ -466,6 +502,30 @@
       "model": "gpt-5-mini"
     },
     "profiles": {
+      "write": {
+        "name": "Write",
+        "tools": {
+          "open": true,
+          "copy_path": true,
+          "create_directory": true,
+          "delete_path": false,
+          "diagnostics": true,
+          "edit_file": true,
+          "fetch": true,
+          "list_directory": true,
+          "project_notifications": true,
+          "move_path": false,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "grep": true,
+          "terminal": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {}
+      },
       "ask": {
         "name": "Ask",
         "tools": {
@@ -515,80 +575,12 @@
             }
           }
         }
-      },
-      "container-use": {
-        "name": "Container Use",
-        "tools": {
-          "fetch": true,
-          "thinking": true,
-          "copy_path": false,
-          "find_path": false,
-          "delete_path": false,
-          "create_directory": false,
-          "list_directory": false,
-          "diagnostics": false,
-          "read_file": false,
-          "open": false,
-          "move_path": false,
-          "grep": false,
-          "edit_file": false,
-          "terminal": false
-        },
-        "enable_all_context_servers": false,
-        "context_servers": {
-          "serena": {
-            "tools": {
-              "write_memory": false,
-              "think_about_whether_you_are_done": true,
-              "think_about_task_adherence": true,
-              "think_about_collected_information": true,
-              "switch_modes": true,
-              "search_for_pattern": true,
-              "replace_regex": false,
-              "replace_symbol_body": false,
-              "read_memory": true,
-              "read_file": true,
-              "prepare_for_new_conversation": true,
-              "onboarding": false,
-              "list_memories": true,
-              "insert_before_symbol": true,
-              "list_dir": true,
-              "insert_after_symbol": true,
-              "get_symbols_overview": true,
-              "find_symbol": true,
-              "find_referencing_symbols": true,
-              "find_file": true,
-              "execute_shell_command": false,
-              "delete_memory": false,
-              "create_text_file": true,
-              "check_onboarding_performed": false,
-              "activate_project": true
-            }
-          },
-          "mcp-server-context7": {
-            "tools": {
-              "resolve-library-id": true,
-              "get-library-docs": true
-            }
-          },
-          "container-use": {
-            "tools": {
-              "environment_add_service": true,
-              "environment_checkpoint": true,
-              "environment_config": true,
-              "environment_create": true,
-              "environment_file_delete": true,
-              "environment_file_edit": true,
-              "environment_file_list": true,
-              "environment_file_read": true,
-              "environment_file_write": true,
-              "environment_open": true,
-              "environment_run_cmd": true,
-              "environment_update_metadata": true
-            }
-          }
-        }
       }
+    }
+  },
+  "agent_servers": {
+    "gemini": {
+      "command": "/opt/homebrew/bin/gemini"
     }
   },
   "context_servers": {
@@ -598,26 +590,6 @@
       "settings": {
         "default_minimum_tokens": "10000"
       }
-    },
-    "serena": {
-      "source": "custom",
-      "enabled": true,
-      "command": "/opt/homebrew/bin/uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/oraios/serena",
-        "serena",
-        "start-mcp-server"
-      ],
-      "env": {}
-    },
-    "container-use": {
-      "source": "custom",
-      "command": "container-use",
-      "args": [
-        "stdio"
-      ],
-      "env": {}
     }
   },
   // ============================================================================
