@@ -1407,7 +1407,7 @@
       "shift-d": "project_panel::Delete",
       "shift-r": "project_panel::Rename",
       "t": "project_panel::OpenPermanent",
-      "s": "project_panel::OpenWithSystem",
+      "s": "workspace::OpenWithSystem",
       "] c": "project_panel::SelectNextGitEntry",
       "[ c": "project_panel::SelectPrevGitEntry",
       "] d": "project_panel::SelectNextDiagnostic",
