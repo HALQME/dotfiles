@@ -21,12 +21,12 @@
   // Theme & Color Scheme
   "theme": {
     "mode": "system",
-    "light": "Fireworks Light",
+    "light": "Fireworks Dark",
     "dark": "Fireworks Dark"
   },
   "icon_theme": {
     "mode": "system",
-    "light": "Catppuccin Latte",
+    "light": "Catppuccin Frappé",
     "dark": "Catppuccin Frappé"
   },
   "use_system_window_tabs": true,

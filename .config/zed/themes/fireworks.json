@@ -7,96 +7,96 @@
       "name": "Fireworks Dark",
       "appearance": "dark",
       "style": {
-        "accents": [ // アクセントカラー
-          "#bb9af7",
-          "#7aa2f7",
-          "#7dcfff",
-          "#9ece6a",
-          "#e0af68",
-          "#ff9e64",
-          "#f7768e"
+        "accents": [
+          "#c8b1ff",
+          "#8ab4f8",
+          "#82e9ff",
+          "#a8e67e",
+          "#f0c674",
+          "#ffb870",
+          "#ff879f"
         ],
         // --- UI ---
         // --- 背景 & ボーダー ---
-        "background.appearance": "blurred", // 背景の見た目 (blurred, vibrant, none)
-        "background": "#16161ee7", // メインの背景色
-        "border": "#3b426180", // 一般的なボーダー色
-        "border.variant": "#4f587e99", // ボーダーのバリエーション
-        "border.focused": "#7aa2f7", // フォーカスされた要素のボーダー
-        "border.selected": "#bb9af7", // 選択された要素のボーダー
-        "border.transparent": "#9ece6a", // 透明なボーダー
-        "border.disabled": "#565f89", // 無効化された要素のボーダー
-        "elevated_surface.background": "#24283b", // 浮き上がった表面の背景
-        "surface.background": "#1f2335e6", // 表面の背景
+        "background.appearance": "blurred",
+        "background": "#101014ca",
+        "border": "#3b426190",
+        "border.variant": "#4f587e99",
+        "border.focused": "#8ab4f8",
+        "border.selected": "#c8b1ff",
+        "border.transparent": "#a8e67e",
+        "border.disabled": "#565f89",
+        "elevated_surface.background": "#24283b",
+        "surface.background": "#1a1d2bda",
         // --- UI要素 ---
-        "element.background": "#24283b", // UI要素の背景
-        "element.hover": "#292e42", // ホバー時のUI要素
-        "element.active": "#00000000", // アクティブなUI要素
-        "element.selected": "#292e4210", // 選択されたUI要素
-        "element.disabled": "#565f89", // 無効化されたUI要素
-        "drop_target.background": "#ea9a9718", // ドロップターゲットの背景
-        "ghost_element.background": "#00000000", // ゴースト要素の背景
-        "ghost_element.hover": "#ea9a9708", // ホバー時のゴースト要素
-        "ghost_element.active": "#ea9a9740", // アクティブなゴースト要素
-        "ghost_element.selected": "#ea9a9740", // 選択されたゴースト要素
-        "ghost_element.disabled": "#565f89", // 無効化されたゴースト要素
+        "element.background": "#24283b",
+        "element.hover": "#292e42",
+        "element.active": "#00000000",
+        "element.selected": "#292e4220",
+        "element.disabled": "#565f89",
+        "drop_target.background": "#8ab4f820",
+        "ghost_element.background": "#00000000",
+        "ghost_element.hover": "#8ab4f810",
+        "ghost_element.active": "#8ab4f840",
+        "ghost_element.selected": "#8ab4f840",
+        "ghost_element.disabled": "#565f89",
         // --- テキスト & アイコン ---
-        "text": "#a9b1d6", // デフォルトのテキスト色
-        "text.muted": "#9aa5ce", // 落ち着いたテキスト色
-        "text.placeholder": "#4f587e", // プレースホルダーのテキスト色
-        "text.disabled": "#3b4261", // 無効化されたテキスト色
-        "text.accent": "#bb9af7", // アクセントテキスト色
-        "icon": "#a9b1d6", // デフォルトのアイコン色
-        "icon.muted": "#848cb5", // 落ち着いたアイコン色
-        "icon.disabled": "#565f89", // 無効化されたアイコン色
-        "icon.placeholder": "#4f587e", // プレースホルダーのアイコン色
-        "icon.accent": "#bb9af7", // アクセントアイコン色
+        "text": "#c0caf5",
+        "text.muted": "#a9b1d6",
+        "text.placeholder": "#4f587e",
+        "text.disabled": "#3b4261",
+        "text.accent": "#c8b1ff",
+        "icon": "#c0caf5",
+        "icon.muted": "#848cb5",
+        "icon.disabled": "#565f89",
+        "icon.placeholder": "#4f587e",
+        "icon.accent": "#c8b1ff",
         // --- バー & パネル ---
-        "status_bar.background": "#1a1b26d7", // ステータスバーの背景
-        "title_bar.background": "#1a1b26d7", // タイトルバーの背景
-        "title_bar.inactive_background": "#16161ed9", // 非アクティブなタイトルバーの背景
-        "toolbar.background": "#00000000", // ツールバーの背景
-        "tab_bar.background": "#00000000", // タブバーの背景
-        "tab.inactive_background": "#24283b", // 非アクティブなタブの背景
-        "tab.active_background": "#3b4261", // アクティブなタブの背景
-        "search.match_background": "#7dcfff33", // 検索に一致した部分の背景
-        "panel.background": "#1A1D2505", // パネルの背景
-        "panel.focused_border": "00000000", // フォーカスされたパネルのボーダー
-        "panel.indent_guide": "#32385499", // インデントガイド
-        "panel.indent_guide_active": "#4f587e", // アクティブなインデントガイド
-        "panel.indent_guide_hover": "#bb9af7", // ホバー時のインデントガイド
-        "pane.focused_border": "#a9b1d6", // フォーカスされたペインのボーダー
-        "pane_group.border": "#292e42", // ペイングループのボーダー
+        "status_bar.background": "#16161ed0",
+        "title_bar.background": "#16161ed0",
+        "title_bar.inactive_background": "#121216d0",
+        "tab_bar.background": "#10202015",
+        "toolbar.background": "#10202030",
+        "tab.inactive_background": "#00000005",
+        "tab.active_background": "#3b4261",
+        "search.match_background": "#82e9ff44",
+        "panel.background": "#6A5D4501",
+        "panel.focused_border": "00000000",
+        "panel.indent_guide": "#32385499",
+        "panel.indent_guide_active": "#4f587e",
+        "panel.indent_guide_hover": "#c8b1ff",
+        "pane.focused_border": "#c0caf5",
+        "pane_group.border": "#292e42",
         // --- スクロールバー ---
-        "scrollbar.thumb.background": "#ea9a971230", // スクロールバーのつまみの背景
-        "scrollbar.thumb.hover_background": "#565f8980", // ホバー時のつまみの背景
-        "scrollbar.thumb.border": "#bb9af7", // つまみのボーダー
-        "scrollbar.track.background": "#00000000", // スクロールバーのトラックの背景
-        "scrollbar.track.border": "#00000000", // トラックのボーダー
+        "scrollbar.thumb.background": "#8ab4f815",
+        "scrollbar.thumb.hover_background": "#565f8980",
+        "scrollbar.thumb.border": "#c8b1ff",
+        "scrollbar.track.background": "#00000000",
+        "scrollbar.track.border": "#00000000",
         // --- エディタ ---
-        "editor.foreground": "#a9b1d6", // エディタのテキスト色
-        "editor.background": "#00000000", // エディタの背景
-        "editor.gutter.background": "#00000000", // 行番号部分の背景
-        "editor.subheader.background": "#16161e", // サブヘッダーの背景
-        "editor.active_line.background": "#7F9CE509", // アクティブな行の背景
-        "editor.highlighted_line.background": "#ea9a9712", // ハイライトされた行の背景
-        "editor.line_number": "#7F9CE590", // 行番号
-        "editor.active_line_number": "#7F9CE5D9", // アクティブな行の行番号
-        "editor.invisible": "#848cb533", // 不可視文字
-        "editor.wrap_guide": "#4f587e", // 折り返しガイド
-        "editor.active_wrap_guide": "#4f587e", // アクティブな折り返しガイド
-        "editor.document_highlight.bracket_background": "#bb9af717", // 対応する括弧の背景
-        "editor.document_highlight.read_background": "#9aa5ce29", // 読み取りアクセス箇所の背景
-        "editor.document_highlight.write_background": "#9aa5ce29", // 書き込みアクセス箇所の背景
-        "editor.indent_guide": "#32385499", // インデントガイド
-        "editor.indent_guide_active": "#4f587e", // アクティブなインデントガイド
-        "link_text.hover": "#89ddff", // ホバー時のリンクテキスト
+        "editor.foreground": "#c0caf5",
+        "editor.background": "#10202015",
+        "editor.gutter.background": "#10202015",
+        "editor.subheader.background": "#16161e",
+        "editor.active_line.background": "#8ab4f80A",
+        "editor.highlighted_line.background": "#8ab4f815",
+        "editor.line_number": "#7F9CE590",
+        "editor.active_line_number": "#8ab4f8",
+        "editor.invisible": "#848cb533",
+        "editor.wrap_guide": "#4f587e",
+        "editor.active_wrap_guide": "#4f587e",
+        "editor.document_highlight.bracket_background": "#c8b1ff17",
+        "editor.document_highlight.read_background": "#a9b1d629",
+        "editor.document_highlight.write_background": "#a9b1d629",
+        "editor.indent_guide": "#32385499",
+        "editor.indent_guide_active": "#4f587e",
+        "link_text.hover": "#82e9ff",
         // --- ターミナル ---
-        "terminal.background": "#1A1D2505", // ターミナルの背
-        "terminal.ansi.background": "#1f2335CC", // ANSI背景色
-        "terminal.foreground": "#9aa5ce", // ターミナルのテキスト色
-        "terminal.dim_foreground": "#848cb5", // Dimテキスト色
-        "terminal.bright_foreground": "#a9b1d6", // Brightテキスト色
+        "terminal.background": "#1A1D2505",
+        "terminal.ansi.background": "#1f2335CC",
+        "terminal.foreground": "#a9b1d6",
+        "terminal.dim_foreground": "#848cb5",
+        "terminal.bright_foreground": "#c0caf5",
         // --- ANSIカラー ---
         "terminal.ansi.black": "#353b51",
         "terminal.ansi.red": "#e8667e",
@@ -107,13 +107,13 @@
         "terminal.ansi.cyan": "#6dc0ef",
         "terminal.ansi.white": "#8f9aaf",
         "terminal.ansi.bright_black": "#4f587e",
-        "terminal.ansi.bright_red": "#f7768e",
-        "terminal.ansi.bright_green": "#9ece6a",
-        "terminal.ansi.bright_yellow": "#e0af68",
-        "terminal.ansi.bright_blue": "#7aa2f7",
-        "terminal.ansi.bright_magenta": "#bb9af7",
-        "terminal.ansi.bright_cyan": "#7dcfff",
-        "terminal.ansi.bright_white": "#a9b1d6",
+        "terminal.ansi.bright_red": "#ff879f",
+        "terminal.ansi.bright_green": "#a8e67e",
+        "terminal.ansi.bright_yellow": "#f0c674",
+        "terminal.ansi.bright_blue": "#8ab4f8",
+        "terminal.ansi.bright_magenta": "#c8b1ff",
+        "terminal.ansi.bright_cyan": "#82e9ff",
+        "terminal.ansi.bright_white": "#c0caf5",
         "terminal.ansi.dim_black": "#353b51",
         "terminal.ansi.dim_red": "#e8667e",
         "terminal.ansi.dim_green": "#8fbc5d",
@@ -123,251 +123,251 @@
         "terminal.ansi.dim_cyan": "#6dc0ef",
         "terminal.ansi.dim_white": "#8f9aaf",
         // --- バージョン管理 ---
-        "conflict": "#ff9e64", // コンフリクト
-        "conflict.border": "#ff9e64",
-        "conflict.background": "#ff9e6426",
-        "created": "#9ece6a", // 追加
-        "created.border": "#9ece6a",
-        "created.background": "#9ece6a26",
-        "deleted": "#f7768e", // 削除
-        "deleted.border": "#f7768e",
-        "deleted.background": "#f7768e26",
-        "hidden": "#565f89", // 非表示
+        "conflict": "#ffb870",
+        "conflict.border": "#ffb870",
+        "conflict.background": "#ffb87026",
+        "created": "#a8e67e",
+        "created.border": "#a8e67e",
+        "created.background": "#a8e67e26",
+        "deleted": "#ff879f",
+        "deleted.border": "#ff879f",
+        "deleted.background": "#ff879f26",
+        "hidden": "#565f89",
         "hidden.border": "#565f89",
         "hidden.background": "#16161e",
-        "hint": "#848cb5", // ヒント
+        "hint": "#848cb5",
         "hint.border": "#4f587e",
         "hint.background": "#292e42c0",
-        "ignored": "#565f89", // 無視
+        "ignored": "#565f89",
         "ignored.border": "#565f89",
         "ignored.background": "#565f8926",
-        "modified": "#e0af68", // 変更
-        "modified.border": "#e0af68",
-        "modified.background": "#e0af6826",
-        "predictive": "#565f89", // 予測
-        "predictive.border": "#7aa2f7",
+        "modified": "#f0c674",
+        "modified.border": "#f0c674",
+        "modified.background": "#f0c67426",
+        "predictive": "#565f89",
+        "predictive.border": "#8ab4f8",
         "predictive.background": "#16161e",
-        "renamed": "#7dcfff", // 名前の変更
-        "renamed.border": "#7dcfff",
-        "renamed.background": "#7dcfff26",
-        "info": "#7dcfff", // 情報
-        "info.border": "#7dcfff",
+        "renamed": "#82e9ff",
+        "renamed.border": "#82e9ff",
+        "renamed.background": "#82e9ff26",
+        "info": "#82e9ff",
+        "info.border": "#82e9ff",
         "info.background": "#292e42",
-        "warning": "#e0af68", // 警告
-        "warning.border": "#e0af68",
+        "warning": "#f0c674",
+        "warning.border": "#f0c674",
         "warning.background": "#292e42",
-        "error": "#f7768e", // エラー
-        "error.border": "#f7768e",
+        "error": "#ff879f",
+        "error.border": "#ff879f",
         "error.background": "#292e42",
-        "success": "#9ece6a", // 成功
-        "success.border": "#9ece6a",
+        "success": "#a8e67e",
+        "success.border": "#a8e67e",
         "success.background": "#292e42",
-        "unreachable": "#f7768e", // 到達不能
-        "unreachable.border": "#f7768e",
-        "unreachable.background": "#f7768e1f",
+        "unreachable": "#ff879f",
+        "unreachable.border": "#ff879f",
+        "unreachable.background": "#ff879f1f",
         // --- シンタックスハイライト ---
         "syntax": {
           "variable": {
-            "color": "#a9b1d6"
-          }, // 変数
+            "color": "#c0caf5"
+          },
           "variable.builtin": {
-            "color": "#f7768e"
-          }, // 組み込み変数
+            "color": "#ff879f"
+          },
           "variable.parameter": {
-            "color": "#ff9e64"
-          }, // パラメータ変数
+            "color": "#ffb870"
+          },
           "variable.member": {
             "color": "#c0caf5"
-          }, // メンバー変数
+          },
           "variable.special": {
-            "color": "#f7768e",
+            "color": "#ff879f",
             "font_style": "italic"
-          }, // 特殊な変数
+          },
           "constant": {
-            "color": "#ff9e64"
-          }, // 定数
+            "color": "#ffb870"
+          },
           "constant.builtin": {
-            "color": "#ff9e64"
-          }, // 組み込み定数
+            "color": "#ffb870"
+          },
           "constant.macro": {
-            "color": "#bb9af7"
-          }, // マクロ定数
+            "color": "#c8b1ff"
+          },
           "module": {
-            "color": "#e0af68",
+            "color": "#f0c674",
             "font_style": "italic"
-          }, // モジュール
+          },
           "label": {
-            "color": "#7aa2f7"
-          }, // ラベル
+            "color": "#8ab4f8"
+          },
           "string": {
-            "color": "#9ece6a"
-          }, // 文字列
+            "color": "#a8e67e"
+          },
           "string.documentation": {
-            "color": "#848cb5"
-          }, // ドキュメンテーション文字列
+            "color": "#6b759d"
+          },
           "string.regexp": {
-            "color": "#e0af68"
-          }, // 正規表現
+            "color": "#f0c674"
+          },
           "string.escape": {
-            "color": "#bb9af7"
-          }, // エスケープシーケンス
+            "color": "#c8b1ff"
+          },
           "string.special": {
-            "color": "#bb9af7"
-          }, // 特殊な文字列
+            "color": "#c8b1ff"
+          },
           "string.special.symbol": {
             "color": "#dd7973"
-          }, // シンボル
+          },
           "string.special.url": {
             "color": "#ea9a97",
             "font_style": "italic"
-          }, // URL
+          },
           "character": {
-            "color": "#9ece6a"
-          }, // 文字
+            "color": "#a8e67e"
+          },
           "character.special": {
-            "color": "#bb9af7"
-          }, // 特殊文字
+            "color": "#c8b1ff"
+          },
           "boolean": {
-            "color": "#ff9e64"
-          }, // 真偽値
+            "color": "#ffb870"
+          },
           "number": {
-            "color": "#ff9e64"
-          }, // 数値
+            "color": "#ffb870"
+          },
           "type": {
-            "color": "#e0af68"
-          }, // 型
+            "color": "#f0c674"
+          },
           "type.builtin": {
-            "color": "#7dcfff",
+            "color": "#82e9ff",
             "font_style": "italic"
-          }, // 組み込み型
+          },
           "type.definition": {
-            "color": "#e0af68"
-          }, // 型定義
+            "color": "#f0c674"
+          },
           "type.interface": {
-            "color": "#e0af68",
+            "color": "#f0c674",
             "font_style": "italic"
-          }, // インターフェース
+          },
           "type.super": {
-            "color": "#e0af68",
+            "color": "#f0c674",
             "font_style": "italic"
-          }, // 親クラス
+          },
           "attribute": {
-            "color": "#e0af68"
-          }, // 属性
+            "color": "#f0c674"
+          },
           "property": {
             "color": "#c0caf5"
-          }, // プロパティ
+          },
           "function": {
-            "color": "#7aa2f7"
-          }, // 関数
+            "color": "#8ab4f8"
+          },
           "function.builtin": {
-            "color": "#ff9e64"
-          }, // 組み込み関数
+            "color": "#ffb870"
+          },
           "function.call": {
-            "color": "#7aa2f7"
-          }, // 関数呼び出し
+            "color": "#8ab4f8"
+          },
           "function.macro": {
-            "color": "#7dcfff"
-          }, // マクロ
+            "color": "#82e9ff"
+          },
           "function.method": {
-            "color": "#7aa2f7"
-          }, // メソッド
+            "color": "#8ab4f8"
+          },
           "function.method.call": {
-            "color": "#7aa2f7"
-          }, // メソッド呼び出し
+            "color": "#8ab4f8"
+          },
           "constructor": {
             "color": "#dd7973"
-          }, // コンストラクタ
+          },
           "operator": {
             "color": "#89ddff"
-          }, // 演算子
+          },
           "keyword": {
-            "color": "#bb9af7"
-          }, // キーワード
+            "color": "#c8b1ff"
+          },
           "punctuation": {
             "color": "#565f89"
-          }, // 句読点
+          },
           "comment": {
-            "color": "#565f89",
+            "color": "#6b759d",
             "font_style": "italic"
-          }, // コメント
+          },
           "diff.plus": {
-            "color": "#9ece6a"
-          }, // diff追加
+            "color": "#a8e67e"
+          },
           "diff.minus": {
-            "color": "#f7768e"
-          }, // diff削除
+            "color": "#ff879f"
+          },
           "tag": {
-            "color": "#f7768e"
-          }, // タグ
+            "color": "#ff879f"
+          },
           "tag.attribute": {
-            "color": "#e0af68",
+            "color": "#f0c674",
             "font_style": "italic"
-          }, // タグ属性
+          },
           "tag.delimiter": {
-            "color": "#7dcfff"
-          }, // タグ区切り文字
+            "color": "#82e9ff"
+          },
           "emphasis.strong": {
             "color": "#e06b7e",
             "font_weight": 700
-          }, // 強調 (太字)
+          },
           "emphasis": {
             "color": "#e06b7e",
             "font_style": "italic"
-          }, // 強調 (斜体)
+          },
           "link_text": {
-            "color": "#9aa5ce"
-          }, // リンクテキスト
+            "color": "#a9b1d6"
+          },
           "link_uri": {
-            "color": "#7aa2f7",
+            "color": "#8ab4f8",
             "font_style": "italic"
-          }, // リンクURI
+          },
           "title": {
-            "color": "#a9b1d6",
+            "color": "#c0caf5",
             "font_weight": 800
-          } // タイトル
+          }
         },
         // --- プレイヤー ---
-        "players": [ // 協力者ごとのカーソルと選択範囲の色
+        "players": [
           {
             "cursor": "#ea9a97",
             "selection": "#4f587e80",
             "background": "#ea9a97"
           },
           {
-            "cursor": "#bb9af7",
-            "selection": "#bb9af733",
-            "background": "#bb9af7"
+            "cursor": "#c8b1ff",
+            "selection": "#c8b1ff33",
+            "background": "#c8b1ff"
           },
           {
-            "cursor": "#7aa2f7",
-            "selection": "#7aa2f733",
-            "background": "#7aa2f7"
+            "cursor": "#8ab4f8",
+            "selection": "#8ab4f833",
+            "background": "#8ab4f8"
           },
           {
-            "cursor": "#7dcfff",
-            "selection": "#7dcfff33",
-            "background": "#7dcfff"
+            "cursor": "#82e9ff",
+            "selection": "#82e9ff33",
+            "background": "#82e9ff"
           },
           {
-            "cursor": "#9ece6a",
-            "selection": "#9ece6a33",
-            "background": "#9ece6a"
+            "cursor": "#a8e67e",
+            "selection": "#a8e67e33",
+            "background": "#a8e67e"
           },
           {
-            "cursor": "#e0af68",
-            "selection": "#e0af6833",
-            "background": "#e0af68"
+            "cursor": "#f0c674",
+            "selection": "#f0c67433",
+            "background": "#f0c674"
           },
           {
-            "cursor": "#ff9e64",
-            "selection": "#ff9e6433",
-            "background": "#ff9e64"
+            "cursor": "#ffb870",
+            "selection": "#ffb87033",
+            "background": "#ffb870"
           },
           {
-            "cursor": "#f7768e",
-            "selection": "#f7768e33",
-            "background": "#f7768e"
+            "cursor": "#ff879f",
+            "selection": "#ff879f33",
+            "background": "#ff879f"
           }
         ]
       }
