@@ -1,7 +1,7 @@
 font-family= Moralerspace Radon HW Regular
 font-size=14
 
-theme = catppuccin-mocha
+theme = "Catppuccin Mocha"
 background-opacity = 0.8
 background-blur-radius = 3
 cursor-style=block_hollow
