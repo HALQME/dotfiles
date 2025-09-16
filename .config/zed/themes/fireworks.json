@@ -18,8 +18,8 @@
         ],
         // --- UI ---
         // --- 背景 & ボーダー ---
-        "background.appearance": "blurred",
-        "background": "#101014ca",
+        "background.appearance": "opaque",
+        "background": "#101014ff",
         "border": "#3b426190",
         "border.variant": "#4f587e99",
         "border.focused": "#8ab4f8",
