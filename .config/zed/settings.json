@@ -31,7 +31,7 @@
   },
   "use_system_window_tabs": true,
   // Font Configuration
-  "buffer_font_family": "Moralerspace Xenon HWNF",
+  "buffer_font_family": "Moralerspace Xenon",
   "buffer_font_features": {
     "calt": true,
     "liga": false,
@@ -40,7 +40,7 @@
     "ss04": false,
     "ss05": false
   },
-  "ui_font_family": "Moralerspace Neon NF",
+  "ui_font_family": "Moralerspace Argon",
   // ============================================================================
   // EDITOR INTERFACE & LAYOUT
   // ============================================================================
