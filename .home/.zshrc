@@ -24,6 +24,12 @@ setopt \
   HIST_IGNORE_SPACE \
   HIST_REDUCE_BLANKS
 
+
+# ==============================================================================
+# Credentials
+# ==============================================================================
+source ~/.config/op/plugins.sh
+
 # ==============================================================================
 # Aliases
 # ==============================================================================
@@ -168,7 +174,7 @@ path=(
   "/opt/homebrew/opt/llvm/bin"
   "/opt/homebrew/opt/rustup/bin"
   "/opt/homebrew/opt/ruby/bin"
-  
+
   # Keep existing system paths
   $path
 )
