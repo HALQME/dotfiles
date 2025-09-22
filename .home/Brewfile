@@ -1,15 +1,9 @@
 tap "apple/apple", "http://github.com/apple/homebrew-apple"
-tap "charmbracelet/tap"
 tap "cirruslabs/cli"
-tap "humansignal/tap"
 tap "libsql/sqld"
-tap "modularml/packages"
 tap "r-lib/rig"
 tap "sst/tap"
-tap "tk04/tap"
 tap "tursodatabase/tap"
-# Run your GitHub Actions locally
-brew "act"
 # Real-time data compression library
 brew "lzo"
 # General-purpose data compression with high compression ratio
@@ -18,6 +12,8 @@ brew "xz"
 brew "openssl@3"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
+# Next-gen compiler infrastructure
+brew "llvm"
 # Download with resuming and segmented downloading
 brew "aria2"
 # Aquarium animation in ASCII art
@@ -34,20 +30,14 @@ brew "bottom"
 brew "btop"
 # Freely available high-quality data compressor
 brew "bzip2"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
-# Emacs dependency management
-brew "cask"
 # CD/DVD/Blu-ray premastering and recording software
 brew "cdrtools"
-# Control Google Chrome from the command-line
-brew "chrome-cli"
+# Cross-platform make
+brew "cmake"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
-# Next-gen compiler infrastructure
-brew "llvm"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Fast and statically typed, compiled language with Ruby-like syntax
@@ -82,10 +72,6 @@ brew "fdupes"
 brew "felinks"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
-# Banner-like program prints strings as ASCII art
-brew "figlet"
-# Command-line outline and bitmap font editor/converter
-brew "fontforge"
 # Infamous electronic fortune-cookie generator
 brew "fortune"
 # Command-line fuzzy finder written in Go
@@ -104,24 +90,16 @@ brew "hdf5"
 brew "gdal"
 # GNOME text editor
 brew "gedit"
-# Platform built on V8 to build network applications
-brew "node"
-# Interact with Google Gemini AI models from the command-line
-brew "gemini-cli"
 # Nonsense activity generator
 brew "genact"
 # GitHub command-line tool
 brew "gh"
 # Installer for the general purpose language Haskell
 brew "ghcup"
-# Command-line utility for uploading Gists
-brew "gist"
 # Distributed revision control system
 brew "git"
 # Git extension for versioning large files
 brew "git-lfs"
-# Blazing fast terminal-ui for git written in rust
-brew "gitui"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # Cross-platform application and UI framework
@@ -130,8 +108,6 @@ brew "qt"
 brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Gorgeous metric visualizations and dashboards for timeseries databases
-brew "grafana"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # GNU troff text-formatting system
@@ -142,8 +118,6 @@ brew "helix"
 brew "hledger"
 # Improved top (interactive process viewer)
 brew "htop"
-# Simple zero-configuration command-line HTTP server
-brew "http-server"
 # Configurable static site generator
 brew "hugo"
 # Command-line benchmarking tool
@@ -152,8 +126,6 @@ brew "hyperfine"
 brew "imagemagick"
 # Git-compatible distributed version control system
 brew "jj"
-# Lightweight and flexible command-line JSON processor
-brew "jq"
 # Selection-based modal text editor
 brew "kakoune"
 # LaTeX-to-HTML translator
@@ -176,18 +148,14 @@ brew "lolcat"
 brew "lsd"
 # Text-based web browser
 brew "lynx"
-# Apple Silicon Monitor Top written in Golang
-brew "mactop"
-# Easily convert Marp Markdown files into static HTML/CSS, PDF, PPT and images
-brew "marp-cli"
+# Personal Knowledge Management System for the LSP
+brew "markdown-oxide"
 # Mac App Store command-line interface
 brew "mas"
 # Yet another part-of-speech and morphological analyzer
 brew "mecab"
 # IPA dictionary compiled for MeCab
 brew "mecab-ipadic"
-# Zero-dependency real-time media server and media proxy
-brew "mediamtx"
 # Modern and intuitive terminal-based text editor
 brew "micro"
 # Run a Kubernetes cluster locally
@@ -196,12 +164,6 @@ brew "minikube"
 brew "mint"
 # Mac command-line tool that automatically downloads macOS Firmwares / Installers
 brew "mist-cli"
-# Cross platform, open source .NET development framework
-brew "mono"
-# GDI+-compatible API on non-Windows operating systems
-brew "mono-libgdiplus"
-# Free (GNU) replacement for the Pico text editor
-brew "nano"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Small build system for use with gyp or CMake
@@ -224,8 +186,8 @@ brew "pinentry-mac"
 brew "pkl"
 # PNG image optimizing utility
 brew "pngquant"
-# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
-brew "prettier"
+# Tool for managing OCI containers and pods
+brew "podman"
 # Modern replacement for ps written in Rust
 brew "procs"
 # Password generator
@@ -242,8 +204,6 @@ brew "rename"
 brew "ripgrep-all"
 # Extremely fast Python linter, written in Rust
 brew "ruff"
-# Experimental Rust compiler front-end for IDEs
-brew "rust-analyzer"
 # Rust toolchain installer
 brew "rustup"
 # JVM-based programming language
@@ -258,8 +218,6 @@ brew "solargraph"
 brew "starship"
 # Opinionated Lua code formatter
 brew "stylua"
-# Version control system designed to be a better CVS
-brew "subversion"
 # Formatting technology for Swift source code
 brew "swift-format"
 # Formatting tool for reformatting Swift code
@@ -286,8 +244,6 @@ brew "translate-shell"
 brew "transmission-cli"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Language for application scale JavaScript development
-brew "typescript"
 # Markup-based typesetting system
 brew "typst"
 # Unidata unit conversion library
@@ -308,6 +264,8 @@ brew "wget"
 brew "winetricks"
 # Userspace Go implementation of WireGuard
 brew "wireguard-go"
+# Validate and execute GitHub Actions workflows locally
+brew "wrkflw"
 # X.Org Applications: xauth
 brew "xauth"
 # Generate your Xcode project from a spec file and your folder structure
@@ -316,8 +274,6 @@ brew "xcodegen"
 brew "xh"
 # Feature-rich command-line audio/video downloader
 brew "yt-dlp"
-# Suite of barcodes-reading tools
-brew "zbar"
 # Pluggable terminal workspace, with terminal multiplexer as the base feature
 brew "zellij"
 # Programming language designed for robustness, optimality, and clarity
@@ -328,8 +284,6 @@ brew "zls"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# A powerful terminal-based AI assistant for developers, providing intelligent coding assistance directly in your terminal.
-brew "charmbracelet/tap/crush"
 # Run macOS and Linux VMs on Apple Hardware
 brew "cirruslabs/cli/tart"
 # The AI coding agent built for the terminal.
@@ -359,12 +313,8 @@ cask "amazon-photos"
 cask "amazon-q"
 # Temporary notes with calculations and extensible features
 cask "antinote"
-# Local-first and end-to-end encrypted notes app
-cask "anytype"
 # Inspect application bundles
 cask "apparency"
-# Open-source project and knowledge management tool
-cask "appflowy"
 # User-friendly GUI app for Homebrew
 cask "applite"
 # Manage team projects and tasks
@@ -383,8 +333,6 @@ cask "bettertouchtool"
 cask "bibdesk"
 # Desktop password and login vault
 cask "bitwarden"
-# Virtual Audio Driver
-cask "blackhole-2ch"
 # 3D creation suite
 cask "blender"
 # Client for the Box cloud storage service
@@ -393,12 +341,6 @@ cask "box-drive"
 cask "burn"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
-# Text and code editor
-cask "chime"
-# Automated testing of webapps for Google Chrome
-cask "chromedriver"
-# Anthropic's official Claude AI desktop app
-cask "claude"
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
 # Code editor
@@ -417,10 +359,10 @@ cask "cyberduck"
 cask "deepl"
 # Virtual monitor for screen sharing
 cask "deskpad"
+# UI to create reproducible developer environments based on a devcontainer.json
+cask "devpod"
 # Utilities designed to make common development tasks easier
 cask "devtoys"
-# Run Stable Diffusion locally
-cask "diffusionbee"
 # Voice and text chat software
 cask "discord"
 # Downloads videos from different websites
@@ -433,25 +375,74 @@ cask "duckduckgo"
 cask "element"
 # Collaborative team software
 cask "figma"
-# Network scanner
-cask "fing"
 # Web browser
 cask "firefox"
 # Web browser
 cask "firefox@developer-edition"
 # Virtual workspace manager
 cask "flashspace"
-# Hybrid IDE and text editor
-cask "fleet"
+cask "font-aoboshi-one"
+cask "font-biz-udpgothic"
+cask "font-biz-udpmincho"
+cask "font-genjyuugothic"
+cask "font-genkigothic"
+cask "font-gensekigothic"
+cask "font-gensenrounded"
+cask "font-genshingothic"
+cask "font-hachi-maru-pop"
+cask "font-hannari"
+cask "font-harano-aji"
+cask "font-hina-mincho"
+cask "font-ia-writer-duo"
+cask "font-ia-writer-mono"
+cask "font-ia-writer-quattro"
+cask "font-iceberg"
 cask "font-ipaexfont"
+cask "font-ipafont"
 cask "font-ipamjmincho"
+cask "font-joti-one"
+cask "font-just-another-hand"
+cask "font-kaisei-decol"
+cask "font-kaisei-harunoumi"
+cask "font-kaisei-opti"
+cask "font-kaisei-tokumin"
+cask "font-kaiso"
+cask "font-kiwi-maru"
+cask "font-kokoro"
+cask "font-kosugi"
+cask "font-kosugi-maru"
+cask "font-m-plus-1p"
+cask "font-makinas4"
+cask "font-mamelon"
+cask "font-mochiy-pop-one"
+cask "font-mochiy-pop-p-one"
 cask "font-moralerspace"
 cask "font-moralerspace-hw"
-cask "font-moralerspace-hw-jpdoc"
-cask "font-moralerspace-hw-nf"
 cask "font-moralerspace-jpdoc"
-cask "font-moralerspace-nf"
-cask "font-plemol-jp-nf"
+cask "font-nico-moji"
+cask "font-noto-sans-jp"
+cask "font-pigmo00"
+cask "font-pigmo01"
+cask "font-poppins"
+cask "font-poprumcute"
+cask "font-sawarabi-gothic"
+cask "font-sawarabi-mincho"
+cask "font-shippori-antique"
+cask "font-shippori-antique-b1"
+cask "font-shippori-mincho"
+cask "font-shippori-mincho-b1"
+cask "font-shizuru"
+cask "font-shojumaru"
+cask "font-simonetta"
+cask "font-sora"
+cask "font-twinkle-star"
+cask "font-yuji-boku"
+cask "font-yuji-hentaigana-akari"
+cask "font-yuji-hentaigana-akebono"
+cask "font-yuji-syuku"
+cask "font-yusei-magic"
+cask "font-zed-mono-nerd-font"
+cask "font-zen-old-mincho"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Desktop client for GitHub repositories
@@ -464,20 +455,12 @@ cask "google-chrome"
 cask "google-drive"
 # Genealogy software
 cask "gramps"
-# Open Source Multimedia Framework
-cask "gstreamer-development"
-# Open Source Multimedia Framework
-cask "gstreamer-runtime"
 # Open-source video transcoder
 cask "handbrake-app"
 # Allows keymap customization on HHKB HYBRID Type-S and HYBRID models
 cask "hhkb"
 # Testing client for REST, GraphQL, and HTTP APIs
 cask "httpie-desktop"
-# Chat client for models on HuggingFace
-cask "huggingchat"
-# All-in-One Project Management Platform
-cask "huly"
 # Markdown dictionary for Dictionary.app
 cask "ia-markdown-dictionary"
 # Create presentation slides from a Markdown document
@@ -486,14 +469,10 @@ cask "ia-presenter"
 cask "iina"
 # Tool to optimise images to a smaller size
 cask "imageoptim"
-# Hex editor for reverse engineers
-cask "imhex"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Menu bar calendar
 cask "itsycal"
-# Menu bar manager
-cask "jordanbaird-ice"
 # Open-source screen recorder built with web technology
 cask "kap"
 # Keyboard customiser
@@ -506,8 +485,6 @@ cask "keyboardcleantool"
 cask "keyclu"
 # Data visualization and analysis software
 cask "labplot"
-# Open source code editor written in Rust
-cask "lapce"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
 # Controls and monitors all fans on Apple computers
@@ -518,8 +495,6 @@ cask "macskk"
 cask "macwhisper"
 # Text editor
 cask "mi"
-# Provides updates to various Microsoft products
-cask "microsoft-auto-update"
 # Spreadsheet software
 cask "microsoft-excel"
 # Presentation software
@@ -540,8 +515,6 @@ cask "netnewswire"
 cask "notion"
 # Calendar for professionals and teams
 cask "notion-calendar"
-# Email client integrated with Notion workspace
-cask "notion-mail"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Automated scene switcher for OBS Studio
@@ -554,8 +527,6 @@ cask "ogdesign-eagle"
 cask "ollama-app"
 # Document editor
 cask "onlyoffice"
-# Alternate version of the Opera web browser to complement gaming
-cask "opera-gx"
 # Replacement for Docker Desktop
 cask "orbstack"
 # Mimic the aesthetic of ray-oscilloscopes
@@ -564,14 +535,8 @@ cask "oscilloscope"
 cask "popclip"
 # Minecraft launcher
 cask "prismlauncher"
-# Apple Notes extension
-cask "pronotes"
 # Sound, video and lighting control
 cask "qlab"
-# Quick Look plug-in that renders source code with syntax highlighting
-cask "qlcolorcode"
-# HTTP client that helps testing and describing APIs
-cask "rapidapi"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Window snapping tool
@@ -592,12 +557,8 @@ cask "shottr"
 cask "signal"
 # Team communication and collaboration software
 cask "slack"
-# Displays all open files and sockets in use by all running processes
-cask "sloth"
 # Notepad with a built-in calculator
 cask "soulver"
-# Open source cross-platform file explorer
-cask "spacedrive"
 # Video game digital distribution service
 cask "steam"
 # Application for inspecting installer packages
@@ -606,8 +567,6 @@ cask "suspicious-package"
 cask "syntax-highlight"
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
-# Extract text from images and other digital documents
-cask "textsniper"
 # Web browser focusing on security
 cask "tor-browser"
 # Virtual machines UI using QEMU
@@ -620,14 +579,10 @@ cask "vivaldi"
 cask "vivaldi@snapshot"
 # Binary releases of VS Code without MS branding/telemetry/licensing
 cask "vscodium"
-# GPU-accelerated cross-platform terminal emulator and multiplexer
-cask "wezterm"
 # Install and switch between multiple versions of Xcode
 cask "xcodes-app"
 # Multiplayer code editor
 cask "zed"
-# Gecko based web browser
-cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
@@ -638,7 +593,9 @@ mas "Boop", id: 1518425043
 mas "Codye", id: 1516894961
 mas "Color Picker", id: 1545870783
 mas "Compressor", id: 424390742
+mas "Craft", id: 1487937127
 mas "DaisyDisk", id: 411643860
+mas "Eagle for Safari", id: 1526651672
 mas "egword Universal 2", id: 1272842196
 mas "Expenses", id: 1492055171
 mas "Final Cut Pro", id: 424389933
@@ -648,7 +605,6 @@ mas "Goodnotes", id: 1444383602
 mas "HextEdit", id: 1557247094
 mas "Hyperduck", id: 6444667067
 mas "iA Writer", id: 775737590
-mas "Inky", id: 6748526665
 mas "Keynote", id: 409183694
 mas "LadioCast", id: 411213048
 mas "LINE", id: 539883307
@@ -664,15 +620,14 @@ mas "Orb", id: 6477840170
 mas "Pages", id: 409201541
 mas "Pastel", id: 413897608
 mas "Patterns", id: 429449079
-mas "Perplexity", id: 6714467650
 mas "Photomator", id: 1444636541
+mas "Piccolo", id: 1561230039
 mas "Pieoneer", id: 6739781207
 mas "Pixelmator Pro", id: 1289583905
 mas "Prime Video", id: 545519333
 mas "ProofreadAI", id: 6705131596
 mas "QuickMIDI", id: 1459790045
 mas "Raycast Companion", id: 6738274497
-mas "Refined GitHub", id: 1519867270
 mas "RunCat", id: 1429033973
 mas "ScreenToLayers", id: 1077317077
 mas "Shareful", id: 1522267256
