@@ -12,6 +12,8 @@ right_format = """
 $time
 """
 
+command_timeout = 100
+
 continuation_prompt = " ❯❯ "
 
 palette = "catppuccin_macchiato"
