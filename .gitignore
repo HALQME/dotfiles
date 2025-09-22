@@ -3,4 +3,9 @@
 .config/zed/prompts/**/*
 .config/zed/conversations/*
 
+**/*.log
 **/history/**
+**/cache/**
+
+.cli_bash_history
+**/amazonq/active-user-state.json
