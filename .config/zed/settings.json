@@ -21,15 +21,14 @@
   // Theme & Color Scheme
   "theme": {
     "mode": "system",
-    "light": "Fireworks Dark",
-    "dark": "Fireworks Dark"
+    "light": "One Light",
+    "dark": "One Dark"
   },
   "icon_theme": {
     "mode": "system",
     "light": "Catppuccin Frappé",
     "dark": "Catppuccin Frappé"
   },
-  "use_system_window_tabs": true,
   // Font Configuration
   "buffer_font_family": "Moralerspace Xenon",
   "buffer_font_features": {
@@ -44,6 +43,14 @@
   // ============================================================================
   // EDITOR INTERFACE & LAYOUT
   // ============================================================================
+  // gutter
+  "gutter": {
+    "line_numbers": true,
+    "runnables": true,
+    "breakpoints": true,
+    "folds": true,
+    "min_line_number_digits": 3
+  },
   // Pane & Window Management
   "active_pane_modifiers": {
     "border_size": 0,
@@ -55,7 +62,7 @@
   "tab_bar": {
     "show": true,
     "show_nav_history_buttons": false,
-    "show_tab_bar_buttons": false
+    "show_tab_bar_buttons": true
   },
   "tabs": {
     "close_position": "right",
@@ -63,7 +70,7 @@
     "git_status": true,
     "activate_on_close": "left_neighbour",
     "show_close_button": "hover",
-    "show_diagnostics": "errors"
+    "show_diagnostics": "all"
   },
   "preview_tabs": {
     "enabled": true,
@@ -72,18 +79,28 @@
   },
   // Toolbar & UI Elements
   "toolbar": {
-    "breadcrumbs": false,
-    "quick_actions": false
+    "breadcrumbs": true,
+    "quick_actions": true,
+    "selections_menu": true,
+    "agent_review": true,
+    "code_actions": true
   },
+  "use_system_window_tabs": true,
   "title_bar": {
     "show_branch_icon": true,
     "show_branch_name": true,
-    "show_project_items": true,
+    "show_project_items": false,
     "show_onboarding_banner": false,
     "show_user_picture": false,
-    "show_sign_in": true,
-    "show_menus": true
+    "show_sign_in": false,
+    "show_menus": false
   },
+  "status_bar": {
+    "active_language_button": true,
+    "cursor_position_button": false
+  },
+  "excerpt_context_lines": 4,
+  "expand_excerpt_lines": 4,
   // ============================================================================
   // EDITOR BEHAVIOR & INTERACTION
   // ============================================================================
@@ -91,11 +108,11 @@
   "cursor_blink": true,
   "cursor_shape": "block",
   "multi_cursor_modifier": "alt",
-  "current_line_highlight": "all",
+  "current_line_highlight": "gutter",
   "selection_highlight": true,
   // Mouse & Input Behavior
-  "hide_mouse": "on_typing",
-  "autoscroll_on_clicks": true,
+  "hide_mouse": "on_typing_and_movement",
+  "autoscroll_on_clicks": false,
   "drag_and_drop_selection": {
     "enabled": true,
     "delay": 200
@@ -118,11 +135,11 @@
   // Scrollbar Configuration
   "scrollbar": {
     "show": "always",
-    "cursors": false,
+    "cursors": true,
     "git_diff": true,
     "search_results": true,
-    "selected_text": true,
-    "selected_symbol": false,
+    "selected_text": false,
+    "selected_symbol": true,
     "diagnostics": "warning",
     "axes": {
       "horizontal": false,
@@ -131,9 +148,12 @@
   },
   // Minimap
   "minimap": {
-    "show": "never",
+    "show": "auto",
     "thumb": "hover",
-    "thumb_border": "left_only"
+    "thumb_border": "none",
+    "current_line_highlight": "all",
+    "display_in": "active_editor",
+    "max_width_columns": 60
   },
   // Indent Guides
   "indent_guides": {
@@ -146,6 +166,8 @@
   // ============================================================================
   // CODE INTELLIGENCE & LSP
   // ============================================================================
+  // Signature Help
+  "auto_signature_help": true,
   // Language Server Protocol
   "enable_language_server": true,
   "lsp_highlight_debounce": 60,
@@ -168,7 +190,16 @@
         "require_config_file": true,
         "config_path": "<path>/biome.json"
       }
+    },
+    "markdown-oxide": {
+      "enable_lsp_tasks": true,
+      "binary": {
+        "path": "markdown-oxide"
+      }
     }
+  },
+  "global_lsp_settings": {
+    "button": true
   },
   // Code Actions & Formatting
   "format_on_save": "on",
@@ -265,6 +296,9 @@
     "Shell Script": [
       ".env.*",
       ".dev.vars*"
+    ],
+    "TOML": [
+      "**/ghostty/config"
     ]
   },
   // File Scanning
@@ -280,8 +314,9 @@
     "**/.settings"
   ],
   "file_scan_inclusions": [
-    ".env*",
-    ".dev.vars*"
+    ".env.*",
+    ".dev.vars.*",
+    "docker-compose.*.yml"
   ],
   // ============================================================================
   // VERSION CONTROL (GIT)
@@ -305,7 +340,10 @@
         "source.organizeImports": true
       },
       "format_on_save": "off",
-      "auto_indent_on_paste": true
+      "auto_indent_on_paste": true,
+      "language_servers": [
+        "!vtsls"
+      ]
     },
     "JavaScript": {
       "code_actions_on_format": {
@@ -360,6 +398,12 @@
           ]
         }
       }
+    },
+    "Markdown": {
+      "enable_language_server": true,
+      "language_servers": [
+        "markdown-oxide"
+      ]
     }
   },
   // ============================================================================
@@ -367,7 +411,9 @@
   // ============================================================================
   "auto_install_extensions": {
     // Languages
+    "asciidoc": true,
     "c": false,
+    "color-highlight": true,
     "color-lsp": true,
     "crystal": true,
     "csharp": false,
@@ -375,11 +421,10 @@
     "d2": true,
     "docker-compose": true,
     "dockerfile": true,
-    "git-firefly": false,
+    "git-firefly": true,
     "haskell": true,
     "html": true,
     "ini": true,
-    "java": false,
     "javascript": true,
     "latex": true,
     "lua": false,
@@ -432,10 +477,6 @@
       "show": "never"
     }
   },
-  // Chat & Collaboration Panels
-  "chat_panel": {
-    "button": "never"
-  },
   "collaboration_panel": {
     "button": false,
     "default_width": 360,
@@ -463,10 +504,7 @@
     "enabled_in_text_threads": false,
     "mode": "subtle"
   },
-  "edit_predictions_disabled_in": [
-    "comment",
-    "string"
-  ],
+  "edit_predictions_disabled_in": [],
   "show_edit_predictions": true,
   "features": {
     "edit_prediction_provider": "zed"
@@ -474,10 +512,11 @@
   // ============================================================================
   // AI AGENT & ASSISTANCE
   // ============================================================================
+  "disable_ai": false,
   "agent": {
     "always_allow_tool_actions": false,
     "button": true,
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_view": "thread",
     "dock": "right",
     "enabled": true,
