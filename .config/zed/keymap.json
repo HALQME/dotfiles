@@ -21,13 +21,6 @@
           "task_name": "lazygit",
           "reveal_target": "center"
         }
-      ],
-      "ctrl-`": [
-        "task::Spawn",
-        {
-          "task_name": "zsh",
-          "reveal_target": "center"
-        }
       ]
     }
   },
@@ -1493,12 +1486,6 @@
     "context": "Editor",
     "bindings": {
       "ctrl-space": null
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-`": null
     }
   },
   {
