@@ -13,12 +13,6 @@
     "hide": "always"
   },
   {
-    "label": "act",
-    "command": "act --container-architecture linux/amd64 -s GITHUB_TOKEN=\"$(gh auth token)\"",
-    "reveal_target": "center",
-    "hide": "on_success"
-  },
-  {
     "label": "btm",
     "command": "btm",
     "reveal_target": "center",
@@ -26,9 +20,7 @@
   },
   {
     "label": "zsh",
-    "args": [
-      "--no-rcs"
-    ],
+    "args": [],
     "command": "zsh",
     "use_new_terminal": true,
     "allow_concurrent_runs": true,
@@ -39,6 +31,18 @@
     "label": "qchat",
     "args": [],
     "command": "qchat",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": true,
+    "reveal": "always",
+    "reveal_target": "center",
+    "show_command": false,
+    "show_summary": false,
+    "hide": "on_success"
+  },
+  {
+    "label": "copilot",
+    "args": [],
+    "command": "COPILOT_MODEL=gpt-5-mini copilot",
     "use_new_terminal": false,
     "allow_concurrent_runs": true,
     "reveal": "always",
