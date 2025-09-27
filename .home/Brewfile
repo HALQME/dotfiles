@@ -469,8 +469,6 @@ cask "ia-presenter"
 cask "iina"
 # Tool to optimise images to a smaller size
 cask "imageoptim"
-# Terminal emulator as alternative to Apple's Terminal app
-cask "iterm2"
 # Menu bar calendar
 cask "itsycal"
 # Open-source screen recorder built with web technology
@@ -495,6 +493,8 @@ cask "macskk"
 cask "macwhisper"
 # Text editor
 cask "mi"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
 # Spreadsheet software
 cask "microsoft-excel"
 # Presentation software
@@ -563,6 +563,8 @@ cask "soulver"
 cask "steam"
 # Application for inspecting installer packages
 cask "suspicious-package"
+# Interior design application
+cask "sweet-home3d"
 # Quicklook extension for source files
 cask "syntax-highlight"
 # Mesh VPN based on WireGuard
