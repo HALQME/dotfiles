@@ -56,9 +56,11 @@ alias ..3="cd ../../.."
 alias ~="cd ~"
 alias c="clear"
 alias ls="lsd"
+alias ts="tailscale"
 alias ll="lsd -la"
 alias lg="lazygit"
 alias d="docker"
+alias dco="docker-compose"
 alias mp='multipass'
 alias edit="vim"
 
@@ -83,9 +85,11 @@ alias weather="curl wttr.in"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 alias untar="tar -zxvf"
 alias python="python3"
+alias port="lsof -i"
 
 # App/Tool specific aliases
 alias brew-backup="brew bundle dump --force --file $HOME/.dotfiles/.home/Brewfile --describe"
+alias gh-copilot="COPILOT_MODEL=gpt-5-mini copilot"
 alias gptk="gameportingtoolkit-no-hud ~/$MY_GAME_PREFIX"
 alias pdftohtml='pdftohtml -enc UTF-8 -noframes'
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
@@ -149,19 +153,26 @@ fuck() {
 typeset -U path
 
 # Define tool-specific variables
+export BUN_HOME="$HOME/.bun"
 export VOLTA_HOME="$HOME/.volta"
+export PNPM_HOME="$HOME/Library/pnpm"
 export GO_HOME="$HOME/.go"
 export SWIFTLY_HOME_DIR="${HOME}/.swiftly"
 export DOTNET_ROOT="/usr/local/share/dotnet"
 export MODULAR_HOME="$HOME/.modular"
 export BAT_THEME="OneHalfDark"
 export MY_GAME_PREFIX=".wine" # For Game Porting Toolkit
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 
 # Prepend directories to PATH. Order matters; first entry is checked first.
 path=(
   # Development Tools & SDKs
   "$MODULAR_HOME/pkg/packages.modular.com_mojo/bin" # Modular Mojo
   "$VOLTA_HOME/bin" # Volta
+  "$BUN_HOME/bin" # Bun
+  "$PNPM_HOME" # PNPM
   "$GO_HOME/bin" # Go
   "$SWIFTLY_HOME_DIR/bin" # Swift
   "$HOME/.ghcup/bin" # Haskell
@@ -174,6 +185,7 @@ path=(
   "/opt/homebrew/opt/llvm/bin"
   "/opt/homebrew/opt/rustup/bin"
   "/opt/homebrew/opt/ruby/bin"
+  "/opt/homebrew/opt/openjdk/bin"
 
   # Keep existing system paths
   $path
