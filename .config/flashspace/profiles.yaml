@@ -23,9 +23,6 @@ profiles:
     - name: Vivaldi
       bundleIdentifier: com.vivaldi.Vivaldi
       iconPath: /Applications/Vivaldi.app/Contents/Resources/app.icns
-    - name: Zed
-      bundleIdentifier: dev.zed.Zed
-      iconPath: /Applications/Zed.app/Contents/Resources/Zed.icns
     - name: VSCodium
       bundleIdentifier: com.vscodium
       iconPath: /Applications/VSCodium.app/Contents/Resources/VSCodium.icns

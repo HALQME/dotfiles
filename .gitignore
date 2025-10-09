@@ -9,3 +9,4 @@
 
 .cli_bash_history
 **/amazonq/active-user-state.json
+**/amazonq/**/*.example

@@ -14,7 +14,7 @@ font-style-bold-italic = "default"
 font-synthetic-style = "bold,italic,bold-italic"
 
 # フォントフィーチャーを適用します（例：リガチャの無効化 `-calt`）。
-font-feature = "calt, liga, dlig, ordn"
+font-feature = "calt, liga, dlig"
 
 # フォントサイズをポイント単位で指定します。
 font-size = 13

@@ -6,6 +6,7 @@
   "restore_on_startup": "last_session",
   "auto_update": false,
   "load_direnv": "direct",
+  "ssh_connections": [],
   // File Management
   "autosave": {
     "after_delay": {
@@ -89,7 +90,7 @@
   "title_bar": {
     "show_branch_icon": true,
     "show_branch_name": true,
-    "show_project_items": false,
+    "show_project_items": true,
     "show_onboarding_banner": false,
     "show_user_picture": false,
     "show_sign_in": false,
@@ -97,7 +98,7 @@
   },
   "status_bar": {
     "active_language_button": true,
-    "cursor_position_button": false
+    "cursor_position_button": true
   },
   "excerpt_context_lines": 4,
   "expand_excerpt_lines": 4,
@@ -111,7 +112,7 @@
   "current_line_highlight": "gutter",
   "selection_highlight": true,
   // Mouse & Input Behavior
-  "hide_mouse": "on_typing_and_movement",
+  "hide_mouse": "never",
   "autoscroll_on_clicks": false,
   "drag_and_drop_selection": {
     "enabled": true,
@@ -299,6 +300,14 @@
     ],
     "TOML": [
       "**/ghostty/config"
+    ],
+    "AsciiDoc": [
+      "*.adoc",
+      "*.asciidoc"
+    ],
+    "Markdown": [
+      "*.md",
+      "*.mdx"
     ]
   },
   // File Scanning
@@ -420,7 +429,7 @@
     "csv": true,
     "d2": true,
     "docker-compose": true,
-    "dockerfile": true,
+    "dockerfile": false,
     "git-firefly": true,
     "haskell": true,
     "html": true,
@@ -526,7 +535,7 @@
     "play_sound_when_agent_done": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini"
+      "model": "claude-sonnet-4"
     },
     "inline_assistant_model": {
       "provider": "copilot_chat",

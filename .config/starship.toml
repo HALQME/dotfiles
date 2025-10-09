@@ -12,7 +12,7 @@ right_format = """
 $time
 """
 
-command_timeout = 100
+command_timeout = 5000
 
 continuation_prompt = " ❯❯ "
 
