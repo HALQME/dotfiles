@@ -1,8 +1,9 @@
 tap "apple/apple", "http://github.com/apple/homebrew-apple"
+tap "charmbracelet/tap"
 tap "cirruslabs/cli"
 tap "libsql/sqld"
+tap "oven-sh/bun"
 tap "r-lib/rig"
-tap "sst/tap"
 tap "tursodatabase/tap"
 # Real-time data compression library
 brew "lzo"
@@ -10,10 +11,6 @@ brew "lzo"
 brew "xz"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
-# Next-gen compiler infrastructure
-brew "llvm"
 # Download with resuming and segmented downloading
 brew "aria2"
 # Aquarium animation in ASCII art
@@ -38,6 +35,10 @@ brew "cmake"
 brew "ruby"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
+# OpenAI's coding agent that runs in your terminal
+brew "codex"
+# Next-gen compiler infrastructure
+brew "llvm"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Fast and statically typed, compiled language with Ruby-like syntax
@@ -82,12 +83,6 @@ brew "gat"
 brew "gauche"
 # GNU compiler collection
 brew "gcc"
-# Common error values for all GnuPG components
-brew "libgpg-error"
-# File format designed to store large amounts of data
-brew "hdf5"
-# Geospatial Data Abstraction Library
-brew "gdal"
 # GNOME text editor
 brew "gedit"
 # Nonsense activity generator
@@ -102,16 +97,14 @@ brew "git"
 brew "git-lfs"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
-# Cross-platform application and UI framework
-brew "qt"
-# Command-driven, interactive function plotting
-brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # GNU troff text-formatting system
 brew "groff"
+# File format designed to store large amounts of data
+brew "hdf5"
 # Post-modern modal text editor
 brew "helix"
 # Easy plain text accounting with command-line, terminal and web UIs
@@ -136,6 +129,8 @@ brew "latex2rtf"
 brew "latexdiff"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Common error values for all GnuPG components
+brew "libgpg-error"
 # Library to communicate with iOS devices natively
 brew "libimobiledevice"
 # SIXEL encoder/decoder implementation
@@ -190,6 +185,8 @@ brew "pngquant"
 brew "podman"
 # Modern replacement for ps written in Rust
 brew "procs"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Password generator
 brew "pwgen"
 # Interpreted, interactive, object-oriented programming language
@@ -284,10 +281,12 @@ brew "zls"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# A powerful terminal-based AI assistant for developers, providing intelligent coding assistance directly in your terminal.
+brew "charmbracelet/tap/crush"
 # Run macOS and Linux VMs on Apple Hardware
 brew "cirruslabs/cli/tart"
-# The AI coding agent built for the terminal.
-brew "sst/tap/opencode"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
 brew "tursodatabase/tap/turso"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
@@ -317,12 +316,8 @@ cask "antinote"
 cask "apparency"
 # User-friendly GUI app for Homebrew
 cask "applite"
-# Manage team projects and tasks
-cask "asana"
 # Multi-track audio editor and recorder
 cask "audacity"
-# Japanese input method
-cask "azookey"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
 # Cross platform SQL editor and database management app
@@ -447,6 +442,8 @@ cask "font-zen-old-mincho"
 cask "ghostty"
 # Desktop client for GitHub repositories
 cask "github"
+# Extensible, firefox-based web browser
+cask "glide-browser"
 # Game development engine
 cask "godot"
 # Web browser
@@ -469,10 +466,6 @@ cask "ia-presenter"
 cask "iina"
 # Tool to optimise images to a smaller size
 cask "imageoptim"
-# Menu bar calendar
-cask "itsycal"
-# Open-source screen recorder built with web technology
-cask "kap"
 # Keyboard customiser
 cask "karabiner-elements"
 # File archiver
@@ -499,6 +492,8 @@ cask "microsoft-auto-update"
 cask "microsoft-excel"
 # Presentation software
 cask "microsoft-powerpoint"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
 # Word processor
 cask "microsoft-word"
 # Tool to control external monitor brightness & volume
@@ -523,8 +518,6 @@ cask "obs-advanced-scene-switcher"
 cask "obsidian"
 # Organise all your reference images in one place
 cask "ogdesign-eagle"
-# Get up and running with large language models locally
-cask "ollama-app"
 # Document editor
 cask "onlyoffice"
 # Replacement for Docker Desktop
@@ -535,8 +528,6 @@ cask "oscilloscope"
 cask "popclip"
 # Minecraft launcher
 cask "prismlauncher"
-# Sound, video and lighting control
-cask "qlab"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Window snapping tool
@@ -555,8 +546,6 @@ cask "scrivener"
 cask "shottr"
 # Instant messaging application focusing on security
 cask "signal"
-# Team communication and collaboration software
-cask "slack"
 # Notepad with a built-in calculator
 cask "soulver"
 # Video game digital distribution service
@@ -595,7 +584,6 @@ mas "Boop", id: 1518425043
 mas "Codye", id: 1516894961
 mas "Color Picker", id: 1545870783
 mas "Compressor", id: 424390742
-mas "Craft", id: 1487937127
 mas "DaisyDisk", id: 411643860
 mas "Eagle for Safari", id: 1526651672
 mas "egword Universal 2", id: 1272842196
@@ -603,12 +591,12 @@ mas "Expenses", id: 1492055171
 mas "Final Cut Pro", id: 424389933
 mas "FirstSeed Calendar", id: 1348617240
 mas "FirstSeed Tasks", id: 1627018604
+mas "Folder Quick Look", id: 6753110395
 mas "Goodnotes", id: 1444383602
 mas "HextEdit", id: 1557247094
 mas "Hyperduck", id: 6444667067
 mas "iA Writer", id: 775737590
 mas "Keynote", id: 409183694
-mas "LadioCast", id: 411213048
 mas "LINE", id: 539883307
 mas "Logic Pro", id: 634148309
 mas "MainStage", id: 634159523
@@ -624,10 +612,10 @@ mas "Pastel", id: 413897608
 mas "Patterns", id: 429449079
 mas "Photomator", id: 1444636541
 mas "Piccolo", id: 1561230039
+mas "Pico AI Server", id: 6738607769
 mas "Pieoneer", id: 6739781207
 mas "Pixelmator Pro", id: 1289583905
 mas "Prime Video", id: 545519333
-mas "ProofreadAI", id: 6705131596
 mas "QuickMIDI", id: 1459790045
 mas "Raycast Companion", id: 6738274497
 mas "RunCat", id: 1429033973
