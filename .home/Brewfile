@@ -167,6 +167,8 @@ brew "ninja"
 brew "nkf"
 # Free/open-source library for nonlinear optimization
 brew "nlopt"
+# Create, run, and share large language models (LLMs)
+brew "ollama", restart_service: :changed
 # Open source suite of directory software
 brew "openldap"
 # OpenBSD freely-licensed SSH connectivity tools
@@ -285,8 +287,6 @@ brew "zsh-syntax-highlighting"
 brew "charmbracelet/tap/crush"
 # Run macOS and Linux VMs on Apple Hardware
 brew "cirruslabs/cli/tart"
-# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
-brew "oven-sh/bun/bun"
 brew "tursodatabase/tap/turso"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
@@ -612,7 +612,6 @@ mas "Pastel", id: 413897608
 mas "Patterns", id: 429449079
 mas "Photomator", id: 1444636541
 mas "Piccolo", id: 1561230039
-mas "Pico AI Server", id: 6738607769
 mas "Pieoneer", id: 6739781207
 mas "Pixelmator Pro", id: 1289583905
 mas "Prime Video", id: 545519333
