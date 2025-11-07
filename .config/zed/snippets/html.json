@@ -1,0 +1,51 @@
+{
+  "HTML5 Boilerplate": {
+    "prefix": "html",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"${1:en}\">",
+      "<head>",
+      "\t<meta charset=\"UTF-8\">",
+      "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "\t<title>${2:Document}</title>",
+      "</head>",
+      "<body>",
+      "\t$0",
+      "</body>",
+      "</html>"
+    ]
+  },
+  "With Vue3": {
+    "prefix": "vue3",
+    "body": [
+      "<div id=\"${1:app}\">",
+      "</div>",
+      "<script src=\"https://cdn.jsdelivr.net/npm/vue/dist/vue.js\"></script>",
+      "<script type=\"module\">",
+      "import { createApp } from 'vue';",
+      "createApp({",
+      "\tdata() {",
+      "\t\treturn {",
+      "\t\t\t${1:data}: ${2:value},",
+      "\t\t};",
+      "\t},",
+      "\tmethods: {",
+      "\t\t${3:method}() {",
+      "\t\t\t${4:code}",
+      "\t\t},",
+      "\t},",
+      "\tcomputed: {",
+      "\t\t${5:computed}() {",
+      "\t\t\t${6:code}",
+      "\t\t},",
+      "\t},",
+      "\twatch: {",
+      "\t\t${7:watch}() {",
+      "\t\t\t${8:code}",
+      "\t\t},",
+      "\t},",
+      "}).mount('#${1:app}');",
+      "</script>"
+    ]
+  }
+}

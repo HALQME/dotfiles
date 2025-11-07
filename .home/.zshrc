@@ -36,7 +36,7 @@ source ~/.config/op/plugins.sh
 
 ## Global Aliases (can be used anywhere in a command)
 alias -g C=" | tee >(pbcopy)"
-alias -g G=" | grep"
+alias -g G=" | rg"
 alias -g L=" | less"
 alias -g N=" ; notify"
 alias -g P=" | pbpaste"
@@ -46,6 +46,7 @@ alias -g iCloud="$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/"
 ## Suffix Aliases (run a command based on file extension)
 alias -s {png,jpg,PNG,JPG,jpeg,JPEG}="imgcat"
 alias -s py="python3"
+alias -s python="python3"
 alias -s sh="bash"
 alias -s swift="swift"
 
@@ -59,6 +60,7 @@ alias ls="lsd"
 alias ts="tailscale"
 alias ll="lsd -la"
 alias lg="lazygit"
+alias grep="rg"
 alias d="docker"
 alias dco="docker-compose"
 alias mp='multipass'
@@ -74,17 +76,12 @@ alias history='history -t "%F %T"'
 # System / Utility aliases
 alias df="df -h"
 alias du="du -h"
-alias free="free -h" # Note: `free` is not native to macOS
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
 alias calc="bc -l"
 alias datestamp="date +%Y%m%d%H%M%S"
 alias ipinfo="curl ipinfo.io"
 alias weather="curl wttr.in"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 alias untar="tar -zxvf"
-alias python="python3"
 alias port="lsof -i"
 
 # App/Tool specific aliases
@@ -213,6 +210,12 @@ export PATH
 
 ## Starship Prompt
 eval "$(starship init zsh)"
+
+## fzf
+eval "$(fzf --zsh)"
+
+## zoxide
+eval "$(zoxide init --cmd cd zsh)"
 
 ## Zsh Syntax Highlighting
 ZSH_SYNTAX_HIGHLIGHTING_FILE="/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

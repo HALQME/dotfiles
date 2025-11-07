@@ -35,8 +35,8 @@ brew "cmake"
 brew "ruby"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
-# OpenAI's coding agent that runs in your terminal
-brew "codex"
+# Create and run Linux containers using lightweight virtual machines
+brew "container"
 # Next-gen compiler infrastructure
 brew "llvm"
 # Package compiler and linker metadata toolkit
@@ -51,8 +51,6 @@ brew "csvlens"
 brew "curl"
 # Modern diagram scripting language that turns text to diagrams
 brew "d2"
-# Secure runtime for JavaScript and TypeScript
-brew "deno"
 # Embeddable SQL OLAP Database Management System
 brew "duckdb"
 # Disk Usage/Free Utility - a better 'df' alternative
@@ -111,6 +109,8 @@ brew "helix"
 brew "hledger"
 # Improved top (interactive process viewer)
 brew "htop"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
 # Configurable static site generator
 brew "hugo"
 # Command-line benchmarking tool
@@ -147,6 +147,8 @@ brew "lynx"
 brew "markdown-oxide"
 # Mac App Store command-line interface
 brew "mas"
+# Terminal image, video, directory, and Markdown viewer
+brew "mcat"
 # Yet another part-of-speech and morphological analyzer
 brew "mecab"
 # IPA dictionary compiled for MeCab
@@ -175,16 +177,12 @@ brew "openldap"
 brew "openssh"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
-# General-purpose scripting language
-brew "php"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # CLI for the Pkl programming language
 brew "pkl"
 # PNG image optimizing utility
 brew "pngquant"
-# Tool for managing OCI containers and pods
-brew "podman"
 # Modern replacement for ps written in Rust
 brew "procs"
 # Protocol buffers (Google's data interchange format)
@@ -239,8 +237,6 @@ brew "tmux"
 brew "toilet"
 # Command-line translator using Google Translate and more
 brew "translate-shell"
-# Lightweight BitTorrent client
-brew "transmission-cli"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Markup-based typesetting system
@@ -279,12 +275,12 @@ brew "zellij"
 brew "zig"
 # Language Server for Zig
 brew "zls"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# A powerful terminal-based AI assistant for developers, providing intelligent coding assistance directly in your terminal.
-brew "charmbracelet/tap/crush"
 # Run macOS and Linux VMs on Apple Hardware
 brew "cirruslabs/cli/tart"
 brew "tursodatabase/tap/turso"
@@ -298,12 +294,8 @@ cask "adguard"
 cask "adguard-vpn"
 # Note editor and whiteboard
 cask "affine"
-# Professional graphic design software
-cask "affinity-designer"
-# Professional image editing software
-cask "affinity-photo"
-# Professional desktop publishing software
-cask "affinity-publisher"
+# Image editing and design software
+cask "affinity"
 # Configure Gatekeeper, unquarantine and self-sign apps
 cask "alienator88-sentinel"
 # Photo storage and sharing service
@@ -342,6 +334,8 @@ cask "cleanmymac"
 cask "codeedit"
 # Multi-language programming editor
 cask "coderunner"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # Create and run Linux containers using lightweight virtual machines
 cask "container"
 # Plain-text editor for web pages, program source codes and more
@@ -456,8 +450,6 @@ cask "gramps"
 cask "handbrake-app"
 # Allows keymap customization on HHKB HYBRID Type-S and HYBRID models
 cask "hhkb"
-# Testing client for REST, GraphQL, and HTTP APIs
-cask "httpie-desktop"
 # Markdown dictionary for Dictionary.app
 cask "ia-markdown-dictionary"
 # Create presentation slides from a Markdown document
@@ -476,6 +468,8 @@ cask "keyboardcleantool"
 cask "keyclu"
 # Data visualization and analysis software
 cask "labplot"
+# Software for Logitech devices
+cask "logi-options+"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
 # Controls and monitors all fans on Apple computers
@@ -504,6 +498,8 @@ cask "motrix"
 cask "multipass"
 # Multi-file renaming tool
 cask "name-mangler"
+# Network information and diagnostics utility
+cask "neo-network-utility"
 # Free and open-source RSS reader
 cask "netnewswire"
 # App to write, plan, collaborate, and get organised
@@ -512,8 +508,6 @@ cask "notion"
 cask "notion-calendar"
 # Open-source software for live streaming and screen recording
 cask "obs"
-# Automated scene switcher for OBS Studio
-cask "obs-advanced-scene-switcher"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Organise all your reference images in one place
@@ -532,10 +526,6 @@ cask "prismlauncher"
 cask "raycast"
 # Window snapping tool
 cask "rectangle-pro"
-# The R Installation Manager
-cask "rig"
-# Hardware-accelerated GPU terminal emulator
-cask "rio"
 # Data science software focusing on R and Python
 cask "rstudio"
 # Notepad software
@@ -560,6 +550,8 @@ cask "syntax-highlight"
 cask "tailscale-app"
 # Web browser focusing on security
 cask "tor-browser"
+# Easy to use text extraction tool
+cask "trex"
 # Virtual machines UI using QEMU
 cask "utm"
 # Virtualization tool
@@ -577,13 +569,13 @@ cask "zed"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
-mas "AdGuard Mail", id: 6499493699
 mas "Baking Soda", id: 1601151613
 mas "Bluebird", id: 1478757472
 mas "Boop", id: 1518425043
 mas "Codye", id: 1516894961
 mas "Color Picker", id: 1545870783
 mas "Compressor", id: 424390742
+mas "Copilot", id: 6738511300
 mas "DaisyDisk", id: 411643860
 mas "Eagle for Safari", id: 1526651672
 mas "egword Universal 2", id: 1272842196
@@ -598,6 +590,7 @@ mas "Hyperduck", id: 6444667067
 mas "iA Writer", id: 775737590
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
+mas "Locally", id: 6741426692
 mas "Logic Pro", id: 634148309
 mas "MainStage", id: 634159523
 mas "Mercury", id: 1621800675
