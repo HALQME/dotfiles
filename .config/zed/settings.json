@@ -173,25 +173,6 @@
   "enable_language_server": true,
   "lsp_highlight_debounce": 60,
   "lsp": {
-    "eslint": {
-      "settings": {
-        "require_config_file": true,
-        "codeActionOnSave": {
-          "rules": [
-            "import/order"
-          ]
-        },
-        "code_actions": {
-          "source.fixAll.eslint": true
-        }
-      }
-    },
-    "biome": {
-      "settings": {
-        "require_config_file": true,
-        "config_path": "<path>/biome.json"
-      }
-    },
     "markdown-oxide": {
       "enable_lsp_tasks": true,
       "binary": {
@@ -204,14 +185,6 @@
   },
   // Code Actions & Formatting
   "format_on_save": "on",
-  "formatter": [
-    {
-      "code_actions": {
-        "source.fixAll": true,
-        "source.organizeImports": true
-      }
-    }
-  ],
   "inline_code_actions": true,
   // Completions & Suggestions
   "completions": {
@@ -280,7 +253,7 @@
     "modal_max_width": "small",
     "git_status": true,
     "skip_focus_for_active_in_search": true,
-    "include_ignored": true
+    "include_ignored": "smart"
   },
   // ============================================================================
   // FILE SYSTEM & PROJECT MANAGEMENT
@@ -345,19 +318,17 @@
   // ============================================================================
   "languages": {
     "TypeScript": {
-      "code_actions_on_format": {
-        "source.organizeImports": true
-      },
       "format_on_save": "off",
       "auto_indent_on_paste": true,
       "language_servers": [
-        "!vtsls"
-      ]
+        "vtsls",
+        "!typescript-language-server"
+      ],
+      "code_actions_on_format": {
+        "source.eslint": false
+      }
     },
     "JavaScript": {
-      "code_actions_on_format": {
-        "source.organizeImports": true
-      },
       "format_on_save": "off",
       "auto_indent_on_paste": true
     },
@@ -366,19 +337,22 @@
         "language_server": {
           "name": "json-language-server"
         }
-      }
+      },
+      "language_servers": [
+        "json-language-server"
+      ]
     },
     "JSONC": {
       "formatter": {
         "language_server": {
           "name": "json-language-server"
         }
-      }
+      },
+      "language_servers": [
+        "json-language-server"
+      ]
     },
     "TSX": {
-      "code_actions_on_format": {
-        "source.organizeImports": true
-      },
       "format_on_save": "off",
       "auto_indent_on_paste": true
     },
@@ -413,6 +387,12 @@
       "language_servers": [
         "markdown-oxide"
       ]
+    },
+    "Astro": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": false
+      },
+      "formatter": "prettier"
     }
   },
   // ============================================================================
@@ -523,115 +503,33 @@
   // ============================================================================
   "disable_ai": false,
   "agent": {
-    "always_allow_tool_actions": false,
-    "button": true,
     "default_profile": "write",
-    "default_view": "thread",
-    "dock": "right",
-    "enabled": true,
-    "use_modifier_to_send": true,
-    "expand_edit_card": true,
-    "expand_terminal_card": true,
-    "play_sound_when_agent_done": true,
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-4"
-    },
+    "always_allow_tool_actions": true,
     "inline_assistant_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini"
+      "model": "claude-haiku-4.5"
     },
-    "commit_message_model": {
+    "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini"
+      "model": "gpt-5"
     },
-    "thread_summary_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5-mini"
-    },
-    "profiles": {
-      "write": {
-        "name": "Write",
-        "tools": {
-          "open": true,
-          "copy_path": true,
-          "create_directory": true,
-          "delete_path": false,
-          "diagnostics": true,
-          "edit_file": true,
-          "fetch": true,
-          "list_directory": true,
-          "project_notifications": true,
-          "move_path": false,
-          "now": true,
-          "find_path": true,
-          "read_file": true,
-          "grep": true,
-          "terminal": true,
-          "thinking": true,
-          "web_search": true
-        },
-        "enable_all_context_servers": true,
-        "context_servers": {}
-      },
-      "ask": {
-        "name": "Ask",
-        "tools": {
-          "contents": true,
-          "diagnostics": true,
-          "fetch": true,
-          "list_directory": false,
-          "project_notifications": true,
-          "now": true,
-          "find_path": false,
-          "read_file": false,
-          "open": false,
-          "grep": true,
-          "thinking": true,
-          "web_search": true
-        },
-        "enable_all_context_servers": true,
-        "context_servers": {
-          "serena": {
-            "tools": {
-              "create_text_file": false,
-              "execute_shell_command": false,
-              "replace_symbol_body": false,
-              "replace_regex": false,
-              "write_memory": true,
-              "think_about_whether_you_are_done": true,
-              "think_about_task_adherence": true,
-              "think_about_collected_information": true,
-              "search_for_pattern": true,
-              "switch_modes": true,
-              "read_memory": true,
-              "read_file": true,
-              "list_memories": true,
-              "list_dir": true,
-              "get_symbols_overview": true,
-              "find_symbol": true,
-              "find_referencing_symbols": true,
-              "find_file": true,
-              "check_onboarding_performed": true,
-              "activate_project": true
-            }
-          },
-          "mcp-server-context7": {
-            "tools": {
-              "resolve-library-id": true,
-              "get-library-docs": true
-            }
-          }
-        }
-      }
-    }
+    "use_modifier_to_send": true,
+    "play_sound_when_agent_done": false,
+    "model_parameters": []
   },
   "agent_servers": {
-    "gemini": {
-      "command": "/opt/homebrew/bin/gemini"
-    }
+    "codex": {},
+    "gemini": {}
   },
   "context_servers": {
+    "chrome-devtools-mcp": {
+      "source": "custom",
+      "enabled": true,
+      "command": "bunx",
+      "args": [
+        "chrome-devtools-mcp@latest"
+      ]
+    },
     "mcp-server-context7": {
       "source": "extension",
       "enabled": true,
