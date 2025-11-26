@@ -1,6 +1,5 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
-
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
 # ==============================================================================
 # Shell Configuration
 # ==============================================================================
@@ -65,6 +64,7 @@ alias d="docker"
 alias dco="docker-compose"
 alias mp='multipass'
 alias edit="vim"
+alias q='kiro-cli'
 
 # Overwrite built-ins with safer/better versions
 alias cp='cp -i'
@@ -223,5 +223,5 @@ if [[ -f "$ZSH_SYNTAX_HIGHLIGHTING_FILE" ]]; then
   source "$ZSH_SYNTAX_HIGHLIGHTING_FILE"
 fi
 
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
