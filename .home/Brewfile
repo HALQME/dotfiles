@@ -171,6 +171,8 @@ brew "nkf"
 brew "nlopt"
 # Create, run, and share large language models (LLMs)
 brew "ollama", restart_service: :changed
+# AI coding agent, built for the terminal
+brew "opencode"
 # Open source suite of directory software
 brew "openldap"
 # OpenBSD freely-licensed SSH connectivity tools
@@ -300,8 +302,8 @@ cask "affinity"
 cask "alienator88-sentinel"
 # Photo storage and sharing service
 cask "amazon-photos"
-# AI-powered productivity tool for the command-line
-cask "amazon-q"
+# AI Coding Agent IDE
+cask "antigravity"
 # Temporary notes with calculations and extensible features
 cask "antinote"
 # Inspect application bundles
@@ -326,8 +328,12 @@ cask "blender"
 cask "box-drive"
 # CD burning application
 cask "burn"
+# Design tool
+cask "canva"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# OpenAI's official browser with ChatGPT built in
+cask "chatgpt-atlas"
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
 # Code editor
@@ -444,8 +450,6 @@ cask "godot"
 cask "google-chrome"
 # Client for the Google Drive storage service
 cask "google-drive"
-# Genealogy software
-cask "gramps"
 # Open-source video transcoder
 cask "handbrake-app"
 # Allows keymap customization on HHKB HYBRID Type-S and HYBRID models
@@ -466,8 +470,12 @@ cask "keka"
 cask "keyboardcleantool"
 # Find shortcuts for any installed application
 cask "keyclu"
+# AI-powered productivity tool for the command-line
+cask "kiro-cli"
 # Data visualization and analysis software
 cask "labplot"
+# Discover, download, and run local LLMs
+cask "lm-studio"
 # Software for Logitech devices
 cask "logi-options+"
 # Privacy-first, open-source platform for knowledge sharing and management
@@ -526,8 +534,6 @@ cask "prismlauncher"
 cask "raycast"
 # Window snapping tool
 cask "rectangle-pro"
-# Data science software focusing on R and Python
-cask "rstudio"
 # Notepad software
 cask "scapple"
 # Word processing software with a typewriter style
@@ -556,12 +562,12 @@ cask "trex"
 cask "utm"
 # Virtualization tool
 cask "virtualbuddy"
+# Open-source code editor
+cask "visual-studio-code"
 # Web browser with built-in email client focusing on customization and control
 cask "vivaldi"
 # Web browser with built-in email client focusing on customization and control
 cask "vivaldi@snapshot"
-# Binary releases of VS Code without MS branding/telemetry/licensing
-cask "vscodium"
 # Install and switch between multiple versions of Xcode
 cask "xcodes-app"
 # Multiplayer code editor
@@ -572,10 +578,10 @@ mas "1Password for Safari", id: 1569813296
 mas "Baking Soda", id: 1601151613
 mas "Bluebird", id: 1478757472
 mas "Boop", id: 1518425043
+mas "Budget Flow", id: 1640091876
 mas "Codye", id: 1516894961
 mas "Color Picker", id: 1545870783
 mas "Compressor", id: 424390742
-mas "Copilot", id: 6738511300
 mas "DaisyDisk", id: 411643860
 mas "Eagle for Safari", id: 1526651672
 mas "egword Universal 2", id: 1272842196
@@ -590,7 +596,6 @@ mas "Hyperduck", id: 6444667067
 mas "iA Writer", id: 775737590
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
-mas "Locally", id: 6741426692
 mas "Logic Pro", id: 634148309
 mas "MainStage", id: 634159523
 mas "Mercury", id: 1621800675
@@ -627,13 +632,43 @@ mas "Yata", id: 1631370175
 mas "Yoink", id: 457622435
 mas "ちゃちゃっとリネーマー", id: 6462363612
 mas "辞書 by 物書堂", id: 1380563956
+vscode "42crunch.vscode-openapi"
+vscode "aaron-bond.better-comments"
 vscode "amazonwebservices.amazon-q-vscode"
 vscode "amazonwebservices.codewhisperer-for-command-line-companion"
+vscode "astro-build.astro-vscode"
+vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
+vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
-vscode "github.vscode-codeql"
+vscode "cweijan.vscode-office"
+vscode "dbaeumer.vscode-eslint"
+vscode "dtsvet.vscode-wasm"
+vscode "esbenp.prettier-vscode"
+vscode "formulahendry.auto-rename-tag"
+vscode "github.codespaces"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
-vscode "james-yu.latex-workshop"
+vscode "golang.go"
+vscode "ibm.output-colorizer"
+vscode "jrebocho.vscode-random"
 vscode "kilocode.kilo-code"
-vscode "ms-vscode.hexeditor"
+vscode "llvm-vs-code-extensions.lldb-dap"
+vscode "marp-team.marp-vscode"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-ceintl.vscode-language-pack-ja"
+vscode "ms-vscode.mono-debug"
+vscode "oakessoftware.headers"
+vscode "oderwat.indent-rainbow"
+vscode "openai.chatgpt"
+vscode "oven.bun-vscode"
+vscode "redhat.vscode-yaml"
+vscode "reditorsupport.r"
+vscode "reditorsupport.r-syntax"
+vscode "swiftlang.swift-vscode"
+vscode "tyriar.lorem-ipsum"
+vscode "unifiedjs.vscode-mdx"
+vscode "vadimcn.vscode-lldb"
+vscode "vitest.explorer"
