@@ -44,6 +44,7 @@ alias -g iCloud="$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/"
 
 ## Suffix Aliases (run a command based on file extension)
 alias -s {png,jpg,PNG,JPG,jpeg,JPEG}="imgcat"
+alias -s {ts,js,tsx,jsx,html}="bun run"
 alias -s py="python3"
 alias -s python="python3"
 alias -s sh="bash"
@@ -65,6 +66,7 @@ alias dco="docker-compose"
 alias mp='multipass'
 alias edit="vim"
 alias q='kiro-cli'
+alias orb='TERM=xterm-256color orb'
 
 # Overwrite built-ins with safer/better versions
 alias cp='cp -i'
@@ -155,8 +157,7 @@ typeset -U path
 
 # Define tool-specific variables
 export BUN_HOME="$HOME/.bun"
-export VOLTA_HOME="$HOME/.volta"
-export PNPM_HOME="$HOME/Library/pnpm"
+export PNPM_HOME="$HOME/.pnpm"
 export GO_HOME="$HOME/.go"
 export SWIFTLY_HOME_DIR="${HOME}/.swiftly"
 export DOTNET_ROOT="/usr/local/share/dotnet"
@@ -171,14 +172,13 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 path=(
   # Development Tools & SDKs
   "$MODULAR_HOME/pkg/packages.modular.com_mojo/bin" # Modular Mojo
-  "$VOLTA_HOME/bin" # Volta
   "$BUN_HOME/bin" # Bun
   "$PNPM_HOME" # PNPM
   "$GO_HOME/bin" # Go
   "$SWIFTLY_HOME_DIR/bin" # Swift
   "$HOME/.ghcup/bin" # Haskell
   "$HOME/.progate/bin" # Progate Path
-  "$HOME/.lmstudio/bin" # LM Studio CLI
+  "$HOME/.antigravity/antigravity/bin" # Antigravity
 
   # Homebrew-installed tools
   "/opt/homebrew/bin"
