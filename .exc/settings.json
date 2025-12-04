@@ -17,9 +17,7 @@
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.rulers": [
-      80
-    ],
+    "editor.rulers": [80],
     "editor.selectionHighlight": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
@@ -63,17 +61,10 @@
     "ssoCacheError": false
   },
   "amazonQ.workspaceIndex": true,
-  "apple-swift-format.configSearchPaths": [
-    "~/.swift-format"
-  ],
-  "apple-swift-format.path": [
-    "/opt/homebrew/bin//swift-format"
-  ],
+  "apple-swift-format.configSearchPaths": ["~/.swift-format"],
+  "apple-swift-format.path": ["/opt/homebrew/bin//swift-format"],
   "atomKeymap.promptV3Features": true,
-  "cSpell.userWords": [
-    "Cica",
-    "miharu"
-  ],
+  "cSpell.userWords": ["Cica", "miharu"],
   "calva.paredit.defaultKeyMap": "original",
   "calva.prettyPrintingOptions": {
     "enabled": false,
@@ -179,7 +170,7 @@
   "editor.definitionLinkOpensInPeek": true,
   "editor.find.globalFindClipboard": true,
   "editor.find.seedSearchStringFromSelection": "selection",
-  "editor.fontFamily": "Moralerspace Xenon NF",
+  "editor.fontFamily": "Moralerspace Xenon",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
   "editor.formatOnPaste": true,
@@ -281,10 +272,7 @@
     "NODE_ENV=test pnpm",
     "npx"
   ],
-  "kilo-code.deniedCommands": [
-    "rm",
-    "npm"
-  ],
+  "kilo-code.deniedCommands": ["rm", "npm"],
   "lldb.launch.expressions": "native",
   "lldb.library": "/Applications/Xcode-16.2.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
   "notebook.cellToolbarLocation": {
@@ -298,15 +286,9 @@
   "notebook.output.textLineLimit": 15,
   "playwright.reuseBrowser": true,
   "playwright.showTrace": false,
-  "python.analysis.extraPaths": [
-    "~/.pyenv/shims/python"
-  ],
-  "python.analysis.typeshedPaths": [
-    "~/.pyenv/shims/python"
-  ],
-  "python.autoComplete.extraPaths": [
-    "~/.pyenv/shims/python"
-  ],
+  "python.analysis.extraPaths": ["~/.pyenv/shims/python"],
+  "python.analysis.typeshedPaths": ["~/.pyenv/shims/python"],
+  "python.autoComplete.extraPaths": ["~/.pyenv/shims/python"],
   "r.alwaysUseActiveTerminal": true,
   "r.bracketedPaste": true,
   "r.helpPanel.cacheIndexFiles": "Workspace",
@@ -329,9 +311,7 @@
   "rust-analyzer.check.command": "clippy",
   "screencastMode.fontSize": 24,
   "security.workspace.trust.untrustedFiles": "open",
-  "settingsSync.ignoredSettings": [
-    "-swift.sanitizer"
-  ],
+  "settingsSync.ignoredSettings": ["-swift.sanitizer"],
   "swift.diagnostics": true,
   "swift.diagnosticsCollection": "keepAll",
   "swift.diagnosticsStyle": "swift",
@@ -353,7 +333,6 @@
     "FIG_NEW_SESSION": "1",
     "Q_NEW_SESSION": "1"
   },
-  "terminal.integrated.fontFamily": "Moralerspace Neon HWNF",
   "terminal.integrated.fontSize": 13,
   "terminal.integrated.macOptionClickForcesSelection": true,
   "terminal.integrated.minimumContrastRatio": 1,
@@ -382,9 +361,7 @@
   "workbench.preferredHighContrastLightColorTheme": "Catppuccin Frappé",
   "workbench.preferredLightColorTheme": "Catppuccin Frappé",
   "workbench.secondarySideBar.showLabels": false,
-  "workbench.settings.applyToAllProfiles": [
-    "workbench.colorTheme"
-  ],
+  "workbench.settings.applyToAllProfiles": ["workbench.colorTheme"],
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.indent": 20,
   "yaml.schemas": {
@@ -393,5 +370,8 @@
     ]
   },
   "zig.path": "zig",
-  "zig.zls.path": "zls"
+  "zig.zls.path": "zls",
+  "editor.codeLensFontFamily": "Moralerspace Xenon NF",
+  "terminal.integrated.fontFamily": "Moralerspace Xenon",
+  "python.analysis.typeCheckingMode": "strict"
 }

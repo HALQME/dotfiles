@@ -23,9 +23,12 @@ profiles:
     - name: Vivaldi
       bundleIdentifier: com.vivaldi.Vivaldi
       iconPath: /Applications/Vivaldi.app/Contents/Resources/app.icns
-    - name: VSCodium
-      bundleIdentifier: com.vscodium
-      iconPath: /Applications/VSCodium.app/Contents/Resources/VSCodium.icns
+    - name: Antigravity
+      bundleIdentifier: com.google.antigravity
+      iconPath: /Applications/Antigravity.app/Contents/Resources/Antigravity.icns
+    - name: Code
+      bundleIdentifier: com.microsoft.VSCode
+      iconPath: /Applications/Visual Studio Code.app/Contents/Resources/Code.icns
     symbolIconName: apple.terminal.on.rectangle.fill
   - id: D33180D1-223D-4544-8C19-88B89858102E
     name: University
