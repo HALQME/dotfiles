@@ -212,6 +212,9 @@ export PATH
 ## Starship Prompt
 eval "$(starship init zsh)"
 
+## GHQ
+export GHQ_ROOT="$HOME/Repo"
+
 ## fzf
 eval "$(fzf --zsh)"
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --E .git -E node_modules -E .DS_Store -E .github'
@@ -226,9 +229,6 @@ _fzf_compgen_dir() {
 }
 
 source "$(ghq root)/github.com/junegunn/fzf-git.sh/fzf-git.sh"
-
-## GHQ
-export GHQ_ROOT="$HOME/Repo"
 
 ## Zsh Syntax Highlighting
 ZSH_SYNTAX_HIGHLIGHTING_FILE="/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
