@@ -1,21 +1,21 @@
 # bin/bash
 
-CONF_DIR="$(cd .. && pwd)/.dotfiles/.config"
+CONF_DIR="$(pwd)/.config"
 for dotfile in "$CONF_DIR"/*; do
   [[ "$dotfile" == "${CONF_DIR}/.git" || "$dotfile" == "${CONF_DIR}/.github" || "$dotfile" == "${CONF_DIR}/.DS_Store" ]] && continue
   ln -sfnv "$dotfile" "$HOME/.config"
 done
 
-HOMEFILE_DIR="$(cd .. && pwd)/.dotfiles/.home"
+HOMEFILE_DIR="$(pwd)/.home"
 for dotfile in "${HOMEFILE_DIR}"/.??*; do
   [[ "$dotfile" == "${HOMEFILE_DIR}/.git" || "$dotfile" == "${HOMEFILE_DIR}/.github" || "$dotfile" == "${HOMEFILE_DIR}/.DS_Store" ]] && continue
   ln -fnsv "$dotfile" "$HOME"
 done
 
 if [ "$(uname)" = "Darwin" ]; then
-  ln -fnsv $HOME/.dotfiles/.exc/settings.json $HOME/Library/Application\ Support/Code/User
+  ln -fnsv $(pwd)/.exc/settings.json $HOME/Library/Application\ Support/Code/User
 elif [ "$(uname -s)" = "Linux" ]; then
-  ln -fnsv $HOME/.dotfiles/.exc/settings.json $HOME/.config/Code/User
+  ln -fnsv $(pwd)/.exc/settings.json $HOME/.config/Code/User
 else
   exit 1
 fi
