@@ -28,16 +28,16 @@
     "hide": "on_success"
   },
   {
-    "label": "qchat",
+    "label": "codex",
     "args": [],
-    "command": "qchat",
+    "command": "codex",
     "use_new_terminal": false,
     "allow_concurrent_runs": true,
     "reveal": "always",
     "reveal_target": "center",
-    "show_command": false,
+    "show_command": true,
     "show_summary": false,
-    "hide": "on_success"
+    "hide": "never"
   },
   {
     "label": "copilot",
@@ -76,5 +76,18 @@
       "latex-build"
     ],
     "reveal": "no_focus"
+  },
+  {
+    "label": "Bun Test",
+    "command": "bun test",
+    "args": [
+      "\"$ZED_RELATVIE_FILE\" -t=\"$ZED_SYMBOL\""
+    ],
+    "tags": [
+      "js-test",
+      "ts-test",
+      "bun-test",
+      "tsx-test"
+    ]
   }
 ]

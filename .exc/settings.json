@@ -373,5 +373,6 @@
   "zig.zls.path": "zls",
   "editor.codeLensFontFamily": "Moralerspace Xenon NF",
   "terminal.integrated.fontFamily": "Moralerspace Xenon",
-  "python.analysis.typeCheckingMode": "strict"
+  "python.analysis.typeCheckingMode": "strict",
+  "workbench.editor.enablePreview": false
 }

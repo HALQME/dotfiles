@@ -66,6 +66,7 @@ alias dco="docker-compose"
 alias mp='multipass'
 alias edit="vim"
 alias q='kiro-cli'
+alias repo='local repodir=$(ghq list | fzf -1 +m) && cd $(ghq root)/$repodir'
 alias orb='TERM=xterm-256color orb'
 
 # Overwrite built-ins with safer/better versions
@@ -213,9 +214,21 @@ eval "$(starship init zsh)"
 
 ## fzf
 eval "$(fzf --zsh)"
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --E .git -E node_modules -E .DS_Store -E .github'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-## zoxide
-eval "$(zoxide init --cmd cd zsh)"
+_fzf_compgen_path() {
+  fd --hidden -E .git -E .DS_Store . "$G1"
+}
+
+_fzf_compgen_dir() {
+  fd --type=d --hidden -exclude .git . "$1"
+}
+
+source "$(ghq root)/github.com/junegunn/fzf-git.sh/fzf-git.sh"
+
+## GHQ
+export GHQ_ROOT="$HOME/Repo"
 
 ## Zsh Syntax Highlighting
 ZSH_SYNTAX_HIGHLIGHTING_FILE="/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

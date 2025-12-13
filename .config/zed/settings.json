@@ -3,6 +3,9 @@
   // CORE EDITOR SETTINGS
   // ============================================================================
   // Workspace & Session Management
+  "git_panel": {
+    "sort_by_path": true
+  },
   "restore_on_startup": "last_session",
   "auto_update": false,
   "load_direnv": "direct",
@@ -518,11 +521,11 @@
     "always_allow_tool_actions": true,
     "inline_assistant_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini"
+      "model": "gpt-5"
     },
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-haiku-4.5"
+      "model": "gpt-5.1"
     },
     "use_modifier_to_send": true,
     "play_sound_when_agent_done": false,
