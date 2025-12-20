@@ -1,0 +1,46 @@
+{
+  "mcpServers": {
+    "git": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-git"
+      ],
+      "disabled": false,
+      "autoApprove": []
+    },
+    "chrome-devtools": {
+      "command": "pnpx",
+      "args": [
+        "chrome-devtools-mcp@latest"
+      ],
+      "disabled": false,
+      "autoApprove": [
+        "navigate_page"
+      ]
+    },
+    "context-7": {
+      "command": "pnpx",
+      "args": [
+        "@upstash/context7-mcp@latest"
+      ],
+      "disabled": false,
+      "autoApprove": []
+    },
+    "memory": {
+      "command": "pnpx",
+      "args": [
+        "@modelcontextprotocol/server-memory"
+      ],
+      "disabled": false,
+      "autoApprove": []
+    },
+    "sequential-thinking": {
+      "command": "pnpx",
+      "args": [
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}

@@ -1,0 +1,4 @@
+.cli_bash_history
+*.json.example
+argv.json
+extensions
