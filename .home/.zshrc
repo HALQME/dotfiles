@@ -1,5 +1,7 @@
+
 # Kiro CLI pre block. Keep at the top of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
+
 # ==============================================================================
 # Shell Configuration
 # ==============================================================================
@@ -49,6 +51,7 @@ alias -s py="python3"
 alias -s python="python3"
 alias -s sh="bash"
 alias -s swift="swift"
+alias -s md="glow -p"
 
 ## Regular Aliases
 alias ..="cd .."
@@ -61,11 +64,13 @@ alias ts="tailscale"
 alias ll="lsd -la"
 alias lg="lazygit"
 alias grep="rg"
+alias glor="glow -p"
 alias d="docker"
 alias dco="docker-compose"
 alias mp='multipass'
 alias edit="vim"
 alias q='kiro-cli'
+alias kiro='kiro-cli'
 alias repo='local repodir=$(ghq list | fzf -1 +m) && cd $(ghq root)/$repodir'
 alias orb='TERM=xterm-256color orb'
 
@@ -146,9 +151,6 @@ fuck() {
 }
 
 
-# bun completions
-[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
-
 # ==============================================================================
 # Environment Variables & PATH
 # ==============================================================================
@@ -173,10 +175,6 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 path=(
   # Development Tools & SDKs
   "$MODULAR_HOME/pkg/packages.modular.com_mojo/bin" # Modular Mojo
-  "$BUN_HOME/bin" # Bun
-  "$PNPM_HOME" # PNPM
-  "$GO_HOME/bin" # Go
-  "$SWIFTLY_HOME_DIR/bin" # Swift
   "$HOME/.ghcup/bin" # Haskell
   "$HOME/.progate/bin" # Progate Path
   "$HOME/.antigravity/antigravity/bin" # Antigravity
@@ -211,6 +209,9 @@ export PATH
 
 ## Starship Prompt
 eval "$(starship init zsh)"
+
+## mise
+eval "$(mise activate zsh)"
 
 ## GHQ
 export GHQ_ROOT="$HOME/Repo"
