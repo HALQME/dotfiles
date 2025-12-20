@@ -3,11 +3,28 @@
   // CORE EDITOR SETTINGS
   // ============================================================================
   // Workspace & Session Management
+  "redact_private_values": true,
+  "use_system_prompts": false,
+  "use_system_path_prompts": false,
+  "when_closing_with_no_tabs": "keep_window_open",
+  "agent_buffer_font_size": 11.0,
+  "agent_ui_font_size": 13.0,
+  "buffer_line_height": "standard",
+  "base_keymap": "SublimeText",
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "show_signature_help_after_edits": true,
+  "lsp_document_colors": "background",
+  "image_viewer": {
+    "unit": "decimal"
+  },
+  "colorize_brackets": false,
   "git_panel": {
     "sort_by_path": true
   },
   "restore_on_startup": "last_session",
-  "auto_update": false,
+  "auto_update": true,
   "load_direnv": "direct",
   "ssh_connections": [
     {
@@ -31,8 +48,8 @@
   // Theme & Color Scheme
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
+    "light": "Dracula Light (Alucard)",
+    "dark": "Dracula"
   },
   "icon_theme": {
     "mode": "system",
@@ -40,7 +57,7 @@
     "dark": "Catppuccin Frappé"
   },
   // Font Configuration
-  "buffer_font_family": "Moralerspace Xenon",
+  "buffer_font_family": "Moralerspace Argon",
   "buffer_font_features": {
     "calt": true,
     "liga": false,
@@ -49,7 +66,7 @@
     "ss04": false,
     "ss05": false
   },
-  "ui_font_family": "Moralerspace Argon",
+  "ui_font_family": "Moralerspace Xenon",
   // ============================================================================
   // EDITOR INTERFACE & LAYOUT
   // ============================================================================
@@ -85,7 +102,9 @@
   "preview_tabs": {
     "enabled": true,
     "enable_preview_from_file_finder": true,
-    "enable_preview_from_code_navigation": false
+    "enable_preview_file_from_code_navigation": true,
+    "enable_preview_multibuffer_from_code_navigation": true,
+    "enable_keep_preview_on_code_navigation": true,
   },
   // Toolbar & UI Elements
   "toolbar": {
@@ -121,22 +140,22 @@
   "current_line_highlight": "gutter",
   "selection_highlight": true,
   // Mouse & Input Behavior
-  "hide_mouse": "never",
-  "autoscroll_on_clicks": false,
+  "hide_mouse": "on_typing_and_movement",
+  "autoscroll_on_clicks": true,
   "drag_and_drop_selection": {
     "enabled": true,
     "delay": 200
   },
   // Text Editing Features
   "use_autoclose": true,
-  "always_treat_brackets_as_autoclosed": false,
+  "always_treat_brackets_as_autoclosed": true,
   "preferred_line_length": 80,
   "soft_wrap": "none",
   "show_wrap_guides": true,
   "tab_size": 2,
   "hard_tabs": false,
   // Text Display
-  "show_whitespaces": "boundary",
+  "show_whitespaces": "selection",
   "unnecessary_code_fade": 0.5,
   "line_indicator_format": "short",
   // ============================================================================
@@ -144,7 +163,7 @@
   // ============================================================================
   // Scrollbar Configuration
   "scrollbar": {
-    "show": "always",
+    "show": "auto",
     "cursors": true,
     "git_diff": true,
     "search_results": true,
@@ -153,7 +172,7 @@
     "diagnostics": "warning",
     "axes": {
       "horizontal": false,
-      "vertical": true
+      "vertical": false
     }
   },
   // Minimap
@@ -215,10 +234,11 @@
   "hover_popover_delay": 200,
   // Inlay Hints
   "inlay_hints": {
+    "show_value_hints": true,
     "enabled": true,
     "show_type_hints": false,
     "show_parameter_hints": true,
-    "show_other_hints": true,
+    "show_other_hints": false,
     "show_background": false,
     "edit_debounce_ms": 500,
     "scroll_debounce_ms": 50,
@@ -325,7 +345,11 @@
       "min_column": 80,
       "delay_ms": 100
     },
-    "hunk_style": "unstaged_hollow"
+    "hunk_style": "unstaged_hollow",
+    "branch_picker": {
+      "show_author_name": true
+    },
+    "path_style": "file_name_first"
   },
   // ============================================================================
   // LANGUAGE-SPECIFIC SETTINGS
@@ -504,28 +528,33 @@
       "**/*.crt",
       "**/secrets.yml"
     ],
-    "enabled_in_text_threads": false,
-    "mode": "subtle"
+    "enabled_in_text_threads": true,
+    "mode": "subtle",
   },
   "edit_predictions_disabled_in": [],
   "show_edit_predictions": true,
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
   // ============================================================================
   // AI AGENT & ASSISTANCE
   // ============================================================================
   "disable_ai": false,
   "agent": {
+    "notify_when_agent_waiting": "all_screens",
     "default_profile": "write",
     "always_allow_tool_actions": true,
     "inline_assistant_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5"
+      "model": "gpt-4.1"
     },
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5.1"
+      "provider": "ollama",
+      "model": "qwen2.5-coder:3b"
+    },
+    "commit_message_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:3b"
     },
     "use_modifier_to_send": true,
     "play_sound_when_agent_done": false,
@@ -570,7 +599,7 @@
   // TERMINAL CONFIGURATION
   // ============================================================================
   "terminal": {
-    "alternate_scroll": "off",
+    "alternate_scroll": "on",
     "blinking": "terminal_controlled",
     "copy_on_select": false,
     "keep_selection_on_copy": true,
@@ -601,7 +630,7 @@
     "toolbar": {
       "breadcrumbs": false
     },
-    "working_directory": "first_project_directory",
+    "working_directory": "current_project_directory",
     "scrollbar": {
       "show": "never"
     },
@@ -625,16 +654,14 @@
   // ============================================================================
   // INPUT & ACCESSIBILITY
   // ============================================================================
-  "vim_mode": true,
+  "helix_mode": true,
   "relative_line_numbers": "enabled",
   "vim": {
-    "use_system_clipboard": "always",
-    "use_smartcase_find": true,
     "cursor_shape": {
+      "insert": "bar",
       "normal": "block",
       "replace": "underline",
-      "visual": "hollow",
-      "insert": "bar"
+      "visual": "hollow"
     }
   }
 }
