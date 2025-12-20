@@ -1,3 +1,7 @@
-
 [settings]
-python.uv_venv_auto = true
+experimental = true
+disable_backends = ["asdf", "vfox"]
+lockfile = true
+
+[settings.pipx]
+uvx = true
