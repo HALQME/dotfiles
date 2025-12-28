@@ -2,8 +2,10 @@ tap "apple/apple", "http://github.com/apple/homebrew-apple"
 tap "charmbracelet/tap"
 tap "cirruslabs/cli"
 tap "libsql/sqld"
+tap "netbirdio/tap"
 tap "oven-sh/bun"
 tap "r-lib/rig"
+tap "theboredteam/boring-notch"
 tap "tursodatabase/tap"
 # Real-time data compression library
 brew "lzo"
@@ -21,20 +23,12 @@ brew "bashdb"
 brew "bat"
 # Backend processor for BibLaTeX
 brew "biber"
-# Yet another cross-platform graphical process/system monitor
-brew "bottom"
-# Resource monitor. C++ version and continuation of bashtop and bpytop
-brew "btop"
 # Freely available high-quality data compressor
 brew "bzip2"
 # CD/DVD/Blu-ray premastering and recording software
 brew "cdrtools"
 # Cross-platform make
 brew "cmake"
-# Powerful, clean, object-oriented scripting language
-brew "ruby"
-# Dependency manager for Cocoa projects
-brew "cocoapods"
 # Create and run Linux containers using lightweight virtual machines
 brew "container"
 # Next-gen compiler infrastructure
@@ -55,8 +49,6 @@ brew "d2"
 brew "duckdb"
 # Disk Usage/Free Utility - a better 'df' alternative
 brew "duf"
-# More intuitive version of du in rust
-brew "dust"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
 # Like neofetch, but much faster because written mostly in C
@@ -73,8 +65,6 @@ brew "felinks"
 brew "ffmpeg"
 # Infamous electronic fortune-cookie generator
 brew "fortune"
-# Command-line fuzzy finder written in Go
-brew "fzf"
 # Cat alternative written in Go
 brew "gat"
 # R7RS Scheme implementation, developed to be a handy script interpreter
@@ -85,26 +75,16 @@ brew "gcc"
 brew "gedit"
 # Nonsense activity generator
 brew "genact"
-# GitHub command-line tool
-brew "gh"
-# Installer for the general purpose language Haskell
-brew "ghcup"
-# Distributed revision control system
-brew "git"
 # Git extension for versioning large files
 brew "git-lfs"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # GNU troff text-formatting system
 brew "groff"
 # File format designed to store large amounts of data
 brew "hdf5"
-# Post-modern modal text editor
-brew "helix"
 # Easy plain text accounting with command-line, terminal and web UIs
 brew "hledger"
 # Improved top (interactive process viewer)
@@ -117,8 +97,6 @@ brew "hugo"
 brew "hyperfine"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
-# Git-compatible distributed version control system
-brew "jj"
 # Selection-based modal text editor
 brew "kakoune"
 # LaTeX-to-HTML translator
@@ -127,8 +105,6 @@ brew "latex2html"
 brew "latex2rtf"
 # Compare and mark up LaTeX file differences
 brew "latexdiff"
-# Simple terminal UI for git commands
-brew "lazygit"
 # Common error values for all GnuPG components
 brew "libgpg-error"
 # Library to communicate with iOS devices natively
@@ -143,8 +119,6 @@ brew "lolcat"
 brew "lsd"
 # Text-based web browser
 brew "lynx"
-# Personal Knowledge Management System for the LSP
-brew "markdown-oxide"
 # Mac App Store command-line interface
 brew "mas"
 # Terminal image, video, directory, and Markdown viewer
@@ -159,26 +133,20 @@ brew "micro"
 brew "minikube"
 # Dependency manager that installs and runs Swift command-line tool packages
 brew "mint"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # Mac command-line tool that automatically downloads macOS Firmwares / Installers
 brew "mist-cli"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
-# Small build system for use with gyp or CMake
-brew "ninja"
 # Network Kanji code conversion Filter (NKF)
 brew "nkf"
 # Free/open-source library for nonlinear optimization
 brew "nlopt"
 # Create, run, and share large language models (LLMs)
 brew "ollama", restart_service: :changed
-# AI coding agent, built for the terminal
-brew "opencode"
 # Open source suite of directory software
 brew "openldap"
 # OpenBSD freely-licensed SSH connectivity tools
 brew "openssh"
-# Swiss-army knife of markup format conversion
-brew "pandoc"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # CLI for the Pkl programming language
@@ -201,30 +169,14 @@ brew "ranger"
 brew "rename"
 # Wrapper around ripgrep that adds multiple rich file types
 brew "ripgrep-all"
-# Extremely fast Python linter, written in Rust
-brew "ruff"
-# Rust toolchain installer
-brew "rustup"
-# JVM-based programming language
-brew "scala"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
-# Ruby language server
-brew "solargraph"
-# Cross-shell prompt for astronauts
-brew "starship"
-# Opinionated Lua code formatter
-brew "stylua"
 # Formatting technology for Swift source code
 brew "swift-format"
 # Formatting tool for reformatting Swift code
 brew "swiftformat"
-# Swift toolchain installer and manager
-brew "swiftly"
-# Feature-rich console based todo list manager
-brew "task"
 # User interface to the TELNET protocol
 brew "telnet"
 # Official documentation format of the GNU project
@@ -245,12 +197,6 @@ brew "tree"
 brew "typst"
 # Unidata unit conversion library
 brew "udunits"
-# Extremely fast Python package installer and resolver, written in Rust
-brew "uv"
-# Vi 'workalike' with many additional features
-brew "vim"
-# JavaScript toolchain manager for reproducible environments
-brew "volta"
 # Web Assembly Binary Toolkit
 brew "wabt"
 # Standalone JIT-style runtime for WebAssembly, using Cranelift
@@ -261,30 +207,18 @@ brew "wget"
 brew "winetricks"
 # Userspace Go implementation of WireGuard
 brew "wireguard-go"
-# Validate and execute GitHub Actions workflows locally
-brew "wrkflw"
 # X.Org Applications: xauth
 brew "xauth"
 # Generate your Xcode project from a spec file and your folder structure
 brew "xcodegen"
 # Friendly and fast tool for sending HTTP requests
 brew "xh"
-# Feature-rich command-line audio/video downloader
-brew "yt-dlp"
-# Pluggable terminal workspace, with terminal multiplexer as the base feature
-brew "zellij"
-# Programming language designed for robustness, optimality, and clarity
-brew "zig"
-# Language Server for Zig
-brew "zls"
-# Shell extension to navigate your filesystem faster
-brew "zoxide"
-# UNIX shell (command interpreter)
-brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
 # Run macOS and Linux VMs on Apple Hardware
 brew "cirruslabs/cli/tart"
+# Netbird project.
+brew "netbirdio/tap/netbird"
 brew "tursodatabase/tap/turso"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
@@ -300,8 +234,6 @@ cask "affine"
 cask "affinity"
 # Configure Gatekeeper, unquarantine and self-sign apps
 cask "alienator88-sentinel"
-# Photo storage and sharing service
-cask "amazon-photos"
 # AI Coding Agent IDE
 cask "antigravity"
 # Temporary notes with calculations and extensible features
@@ -310,16 +242,18 @@ cask "antinote"
 cask "apparency"
 # User-friendly GUI app for Homebrew
 cask "applite"
+# Markdown editor for Astro content collections
+cask "astro-editor"
 # Multi-track audio editor and recorder
 cask "audacity"
+# Live wallpaper app
+cask "backdrop"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
 # Cross platform SQL editor and database management app
 cask "beekeeper-studio"
 # Tool to customise input devices and automate computer systems
 cask "bettertouchtool"
-# Edit and manage bibliographies
-cask "bibdesk"
 # Desktop password and login vault
 cask "bitwarden"
 # 3D creation suite
@@ -348,8 +282,6 @@ cask "container"
 cask "coteditor"
 # Tool to run Windows software
 cask "crossover"
-# Server and cloud storage browser
-cask "cyberduck"
 # AI-powered translator
 cask "deepl"
 # Virtual monitor for screen sharing
@@ -438,8 +370,6 @@ cask "font-yuji-syuku"
 cask "font-yusei-magic"
 cask "font-zed-mono-nerd-font"
 cask "font-zen-old-mincho"
-# Terminal emulator that uses platform-native UI and GPU acceleration
-cask "ghostty"
 # Desktop client for GitHub repositories
 cask "github"
 # Extensible, firefox-based web browser
@@ -450,6 +380,8 @@ cask "godot"
 cask "google-chrome"
 # Client for the Google Drive storage service
 cask "google-drive"
+# Desktop automation application
+cask "hammerspoon"
 # Open-source video transcoder
 cask "handbrake-app"
 # Allows keymap customization on HHKB HYBRID Type-S and HYBRID models
@@ -470,10 +402,10 @@ cask "keka"
 cask "keyboardcleantool"
 # Find shortcuts for any installed application
 cask "keyclu"
-# AI-powered productivity tool for the command-line
-cask "kiro-cli"
 # Data visualization and analysis software
 cask "labplot"
+# Customise mouse behavior
+cask "linearmouse"
 # Discover, download, and run local LLMs
 cask "lm-studio"
 # Software for Logitech devices
@@ -510,6 +442,8 @@ cask "name-mangler"
 cask "neo-network-utility"
 # Free and open-source RSS reader
 cask "netnewswire"
+# Handy utility to manage and customize the notch area
+cask "notchnook"
 # App to write, plan, collaborate, and get organised
 cask "notion"
 # Calendar for professionals and teams
@@ -550,8 +484,6 @@ cask "steam"
 cask "suspicious-package"
 # Interior design application
 cask "sweet-home3d"
-# Quicklook extension for source files
-cask "syntax-highlight"
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
 # Web browser focusing on security
@@ -568,6 +500,8 @@ cask "visual-studio-code"
 cask "vivaldi"
 # Web browser with built-in email client focusing on customization and control
 cask "vivaldi@snapshot"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
 # Install and switch between multiple versions of Xcode
 cask "xcodes-app"
 # Multiplayer code editor
@@ -579,16 +513,19 @@ mas "Baking Soda", id: 1601151613
 mas "Bluebird", id: 1478757472
 mas "Boop", id: 1518425043
 mas "Budget Flow", id: 1640091876
+mas "bunkoOCR", id: 1611405865
 mas "Codye", id: 1516894961
 mas "Color Picker", id: 1545870783
 mas "Compressor", id: 424390742
 mas "DaisyDisk", id: 411643860
+mas "DaVinci Resolve", id: 571213070
 mas "Eagle for Safari", id: 1526651672
 mas "egword Universal 2", id: 1272842196
 mas "Expenses", id: 1492055171
 mas "Final Cut Pro", id: 424389933
 mas "FirstSeed Calendar", id: 1348617240
 mas "FirstSeed Tasks", id: 1627018604
+mas "FocusFlight", id: 6648771147
 mas "Folder Quick Look", id: 6753110395
 mas "Goodnotes", id: 1444383602
 mas "HextEdit", id: 1557247094
@@ -632,19 +569,14 @@ mas "Yata", id: 1631370175
 mas "Yoink", id: 457622435
 mas "ちゃちゃっとリネーマー", id: 6462363612
 mas "辞書 by 物書堂", id: 1380563956
-vscode "42crunch.vscode-openapi"
+vscode "3w36zj6.textlint"
 vscode "aaron-bond.better-comments"
-vscode "amazonwebservices.amazon-q-vscode"
-vscode "amazonwebservices.codewhisperer-for-command-line-companion"
 vscode "astro-build.astro-vscode"
-vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
 vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
 vscode "cweijan.vscode-office"
-vscode "dbaeumer.vscode-eslint"
 vscode "dtsvet.vscode-wasm"
-vscode "esbenp.prettier-vscode"
 vscode "formulahendry.auto-rename-tag"
 vscode "github.codespaces"
 vscode "github.copilot"
@@ -654,21 +586,22 @@ vscode "github.vscode-pull-request-github"
 vscode "golang.go"
 vscode "ibm.output-colorizer"
 vscode "jrebocho.vscode-random"
-vscode "kilocode.kilo-code"
+vscode "knttnk.custom-japanese-proofreading"
 vscode "llvm-vs-code-extensions.lldb-dap"
-vscode "marp-team.marp-vscode"
-vscode "ms-azuretools.vscode-containers"
+vscode "mechatroner.rainbow-csv"
 vscode "ms-ceintl.vscode-language-pack-ja"
-vscode "ms-vscode.mono-debug"
-vscode "oakessoftware.headers"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
+vscode "odangoo.otak-lsp"
 vscode "oderwat.indent-rainbow"
-vscode "openai.chatgpt"
 vscode "oven.bun-vscode"
+vscode "oxc.oxc-vscode"
+vscode "prettier.prettier-vscode"
 vscode "redhat.vscode-yaml"
-vscode "reditorsupport.r"
-vscode "reditorsupport.r-syntax"
 vscode "swiftlang.swift-vscode"
-vscode "tyriar.lorem-ipsum"
 vscode "unifiedjs.vscode-mdx"
-vscode "vadimcn.vscode-lldb"
 vscode "vitest.explorer"
+go "cmd/go"
+go "cmd/gofmt"

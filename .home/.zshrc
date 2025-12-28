@@ -93,7 +93,7 @@ alias untar="tar -zxvf"
 alias port="lsof -i"
 
 # App/Tool specific aliases
-alias brew-backup="brew bundle dump --force --file $HOME/.dotfiles/.home/Brewfile --describe"
+alias brew-backup="brew bundle dump --force --file ~/Brewfile --describe"
 alias gh-copilot="COPILOT_MODEL=gpt-5-mini copilot"
 alias gptk="gameportingtoolkit-no-hud ~/$MY_GAME_PREFIX"
 alias pdftohtml='pdftohtml -enc UTF-8 -noframes'
@@ -161,12 +161,10 @@ typeset -U path
 # Define tool-specific variables
 export BUN_HOME="$HOME/.bun"
 export PNPM_HOME="$HOME/.pnpm"
-export GO_HOME="$HOME/.go"
-export SWIFTLY_HOME_DIR="${HOME}/.swiftly"
+export GOPATH="$HOME/.go"
 export DOTNET_ROOT="/usr/local/share/dotnet"
 export MODULAR_HOME="$HOME/.modular"
 export BAT_THEME="OneHalfDark"
-export MY_GAME_PREFIX=".wine" # For Game Porting Toolkit
 export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
@@ -177,6 +175,7 @@ path=(
   "$MODULAR_HOME/pkg/packages.modular.com_mojo/bin" # Modular Mojo
   "$HOME/.ghcup/bin" # Haskell
   "$HOME/.progate/bin" # Progate Path
+  "$GOPATH/bin" # Go Bin
   "$HOME/.antigravity/antigravity/bin" # Antigravity
 
   # Homebrew-installed tools
@@ -207,11 +206,12 @@ export PATH
 # Initializations (should be at the end)
 # ==============================================================================
 
-## Starship Prompt
-eval "$(starship init zsh)"
 
 ## mise
 eval "$(mise activate zsh)"
+
+## Starship Prompt
+eval "$(starship init zsh)"
 
 ## GHQ
 export GHQ_ROOT="$HOME/Repo"

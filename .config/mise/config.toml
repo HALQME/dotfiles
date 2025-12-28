@@ -5,3 +5,6 @@ lockfile = true
 
 [settings.pipx]
 uvx = true
+
+[settings.npm]
+package_manager = "bun"
