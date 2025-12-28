@@ -7,10 +7,11 @@ for dotfile in "$CONF_DIR"/*; do
 done
 
 HOMEFILE_DIR="$(pwd)/.home"
-for dotfile in "${HOMEFILE_DIR}"/.??*; do
+for dotfile in "${HOMEFILE_DIR}"/.**?; do
   [[ "$dotfile" == "${HOMEFILE_DIR}/.git" || "$dotfile" == "${HOMEFILE_DIR}/.github" || "$dotfile" == "${HOMEFILE_DIR}/.DS_Store" ]] && continue
   ln -fnsv "$dotfile" "$HOME"
 done
+ln -fnsv "${HOMEFILE_DIR}/Brewfile" "$HOME"
 
 if [ "$(uname)" = "Darwin" ]; then
   ln -fnsv $(pwd)/.exc/settings.json $HOME/Library/Application\ Support/Code/User

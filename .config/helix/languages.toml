@@ -1,0 +1,55 @@
+# JS/TS
+[[language]]
+name = "typescript"
+auto-format = true
+formatter = { command = 'oxfmt', args = ["--write"] }
+language-servers = [ { name = "vtsls" } ]
+
+[[language]]
+name = "javascript"
+language-servers = [ { name = "vtsls" } ]
+
+[[language]]
+name = "tsx"
+language-servers = [ { name = "vtsls" } ]
+
+[[language]]
+name = "jsx"
+language-servers = [ { name = "vtsls" } ]
+
+[language-server.vtsls]
+command = "vtsls"
+args = ["--stdio"]
+config = { typescript = { tsserver = { maxTsServerMemory = 8192 } } }
+
+# Rust
+[[language]]
+name = "rust"
+auto-format = true
+
+# Go
+[[language]]
+name = "go"
+auto-format = true
+language-servers = [ { name = "gopls" } ]
+formatter = { command = "goimports" }
+
+# --- Haskell ---
+[[language]]
+name = "haskell"
+auto-format = true
+
+# --- Swift ---
+[[language]]
+name = "swift"
+auto-format = true
+
+# --- Crystal ---
+[[language]]
+name = "crystal"
+auto-format = true
+
+# --- Lua ---
+[[language]]
+name = "lua"
+auto-format = true

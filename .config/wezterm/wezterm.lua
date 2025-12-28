@@ -7,7 +7,7 @@ local config = {}
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
 if wezterm.config_builder then
-	config = wezterm.config_builder()
+  config = wezterm.config_builder()
 end
 
 -- imput method
@@ -21,77 +21,89 @@ config.hide_tab_bar_if_only_one_tab = false
 config.show_tab_index_in_tab_bar = false
 
 -- windows setting
-config.initial_rows = 50
-config.initial_cols = 150
+config.initial_rows = 36
+config.initial_cols = 120
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
-config.macos_window_background_blur = 10
+config.macos_window_background_blur = 4
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = {
-	left = '0px',
-	right = '0px',
-	bottom = '0px',
-	top = '24pt',
+  left = '0px',
+  right = '0px',
+  bottom = '0px',
+  top = '16pt',
 }
 config.enable_scroll_bar = false
 
 -- color scheme and face:
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "Nord (base16)"
 config.text_background_opacity = 1
 config.window_background_opacity = 0.1
 
 -- Background pics
-local homedir = os.getenv("HOME")
--- -- put your images in the following directory "~/Hoge/Fuga……"
-local images = {
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N41ZQAL4.info/Ver.1.5_2560x1440.jpg",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N41AFJVZ.info/FlPSIMOaAAA3ZIZ.jpg",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N41P8UXZ.info/2560x1440.jpg",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N41S0K3H.info/2560-1440.png",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N41FCF42.info/2560-1440.jpg",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N41FQWSN.info/Fm_cCB6XoAMk_BU.png",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N4168JB8.info/張家界2560x1440.jpg",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N41UD4ZN.info/2560-1440.jpg",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N41DZU2A.info/2560×1440.jpg",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N41CD99W.info/2560-1440.jpg",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N41R6RDW.info/FlPR8l1akAAtHaN.jpg",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N41P5QW7.info/2560-1440.jpg",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N417GZQD.info/1.2KV2_2560x1440.jpg",
-	homedir .. "/Pictures/Pictures.library/images/LMLH5N41P47AG.info/2560-1440.jpg",
-}
+local function getImgaes()
+  local command = '\\find ~/Pictures/Wallpaper.Collections/*'
+  local file = io.popen(command, "r")
+  if not file then
+    return {}
+  end
+  local images = {}
+  for line in file:lines() do
+    table.insert(images, tostring(line))
+  end
+  file:close()
+  return images
+end
+
+local images = getImgaes()
 
 -- 配列からランダムな画像を選択する関数
 local function get_random_image()
-	math.randomseed(os.time())
-	local index = math.random(1, #images)
-	return images[index]
+  math.randomseed(os.time())
+  local index = math.random(1, #images)
+  return images[index]
 end
 
+print(get_random_image())
+
 -- ウィンドウが再読み込みされるたびにランダムな画像を設定
+local last_image_time = 0
+local last_image = nil
+
 local function set_background_image(window, pane)
-	local overrides = window:get_config_overrides() or {}
-	local random_image = get_random_image()
-	overrides.background = {
-		{
-			source = {
-				File = random_image,
-			},
-			opacity = 0.80,
-			hsb = { brightness = 0.05 },
-		},
-	}
-	window:set_config_overrides(overrides)
-	pane:set_config_overrides(overrides)
+  local now = os.time()
+  if last_image == nil or (now - last_image_time) >= 0.5 then
+    local next_image = get_random_image()
+    if last_image == next_image then
+      next_image = get_random_image()
+    end
+    last_image = next_image
+    last_image_time = now
+  end
+  local overrides = window:get_config_overrides() or {}
+  overrides.background = {
+    {
+      source = {
+        File = last_image,
+      },
+      opacity = 0.80,
+      hsb = { brightness = 0.05 },
+    },
+  }
+  window:set_config_overrides(overrides)
 end
 
 wezterm.on("window-focus-changed", function(window, pane)
-	set_background_image(window, pane)
+  if not (window:is_focused()) then
+    set_background_image(window, pane)
+  end
 end)
+
 wezterm.on("window-config-reloaded", function(window, pane)
-	set_background_image(window, pane)
+  set_background_image(window, pane)
 end)
 
 -- fonts
-config.font = wezterm.font_with_fallback({ "Moralerspace Xenon NF" })
+config.font = wezterm.font_with_fallback({ "Moralerspace Xenon" })
 config.font_size = 14.5
 config.adjust_window_size_when_changing_font_size = false
 

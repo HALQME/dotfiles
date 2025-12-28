@@ -374,5 +374,6 @@
   "editor.codeLensFontFamily": "Moralerspace Xenon NF",
   "terminal.integrated.fontFamily": "Moralerspace Xenon",
   "python.analysis.typeCheckingMode": "strict",
-  "workbench.editor.enablePreview": false
+  "workbench.editor.enablePreview": false,
+  "chat.mcp.gallery.enabled": true
 }
