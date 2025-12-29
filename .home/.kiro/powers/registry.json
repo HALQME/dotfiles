@@ -1,0 +1,63 @@
+{
+  "version": "1.0.0",
+  "powers": {
+    "postman": {
+      "name": "postman",
+      "description": "Automate API testing and collection management with Postman - create workspaces, collections, environments, and run tests programmatically",
+      "displayName": "API Testing with Postman",
+      "author": "Postman",
+      "iconUrl": "https://prod.download.desktop.kiro.dev/powers/icons/postman.png",
+      "repositoryUrl": "https://github.com/kirodotdev/powers/tree/main/postman",
+      "license": "",
+      "repositoryCloneUrl": "git@github.com:kirodotdev/powers.git",
+      "pathInRepo": "postman",
+      "repositoryBranch": "main",
+      "installed": false,
+      "keywords": [],
+      "source": {
+        "type": "registry"
+      }
+    },
+    "figma": {
+      "name": "figma",
+      "description": "Connect Figma designs to code components - automatically generate design system rules, map UI components to Figma designs, and maintain design-code consistency",
+      "displayName": "Design to Code with Figma",
+      "author": "Figma",
+      "iconUrl": "https://prod.download.desktop.kiro.dev/powers/icons/figma.png",
+      "repositoryUrl": "https://github.com/kirodotdev/powers/tree/main/figma",
+      "license": "",
+      "repositoryCloneUrl": "git@github.com:kirodotdev/powers.git",
+      "pathInRepo": "figma",
+      "repositoryBranch": "main",
+      "installed": false,
+      "keywords": [],
+      "source": {
+        "type": "registry"
+      }
+    },
+    "datadog": {
+      "name": "datadog",
+      "description": "Query logs, metrics, traces, RUM events, incidents, and monitors from Datadog for production debugging and performance analysis",
+      "displayName": "Datadog Observability",
+      "author": "Datadog",
+      "iconUrl": "https://prod.download.desktop.kiro.dev/powers/icons/datadog.png",
+      "repositoryUrl": "https://github.com/kirodotdev/powers/tree/main/datadog",
+      "license": "",
+      "repositoryCloneUrl": "git@github.com:kirodotdev/powers.git",
+      "pathInRepo": "datadog",
+      "repositoryBranch": "main",
+      "installed": false,
+      "keywords": [],
+      "source": {
+        "type": "registry"
+      }
+    }
+  },
+  "repoSources": {},
+  "lastUpdated": "2025-12-29T01:38:49.588Z",
+  "kiroRecommendedRepo": {
+    "url": "https://prod.download.desktop.kiro.dev/powers/default_registry.json",
+    "lastFetch": "2025-12-29T01:38:49.587Z",
+    "powerCount": 18
+  }
+}
