@@ -20,6 +20,7 @@ in
       (name: v:
         lib.nameValuePair v.target {
           source = v.source;
+          recursive = builtins.pathExists (builtins.toString v.source + "/.");
         }
       )
       homeFiles;
@@ -31,6 +32,7 @@ in
           (lib.removePrefix "config/" v.target)
           {
             source = v.source;
+            recursive = builtins.pathExists (builtins.toString v.source + "/.");
           }
       )
       xdgFiles;

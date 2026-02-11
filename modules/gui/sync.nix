@@ -10,18 +10,33 @@ in
 
     echo "== Brew Cask Sync =="
 
-    installed_casks=$(brew list --cask 2>/dev/null || true)
+    # Find brew binary
+    BREW_BIN=""
+    for path in /opt/homebrew/bin/brew /usr/local/bin/brew "$HOME/.homebrew/bin/brew"; do
+      if [ -x "$path" ]; then
+        BREW_BIN="$path"
+        break
+      fi
+    done
+
+    if [ -z "$BREW_BIN" ]; then
+      echo "Warning: brew not found in common locations. Skipping cask sync."
+      echo "Install Homebrew or ensure it's in /opt/homebrew/bin, /usr/local/bin, or ~/.homebrew/bin"
+      exit 0
+    fi
+
+    installed_casks=$($BREW_BIN list --cask 2>/dev/null || true)
 
     ${lib.concatMapStringsSep "\n" (cask: ''
       if ! echo "$installed_casks" | grep -q "^${cask}$"; then
-        brew install --cask ${cask}
+        $BREW_BIN install --cask ${cask}
       fi
     '') casks}
 
     for pkg in $installed_casks; do
       case " ${lib.concatStringsSep " " casks} " in
         *" $pkg "*) ;;
-        *) brew uninstall --cask "$pkg" ;;
+        *) $BREW_BIN uninstall --cask "$pkg" ;;
       esac
     done
 

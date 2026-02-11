@@ -1,6 +1,5 @@
 {
   my.configFiles = {
-
     wezterm = {
       source = ../../config/wezterm;
       target = "config/wezterm";
@@ -11,10 +10,59 @@
       target = "config/ghostty";
     };
 
+    nvim = {
+      source = ../../config/nvim;
+      target = "config/nvim";
+    };
+
+    zed = {
+      source = ../../config/zed;
+      target = "config/zed";
+    };
+
+    karabiner = {
+      source = ../../config/karabiner;
+      target = "config/karabiner";
+    };
+
+    hammerspoon = {
+      source = ../../config/.hammerspoon;
+      target = ".hammerspoon";
+    };
+
+    zellij = {
+      source = ../../config/zellij;
+      target = "config/zellij";
+    };
+
+    gh = {
+      source = ../../config/gh;
+      target = "config/gh";
+    };
+
+    starship = {
+      source = ../../config/starship.toml;
+      target = "config/starship.toml";
+    };
+
     vimrc = {
-      source = ../../config/vimrc;
+      source = ../../config/.vimrc;
       target = ".vimrc";
     };
 
+    tmux = {
+      source = ../../config/.tmux.conf;
+      target = ".tmux.conf";
+    };
+
+    latexmkrc = {
+      source = ../../config/.latexmkrc;
+      target = ".latexmkrc";
+    };
+
+    kiro = {
+      source = ../../config/.kiro;
+      target = ".kiro";
+    };
   };
 }
