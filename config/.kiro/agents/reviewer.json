@@ -1,0 +1,50 @@
+{
+  "name": "reviewer",
+  "description": "コードレビュー・セキュリティチェック",
+  "prompt": "file://./prompts/reviewer.md",
+  "mcpServers": {},
+  "tools": [
+    "fs_read",
+    "thinking",
+    "web_search",
+    "@git"
+  ],
+  "allowedTools": [
+    "fs_read",
+    "thinking",
+    "@git/git_status",
+    "@git/git_diff",
+    "@git/git_log",
+    "@git/git_show"
+  ],
+  "toolsSettings": {
+    "fs_read": {
+      "allowedPaths": [
+        "**/*"
+      ]
+    }
+  },
+  "resources": [
+    "file://README.md",
+    "file://AGENTS.md",
+    "file://**/AGENTS.md",
+    "file://.kiro/steering/**/*.md"
+  ],
+  "hooks": {
+    "agentSpawn": [
+      {
+        "command": "git diff $(git merge-base origin/HEAD HEAD)..HEAD --stat",
+        "timeout_ms": 5000,
+        "cache_ttl_seconds": 300
+      }
+    ],
+    "userPromptSubmit": [
+      {
+        "command": "git log -5 --oneline",
+        "timeout_ms": 3000,
+        "cache_ttl_seconds": 60
+      }
+    ]
+  },
+  "includeMcpJson": true
+}

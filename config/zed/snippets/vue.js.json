@@ -1,0 +1,89 @@
+{
+  "Vue Single File Components Setup": {
+    "prefix": "sfc",
+    "body": [
+      "<script setup lang=\"ts\">",
+      "",
+      "</script>",
+      "",
+      "<template>",
+      "\t<div>",
+      "\t\t${0}",
+      "\t</div>",
+      "</template>"
+    ],
+    "description": "Vue Single File Component Setup"
+  },
+  "Vue v-model Directive": {
+    "prefix": "vmodel",
+    "body": [
+      "<input v-model=\"${1:data}\" type=\"text\" />"
+    ],
+    "description": "v-model directive"
+  },
+  "Vue v-on Shortcut Directive": {
+    "prefix": "von",
+    "body": [
+      "@click=\"${1:handler}(${2})\""
+    ],
+    "description": "v-on click handler"
+  },
+  "Vue Component with Props Binding": {
+    "prefix": "vel-props",
+    "body": [
+      "<${1:component} :${1:propName}=\"${0}\"></${1:component}>"
+    ],
+    "description": "component element with props"
+  },
+  "Vue Named Slot": {
+    "prefix": "vslot-named",
+    "body": [
+      "<template #${0:name}>${1:defaultcontent}</template>"
+    ],
+    "description": "named slot"
+  },
+  "Vue Image Source Binding": {
+    "prefix": "vimg",
+    "body": [
+      "<img :src=\"${1:imageSrc}\" :alt=\"${2:altText}\"/>"
+    ],
+    "description": "image source binding"
+  },
+  "Vue Options API Set": {
+    "prefix": "voptions",
+    "body": [
+      "<script>",
+      "\texport default {",
+      "\t\tname: '${0}',",
+      "\t\tdata() {",
+      "\t\t\treturn {",
+      "\t\t\t\t${1:data}: ${2:value},",
+      "\t\t\t};",
+      "\t\t},",
+      "\t\tmethods: {",
+      "\t\t\t${3:method}() {",
+      "\t\t\t\t${4:code}",
+      "\t\t\t},",
+      "\t\t},",
+      "\t\tcomputed: {",
+      "\t\t\t${5:computed}() {",
+      "\t\t\t\t${6:code}",
+      "\t\t\t},",
+      "\t\t},",
+      "\t\twatch: {",
+      "\t\t\t${7:watch}() {",
+      "\t\t\t\t${8:code}",
+      "\t\t\t},",
+      "\t\t},",
+      "\t};",
+      "</script>",
+      "",
+      "<template>",
+      "\t<div>",
+      "\t\t${9}",
+      "\t</div>",
+      "</template>"
+    ],
+    "description": "Vue Options API Set"
+  }
+}

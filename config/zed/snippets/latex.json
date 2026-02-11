@@ -1,0 +1,128 @@
+{
+  "LaTeX ja Setup": {
+    "prefix": "setup",
+    "body": [
+      "\\documentclass{ltjsarticle}",
+      "% font",
+      "\\usepackage{luatexja-fontspec}",
+      "\\setmainjfont{IPAmjMincho}",
+      "\\setmainfont{Times New Roman}",
+      "% cite",
+      "\\usepackage[backend=biber,style=authoryear,sortcites,isbn=false,doi]{biblatex}",
+      "\\addbibresource{refs.bib}",
+      "% graphic",
+      "\\usepackage{graphicx}",
+      "\\usepackage{booktabs}",
+      "\\usepackage{multirow}",
+      "\\usepackage{multicolumn}",
+      "\\usepackage[justification=raggedright,singlelinecheck=false,labelformat=simple, labelsep=newline]{caption}",
+      "\\renewcommand{\\figurename}{Figure}",
+      "\\renewcommand{\\tablename}{Table}",
+      "\\usepackage{tikz} % TikZ: Flow Chart Viewer",
+      "\\usepackage{minted}",
+      "\\usepackage{xcolor}",
+      "% ================================== %",
+      "\\title{$1}",
+      "\\author{$2}",
+      "\\date{\\today}",
+      "\\begin{document}",
+      "\\maketitle",
+      "$0",
+      "\\end{document}",
+      "\\printbibliography"
+    ],
+    "description": "Basic LuaLaTeX document setup with Japaneses."
+  },
+  "Presentation Setup": {
+    "prefix": "setup",
+    "body": [
+      "\\documentclass{beamer}",
+      "\\usetheme{Madrid}  % テーマ例",
+      "\\title{発表タイトル}",
+      "\\author{$1}",
+      "\\date{\\today}",
+      "\\begin{document}",
+      "\\frame{\\titlepage}",
+      "\\begin{frame}{${2:スライド見出し}}",
+      "$0",
+      "\\end{frame}",
+      "\\end{document"
+    ],
+    "description": "Basic Beamer presentation setup."
+  },
+  "Figure": {
+    "prefix": "figure",
+    "body": [
+      "\\begin{figure}[htbp]",
+      "\t\\centering",
+      "\t\\includegraphics[width=0.8\\textwidth]{${1:figure.png}}",
+      "\t\\caption{${2:Caption}}",
+      "\t\\label{fig:${3:label}}",
+      "\\end{figure}"
+    ],
+    "description": "Insert a figure with caption and label."
+  },
+  "Table": {
+    "prefix": "table",
+    "body": [
+      "\\begin{table}[htbp]",
+      "\t\\centering",
+      "\t\\begin{tabular}{|c|c|c|}",
+      "\t\t\\hline",
+      "\t\t${1:Header1} & ${2:Header2} & ${3:Header3} \\\\",
+      "\t\t\\hline",
+      "\t\t${4:Data1} & ${5:Data2} & ${6:Data3} \\\\",
+      "\t\t\\hline",
+      "\t\\end{tabular}",
+      "\t\\caption{${7:Caption}}",
+      "\t\\label{tab:${8:label}}",
+      "\\end{table}"
+    ],
+    "description": "Insert a table with headers and data."
+  },
+  "TableOfContent": {
+    "prefix": "toc",
+    "body": [
+      "\\tableofcontents",
+      "\\setcounter{tocdepth}{2}",
+      "\\usepackage{titlesec}",
+      "\\titleformat{\\section}{\\Large\\bfseries}{\\thesection}{1em}{}"
+    ],
+    "description": "Insert a table of contents."
+  },
+  "Code Block": {
+    "prefix": "code",
+    "body": [
+      "\\begin{minted}[frame=lines, fontsize=\\footnotesize, linenos]{${1:haskell}}",
+      "$0",
+      "\\end{minted}"
+    ],
+    "description": "Insert a code block with syntax highlighting."
+  },
+  "Fraction": {
+    "prefix": "fraction",
+    "body": [
+      "\\frac{${1:numerator}}{${2:denominator}}"
+    ],
+    "description": "Insert a fraction."
+  },
+  "Equation": {
+    "prefix": "center",
+    "body": [
+      "\\begin{equation}",
+      "\t${0:equation}",
+      "\t\\label{eq:${1:label}}",
+      "\\end{equation}"
+    ],
+    "description": "Insert an equation with label."
+  },
+  "Position Center": {
+    "prefix": "center",
+    "body": [
+      "\\begin{center}",
+      "\t${0:center}",
+      "\\end{center}"
+    ],
+    "description": "Center text or content."
+  }
+}

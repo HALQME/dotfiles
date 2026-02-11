@@ -1,0 +1,693 @@
+{
+  // ============================================================================
+  // CORE EDITOR SETTINGS
+  // ============================================================================
+  // Workspace & Session Management
+  "vim_mode": true,
+  "buffer_font_size": 14.0,
+  "redact_private_values": true,
+  "use_system_prompts": false,
+  "use_system_path_prompts": false,
+  "when_closing_with_no_tabs": "keep_window_open",
+  "agent_buffer_font_size": 11.0,
+  "agent_ui_font_size": 13.0,
+  "buffer_line_height": "standard",
+  "base_keymap": "SublimeText",
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "show_signature_help_after_edits": true,
+  "lsp_document_colors": "background",
+  "image_viewer": {
+    "unit": "decimal"
+  },
+  "colorize_brackets": false,
+  "git_panel": {
+    "tree_view": true,
+    "sort_by_path": true
+  },
+  "restore_on_startup": "last_session",
+  "auto_update": true,
+  "load_direnv": "direct",
+  "ssh_connections": [],
+  // File Management
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 5000
+    }
+  },
+  "ensure_final_newline_on_save": false,
+  "remove_trailing_whitespace_on_save": true,
+  "close_on_file_delete": true,
+  // ============================================================================
+  // VISUAL APPEARANCE & THEMING
+  // ============================================================================
+  // Theme & Color Scheme
+  "theme": {
+    "mode": "system",
+    "light": "Flexoki Light",
+    "dark": "Flexoki Dark"
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Frappé",
+    "dark": "Catppuccin Frappé"
+  },
+  // Font Configuration
+  "buffer_font_family": "Moralerspace Argon",
+  "buffer_font_features": {
+    "calt": true,
+    "liga": false,
+    "ss02": false,
+    "ss03": true,
+    "ss04": false,
+    "ss05": false
+  },
+  "ui_font_family": "Moralerspace Xenon",
+  // ============================================================================
+  // EDITOR INTERFACE & LAYOUT
+  // ============================================================================
+  // gutter
+  "gutter": {
+    "line_numbers": true,
+    "runnables": true,
+    "breakpoints": true,
+    "folds": true,
+    "min_line_number_digits": 3
+  },
+  // Pane & Window Management
+  "active_pane_modifiers": {
+    "border_size": 0,
+    "inactive_opacity": 0.8
+  },
+  "scroll_beyond_last_line": "one_page",
+  "bottom_dock_layout": "contained",
+  // Tab Configuration
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": true
+  },
+  "tabs": {
+    "close_position": "right",
+    "file_icons": true,
+    "git_status": true,
+    "activate_on_close": "left_neighbour",
+    "show_close_button": "hover",
+    "show_diagnostics": "all"
+  },
+  "preview_tabs": {
+    "enabled": true,
+    "enable_preview_from_file_finder": true,
+    "enable_preview_file_from_code_navigation": true,
+    "enable_preview_multibuffer_from_code_navigation": true,
+    "enable_keep_preview_on_code_navigation": true
+  },
+  // Toolbar & UI Elements
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true,
+    "selections_menu": true,
+    "agent_review": true,
+    "code_actions": true
+  },
+  "use_system_window_tabs": true,
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_branch_name": true,
+    "show_project_items": true,
+    "show_onboarding_banner": false,
+    "show_user_picture": false,
+    "show_sign_in": false,
+    "show_menus": false
+  },
+  "status_bar": {
+    "active_language_button": true,
+    "cursor_position_button": true
+  },
+  "excerpt_context_lines": 4,
+  "expand_excerpt_lines": 4,
+  // ============================================================================
+  // EDITOR BEHAVIOR & INTERACTION
+  // ============================================================================
+  // Cursor & Selection
+  "cursor_blink": true,
+  "cursor_shape": "block",
+  "multi_cursor_modifier": "alt",
+  "current_line_highlight": "gutter",
+  "selection_highlight": true,
+  // Mouse & Input Behavior
+  "hide_mouse": "on_typing_and_movement",
+  "autoscroll_on_clicks": true,
+  "drag_and_drop_selection": {
+    "enabled": true,
+    "delay": 200
+  },
+  // Text Editing Features
+  "use_autoclose": true,
+  "always_treat_brackets_as_autoclosed": true,
+  "preferred_line_length": 80,
+  "soft_wrap": "prefer_line",
+  "show_wrap_guides": true,
+  "tab_size": 2,
+  "hard_tabs": false,
+  // Text Display
+  "show_whitespaces": "selection",
+  "unnecessary_code_fade": 0.5,
+  "line_indicator_format": "short",
+  "prettier": {
+    "allowed": false
+  },
+  // ============================================================================
+  // VISUAL GUIDES & NAVIGATION AIDS
+  // ============================================================================
+  // Scrollbar Configuration
+  "scrollbar": {
+    "show": "always",
+    "cursors": true,
+    "git_diff": true,
+    "search_results": true,
+    "selected_text": false,
+    "selected_symbol": true,
+    "diagnostics": "warning",
+    "axes": {
+      "horizontal": false,
+      "vertical": true
+    }
+  },
+  // Minimap
+  "minimap": {
+    "show": "auto",
+    "thumb": "hover",
+    "thumb_border": "none",
+    "current_line_highlight": "all",
+    "display_in": "active_editor",
+    "max_width_columns": 60
+  },
+  // Indent Guides
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 2,
+    "active_line_width": 3,
+    "background_coloring": "disabled",
+    "coloring": "indent_aware"
+  },
+  // ============================================================================
+  // CODE INTELLIGENCE & LSP
+  // ============================================================================
+  // Signature Help
+  "auto_signature_help": true,
+  // Language Server Protocol
+  "enable_language_server": true,
+  "lsp_highlight_debounce": 60,
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    },
+    "marksman": {
+      "enable_lsp_tasks": true,
+      "binary": {
+        "path": "marksman"
+      }
+    },
+    "eslint": {
+      "settings": {
+        "onIgnoredFiles": "off"
+      }
+    }
+  },
+  "global_lsp_settings": {
+    "button": true
+  },
+  // Code Actions & Formatting
+  "format_on_save": "off",
+  "inline_code_actions": true,
+  // Completions & Suggestions
+  "completions": {
+    "words": "fallback",
+    "lsp": true,
+    "lsp_fetch_timeout_ms": 100,
+    "lsp_insert_mode": "replace_subsequence"
+  },
+  "show_completions_on_input": true,
+  "show_completion_documentation": true,
+  "snippet_sort_order": "inline",
+  // Hover & Help
+  "hover_popover_enabled": false,
+  "hover_popover_delay": 200,
+  // Inlay Hints
+  "inlay_hints": {
+    "show_value_hints": true,
+    "enabled": true,
+    "show_type_hints": false,
+    "show_parameter_hints": true,
+    "show_other_hints": false,
+    "show_background": false,
+    "edit_debounce_ms": 500,
+    "scroll_debounce_ms": 50,
+    "toggle_on_modifiers_press": {
+      "control": true,
+      "shift": true,
+      "alt": true,
+      "platform": true,
+      "function": true
+    }
+  },
+  // ============================================================================
+  // DIAGNOSTICS & ERROR HANDLING
+  // ============================================================================
+  "diagnostics": {
+    "button": true,
+    "include_warnings": true,
+    "lsp_pull_diagnostics": {
+      "enabled": true,
+      "debounce_ms": 50
+    },
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 3,
+      "min_column": 0,
+      "max_severity": "warning"
+    }
+  },
+  // ============================================================================
+  // SEARCH & NAVIGATION
+  // ============================================================================
+  // Search Configuration
+  "search": {
+    "whole_word": false,
+    "case_sensitive": false,
+    "include_ignored": false,
+    "regex": true,
+    "button": false
+  },
+  "seed_search_query_from_cursor": "always",
+  "use_smartcase_search": true,
+  // File Finder
+  "file_finder": {
+    "file_icons": true,
+    "modal_max_width": "small",
+    "git_status": true,
+    "skip_focus_for_active_in_search": true,
+    "include_ignored": "smart"
+  },
+  // ============================================================================
+  // FILE SYSTEM & PROJECT MANAGEMENT
+  // ============================================================================
+  // File Type Associations
+  "file_types": {
+    "JSONC": [
+      "**/.zed/**/*.json",
+      "**/zed/**/*.json",
+      "**/Zed/**/*.json",
+      "**/.vscode/**/*.json",
+      "**/.editorconfig"
+    ],
+    "Shell Script": [".env.*", ".dev.vars*"],
+    "TOML": ["**/ghostty/config"],
+    "AsciiDoc": ["*.adoc", "*.asciidoc"],
+    "Markdown": ["*.md", "*.mdx"]
+  },
+  // File Scanning
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings"
+  ],
+  "file_scan_inclusions": [".env.*", ".dev.vars.*", "docker-compose.*.yml"],
+  // ============================================================================
+  // VERSION CONTROL (GIT)
+  // ============================================================================
+  "git": {
+    "git_gutter": "tracked_files",
+    "gutter_debounce": 100,
+    "inline_blame": {
+      "enabled": true,
+      "min_column": 80,
+      "delay_ms": 100
+    },
+    "hunk_style": "unstaged_hollow",
+    "branch_picker": {
+      "show_author_name": true
+    },
+    "path_style": "file_name_first"
+  },
+  // ============================================================================
+  // LANGUAGE-SPECIFIC SETTINGS
+  // ============================================================================
+  "languages": {
+    "Vue.js": {
+      "completions": {
+        "words": "enabled"
+      }
+    },
+    "TypeScript": {
+      "format_on_save": "off",
+      "auto_indent_on_paste": true,
+      "language_servers": ["vtsls", "!typescript-language-server"],
+      "code_actions_on_format": {
+        "source.eslint": false
+      }
+    },
+    "JavaScript": {
+      "format_on_save": "off",
+      "auto_indent_on_paste": true
+    },
+    "JSON": {
+      "formatter": {
+        "external": {
+          "command": "oxfmt",
+          "arguments": ["{buffer_path}"]
+        }
+      },
+      "language_servers": ["json-language-server", "oxfmt"]
+    },
+    "JSONC": {
+      "formatter": {
+        "language_server": {
+          "name": "oxfmt"
+        }
+      },
+      "language_servers": ["json-language-server"]
+    },
+    "TSX": {
+      "format_on_save": "off",
+      "auto_indent_on_paste": true
+    },
+    "Haskell": {
+      "indent_guides": {
+        "enabled": true,
+        "background_coloring": "indent_aware",
+        "coloring": "disabled"
+      }
+    },
+    "Python": {
+      "indent_guides": {
+        "enabled": true,
+        "background_coloring": "indent_aware",
+        "coloring": "disabled"
+      }
+    },
+    "Crystal": {
+      "formatter": {
+        "external": {
+          "command": "crystal",
+          "arguments": ["tool", "format", "-"]
+        }
+      }
+    },
+    "Markdown": {
+      "prettier": {
+        "allowed": true
+      },
+      "use_on_type_format": true,
+      "format_on_save": "on",
+      "indent_guides": {
+        "coloring": "fixed",
+        "background_coloring": "indent_aware"
+      },
+      "remove_trailing_whitespace_on_save": false,
+      "hard_tabs": true,
+      "enable_language_server": true,
+      "language_servers": ["marksman"],
+      "soft_wrap":"editor_width"
+    },
+    "Astro": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": false
+      },
+      "formatter": "prettier"
+    },
+    "CSS": {
+      "enable_language_server": true,
+      "language_servers": ["!tailwindcss-language-server", "..."],
+      "formatter": {
+        "external": {
+          "command": "oxfmt",
+          "arguments": ["{buffer_path}"]
+        }
+      }
+    }
+  },
+  "completion_menu_scrollbar": "auto",
+  // ============================================================================
+  // EXTENSIONS & PLUGINS
+  // ============================================================================
+  "auto_install_extensions": {
+    // Languages
+    "asciidoc": true,
+    "c": false,
+    "color-highlight": true,
+    "color-lsp": true,
+    "crystal": true,
+    "csharp": false,
+    "csv": true,
+    "d2": true,
+    "docker-compose": true,
+    "dockerfile": false,
+    "git-firefly": true,
+    "haskell": true,
+    "html": false,
+    "ini": true,
+    "javascript": true,
+    "latex": true,
+    "lua": false,
+    "pkl": false,
+    "python": true,
+    "r": false,
+    "rainbow-csv": true,
+    "swift": true,
+    "toml": true,
+    "typescript": true,
+    "wat": true,
+    "xml": true,
+    "zig": false
+  },
+  // ============================================================================
+  // PANELS & DOCK CONFIGURATION
+  // ============================================================================
+  // Project Panel
+  "project_panel": {
+    "button": true,
+    "default_width": 240,
+    "dock": "left",
+    "entry_spacing": "standard",
+    "git_status": true,
+    "auto_reveal_entries": true,
+    "auto_fold_dirs": true,
+    "indent_size": 16,
+    "indent_guides": {
+      "show": "always"
+    },
+    "scrollbar": {
+      "show": "auto"
+    }
+  },
+  // Outline Panel
+  "outline_panel": {
+    "button": true,
+    "default_width": 240,
+    "dock": "right",
+    "file_icons": true,
+    "folder_icons": true,
+    "indent_guides": {
+      "show": "always"
+    },
+    "scrollbar": {
+      "show": "never"
+    }
+  },
+  "collaboration_panel": {
+    "button": false,
+    "default_width": 360,
+    "dock": "left"
+  },
+  "notification_panel": {
+    "button": false,
+    "dock": "right",
+    "default_width": 380
+  },
+  // ============================================================================
+  // AI & PREDICTIONS
+  // ============================================================================
+  // Edit Predictions
+  "edit_predictions": {
+    "ollama": {
+      "model": "glm-4.7:cloud"
+    },
+    "provider": "copilot",
+    "disabled_globs": [
+      "**/.env*",
+      "**/.dev.vars",
+      "**/*.key",
+      "**/*.cart",
+      "**/*.lock",
+      "**/*.crt",
+      "**/secrets.yml"
+    ],
+    "enabled_in_text_threads": true,
+    "mode": "subtle"
+  },
+  "edit_predictions_disabled_in": [],
+  "show_edit_predictions": true,
+  // ============================================================================
+  // AI AGENT & ASSISTANCE
+  // ============================================================================
+  "disable_ai": false,
+  "agent": {
+    "favorite_models": [
+      {
+        "provider": "copilot_chat",
+        "model": "claude-haiku-4.5"
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gpt-5-mini"
+      }
+    ],
+    "profiles": {
+
+    },
+    "message_editor_min_lines": 4,
+    "notify_when_agent_waiting": "all_screens",
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini"
+    },
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-haiku-4.5"
+    },
+    "commit_message_model": {
+      "provider": "copilot_chat",
+      "model": "grok-code-fast-1"
+    },
+    "use_modifier_to_send": true,
+    "play_sound_when_agent_done": false,
+    "model_parameters": []
+  },
+  "agent_servers": {
+    "kiro cli": {
+      "type": "custom",
+      "command": "kiro-cli",
+      "args": ["acp"]
+    },
+    "opencode": {
+      "type": "registry",
+      "favorite_models": [
+        "opencode/grok-code",
+        "github-copilot/gpt-5-mini",
+        "github-copilot/claude-sonnet-4.5",
+        "ollama/olmo-3.1:32b-instruct",
+        "ollama/glm-4.7:cloud",
+        "ollama/kimi-k2.5:cloud",
+        "opencode/big-pickle"
+      ]
+    },
+  },
+  "context_servers": {
+  },
+  // ============================================================================
+  // DEVELOPMENT TOOLS
+  // ============================================================================
+  // Debugger
+  "debugger": {
+    "dock": "bottom",
+    "button": true,
+    "stepping_granularity": "line",
+    "save_breakpoints": true
+  },
+  // Journal
+  "journal": {
+    "path": "~/Library/Mobile Documents/iCloud~com~talex~www~noteshub/Documents/Knowledge",
+    "hour_format": "hour24"
+  },
+  // ============================================================================
+  // TERMINAL CONFIGURATION
+  // ============================================================================
+  "terminal": {
+    "font_weight": 400.0,
+    "alternate_scroll": "on",
+    "blinking": "terminal_controlled",
+    "copy_on_select": false,
+    "keep_selection_on_copy": true,
+    "dock": "bottom",
+    "default_width": 640,
+    "default_height": 320,
+    "detect_venv": {
+      "on": {
+        "directories": [".env", "env", ".venv", "venv"],
+        "activate_script": "default"
+      }
+    },
+    "env": {},
+    "font_family": "Moralerspace Xenon HW",
+    "font_features": {
+      "regture": true
+    },
+    "font_size": 13.0,
+    "line_height": {
+      "custom": 1
+    },
+    "option_as_meta": true,
+    "button": true,
+    "shell": "system",
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "working_directory": "current_project_directory",
+    "scrollbar": {
+      "show": "never"
+    },
+    "cursor_shape": "bar"
+  },
+  // ============================================================================
+  // COLLABORATION & COMMUNICATION
+  // ============================================================================
+  "calls": {
+    "mute_on_join": true,
+    "share_on_join": false
+  },
+  "show_call_status_icon": true,
+  // ============================================================================
+  // PRIVACY & TELEMETRY
+  // ============================================================================
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  // ============================================================================
+  // INPUT & ACCESSIBILITY
+  // ============================================================================
+  "helix_mode": false,
+  "relative_line_numbers": "enabled",
+  "vim": {
+    "cursor_shape": {
+      "insert": "bar",
+      "normal": "block",
+      "replace": "underline",
+      "visual": "hollow"
+    }
+  }
+}

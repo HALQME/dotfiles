@@ -1,0 +1,74 @@
+[
+  {
+    "label": "lazygit",
+    "command": "lazygit",
+    "reveal_target": "center",
+    "hide": "on_success"
+  },
+  {
+    "label": "btm",
+    "command": "btm",
+    "reveal_target": "center",
+    "hide": "on_success"
+  },
+  {
+    "label": "zsh",
+    "args": [],
+    "command": "zsh",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": true,
+    "reveal_target": "center",
+    "hide": "on_success"
+  },
+  {
+    "label": "opencode",
+    "args": [],
+    "command": "opencode",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "center",
+    "show_command": true,
+    "show_summary": false,
+    "hide": "never"
+  },
+  {
+    "label": "lualatex build",
+    "command": "mkdir -p $(echo $ZED_DIRNAME)/dist && lualatex",
+    "args": [
+      "--recorder",
+      "--output-directory=$(echo $ZED_DIRNAME)/dist",
+      "$ZED_FILENAME"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "tags": [
+      "latex-build"
+    ],
+    "reveal": "no_focus"
+  },
+  {
+    "label": "biber build",
+    "command": "mkdir -p $(echo $ZED_DIRNAME)/dist && biber $(echo $ZED_FILENAME | sed 's/\\.bib//')",
+    "args": [
+      "--output-directory=$ZED_DIRNAME/dist"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "tags": [
+      "latex-build"
+    ],
+    "reveal": "no_focus"
+  },
+  {
+    "label": "Bun Test",
+    "command": "bun test",
+    "args": [
+      "\"$ZED_RELATVIE_FILE\" -t=\"$ZED_SYMBOL\""
+    ],
+    "tags": [
+      "js-test",
+      "ts-test",
+      "bun-test",
+      "tsx-test"
+    ]
+  }
+]

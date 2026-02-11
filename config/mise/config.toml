@@ -1,0 +1,13 @@
+[settings]
+experimental = true
+disable_backends = ["asdf", "ubi", "conda"]
+lockfile = true
+
+[settings.pipx]
+uvx = true
+
+[settings.npm]
+package_manager = "bun"
+
+[tools]
+oxlint = "latest"

@@ -1,0 +1,69 @@
+{
+  "name": "refactor",
+  "description": "コードリファクタリング専門 - 既存コード改善、ドキュメント、テスト生成",
+  "prompt": "file://./prompts/refactor.md",
+  "mcpServers": {},
+  "tools": [
+    "*"
+  ],
+  "toolAliases": {
+    "@git/git_status": "status",
+    "@git/git_commit": "commit"
+  },
+  "allowedTools": [
+    "fs_read",
+    "thinking",
+    "@git/git_status",
+    "@git/git_diff",
+    "@git/git_log",
+    "fs_write",
+    "execute_bash"
+  ],
+  "toolsSettings": {
+    "fs_write": {
+      "allowedPaths": [
+        "src/**",
+        "tests/**",
+        "*.md",
+        "*.json",
+        "*.yml",
+        "*.yaml",
+        "docs/**"
+      ]
+    },
+    "execute_bash": {
+      "allowedCommands": [
+        "git status",
+        "git diff",
+        "git worktree add",
+        "git worktree remove", 
+        "git worktree list",
+        "mise install",
+        "mise run lint",
+        "mise run format",
+        "mise run format:check",
+        "mise run type-check",
+        "mise run test",
+        "mise tasks",
+        "mise task add"
+      ],
+      "autoAllowReadonly": true
+    }
+  },
+  "resources": [
+    "file://README.md",
+    "file://AGENTS.md",
+    "file://**/AGENTS.md",
+    "file://.kiro/steering/**/*.md"
+  ],
+  "hooks": {
+    "agentSpawn": [
+      {
+        "command": "git status --porcelain",
+        "timeout_ms": 5000,
+        "cache_ttl_seconds": 60
+      }
+    ]
+  },
+  "includeMcpJson": true
+}
