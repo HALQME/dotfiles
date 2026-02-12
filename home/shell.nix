@@ -25,6 +25,12 @@
       export EDITOR=nvim
     '';
 
+    profileExtra = ''
+      if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+        . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+      fi
+    '';
+
     # Global aliases (can be used anywhere in a command)
     shellGlobalAliases = {
       C = "| tee >(pbcopy)";
@@ -35,8 +41,6 @@
       Cloud = "$HOME/Library/CloudStorage/";
       iCloud = "$HOME/Library/Mobile\\ Documents/com~apple~CloudDocs/";
     };
-
-
 
     # Regular aliases
     shellAliases = {
@@ -94,6 +98,7 @@
     # Functions
     initContent = ''
       # Suffix aliases
+      alias -s {png,jpg,PNG,JPG,jpeg,JPEG}="imgcat"
       alias -s {png,jpg,PNG,JPG,jpeg,JPEG}="imgcat"
       alias -s {ts,js,tsx,jsx,html}="bun run"
       alias -s py="python3"
@@ -159,7 +164,7 @@
   # Environment Variables and PATH Configuration
   home.sessionVariables = {
     # Tool-specific variables
-    BUN_HOME = "$HOME/.bun";
+    BUN_INSTALL = "$HOME/.bun";
     PNPM_HOME = "$HOME/.pnpm";
     GOPATH = "$HOME/.go";
     DOTNET_ROOT = "/usr/local/share/dotnet";

@@ -81,5 +81,6 @@
     aria2
     d2
     tart
+    lsd
   ];
 }
