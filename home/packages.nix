@@ -4,10 +4,12 @@
   home.packages = with pkgs; [
     # Version Control
     git
+    git-lfs
     delta
     gh
     ghq
     lazygit
+    jujutsu
 
     # Shell
     zsh
@@ -34,6 +36,7 @@
     # System Monitoring
     bottom
     dust
+    htop
 
     # Task Runner
     go-task
@@ -58,6 +61,9 @@
     lua-language-server
     gopls
 
+    nil
+    nixd
+
     # Package Managers
     pnpm
 
@@ -67,5 +73,13 @@
     # Build Tools
     jq
     mas
+
+    imagemagick
+    texliveSmall
+    ffmpeg
+    ripgrep
+    aria2
+    d2
+    tart
   ];
 }

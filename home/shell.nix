@@ -175,14 +175,6 @@
     "$HOME/.go/bin" # Go Bin (using $HOME/.go instead of $GOPATH for path)
     "$HOME/.bun/bin" # Bun Bin
 
-    # Homebrew-installed tools
-    "/opt/homebrew/bin"
-    "/opt/homebrew/sbin"
-    "/opt/homebrew/opt/llvm/bin"
-    "/opt/homebrew/opt/rustup/bin"
-    "/opt/homebrew/opt/ruby/bin"
-    "/opt/homebrew/opt/openjdk/bin"
-
     # .NET
     "/usr/local/share/dotnet"
   ];
@@ -212,12 +204,5 @@
     enableZshIntegration = true;
   };
 
-  # Other tools
-  programs.bat = {
-    enable = true;
-    config = {
-      theme = "OneHalfDark";
-    };
-  };
   programs.eza.enable = true;
 }
