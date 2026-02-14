@@ -596,13 +596,9 @@
     "opencode": {
       "type": "registry",
       "favorite_models": [
-        "opencode/grok-code",
         "github-copilot/gpt-5-mini",
         "github-copilot/claude-sonnet-4.5",
-        "ollama/olmo-3.1:32b-instruct",
-        "ollama/glm-4.7:cloud",
-        "ollama/kimi-k2.5:cloud",
-        "opencode/big-pickle"
+        "opencode/kimi-k2.5-free",
       ]
     },
   },
