@@ -26,7 +26,7 @@
     };
 
     hammerspoon = {
-      source = ../../config/.hammerspoon;
+      source = ../../config/hammerspoon;
       target = ".hammerspoon";
     };
 
@@ -46,22 +46,22 @@
     };
 
     vimrc = {
-      source = ../../config/.vimrc;
+      source = ../../config/vimrc;
       target = ".vimrc";
     };
 
     tmux = {
-      source = ../../config/.tmux.conf;
+      source = ../../config/tmux.conf;
       target = ".tmux.conf";
     };
 
     latexmkrc = {
-      source = ../../config/.latexmkrc;
+      source = ../../config/latexmkrc;
       target = ".latexmkrc";
     };
 
     kiro = {
-      source = ../../config/.kiro;
+      source = ../../config/kiro;
       target = ".kiro";
     };
   };

@@ -58,17 +58,4 @@
     ],
     "reveal": "no_focus"
   },
-  {
-    "label": "Bun Test",
-    "command": "bun test",
-    "args": [
-      "\"$ZED_RELATVIE_FILE\" -t=\"$ZED_SYMBOL\""
-    ],
-    "tags": [
-      "js-test",
-      "ts-test",
-      "bun-test",
-      "tsx-test"
-    ]
-  }
 ]

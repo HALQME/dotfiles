@@ -1,7 +1,7 @@
 .PHONY: switch build clean
 
 switch:
-	home-manager switch --flake .#hal
+	home-manager switch --flake .#hal -b backup
 
 build:
 	home-manager build --flake .#hal
