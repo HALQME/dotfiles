@@ -8,9 +8,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, nix-index-database, ... }:
   let
     system = "aarch64-darwin";
     pkgs = import nixpkgs {
@@ -25,6 +28,7 @@
 
         modules = [
           ./hosts/macbook/home.nix
+          nix-index-database.homeModules.nix-index
         ];
       };
   };

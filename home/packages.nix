@@ -16,6 +16,7 @@
     starship
     zoxide
     direnv
+    comma
 
     # Search & Navigation
     ripgrep

@@ -185,6 +185,9 @@
     "/usr/local/share/dotnet"
   ];
 
+  # Nix Index
+  programs.nix-index.enable = true;
+
   # Starship Prompt
   programs.starship = {
     enable = true;
