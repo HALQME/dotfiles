@@ -446,6 +446,10 @@
           "arguments": ["{buffer_path}"]
         }
       }
+    },
+    "Zig": {
+      "tab_size": 4,
+      "hard_tabs": true,
     }
   },
   "completion_menu_scrollbar": "auto",
