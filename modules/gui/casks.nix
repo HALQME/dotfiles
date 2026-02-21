@@ -163,6 +163,7 @@
     "oscilloscope"
     "popclip"
     "prismlauncher"
+    "raycast"
     "rectangle-pro"
     "scapple"
     "scrivener"
