@@ -331,7 +331,8 @@
     "**/.DS_Store",
     "**/Thumbs.db",
     "**/.classpath",
-    "**/.settings"
+    "**/.settings",
+    "**/.zig-cache"
   ],
   "file_scan_inclusions": [".env.*", ".dev.vars.*", "docker-compose.*.yml"],
   // ============================================================================
@@ -558,23 +559,11 @@
   // ============================================================================
   "disable_ai": false,
   "agent": {
-    "favorite_models": [
-      {
-        "provider": "copilot_chat",
-        "model": "claude-haiku-4.5"
-      },
-      {
-        "provider": "copilot_chat",
-        "model": "gpt-5-mini"
-      }
-    ],
     "profiles": {
-
     },
     "message_editor_min_lines": 4,
     "notify_when_agent_waiting": "all_screens",
     "default_profile": "write",
-    "always_allow_tool_actions": true,
     "inline_assistant_model": {
       "provider": "copilot_chat",
       "model": "gpt-5-mini"
