@@ -42,9 +42,6 @@
     # Task Runner
     go-task
 
-    # Media
-    yt-dlp
-
     # Markdown
     glow
     marksman
