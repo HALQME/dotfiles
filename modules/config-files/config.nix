@@ -40,11 +40,6 @@
       target = "config/gh";
     };
 
-    starship = {
-      source = ../../config/starship.toml;
-      target = "config/starship.toml";
-    };
-
     vimrc = {
       source = ../../config/vimrc;
       target = ".vimrc";
@@ -58,6 +53,11 @@
     latexmkrc = {
       source = ../../config/latexmkrc;
       target = ".latexmkrc";
+    };
+
+    p10k = {
+      source = ../../config/zsh/.p10k.zsh;
+      target = "config/zsh/.p10k.zsh";
     };
 
     kiro = {

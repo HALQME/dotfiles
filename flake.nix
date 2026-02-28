@@ -13,17 +13,22 @@
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, nix-index-database, ... }:
-  let
-    system = "aarch64-darwin";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
-  in
-  {
-    homeConfigurations."hal" =
-      home-manager.lib.homeManagerConfiguration {
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      nix-index-database,
+      ...
+    }:
+    let
+      system = "aarch64-darwin";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    in
+    {
+      homeConfigurations."hal" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         modules = [
@@ -31,5 +36,5 @@
           nix-index-database.homeModules.nix-index
         ];
       };
-  };
+    };
 }

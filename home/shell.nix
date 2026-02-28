@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   # Zsh Configuration
   programs.zsh = {
@@ -159,6 +160,10 @@
         source "$ZSH_SYNTAX_HIGHLIGHTING_FILE"
       fi
 
+      # Powerlevel10k
+      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+      [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
     '';
   };
 
@@ -187,12 +192,6 @@
 
   # Nix Index
   programs.nix-index.enable = true;
-
-  # Starship Prompt
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-  };
 
   # Direnv
   programs.direnv = {

@@ -13,7 +13,7 @@
 
     # Shell
     zsh
-    starship
+    zsh-powerlevel10k
     zoxide
     direnv
     comma
