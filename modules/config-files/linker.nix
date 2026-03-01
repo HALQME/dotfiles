@@ -31,12 +31,6 @@ in
       }
     ) textBasedHomeFiles;
 
-  home.activation.initZed = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    if [ ! -f ~/.config/zed/settings.json ]; then
-      cp ${../../config/zed/settings.json} ~/.config/zed/settings.json
-    fi
-  '';
-
   xdg.configFile =
     # Source-based files
     lib.mapAttrs' (

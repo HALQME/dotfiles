@@ -29,11 +29,6 @@
         src = pkgs.zsh-powerlevel10k;
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
-      {
-        name = "zsh-abbr";
-        src = pkgs.zsh-abbr;
-        file = "share/zsh/site";
-      }
     ];
 
     envExtra = ''

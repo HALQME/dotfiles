@@ -21,72 +21,72 @@
       # ====================================================================
       core = {
         excludesfile = "~/.gitignore_global";
-        fsmonitor = true;                    # Use filesystem monitor for better performance
-        untrackedCache = true;               # Cache untracked files list
+        fsmonitor = true; # Use filesystem monitor for better performance
+        untrackedCache = true; # Cache untracked files list
         editor = "nvim";
       };
 
       # ====================================================================
       # BRANCH & TAG CONFIGURATION
       # ====================================================================
-      branch.sort = "-committerdate";        # Sort branches by commit date (newest first)
-      tag.sort = "version:refname";          # Sort tags by version
+      branch.sort = "-committerdate"; # Sort branches by commit date (newest first)
+      tag.sort = "version:refname"; # Sort tags by version
       init.defaultBranch = "main";
 
       # ====================================================================
       # DIFF & MERGE SETTINGS
       # ====================================================================
       diff = {
-        algorithm = "histogram";             # Better diff algorithm
-        colorMoved = "plain";                # Highlight moved code
-        mnemonicPrefix = true;               # Use mnemonic prefixes (a/b -> c/i for copy/index)
-        renames = true;                      # Detect renames
+        algorithm = "histogram"; # Better diff algorithm
+        colorMoved = "plain"; # Highlight moved code
+        mnemonicPrefix = true; # Use mnemonic prefixes (a/b -> c/i for copy/index)
+        renames = true; # Detect renames
       };
 
-      merge.conflictStyle = "zdiff3";        # Better 3-way merge visualization
+      merge.conflictStyle = "zdiff3"; # Better 3-way merge visualization
 
       # ====================================================================
       # PUSH & PULL SETTINGS
       # ====================================================================
       push = {
-        default = "simple";                  # Push only current branch
-        autoSetupRemote = true;              # Automatically set up tracking branch
-        followTags = true;                   # Push tags automatically
+        default = "simple"; # Push only current branch
+        autoSetupRemote = true; # Automatically set up tracking branch
+        followTags = true; # Push tags automatically
       };
 
-      pull.rebase = true;                    # Use rebase instead of merge when pulling
+      pull.rebase = true; # Use rebase instead of merge when pulling
 
       # ====================================================================
       # FETCH SETTINGS
       # ====================================================================
       fetch = {
-        prune = true;                        # Remove deleted remote branches
-        pruneTags = true;                    # Remove deleted remote tags
-        all = true;                          # Fetch all remotes
+        prune = true; # Remove deleted remote branches
+        pruneTags = true; # Remove deleted remote tags
+        all = true; # Fetch all remotes
       };
 
       # ====================================================================
       # COMMIT & REBASE SETTINGS
       # ====================================================================
       commit = {
-        verbose = true;                      # Show diff in commit editor
-        gpgSign = true;                      # Sign commits by default
+        verbose = true; # Show diff in commit editor
+        gpgSign = true; # Sign commits by default
       };
 
       rebase = {
-        autoSquash = true;                   # Auto-squash marked commits
-        autoStash = true;                    # Stash changes before rebase
-        updateRefs = true;                   # Update branches that point to rebased commits
+        autoSquash = true; # Auto-squash marked commits
+        autoStash = true; # Stash changes before rebase
+        updateRefs = true; # Update branches that point to rebased commits
       };
 
       # ====================================================================
       # HELP & ERROR RECOVERY
       # ====================================================================
-      help.autocorrect = "prompt";           # Suggest corrections for typos
-      
+      help.autocorrect = "prompt"; # Suggest corrections for typos
+
       rerere = {
-        enabled = true;                      # Reuse recorded resolution (git rerere)
-        autoupdate = true;                   # Auto-update rerere database
+        enabled = true; # Reuse recorded resolution (git rerere)
+        autoupdate = true; # Auto-update rerere database
       };
 
       # ====================================================================
@@ -108,7 +108,7 @@
       # ====================================================================
       # URL REWRITES
       # ====================================================================
-      url."https://".insteadOf = "git://";  # Use HTTPS instead of git://
+      url."https://".insteadOf = "git://"; # Use HTTPS instead of git://
 
       # ====================================================================
       # MERGE DRIVERS
@@ -137,9 +137,9 @@
     enable = true;
     enableGitIntegration = true;
     options = {
-      navigate = true;                      # Allow navigation in diffs
-      line-numbers = true;                  # Show line numbers
-      side-by-side = true;                  # Show diffs side-by-side
+      navigate = true; # Allow navigation in diffs
+      line-numbers = true; # Show line numbers
+      side-by-side = true; # Show diffs side-by-side
     };
   };
 
