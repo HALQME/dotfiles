@@ -11,8 +11,4 @@
   home.homeDirectory = "/Users/hal";
 
   home.stateVersion = "26.05";
-
-  home.file = {
-    ".zshrc".source = ./files/.zshrc;
-  };
 }

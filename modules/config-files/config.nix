@@ -64,5 +64,12 @@
       source = ../../config/kiro;
       target = ".kiro";
     };
+
+    hashlogin = {
+      source = null;
+      target = ".hashlogin";
+      text = "# Hashlogin configuration\n";
+      mode = "0644";
+    };
   };
 }

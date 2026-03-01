@@ -1,6 +1,6 @@
 { pkgs, ... }:
+
 {
-  # Zsh Configuration
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -9,7 +9,7 @@
     enableVteIntegration = true;
     defaultKeymap = "emacs";
 
-    # Zsh options (equivalent to setopt)
+    # Zsh options
     setOptions = [
       "PRINT_EIGHT_BIT"
       "INTERACTIVE_COMMENTS"
@@ -31,12 +31,11 @@
       }
       {
         name = "zsh-abbr";
-        src = pkgs.zsh-zsh-abbr;
+        src = pkgs.zsh-abbr;
         file = "share/zsh/site";
       }
     ];
 
-    # Environment variables
     envExtra = ''
       export EDITOR=nvim
     '';
