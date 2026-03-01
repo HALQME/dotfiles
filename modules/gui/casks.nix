@@ -166,7 +166,6 @@
     "signal"
     "soulver"
     "steam"
-    "scratch"
     "suspicious-package"
     "sweet-home3d"
     "tailscale-app"
