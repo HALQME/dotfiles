@@ -57,7 +57,7 @@
 
     p10k = {
       source = ../../config/zsh/.p10k.zsh;
-      target = "config/zsh/.p10k.zsh";
+      target = ".p10k.zsh";
     };
 
     kiro = {

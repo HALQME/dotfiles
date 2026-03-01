@@ -3,8 +3,6 @@
 {
   home.packages = with pkgs; [
     # Version Control
-    git
-    git-lfs
     delta
     gh
     ghq
@@ -13,19 +11,14 @@
 
     # Shell
     zsh
-    zsh-powerlevel10k
-    zoxide
-    direnv
     comma
 
     # Search & Navigation
     ripgrep
     fd
-    fzf
 
     # File Viewers
     bat
-    eza
 
     # Terminal Multiplexers
     tmux
