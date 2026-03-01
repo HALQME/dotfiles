@@ -47,14 +47,14 @@ make clean
 ├── flake.nix           # Flake設定
 ├── home/               # Home Manager設定
 │   ├── default.nix
-│   ├── packages.nix    # CLIツール
-│   ├── shell.nix       # シェル設定
-│   └── git.nix         # Git設定
-├── hosts/              # ホスト別設定
+│   ├── dev/             # パッケージやツール、変数など
+│   ├── shell/           # シェル設定
+│   └── git/             # Git設定
+├── hosts/                # ホスト別設定
 │   └── macbook/
 │       └── home.nix
-├── modules/            # 再利用可能なモジュール
+├── modules/             # 再利用可能なモジュール
 │   ├── config-files/   # dotfilesリンク管理
 │   └── gui/            # Homebrew管理
-└── config/             # 実際の設定ファイル
+└── config/              # 実際の設定ファイル
 ```
