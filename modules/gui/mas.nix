@@ -6,7 +6,6 @@
     "Boop" = 1518425043;
     "Budget Flow" = 1640091876;
     "bunkoOCR" = 1611405865;
-    "CivilizationVII" = 6744373452;
     "Color Picker" = 1545870783;
     "Compressor" = 424390742;
     "DaisyDisk" = 411643860;
@@ -42,7 +41,6 @@
     "Piccolo" = 1561230039;
     "Pieoneer" = 6739781207;
     "Pixelmator Pro" = 1289583905;
-    "PowerWash Simulator" = 6477445344;
     "Prime Video" = 545519333;
     "QuickMIDI" = 1459790045;
     "RunCat" = 1429033973;
