@@ -65,10 +65,10 @@
       target = ".kiro";
     };
 
-    hashlogin = {
+    hushlogin = {
       source = null;
-      target = ".hashlogin";
-      text = "# Hashlogin configuration\n";
+      target = ".hushlogin";
+      text = "";
       mode = "0644";
     };
   };
