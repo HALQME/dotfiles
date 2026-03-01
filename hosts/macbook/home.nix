@@ -3,6 +3,7 @@
     ../../home
     ../../modules/gui/options.nix
     ../../modules/gui/casks.nix
+    ../../modules/gui/font.nix
     ../../modules/gui/mas.nix
     ../../modules/gui/sync.nix
   ];

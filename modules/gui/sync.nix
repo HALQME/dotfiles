@@ -1,10 +1,11 @@
 
 { config, lib, ... }:
 
-let
+  let
   casks = config.my.gui.casks;
+  fonts = config.my.gui.fonts;
   masApps = config.my.gui.masApps;
-in
+ in
 {
   home.activation.guiSync = lib.hm.dag.entryAfter ["writeBoundary"] ''
 
@@ -27,18 +28,41 @@ in
 
     installed_casks=$($BREW_BIN list --cask 2>/dev/null || true)
 
+    # Determine which installed casks are fonts (font-*). We'll manage font
+    # casks separately and therefore avoid uninstalling them in the general
+    # cask cleanup below.
+    installed_font_casks=$(echo "$installed_casks" | grep "^font-" || true)
+
+    # Install configured casks
     ${lib.concatMapStringsSep "\n" (cask: ''
       if ! echo "$installed_casks" | grep -q "^${cask}$"; then
         $BREW_BIN install --cask ${cask}
       fi
     '') casks}
 
+    # Uninstall unmanaged casks (present but not in config). Skip any font
+    # casks because fonts are managed separately via my.gui.fonts.
     for pkg in $installed_casks; do
+      # Skip font casks (they are handled separately)
+      case "$pkg" in
+        font-*) continue ;;
+      esac
+
       case " ${lib.concatStringsSep " " casks} " in
         *" $pkg "*) ;;
         *) $BREW_BIN uninstall --cask "$pkg" ;;
       esac
     done
+
+    # Install fonts (managed separately). Treat entries in my.gui.fonts as
+    # Homebrew font casks (font-*) and ensure they're installed.
+    # Ensure the fonts tap is available (many fonts live in homebrew/cask-fonts)
+    $BREW_BIN tap homebrew/cask-fonts >/dev/null 2>&1 || true
+    ${lib.concatMapStringsSep "\n" (font: ''
+      if ! echo "$installed_font_casks" | grep -q "^${font}$"; then
+        $BREW_BIN install --cask ${font}
+      fi
+    '') fonts}
 
 
     echo "== MAS Sync =="
