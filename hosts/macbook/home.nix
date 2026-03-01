@@ -1,11 +1,12 @@
 {
   imports = [
     ../../home
-    ../../modules/gui/options.nix
-    ../../modules/gui/casks.nix
-    ../../modules/gui/font.nix
-    ../../modules/gui/mas.nix
-    ../../modules/gui/sync.nix
+    ../../modules/macos/gui/options.nix
+    ../../modules/macos/gui/casks.nix
+    ../../modules/macos/gui/font.nix
+    ../../modules/macos/gui/mas.nix
+    ../../modules/macos/gui/sync.nix
+    ../../modules/macos/config-files.nix
   ];
 
   home.username = "hal";

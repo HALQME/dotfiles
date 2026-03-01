@@ -20,16 +20,6 @@
       target = "config/zed";
     };
 
-    karabiner = {
-      source = ../../config/karabiner;
-      target = "config/karabiner";
-    };
-
-    hammerspoon = {
-      source = ../../config/hammerspoon;
-      target = ".hammerspoon";
-    };
-
     zellij = {
       source = ../../config/zellij;
       target = "config/zellij";
