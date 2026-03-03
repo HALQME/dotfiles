@@ -27,6 +27,8 @@
       mp = "multipass";
       edit = "vim";
       orb = "TERM=xterm-256color orb";
+      nf = "nix flake";
+      nd = "nix develop --command $SHELL";
 
       cp = "cp -i";
       mv = "mv -i";
