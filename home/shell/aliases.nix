@@ -26,6 +26,8 @@
       dc = "docker compose";
       mp = "multipass";
       edit = "vim";
+      q = "kiro-cli";
+      kiro = "kiro-cli";
       orb = "TERM=xterm-256color orb";
       nf = "nix flake";
       nd = "nix develop --command $SHELL";
