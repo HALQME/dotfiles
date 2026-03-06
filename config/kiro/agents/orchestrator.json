@@ -11,8 +11,12 @@
     }
   },
   "resources": [
-    "file://../steering/**/*.md",
-    "skill://../skills/**/SKILL.md"
+    "file://README.md",
+    "file://AGENTS.md",
+    "file://**/AGENTS.md",
+    "file://.kiro/steering/**/*.md",
+    "skill://skills/**/SKILL.md",
+    "skill://~/.kiro/skills/**/SKILL.md"
   ],
-  "model": "claude-sonnet-4.6"
+  "hooks": {}
 }

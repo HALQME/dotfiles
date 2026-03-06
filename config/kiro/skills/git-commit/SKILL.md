@@ -1,8 +1,6 @@
-## <!-- ~/.kiro/skills/git-agent-commit.md -->
-
+---
 name: git-agent-commit
 description: Git commit identity for agent-authored changes
-
 ---
 
 When making git commits, always use this form:
