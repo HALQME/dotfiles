@@ -1,0 +1,6 @@
+{
+  "chat.enableDelegate": true,
+  "chat.enableSubagents": true,
+  "subagent.defaultTimeout": 300000,
+  "subagent.maxConcurrent": 4
+}
