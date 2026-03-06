@@ -2,7 +2,6 @@
 
 ## 1. **Git Worktree管理**
 
-- 編集内容ごとに適切なWorktreeを作成・使用
 - 機能追加、リファクタリング、バグ修正で分離
 - Worktree作成時は目的と範囲を明確にする
 - 作業完了後は適切にWorktreeをクリーンアップ
@@ -21,21 +20,7 @@
 
 ## 4. **コード品質検証**
 
-- 編集後は必ずmiseタスクで品質チェック実行
-- `mise run type-check`: 型チェック（TypeScript、Go、Rust等）
-- `mise run lint`: 構文・スタイル問題検出
-- `mise run format:check`: フォーマット確認
-- `mise run format`: コードスタイル統一
-- `mise run test`: 機能回帰防止
 - プロジェクト固有の設定に従った継続的検証
-
-### miseタスク自動生成
-
-- `.mise.toml`がない場合は既存設定からmiseタスクを生成
-- `package.json`のpackageManager, scripts → miseタスクに変換
-- `Makefile`のターゲット → miseタスクに変換
-- 言語固有ツール検出 → 適切なmiseタスク作成
-- 生成前に内容確認を求める
 
 ## 5. **依存関係管理**
 

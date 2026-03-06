@@ -2,59 +2,30 @@
   "name": "editor",
   "description": "新規コード生成とファイル編集 - 機能実装、プロトタイプ作成、コード生成",
   "prompt": "file://./prompts/editor.md",
-  "mcpServers": {},
-  "tools": ["*"],
+  "tools": ["read", "write", "thinking", "@git", "execute_bash"],
   "toolAliases": {
     "@git/git_status": "status",
     "@git/git_commit": "commit"
   },
   "allowedTools": [
-    "fs_read",
+    "read",
     "thinking",
     "@git/git_status",
     "@git/git_diff",
     "@git/git_log",
-    "fs_write",
+    "write",
     "execute_bash"
   ],
   "toolsSettings": {
-    "fs_write": {
+    "write": {
       "allowedPaths": [
-        "src/**",
-        "lib/**",
-        "app/**",
-        "components/**",
-        "utils/**",
-        "tests/**",
-        "*.md",
-        "*.json",
-        "*.yml",
-        "*.yaml",
-        "*.js",
-        "*.ts",
-        "*.py",
-        "*.go",
-        "*.rs",
-        "docs/**"
+        "src/**", "lib/**", "app/**", "components/**", "utils/**",
+        "tests/**", "*.md", "*.json", "*.yml", "*.yaml",
+        "*.js", "*.ts", "*.py", "*.go", "*.rs", "docs/**"
       ]
     },
     "execute_bash": {
-      "allowedCommands": [
-        "git status",
-        "git diff",
-        "git worktree add",
-        "git worktree remove",
-        "git worktree list",
-        "mise install",
-        "mise run lint",
-        "mise run format",
-        "mise run format:check",
-        "mise run type-check",
-        "mise run test",
-        "mise run build",
-        "mise tasks",
-        "mise task add"
-      ],
+      "allowedCommands": ["git status", "git diff"],
       "autoAllowReadonly": true
     }
   },
@@ -62,8 +33,9 @@
     "file://README.md",
     "file://AGENTS.md",
     "file://**/AGENTS.md",
-    "file://.kiro/steering/**/*.md",
-    "file://~/.kiro/steering/**/*.md",
+    "file://.kiro/steering/*.md",
+    "file://~/.kiro/steering/*.md",
+    "skill://.kiro/skills/**/SKILL.md",
     "skill://~/.kiro/skills/**/SKILL.md"
   ],
   "hooks": {
@@ -74,6 +46,5 @@
         "cache_ttl_seconds": 60
       }
     ]
-  },
-  "includeMcpJson": true
+  }
 }
