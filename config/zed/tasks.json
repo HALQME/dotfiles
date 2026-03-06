@@ -21,9 +21,9 @@
     "hide": "on_success"
   },
   {
-    "label": "opencode",
+    "label": "kiro-cli",
     "args": [],
-    "command": "opencode",
+    "command": "kiro-cli",
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
     "reveal": "always",
