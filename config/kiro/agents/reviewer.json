@@ -3,12 +3,7 @@
   "description": "コードレビュー・セキュリティチェック",
   "prompt": "file://./prompts/reviewer.md",
   "mcpServers": {},
-  "tools": [
-    "fs_read",
-    "thinking",
-    "web_search",
-    "@git"
-  ],
+  "tools": ["fs_read", "thinking", "web_search", "@git"],
   "allowedTools": [
     "fs_read",
     "thinking",
@@ -19,9 +14,7 @@
   ],
   "toolsSettings": {
     "fs_read": {
-      "allowedPaths": [
-        "**/*"
-      ]
+      "allowedPaths": ["**/*"]
     }
   },
   "resources": [

@@ -3,9 +3,7 @@
   "description": "新規コード生成とファイル編集 - 機能実装、プロトタイプ作成、コード生成",
   "prompt": "file://./prompts/editor.md",
   "mcpServers": {},
-  "tools": [
-    "*"
-  ],
+  "tools": ["*"],
   "toolAliases": {
     "@git/git_status": "status",
     "@git/git_commit": "commit"

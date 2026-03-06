@@ -3,9 +3,7 @@
   "description": "コードリファクタリング専門 - 既存コード改善、ドキュメント、テスト生成",
   "prompt": "file://./prompts/refactor.md",
   "mcpServers": {},
-  "tools": [
-    "*"
-  ],
+  "tools": ["*"],
   "toolAliases": {
     "@git/git_status": "status",
     "@git/git_commit": "commit"
@@ -21,22 +19,14 @@
   ],
   "toolsSettings": {
     "fs_write": {
-      "allowedPaths": [
-        "src/**",
-        "tests/**",
-        "*.md",
-        "*.json",
-        "*.yml",
-        "*.yaml",
-        "docs/**"
-      ]
+      "allowedPaths": ["src/**", "tests/**", "*.md", "*.json", "*.yml", "*.yaml", "docs/**"]
     },
     "execute_bash": {
       "allowedCommands": [
         "git status",
         "git diff",
         "git worktree add",
-        "git worktree remove", 
+        "git worktree remove",
         "git worktree list",
         "mise install",
         "mise run lint",
