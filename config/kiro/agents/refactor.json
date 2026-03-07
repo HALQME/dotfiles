@@ -17,9 +17,6 @@
     "execute_bash"
   ],
   "toolsSettings": {
-    "write": {
-      "allowedPaths": ["src/**", "tests/**", "*.md", "*.json", "*.yml", "*.yaml", "docs/**"]
-    },
     "execute_bash": {
       "allowedCommands": [
         "git status",

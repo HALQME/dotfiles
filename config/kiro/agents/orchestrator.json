@@ -6,7 +6,6 @@
   "allowedTools": ["read", "subagent", "execute_bash"],
   "toolsSettings": {
     "subagent": {
-      "availableAgents": ["reviewer", "refactor", "editor", "docs-*"],
       "trustedAgents": ["reviewer", "refactor", "editor"]
     },
     "execute_bash": {
