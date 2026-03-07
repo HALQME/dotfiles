@@ -190,6 +190,7 @@
     .DS_Store
     .env.local
     .envrc
+    .direnv/
 
     # ========================================================================
     # LOGS, CACHE & TEMPORARY FILES
