@@ -56,5 +56,10 @@
       text = "";
       mode = "0644";
     };
+
+    bun = {
+      source = ../../config/bunfig.toml;
+      target = "config/.bunfig.toml";
+    };
   };
 }

@@ -1,0 +1,35 @@
+# ~/.bunfig.toml
+
+telemetry = false
+logLevel = "warn"
+
+[install]
+exact = true
+auto = "auto"
+
+linker = "isolated"
+
+minimumReleaseAge = 259200
+minimumReleaseAgeExcludes = ["@types/bun", "typescript"]
+
+[install.cache]
+disable = false
+disableManifest = false
+
+[install.security]
+scanner = true
+
+[console]
+depth = 3
+
+[test]
+coverage = true
+coverageReporter = ["text", "lcov"]
+retry = 1
+randomize = true
+seed = 445984611
+onlyFailures = true
+
+[run]
+bun = true
+silent = true
