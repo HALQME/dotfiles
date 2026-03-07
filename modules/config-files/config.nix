@@ -15,11 +15,6 @@
       target = "config/nvim";
     };
 
-    zed = {
-      source = ../../config/zed;
-      target = "config/zed";
-    };
-
     zellij = {
       source = ../../config/zellij;
       target = "config/zellij";
