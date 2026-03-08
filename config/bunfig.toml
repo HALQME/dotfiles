@@ -16,9 +16,6 @@ minimumReleaseAgeExcludes = ["@types/bun", "typescript"]
 disable = false
 disableManifest = false
 
-[install.security]
-scanner = true
-
 [console]
 depth = 3
 
