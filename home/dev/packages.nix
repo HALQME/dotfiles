@@ -68,6 +68,7 @@
     # PACKAGE MANAGERS
     # ========================================================================
     pnpm # Fast Node.js package manager
+    bun # Fastest JavaScript runtime and package manager
 
     # ========================================================================
     # PYTHON
