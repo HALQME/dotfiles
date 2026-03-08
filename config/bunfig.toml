@@ -9,7 +9,7 @@ auto = "auto"
 
 linker = "isolated"
 
-minimumReleaseAge = 259200
+minimumReleaseAge = 129600
 minimumReleaseAgeExcludes = ["@types/bun", "typescript"]
 
 [install.cache]
