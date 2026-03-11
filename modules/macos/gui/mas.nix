@@ -20,7 +20,6 @@
     "Folder Quick Look" = 6753110395;
     "Gamma Dimmer" = 1635180752;
     "Goodnotes" = 1444383602;
-    "Grila" = 6444335028;
     "HextEdit" = 1557247094;
     "Hyperduck" = 6444667067;
     "iA Writer" = 775737590;
@@ -29,7 +28,6 @@
     "Logic Pro" = 634148309;
     "MainStage" = 634159523;
     "Mercury" = 1621800675;
-    "Money Pro" = 972572731;
     "Motion" = 434290957;
     "NotesHub" = 1621210753;
     "Numbers" = 361304891;
