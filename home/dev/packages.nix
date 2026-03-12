@@ -63,6 +63,7 @@
     gopls # Go language server
     nil # Nix language server
     nixd # Modern Nix language server
+    alejandra
 
     # ========================================================================
     # PACKAGE MANAGERS
@@ -89,7 +90,6 @@
     ffmpeg # Multimedia framework
     aria2 # Download utility
     d2 # Diagram creation language
-    tart # macOS & Linux VM manager
 
     # ========================================================================
     # FILE OPERATIONS & DISPLAY
