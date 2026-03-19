@@ -28,10 +28,22 @@
   # ============================================================================
   # FILE LISTING & NAVIGATION
   # ============================================================================
-  programs.eza.enable = true; # Modern ls alternative
+  # Modern ls alternative
+  programs.eza = {
+    enable = true;
+    enableZshIntegration = true;
+    icons = "auto";
+    git = true;
+  };
+  # Track and jump to frequently used directories
   programs.zoxide = {
     enable = true;
-    enableZshIntegration = true; # Track and jump to frequently used directories
+    enableZshIntegration = true;
+  };
+  # Fast fuzzy finder for file contents
+  programs.yazi = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
   # ============================================================================
@@ -46,13 +58,20 @@
   # VERSION CONTROL
   # ============================================================================
   programs.jujutsu.enable = true; # Modern VCS (experimental)
-  programs.lazygit.enable = true; # Interactive git CLI
+  # Interactive git CLI
+  programs.lazygit = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
   # ============================================================================
   # EDITORS
   # ============================================================================
-  programs.neovim.enable = true; # Vim-based text editor
-
+  # Vim-based text editor
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
   # ============================================================================
   # PACKAGE & INDEX MANAGEMENT
   # ============================================================================

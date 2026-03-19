@@ -90,10 +90,5 @@
     ffmpeg # Multimedia framework
     aria2 # Download utility
     d2 # Diagram creation language
-
-    # ========================================================================
-    # FILE OPERATIONS & DISPLAY
-    # ========================================================================
-    lsd # Modern ls alternative with icons
   ];
 }

@@ -17,15 +17,14 @@
       repo = "local repodir=$(ghq list | fzf -1 +m) && cd $(ghq root)/$repodir";
 
       c = "clear";
-      ls = "lsd";
-      ll = "lsd -la";
+      ls = "eza";
+      ll = "eza -la";
       lg = "lazygit";
       grep = "rg";
       glor = "glow -p";
       d = "docker";
       dc = "docker compose";
       mp = "multipass";
-      edit = "vim";
       q = "kiro-cli";
       kiro = "kiro-cli";
       orb = "TERM=xterm-256color orb";
