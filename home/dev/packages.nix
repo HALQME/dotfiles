@@ -52,7 +52,6 @@
     # PROGRAMMING LANGUAGE RUNTIMES
     # ========================================================================
     go # Go programming language
-    nodejs # Node.js runtime
     rustup # Rust toolchain installer
     zig # Zig programming language
 
@@ -68,7 +67,6 @@
     # ========================================================================
     # PACKAGE MANAGERS
     # ========================================================================
-    pnpm # Fast Node.js package manager
     bun # Fastest JavaScript runtime and package manager
 
     # ========================================================================
