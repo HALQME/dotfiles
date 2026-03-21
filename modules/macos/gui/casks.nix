@@ -10,7 +10,6 @@
     "affine"
     "affinity"
     "alienator88-sentinel"
-    "antigravity"
     "antinote"
     "apparency"
     "applite"

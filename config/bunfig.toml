@@ -28,5 +28,5 @@ seed = 445984611
 onlyFailures = true
 
 [run]
-bun = true
+bun = false
 silent = true

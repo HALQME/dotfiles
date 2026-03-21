@@ -54,6 +54,8 @@
     go # Go programming language
     rustup # Rust toolchain installer
     zig # Zig programming language
+    bun # Bun JavaScript runtime
+    nodejs-slim_latest
 
     # ========================================================================
     # LANGUAGE SERVERS & DEVELOPMENT TOOLS
@@ -67,7 +69,7 @@
     # ========================================================================
     # PACKAGE MANAGERS
     # ========================================================================
-    bun # Fastest JavaScript runtime and package manager
+    pnpm # Fast JavaScript package manager
 
     # ========================================================================
     # PYTHON
