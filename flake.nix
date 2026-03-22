@@ -26,15 +26,21 @@
         inherit system;
         config.allowUnfree = true;
       };
+
+      mkHomeConfig = enableGuiSync:
+        home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = { inherit enableGuiSync; };
+          modules = [
+            ./hosts/macbook/home.nix
+            nix-index-database.homeModules.nix-index
+          ];
+        };
     in
     {
-      homeConfigurations."hal" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        modules = [
-          ./hosts/macbook/home.nix
-          nix-index-database.homeModules.nix-index
-        ];
+      homeConfigurations = {
+        "hal" = mkHomeConfig false;
+        "hal-full" = mkHomeConfig true;
       };
     };
 }
