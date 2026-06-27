@@ -4,10 +4,17 @@
 in {
   programs.git.enable = true;
   programs.git.settings = {
+    user = {
+      name = "HAL";
+      email = gitEmail;
+      useConfigOnly = true;
+    };
+
     user.signingKey = gitSigningKey;
 
     core = {
       fsmonitor = true;
+      excludesfile = "~/.gitignore_global";
       untrackedCache = true;
     };
 

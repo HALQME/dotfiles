@@ -53,6 +53,7 @@ dist/
 tmp/
 temp/
 cache/
+.cache/
 logs/
 *.bak
 *.out
