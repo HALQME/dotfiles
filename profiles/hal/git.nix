@@ -10,6 +10,8 @@ in {
       useConfigOnly = true;
     };
 
+    init.defaultBranch = "main";
+
     user.signingKey = gitSigningKey;
 
     core = {
