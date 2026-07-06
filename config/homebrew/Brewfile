@@ -1,5 +1,5 @@
 # --- System & Utilities ---
-cask "1password"              # Password manager
+cask "secretive"              # Secure Enclave-backed SSH keys
 cask "adguard"                # Ad blocker
 cask "audacity"               # Multi-track audio editor and recorder
 cask "alienator88-sentinel"   # Gatekeeper/Unquarantine
@@ -35,7 +35,7 @@ cask "virtualbuddy"           # Virtualization tool
 
 # --- Design & Creative ---
 cask "affinity"               # Image editing & Design
-cask "blender"                # 3D creation suite
+cask "blender"                # 3D creation
 cask "drawio"                 # Diagram software
 cask "handbrake-app"          # Video transcoder
 cask "obs"                    # Streaming & Recording
