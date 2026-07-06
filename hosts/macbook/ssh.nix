@@ -1,5 +1,5 @@
 {...}: let
-  onePasswordAgentSocket = "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
+  secretiveAgentSocket = "~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh";
 in {
   programs.ssh = {
     enable = true;
@@ -15,7 +15,7 @@ in {
       HashKnownHosts = true;
       ServerAliveInterval = 60;
       ServerAliveCountMax = 3;
-      IdentityAgent = onePasswordAgentSocket;
+      IdentityAgent = secretiveAgentSocket;
     };
   };
 
