@@ -25,19 +25,6 @@
       size = 10000;
     };
 
-    plugins = [
-      {
-        name = "powerlevel10k";
-        src = pkgs.zsh-powerlevel10k;
-        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-      }
-      {
-        name = "fast-syntax-highlighting";
-        src = pkgs.zsh-fast-syntax-highlighting;
-        file = "share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh";
-      }
-    ];
-
     siteFunctions.mkcd = ''
       mkdir --parents "$1" && cd "$1"
     '';
@@ -82,6 +69,11 @@
     };
 
     initContent = ''
+      # Some prompt/completion snippets assume these exist and trip over unset vars.
+      export SSH_CONNECTION="''${SSH_CONNECTION-}"
+      export SSH_CLIENT="''${SSH_CLIENT-}"
+      export SSH_TTY="''${SSH_TTY-}"
+
       alias -s {png,jpg,PNG,JPG,jpeg,JPEG}="gat"
 
       alias -s {ts,js,tsx,jsx,html,md}="bun run"
@@ -91,11 +83,19 @@
       alias -s swift="swift"
       alias -s cr="crystal"
 
-      if [ -f "$HOME/.config/zsh/.p10k.zsh" ]; then
+      if [[ -o interactive ]]; then
+        source ${pkgs.zsh-fast-syntax-highlighting}/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+      fi
+
+      if [[ -o interactive ]] && [[ -o zle ]]; then
+        source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+      fi
+
+      if [[ -o interactive ]] && [[ -o zle ]] && [ -f "$HOME/.config/zsh/.p10k.zsh" ]; then
         source "$HOME/.config/zsh/.p10k.zsh"
       fi
 
-      if [ -s "$HOME/.bun/_bun" ]; then
+      if [[ -o interactive ]] && [ -s "$HOME/.bun/_bun" ]; then
         source "$HOME/.bun/_bun"
       fi
 
