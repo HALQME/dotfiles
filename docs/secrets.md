@@ -42,6 +42,12 @@ On a replacement Mac, create a new Secretive key and replace the old key in GitH
 
 There is no global secret file in this repository. Each project stores only its own encrypted values in its own `mise.toml`.
 
+Direct age encryption is currently an experimental mise feature, so enable experimental features once:
+
+```bash
+mise settings set experimental=true
+```
+
 Create the age identity the first time a project needs encrypted secrets:
 
 ```bash
@@ -56,7 +62,7 @@ Add a secret from the project directory:
 mise set --age-encrypt --prompt API_TOKEN
 ```
 
-Commit the encrypted `mise.toml`; never commit plaintext `.env` files or the age identity.
+Commit the encrypted `mise.toml`; never commit plaintext `.env` files or the age identity. mise performs encryption and decryption itself; the `age` CLI is installed for identity generation and recovery.
 
 ## Recovery backup
 
