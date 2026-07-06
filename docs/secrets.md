@@ -42,7 +42,7 @@ On a replacement Mac, create a new Secretive key and replace the old key in GitH
 
 There is no global secret file in this repository. Each project stores only its own encrypted values in its own `mise.toml`.
 
-Home Manager manages the global mise configuration in `~/.config/mise/config.toml` and enables the experimental features required for direct age encryption.
+The global mise configuration lives at `config/mise/config.toml` and is linked to `~/.config/mise/config.toml` by the shared config module. It enables the experimental features required for direct age encryption.
 
 Create the age identity the first time a project needs encrypted secrets:
 
