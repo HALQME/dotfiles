@@ -35,7 +35,7 @@ cask "virtualbuddy"           # Virtualization tool
 
 # --- Design & Creative ---
 cask "affinity"               # Image editing & Design
-cask "blender"                # 3D creation
+cask "blender"                # 3D creation suite
 cask "drawio"                 # Diagram software
 cask "handbrake-app"          # Video transcoder
 cask "obs"                    # Streaming & Recording
