@@ -24,6 +24,8 @@
     gh
     ghq
     jujutsu
+    # Secrets
+    age
     # Shell
     fd
     ripgrep
