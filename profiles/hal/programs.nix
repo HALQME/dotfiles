@@ -1,8 +1,40 @@
-{...}: {
+{pkgs, ...}: {
   programs.direnv = {
     enable = true;
     enableZshIntegration = true;
     config.global.log_filter = "^$";
+    nix-direnv = {
+      enable = true;
+    };
+
+    stdlib = ''
+      use_age() {
+        local encrypted_file="''${1:-.env.age}"
+        local tmp_file
+        local status
+
+        [ -f "$encrypted_file" ] || return 0
+
+        watch_file "$encrypted_file"
+        tmp_file="$(mktemp)"
+
+        if ! ${pkgs.age}/bin/age \
+          --decrypt \
+          -i "$HOME/.config/age/identity.age" \
+          "$encrypted_file" \
+          > "$tmp_file"
+        then
+          rm -f "$tmp_file"
+          return 1
+        fi
+
+        dotenv "$tmp_file"
+        status=$?
+
+        rm -f "$tmp_file"
+        return "$status"
+      }
+    '';
   };
 
   programs.nix-index = {

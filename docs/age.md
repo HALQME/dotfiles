@@ -2,13 +2,23 @@
 
 プロジェクトごとの環境変数ファイルは、`age` を使って暗号化する。
 
-暗号化には、あらかじめ設定されたrecipientを使用する。
+## Usage
+
+### 鍵の生成
+
+```shell
+age-keygen -o ~/.config/age/identity.age \
+# ファイルに書きたい場合
+> ~/.config/age/recipient.txt
+```
+
+### 暗号化
 
 ```shell
 agec -o .env.age .env
 ```
 
-復号化は以下の通り。
+### 復号化
 
 ```shell
 aged .env.age
@@ -20,7 +30,7 @@ aged .env.age
 aged -o .env .env.age
 ```
 
-以下が登録されている
+これらはエイリアス。以下が登録されている。
 ```shell
 alias agec="age -R ~/.config/age/recipient.txt"
 alias aged="age --decrypt -i ~/.config/age/identity.age"
@@ -40,11 +50,12 @@ agec -o .env.age .env
 
 `direnv`を使うと、プロジェクトに入ったときに`.env.age`を自動的に復号し、その内容を環境変数として読み込める。
 
+`use age`が利用可能。
+
 ```shell
 # .envrc
-dotenv <(aged .env.age)
+dotenv <(use age)
 ```
-
 
 プロジェクト側で管理するファイルは次の2つ。
 

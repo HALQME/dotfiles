@@ -62,6 +62,8 @@
       du = "du -h";
       calc = "bc -l";
       datestamp = "date +%Y%m%d%H%M%S";
+      now = "date +%Y/%m/%d\ %H:%M\;%S";
+      iso = "date +%Y-%m-%dT%H:%M:%S%z";
       ipinfo = "curl ipinfo.io";
       weather = "curl wttr.in";
       port = "lsof -i";
