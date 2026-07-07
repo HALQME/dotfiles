@@ -37,6 +37,7 @@
     ## Task Runner
     just
     act
+    mise
     ## Terminal Multiplexer
     tmux
   ];
