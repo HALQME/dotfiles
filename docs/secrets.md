@@ -15,13 +15,14 @@ Secretiveの公開鍵パスは端末ごとに異なるため、署名設定は`h
 1. Home Managerの設定を適用する。
 2. Secretiveを開き、GitHub用の鍵を作成する。
 3. 同じ公開鍵をGitHubへAuthentication keyとSigning keyとして登録する。
-4. もう一度Home Managerの設定を適用する。
+4. Secretiveの公開鍵パスを`hosts/macbook/git.nix`の`signingKey`に設定する。
+5. もう一度Home Managerの設定を適用する。
 
 ```bash
 home-manager switch
 ```
 
-`hosts/macbook/git.nix`がSecretiveの公開鍵を検出し、次のGit設定を生成する。
+`hosts/macbook/git.nix`から、次のGit設定を生成する。
 
 ```ini
 [user]
@@ -34,7 +35,7 @@ home-manager switch
     allowedSignersFile = ~/.ssh/allowed_signers
 ```
 
-同時に、端末の公開鍵から`~/.ssh/allowed_signers`を生成する。
+同時に、指定した公開鍵から`~/.ssh/allowed_signers`を生成する。
 
 SSH認証を確認する。
 
@@ -56,8 +57,9 @@ git log --show-signature -1
 3. Home Managerの設定を適用する。
 4. Secretiveで新しいGitHub用の鍵を作成する。
 5. 同じ公開鍵をGitHubへAuthentication keyとSigning keyとして登録する。
-6. もう一度Home Managerの設定を適用する。
-7. SSH認証とGit署名を確認する。
+6. Secretiveの公開鍵パスを、その端末のhost設定に反映する。
+7. もう一度Home Managerの設定を適用する。
+8. SSH認証とGit署名を確認する。
 
 ```text
 Nixをインストール
@@ -65,6 +67,7 @@ Nixをインストール
   -> home-manager switch
   -> Secretiveで鍵を生成
   -> GitHubへAuthentication keyとSigning keyとして登録
+  -> host設定へ公開鍵パスを反映
   -> home-manager switch
   -> SSH認証とGit署名を確認
 ```
