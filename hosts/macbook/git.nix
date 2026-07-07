@@ -1,4 +1,8 @@
-{config, lib, ...}: let
+{
+  config,
+  lib,
+  ...
+}: let
   gitEmail = config.programs.git.settings.user.email;
   signingKey = "${config.home.homeDirectory}/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/6057ce14894fb07471677b81fb3d0f33.pub";
 in {
