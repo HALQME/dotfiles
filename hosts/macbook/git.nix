@@ -1,5 +1,5 @@
 {config, lib, ...}: let
-  gitEmail = "68320771+HALQME@users.noreply.github.com";
+  gitEmail = config.programs.git.settings.user.email;
   secretivePublicKeysDir = "${config.home.homeDirectory}/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys";
   hostGitConfig = "${config.xdg.configHome}/git/host-signing.conf";
 in {
