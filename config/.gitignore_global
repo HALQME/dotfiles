@@ -97,5 +97,6 @@ out/
 .env
 .env.local
 .env.*.local
+!.env.age
 .note.md
 .note.*.md

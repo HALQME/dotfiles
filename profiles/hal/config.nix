@@ -11,5 +11,6 @@
     "nvim".source = repoRoot + /config/nvim;
     "wezterm".source = repoRoot + /config/wezterm;
     "zsh/.p10k.zsh".source = repoRoot + /config/zsh/.p10k.zsh;
+    "age/recipient.txt".source = repoRoot + /config/age/recipient.txt;
   };
 }

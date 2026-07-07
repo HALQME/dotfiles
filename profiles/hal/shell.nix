@@ -66,6 +66,9 @@
       weather = "curl wttr.in";
       port = "lsof -i";
       repo = "cd $(ghq list --full-path | fzf)";
+
+      agec = "age -R ~/.config/age/recipient.txt";
+      aged = "age --decrypt -i ~/.config/age/identity.age";
     };
 
     initContent = ''

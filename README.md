@@ -54,7 +54,7 @@ home-manager switch
 ```
 のみで更新することも可能です。
 
-SSH鍵、Git署名、端末移行時の手順は [`docs/secrets.md`](docs/secrets.md) を参照してください。
+SSH鍵、Git署名、端末移行時の手順は [`docs/git&verify.md`](docs/git&verify.md) を参照してください。
 
 ### 4. クリーンアップ
 ```bash
