@@ -1,22 +1,13 @@
 {config, lib, ...}: let
   gitEmail = config.programs.git.settings.user.email;
   signingKey = "${config.home.homeDirectory}/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/6057ce14894fb07471677b81fb3d0f33.pub";
-  hostGitConfig = "${config.xdg.configHome}/git/host-signing.conf";
 in {
-  programs.git.includes = [
-    {path = hostGitConfig;}
-  ];
-
-  xdg.configFile."git/host-signing.conf".text = ''
-    [user]
-        signingkey = ${signingKey}
-    [commit]
-        gpgsign = true
-    [gpg]
-        format = ssh
-    [gpg "ssh"]
-        allowedSignersFile = ~/.ssh/allowed_signers
-  '';
+  programs.git.settings = {
+    user.signingkey = signingKey;
+    commit.gpgsign = true;
+    gpg.format = "ssh";
+    "gpg \"ssh\"".allowedSignersFile = "~/.ssh/allowed_signers";
+  };
 
   home.activation.configureAllowedSigners = lib.hm.dag.entryAfter ["writeBoundary"] ''
     if [ -f '${signingKey}' ]; then

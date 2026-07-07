@@ -34,6 +34,7 @@
     gat
     ffmpeg
     aria2
+    age
     ## Task Runner
     just
     act
