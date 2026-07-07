@@ -1,17 +1,31 @@
-# Secrets and key recovery
+# 秘密情報と鍵の復旧
 
-1Password is not part of the development environment. SSH authentication and Git signing use a device-local Secretive key. Project secrets use mise's age encryption with a dedicated passphrase-protected SSH key.
+この環境では、1Passwordを開発用の鍵管理に使用しない。
 
-## SSH authentication and Git signing
+用途ごとに鍵のライフサイクルを分離する。
 
-Secretive stores the private key in the Secure Enclave. The private key is not backed up or restored to another Mac.
+```text
+GitHubへのSSH認証・Git署名
+  -> Secretive
+  -> 端末ごとに生成
+  -> バックアップしない
 
-After applying the Home Manager configuration:
+miseのproject secret
+  -> ~/.ssh/mise_age
+  -> パスフレーズ付きSSH鍵
+  -> 端末移行時に同じ鍵を復元する
+```
 
-1. Open Secretive and create a key for GitHub.
-2. Copy its public key and save it as `~/.ssh/signing.pub`.
-3. Register the same public key in GitHub as both an authentication key and a signing key.
-4. Create the local allowed signers file.
+## GitHubへのSSH認証とGit署名
+
+Secretiveは秘密鍵をSecure Enclaveに保存する。この秘密鍵は別のMacへ移行せず、端末ごとに新しく生成する。
+
+Home Managerの設定を適用した後、次の手順でセットアップする。
+
+1. Secretiveを開き、GitHub用の鍵を作成する。
+2. 公開鍵をコピーし、`~/.ssh/signing.pub`として保存する。
+3. 同じ公開鍵をGitHubへAuthentication keyとSigning keyの両方として登録する。
+4. ローカルの`allowed_signers`を作成する。
 
 ```bash
 mkdir -p ~/.ssh
@@ -27,7 +41,7 @@ printf '%s %s\n' \
 chmod 644 ~/.ssh/allowed_signers
 ```
 
-Verify both authentication and signing:
+SSH認証と署名を確認する。
 
 ```bash
 ssh -T git@github.com
@@ -35,15 +49,27 @@ git commit --allow-empty -m 'test signing'
 git log --show-signature -1
 ```
 
-On a replacement Mac, create a new Secretive key and register the new public key in GitHub for both authentication and signing. The old private key is not migrated.
+新しいMacへ移行するときは、新しいSecretive鍵を生成し、その公開鍵をGitHubへAuthentication keyとSigning keyとして登録する。旧端末の秘密鍵は移行しない。
 
-## Project secrets with mise and age
+## miseによるproject secretの暗号化
 
-There is no global secret file in this repository. Each project stores only its own encrypted values in its own `mise.toml`.
+グローバルなsecretファイルは持たない。各projectは、自分の`mise.toml`にそのproject専用の暗号化済みsecretだけを保存する。
 
-The global mise configuration lives at `config/mise/config.toml` and is linked to `~/.config/mise/config.toml` by the shared config module. It enables direct age encryption and configures `~/.ssh/mise_age` as the dedicated SSH identity used for project secret decryption.
+グローバルなmise設定は`config/mise/config.toml`に置き、共通config moduleから`~/.config/mise/config.toml`へリンクする。
 
-Create the key once, with a strong passphrase:
+この設定では、miseのdirect age encryptionを有効にし、`~/.ssh/mise_age`をproject secretの暗号化・復号専用SSH鍵として使用する。
+
+```toml
+[settings]
+experimental = true
+
+[settings.age]
+ssh_identity_files = ["~/.ssh/mise_age"]
+```
+
+### 初回セットアップ
+
+`mise_age`は一度だけ作成する。必ずパスフレーズを設定する。
 
 ```bash
 ssh-keygen \
@@ -53,69 +79,112 @@ ssh-keygen \
   -C 'mise age encryption'
 ```
 
-Keep both files:
+生成されるファイルは次の2つ。
 
 ```text
-~/.ssh/mise_age
-~/.ssh/mise_age.pub
+~/.ssh/mise_age      # パスフレーズ付き秘密鍵
+~/.ssh/mise_age.pub  # 公開鍵
 ```
 
-Do not add this key to GitHub. It exists only for mise secret encryption and decryption.
+この鍵はGitHubには登録しない。miseによるproject secretの暗号化・復号だけに使用する。
 
-Add a secret from the project directory:
+project内でsecretを追加する。
 
 ```bash
 mise set --age-encrypt --prompt API_TOKEN
 ```
 
-When no recipient is passed explicitly, mise derives an SSH recipient from the configured identity when the matching `.pub` file exists. Commit the encrypted `mise.toml`; never commit plaintext `.env` files or the private key.
+暗号化済みの`mise.toml`はGitへcommitしてよい。平文の`.env`や`~/.ssh/mise_age`はcommitしない。
 
-## Recovery backup
+## mise_ageのバックアップ
 
-`~/.ssh/mise_age` must survive a device replacement because existing project ciphertext is encrypted to its public key.
+`~/.ssh/mise_age`は、既存のproject secretを復号するための長期鍵である。新しいMacへ移行しても同じ鍵を使うため、生成直後にバックアップする。
 
-The private key remains protected by its SSH passphrase. Back up both files outside the Mac, in at least two independent locations:
+秘密鍵自体はSSH鍵のパスフレーズで暗号化されているため、パスフレーズを削除せず、そのままコピーする。
+
+推奨する保管先は次の2系統。
 
 ```text
-mise_age
-mise_age.pub
+クラウドストレージ
+└── Recovery/mise/
+    ├── mise_age
+    └── mise_age.pub
+
+USBメモリまたは外部SSD
+└── Recovery/mise/
+    ├── mise_age
+    └── mise_age.pub
 ```
 
-Keep the passphrase separately from the backup files.
+少なくとも、Mac本体とは独立した2箇所に保存する。
 
-## New Mac recovery flow
+パスフレーズはバックアップファイルと同じ場所に保存しない。紙など、別経路で復元できる場所に保管する。
+
+### バックアップ例
+
+クラウドストレージ上の`Recovery/mise`へコピーする。
+
+```bash
+mkdir -p /path/to/cloud-storage/Recovery/mise
+cp ~/.ssh/mise_age /path/to/cloud-storage/Recovery/mise/mise_age
+cp ~/.ssh/mise_age.pub /path/to/cloud-storage/Recovery/mise/mise_age.pub
+```
+
+同じ2ファイルを、USBメモリまたは外部SSDにもコピーする。
+
+`mise_age.pub`は秘密鍵から再生成できるため、絶対に失ってはいけないのは`mise_age`の方である。ただし復旧を単純にするため、通常は両方をバックアップする。
+
+## 新しいMacへの復旧
+
+復旧の流れは次の通り。
 
 ```text
-Install Nix
-  -> clone dotfiles over HTTPS
+Nixをインストール
+  -> dotfilesをHTTPSでclone
   -> home-manager switch
-  -> restore ~/.ssh/mise_age and ~/.ssh/mise_age.pub
-  -> create a new Secretive key
-  -> register the new GitHub authentication and signing keys
-  -> continue using project-local encrypted secrets
+  -> バックアップからmise_ageを復元
+  -> Secretiveで新しいGitHub用鍵を生成
+  -> GitHubへAuthentication keyとSigning keyとして登録
+  -> projectをclone
+  -> 既存の暗号化済みsecretをそのまま復号
 ```
 
-Restore the mise key with restrictive permissions:
+### mise_ageの復元
+
+クラウドストレージまたは外部メディアから、同じ`mise_age`を新しいMacへ戻す。
 
 ```bash
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
+
 cp /path/to/backup/mise_age ~/.ssh/mise_age
 cp /path/to/backup/mise_age.pub ~/.ssh/mise_age.pub
+
 chmod 600 ~/.ssh/mise_age
 chmod 644 ~/.ssh/mise_age.pub
 ```
 
-The two key lifecycles are intentionally different:
+`mise_age.pub`を失った場合は、秘密鍵から再生成できる。
+
+```bash
+ssh-keygen -y -f ~/.ssh/mise_age > ~/.ssh/mise_age.pub
+chmod 644 ~/.ssh/mise_age.pub
+```
+
+復元後は、既存projectで暗号化済みsecretを読み出せることを確認する。
+
+## 鍵のライフサイクル
+
+2種類の鍵は、意図的に異なる運用を行う。
 
 ```text
-Secretive key
-  -> device identity
-  -> rotate on device replacement
-  -> do not back up
+Secretive鍵
+  -> 端末のidentity
+  -> 端末移行時に新規生成
+  -> バックアップしない
 
 mise_age
-  -> data decryption key
-  -> restore on device replacement
-  -> back up with passphrase protection intact
+  -> project secretの復号鍵
+  -> 端末移行時に同じ鍵を復元
+  -> パスフレーズ保護を維持したままバックアップする
 ```
