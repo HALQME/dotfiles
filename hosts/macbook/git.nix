@@ -37,6 +37,7 @@ EOF
       printf '%s %s\n' '${gitEmail}' "$(cat "$public_key")" > "$HOME/.ssh/allowed_signers"
       chmod 644 "$HOME/.ssh/allowed_signers"
     else
+      rm -f '${hostGitConfig}' "$HOME/.ssh/allowed_signers"
       echo "Secretive public key not found; Git signing configuration was not generated"
     fi
   '';
