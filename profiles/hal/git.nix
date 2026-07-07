@@ -7,7 +7,6 @@ in {
       name = "HAL";
       email = gitEmail;
       useConfigOnly = true;
-      signingKey = "~/.ssh/signing.pub";
     };
 
     init.defaultBranch = "main";
@@ -45,12 +44,7 @@ in {
       all = true;
     };
 
-    commit = {
-      verbose = true;
-      gpgSign = true;
-    };
-
-    tag.gpgSign = true;
+    commit.verbose = true;
 
     rebase = {
       autoSquash = true;
@@ -63,11 +57,6 @@ in {
     rerere = {
       enabled = true;
       autoupdate = true;
-    };
-
-    gpg = {
-      format = "ssh";
-      ssh.allowedSignersFile = "~/.ssh/allowed_signers";
     };
 
     filter.lfs = {
