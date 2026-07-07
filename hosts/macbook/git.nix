@@ -11,17 +11,19 @@ in {
     public_key="$(${lib.getExe' config.programs.git.package "git"} config --global --get user.signingkey 2>/dev/null || true)"
 
     if [ -z "$public_key" ] || [ ! -f "$public_key" ]; then
-      public_key="$(find '${secretivePublicKeysDir}' -maxdepth 1 -type f -name '*.pub' -print -quit 2>/dev/null || true)"
+      public_key=""
+      for candidate in '${secretivePublicKeysDir}'/*.pub; do
+        if [ -f "$candidate" ]; then
+          public_key="$candidate"
+          break
+        fi
+      done
     fi
 
-    if [ -z "$public_key" ]; then
-      echo "Secretive public key not found; skipping Git signing configuration"
-      exit 0
-    fi
+    if [ -n "$public_key" ]; then
+      mkdir -p "$(dirname '${hostGitConfig}')" "$HOME/.ssh"
 
-    mkdir -p "$(dirname '${hostGitConfig}')" "$HOME/.ssh"
-
-    cat > '${hostGitConfig}' <<EOF
+      cat > '${hostGitConfig}' <<EOF
 [user]
     signingkey = $public_key
 [commit]
@@ -32,7 +34,10 @@ in {
     allowedSignersFile = ~/.ssh/allowed_signers
 EOF
 
-    printf '%s %s\n' '${gitEmail}' "$(cat "$public_key")" > "$HOME/.ssh/allowed_signers"
-    chmod 644 "$HOME/.ssh/allowed_signers"
+      printf '%s %s\n' '${gitEmail}' "$(cat "$public_key")" > "$HOME/.ssh/allowed_signers"
+      chmod 644 "$HOME/.ssh/allowed_signers"
+    else
+      echo "Secretive public key not found; Git signing configuration was not generated"
+    fi
   '';
 }
