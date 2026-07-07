@@ -1,5 +1,5 @@
 # --- System & Utilities ---
-cask "1password"              # Password manager
+cask "secretive"              # Secure Enclave-backed SSH keys
 cask "adguard"                # Ad blocker
 cask "audacity"               # Multi-track audio editor and recorder
 cask "alienator88-sentinel"   # Gatekeeper/Unquarantine

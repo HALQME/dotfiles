@@ -1,6 +1,5 @@
 {...}: let
   gitEmail = "68320771+HALQME@users.noreply.github.com";
-  gitSigningKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICo87LAYNrYhv5xPCLFgZedT+hBWUBMJrG3WLW6GFnfM";
 in {
   programs.git.enable = true;
   programs.git.settings = {
@@ -8,11 +7,10 @@ in {
       name = "HAL";
       email = gitEmail;
       useConfigOnly = true;
+      signingKey = "~/.ssh/signing.pub";
     };
 
     init.defaultBranch = "main";
-
-    user.signingKey = gitSigningKey;
 
     core = {
       fsmonitor = true;
@@ -90,6 +88,4 @@ in {
       last = "log -1 HEAD";
     };
   };
-
-  home.file.".ssh/allowed_signers".text = "${gitEmail} ${gitSigningKey}\n";
 }

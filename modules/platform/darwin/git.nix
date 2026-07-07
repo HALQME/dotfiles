@@ -1,3 +1,1 @@
-{...}: {
-  programs.git.settings.gpg.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
-}
+{...}: {}

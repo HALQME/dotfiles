@@ -1,0 +1,5 @@
+[settings]
+experimental = true
+
+[settings.age]
+ssh_identity_files = ["~/.ssh/mise_age"]

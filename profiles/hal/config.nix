@@ -8,6 +8,7 @@
   xdg.configFile = {
     ".bunfig.toml".source = repoRoot + /config/bun/bunfig.toml;
     "ghostty".source = repoRoot + /config/ghostty;
+    "mise".source = repoRoot + /config/mise;
     "nvim".source = repoRoot + /config/nvim;
     "wezterm".source = repoRoot + /config/wezterm;
     "zsh/.p10k.zsh".source = repoRoot + /config/zsh/.p10k.zsh;
