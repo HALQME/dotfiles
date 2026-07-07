@@ -1,23 +1,22 @@
 # Secrets and key recovery
 
-1Password is not part of the development environment. SSH authentication and Git signing use a device-local Secretive key, while project secrets use mise's age encryption.
+1Password is not part of the development environment. SSH authentication and Git signing use a device-local Secretive key. Project secrets use mise's age encryption with a dedicated passphrase-protected SSH key.
 
 ## SSH authentication and Git signing
 
-Secretive stores the private key in the Secure Enclave. The private key is intentionally not backed up or restored to another Mac.
+Secretive stores the private key in the Secure Enclave. The private key is not backed up or restored to another Mac.
 
 After applying the Home Manager configuration:
 
 1. Open Secretive and create a key for GitHub.
 2. Copy its public key and save it as `~/.ssh/signing.pub`.
-3. Register the public key in GitHub for SSH authentication and signing.
+3. Register the same public key in GitHub as both an authentication key and a signing key.
 4. Create the local allowed signers file.
 
 ```bash
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 
-# Copy the public key in Secretive, then:
 pbpaste > ~/.ssh/signing.pub
 chmod 644 ~/.ssh/signing.pub
 
@@ -36,21 +35,32 @@ git commit --allow-empty -m 'test signing'
 git log --show-signature -1
 ```
 
-On a replacement Mac, create a new Secretive key and replace the old key in GitHub. Do not attempt to migrate the private key.
+On a replacement Mac, create a new Secretive key and register the new public key in GitHub for both authentication and signing. The old private key is not migrated.
 
 ## Project secrets with mise and age
 
 There is no global secret file in this repository. Each project stores only its own encrypted values in its own `mise.toml`.
 
-The global mise configuration lives at `config/mise/config.toml` and is linked to `~/.config/mise/config.toml` by the shared config module. It enables the experimental features required for direct age encryption.
+The global mise configuration lives at `config/mise/config.toml` and is linked to `~/.config/mise/config.toml` by the shared config module. It enables direct age encryption and configures `~/.ssh/mise_age` as the dedicated SSH identity used for project secret decryption.
 
-Create the age identity the first time a project needs encrypted secrets:
+Create the key once, with a strong passphrase:
 
 ```bash
-mkdir -p ~/.config/mise
-age-keygen -o ~/.config/mise/age.txt
-chmod 600 ~/.config/mise/age.txt
+ssh-keygen \
+  -t ed25519 \
+  -a 100 \
+  -f ~/.ssh/mise_age \
+  -C 'mise age encryption'
 ```
+
+Keep both files:
+
+```text
+~/.ssh/mise_age
+~/.ssh/mise_age.pub
+```
+
+Do not add this key to GitHub. It exists only for mise secret encryption and decryption.
 
 Add a secret from the project directory:
 
@@ -58,42 +68,54 @@ Add a secret from the project directory:
 mise set --age-encrypt --prompt API_TOKEN
 ```
 
-Commit the encrypted `mise.toml`; never commit plaintext `.env` files or the age identity. mise performs encryption and decryption itself; the `age` CLI is installed for identity generation and recovery.
+When no recipient is passed explicitly, mise derives an SSH recipient from the configured identity when the matching `.pub` file exists. Commit the encrypted `mise.toml`; never commit plaintext `.env` files or the private key.
 
 ## Recovery backup
 
-The age identity is the only secret material that must survive a device replacement. Keep a passphrase-encrypted backup outside the Mac.
+`~/.ssh/mise_age` must survive a device replacement because existing project ciphertext is encrypted to its public key.
 
-```bash
-age -p \
-  -o mise-age-recovery.txt.age \
-  ~/.config/mise/age.txt
+The private key remains protected by its SSH passphrase. Back up both files outside the Mac, in at least two independent locations:
+
+```text
+mise_age
+mise_age.pub
 ```
 
-Store the encrypted recovery file in at least two independent locations, for example cloud storage and removable media. Keep the passphrase separately from the recovery file.
+Keep the passphrase separately from the backup files.
 
 ## New Mac recovery flow
-
-Bootstrap does not depend on any secret:
 
 ```text
 Install Nix
   -> clone dotfiles over HTTPS
   -> home-manager switch
-  -> restore the age identity
+  -> restore ~/.ssh/mise_age and ~/.ssh/mise_age.pub
   -> create a new Secretive key
-  -> register the new GitHub keys
+  -> register the new GitHub authentication and signing keys
   -> continue using project-local encrypted secrets
 ```
 
-Restore the age identity:
+Restore the mise key with restrictive permissions:
 
 ```bash
-mkdir -p ~/.config/mise
-age -d \
-  -o ~/.config/mise/age.txt \
-  mise-age-recovery.txt.age
-chmod 600 ~/.config/mise/age.txt
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+cp /path/to/backup/mise_age ~/.ssh/mise_age
+cp /path/to/backup/mise_age.pub ~/.ssh/mise_age.pub
+chmod 600 ~/.ssh/mise_age
+chmod 644 ~/.ssh/mise_age.pub
 ```
 
-The Git/SSH key is rotated on every device migration. The age identity is restored because existing project ciphertext must remain decryptable.
+The two key lifecycles are intentionally different:
+
+```text
+Secretive key
+  -> device identity
+  -> rotate on device replacement
+  -> do not back up
+
+mise_age
+  -> data decryption key
+  -> restore on device replacement
+  -> back up with passphrase protection intact
+```
