@@ -1,4 +1,4 @@
-name: Home Manager Build Test
+name: Home Manager Activation Build Test
 
 on:
   push:
@@ -6,13 +6,13 @@ on:
       - main
       - mise
     paths:
-      - "**.nix"
-      - "flake.lock"
+      - "config/home-manager/**"
+      - "config/nix/**"
       - ".github/workflows/home-manager-test.yml"
   pull_request:
     paths:
-      - "**.nix"
-      - "flake.lock"
+      - "config/home-manager/**"
+      - "config/nix/**"
       - ".github/workflows/home-manager-test.yml"
   workflow_dispatch:
 
@@ -28,11 +28,14 @@ jobs:
           - name: ci-linux
             os: ubuntu-latest
             target: .#homeConfigurations."ci@actions".activationPackage
+    defaults:
+      run:
+        working-directory: config/home-manager
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v6
 
       - uses: nixbuild/nix-quick-install-action@v34
 
-      - name: Build activation package
+      - name: Build Home Manager activation package
         run: nix build '${{ matrix.target }}'

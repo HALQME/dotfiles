@@ -1,4 +1,4 @@
-name: Bootstrap Test
+name: Mise Bootstrap Test
 
 on:
   push:
@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  bootstrap-dry-run:
+  mise-bootstrap-dry-run:
     strategy:
       fail-fast: false
       matrix:
@@ -41,7 +41,7 @@ jobs:
           MISE_CONFIG_FILE: ${{ github.workspace }}/mise/config.toml
         run: mise bootstrap --dry-run --yes --skip ${{ matrix.skip }}
 
-      - name: Check dotfiles status
+      - name: Check managed dotfiles status
         env:
           MISE_CONFIG_FILE: ${{ github.workspace }}/mise/config.toml
         run: mise dotfiles status
