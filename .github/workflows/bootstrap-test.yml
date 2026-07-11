@@ -1,0 +1,47 @@
+name: Bootstrap Test
+
+on:
+  push:
+    branches:
+      - main
+      - mise
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+  pull_request:
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+  workflow_dispatch:
+
+jobs:
+  bootstrap-dry-run:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: macos
+            os: macos-latest
+            skip: macos-defaults,macos-launchd-agents,tools,task
+          - name: linux
+            os: ubuntu-latest
+            skip: macos-defaults,macos-launchd-agents,tools,task
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install mise
+        uses: jdx/mise-action@v2
+
+      - name: Trust config
+        run: mise trust
+
+      - name: Dry-run bootstrap
+        env:
+          MISE_CONFIG_FILE: ${{ github.workspace }}/mise/config.toml
+        run: mise bootstrap --dry-run --yes --skip ${{ matrix.skip }}
+
+      - name: Check dotfiles status
+        env:
+          MISE_CONFIG_FILE: ${{ github.workspace }}/mise/config.toml
+        run: mise dotfiles status

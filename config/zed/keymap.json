@@ -1,0 +1,22 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-'": "task::Spawn",
+      "f1": "command_palette::Toggle"
+    }
+  },
+  {
+    "context": "(Workspace && !Terminal)",
+    "bindings": {
+      "cmd-shift-r": "task::Spawn"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {},
+    "unbind": {
+      "alt-cmd-shift-down": "editor::FindAllReferences"
+    }
+  }
+]

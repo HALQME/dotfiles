@@ -43,7 +43,7 @@ agec -o .env.age .env
 ```
 
 ## バックアップ
-公開鍵はhome-managerで管理される。
+公開鍵は mise dotfiles で管理される（`config/age/recipient.txt`）。
 秘密鍵は自分でどうにかすること。
 
 ## direnv

@@ -1,87 +1,88 @@
-# dotfiles (Home Manager)
+# dotfiles (mise + home-manager)
 
-Home Manager を使用した macOS (Main) および Linux (Minimal) の環境設定リポジトリです。
+[mise bootstrap](https://mise.jdx.dev/bootstrap.html) と [home-manager](https://github.com/nix-community/home-manager) のハイブリッド構成です。
+
+| 担当 | 内容 |
+|------|------|
+| **mise** | 静的 dotfiles（symlink）、`[bootstrap.packages]`（brew/apt）、タスク |
+| **home-manager** | git / ssh / direnv の生成、端末依存設定、Nix 文脈ツール |
+
+ランタイムのバージョン管理（`[tools]`）はプロジェクト単位の `.mise.toml` で行う。グローバル CLI は brew/apt 経由。
 
 ## 構成
 
-- `config/`: 共通のドットファイル（Zsh, Tmux, Neovim, Ghostty 等）
-- `modules/common/`: 全環境で共有する Home Manager モジュール
-- `modules/platform/`: OS ごとの差分モジュール
-- `profiles/`: ユーザーや用途ごとの共通設定
-- `hosts/`: ホストごとの差分設定
-  - `macbook/`: 個体差を持つ macOS ホスト設定
-  - `actions/`: GitHub Actions 用の最小限環境
+- `config/`: 静的ドットファイル（Zsh, Tmux, Neovim, Ghostty 等）
+- `mise/`: mise のグローバル設定
+- `profiles/hal/`, `hosts/`: home-manager（生成系のみ）
+- `scripts/`: 補助スクリプト
 
 ## セットアップ
 
-### 1. Nix のインストール
+### 1. mise のインストール
+
 ```bash
-sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
+curl https://mise.run | sh
 ```
 
-### 2. Flake の有効化
+### 2. Nix / home-manager の準備
+
 ```bash
+sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
 mkdir -p ~/.config/nix
 echo 'experimental-features = nix-command flakes' >> ~/.config/nix/nix.conf
 ```
 
-### 3. 設定の適用
-
-リポジトリを `~/.config/home-manager` にクローンして実行します。
+### 3. リポジトリのクローン
 
 ```bash
-git clone https://github.com/HALQME/dotfiles.git ~/.config/home-manager
-cd ~/.config/home-manager
+git clone https://github.com/HALQME/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 ```
 
-環境（ユーザー名とホスト名）に一致する設定が `flake.nix` に定義されている場合、以下のコマンドのみで適用されます。
+### 4. 設定の適用
 
 ```bash
-home-manager switch
+# パッケージ + 静的 dotfiles
+mise trust
+MISE_CONFIG_FILE=~/.dotfiles/mise/config.toml mise bootstrap --yes
+
+# 端末依存 config + Nix ツール（git/ssh/direnv, comma, nix-index）
+home-manager switch --flake ~/.dotfiles#hal@$(hostname -s).local
 ```
 
-一致する設定がない場合や、明示的に指定したい場合は `#` で設定名を指定します。
+ホスト名が flake に無い場合は明示指定:
 
 ```bash
-home-manager switch --flake .#hal@MacBook-Pro.local
+home-manager switch --flake ~/.dotfiles#hal@MacBook-Pro.local
 ```
 
-最初の実行時にhome-managerがインストールされるため、2回目以降は、`nix run` を省略することができます。
+### 5. 更新
 
-また、どのディレクトリからでも、（ユーザー名とホストのアーキテクチャが一意になる場合は）
 ```bash
-home-manager switch
-```
-のみで更新することも可能です。
-
-SSH鍵、Git署名、端末移行時の手順は [`docs/git&verify.md`](docs/git&verify.md) を参照してください。
-
-### 4. クリーンアップ
-```bash
-nix run home-manager/master -- expire-generations '-1 day'
-nix-env --profile ~/.local/state/nix/profiles/home-manager --delete-generations +5
-nix-collect-garbage -d
+cd ~/.dotfiles && git pull
+mise bootstrap --yes
+home-manager switch --flake .#hal@$(hostname -s).local
 ```
 
-### 5. `/nix` が空になる場合
+### 6. macOS パッケージの更新
 
-macOS のアップデート後に `/nix` が空になって見えることがありますが、ほとんどの場合は `Nix Store` の APFS volume が未マウントになっているだけです。
+- **cask（GUI アプリ）**: `config/homebrew/Brewfile` を編集 → `python3 scripts/brewfile-to-mise.py`
+- **formula（CLI）**: `scripts/brewfile-to-mise.py` の `FORMULAE` リストを編集 → 同上
 
-まずは volume の状態を確認します。
+### 7. 手動セットアップ
+
+SSH鍵、Git署名、端末移行時の手順は [`docs/git&verify.md`](docs/git&verify.md) を参照。
+
+## 新しい Mac を追加するとき
+
+1. `hosts/<hostname>/` を作成（`macbook/` をコピーしてよい）
+2. `hosts/<hostname>/git.nix` の `signingKey` を Secretive の公開鍵パスに更新
+3. `flake.nix` の `homeDefinitions` に `hal@<hostname>.local` を追加
+4. `mise bootstrap --yes` → `home-manager switch --flake .#hal@<hostname>.local`
+
+## CI 向け (Linux)
 
 ```bash
-diskutil apfs list
-```
-
-`Nix Store` が `Not Mounted` になっている場合は、ディスクユーティリティから再マウントすることで対処できます。
-
-再マウント後、もし`nix` コマンドが見つからない場合は以下の通りパスを補完することで対処可能です。
-
-```bash
-export path=(
-  "$HOME/.nix-profile/bin"
-  "$HOME/.nix-profile/home-path/bin"
-  "/nix/var/nix/profiles/default/bin"
-  $path
-)
+home-manager switch --flake .#ci@actions
+MISE_CONFIG_FILE=~/.dotfiles/mise/config.toml mise bootstrap --yes --skip macos-defaults,macos-launchd-agents
 ```

@@ -1,0 +1,14 @@
+# Linux / CI — CLI packages via apt
+
+[bootstrap.packages]
+"apt:age" = "latest"
+"apt:aria2" = "latest"
+"apt:curl" = "latest"
+"apt:fd-find" = "latest"
+"apt:ffmpeg" = "latest"
+"apt:fzf" = "latest"
+"apt:golang-go" = "latest"
+"apt:htop" = "latest"
+"apt:jq" = "latest"
+"apt:neovim" = "latest"
+"apt:ripgrep" = "latest"

@@ -1,0 +1,38 @@
+name: Home Manager Build Test
+
+on:
+  push:
+    branches:
+      - main
+      - mise
+    paths:
+      - "**.nix"
+      - "flake.lock"
+      - ".github/workflows/home-manager-test.yml"
+  pull_request:
+    paths:
+      - "**.nix"
+      - "flake.lock"
+      - ".github/workflows/home-manager-test.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: hal-macos
+            os: macos-latest
+            target: .#homeConfigurations."hal@MacBook-Pro.local".activationPackage
+          - name: ci-linux
+            os: ubuntu-latest
+            target: .#homeConfigurations."ci@actions".activationPackage
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: nixbuild/nix-quick-install-action@v34
+
+      - name: Build activation package
+        run: nix build '${{ matrix.target }}'

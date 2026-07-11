@@ -1,7 +1,26 @@
-{pkgs, ...}: {
+{pkgs, lib, ...}: let
+  nixPathDarwin = lib.optionalString pkgs.stdenv.isDarwin ''
+    # Ensure Nix profiles are present even when macOS shell startup differs.
+    path=(
+      "$HOME/.nix-profile/bin"
+      "$HOME/.nix-profile/home-path/bin"
+      "/nix/var/nix/profiles/default/bin"
+      $path
+    )
+    typeset -U path
+    export PATH
+  '';
+in {
+  home.packages = with pkgs; [
+    comma
+    nil
+    nixd
+    alejandra
+  ];
+
   programs.direnv = {
     enable = true;
-    enableZshIntegration = true;
+    enableZshIntegration = false;
     config.global.log_filter = "^$";
     nix-direnv = {
       enable = true;
@@ -39,44 +58,15 @@
 
   programs.nix-index = {
     enable = true;
-    enableZshIntegration = true;
+    enableZshIntegration = false;
   };
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
+  xdg.configFile."zsh/nix-env.zsh".text = ''
+    ${nixPathDarwin}
+    eval "$(${pkgs.direnv}/bin/direnv hook zsh)"
 
-  programs.eza = {
-    enable = true;
-    enableZshIntegration = true;
-    icons = "auto";
-    git = true;
-  };
-
-  programs.yazi = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.lazygit = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.delta = {
-    enable = true;
-    enableGitIntegration = true;
-    enableJujutsuIntegration = true;
-  };
+    if [ -f "$HOME/.nix-profile/etc/profile.d/nix-index.sh" ]; then
+      . "$HOME/.nix-profile/etc/profile.d/nix-index.sh"
+    fi
+  '';
 }

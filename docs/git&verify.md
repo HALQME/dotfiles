@@ -8,21 +8,24 @@ Secretive
   -> Git Signing
 ```
 
-Secretiveの公開鍵パスは端末ごとに異なるため、署名設定は`hosts/macbook/git.nix`で管理する。
+Secretiveの公開鍵パスは端末ごとに異なるため、署名設定は `hosts/<hostname>/git.nix` で管理する。SSH設定は `hosts/<hostname>/ssh.nix` で管理する。
 
 ## 初回セットアップ
 
-1. Home Managerの設定を適用する。
-2. Secretiveを開き、GitHub用の鍵を作成する。
-3. 同じ公開鍵をGitHubへAuthentication keyとSigning keyとして登録する。
-4. Secretiveの公開鍵パスを`hosts/macbook/git.nix`の`signingKey`に設定する。
-5. もう一度Home Managerの設定を適用する。
+1. mise bootstrap を適用する。
+2. home-manager を適用する。
+3. Secretiveを開き、GitHub用の鍵を作成する。
+4. 同じ公開鍵をGitHubへAuthentication keyとSigning keyとして登録する。
+5. Secretiveの公開鍵パスを `hosts/<hostname>/git.nix` の `signingKey` に設定する。
+6. もう一度 home-manager を適用する。
 
 ```bash
-home-manager switch
+cd ~/.dotfiles
+mise bootstrap --yes
+home-manager switch --flake .#hal@$(hostname -s).local
 ```
 
-`hosts/macbook/git.nix`から、次のGit設定を生成する。
+home-manager が次の Git 設定を生成する。
 
 ```ini
 [user]
@@ -35,7 +38,7 @@ home-manager switch
     allowedSignersFile = ~/.ssh/allowed_signers
 ```
 
-同時に、指定した公開鍵から`~/.ssh/allowed_signers`を生成する。
+同時に、指定した公開鍵から `~/.ssh/allowed_signers` を生成する。
 
 SSH認証を確認する。
 
@@ -52,22 +55,26 @@ git log --show-signature -1
 
 ## 新しいMacへの移行
 
-1. Nixをインストールする。
+1. mise と Nix をインストールする。
 2. dotfilesをHTTPSでcloneする。
-3. Home Managerの設定を適用する。
-4. Secretiveで新しいGitHub用の鍵を作成する。
-5. 同じ公開鍵をGitHubへAuthentication keyとSigning keyとして登録する。
-6. Secretiveの公開鍵パスを、その端末のhost設定に反映する。
-7. もう一度Home Managerの設定を適用する。
-8. SSH認証とGit署名を確認する。
+3. `hosts/<hostname>/` を追加し、`flake.nix` にホスト定義を書く。
+4. mise bootstrap を適用する。
+5. home-manager を適用する。
+6. Secretiveで新しいGitHub用の鍵を作成する。
+7. 同じ公開鍵をGitHubへAuthentication keyとSigning keyとして登録する。
+8. `hosts/<hostname>/git.nix` の `signingKey` を更新する。
+9. もう一度 home-manager を適用する。
+10. SSH認証とGit署名を確認する。
 
 ```text
-Nixをインストール
+mise + Nixをインストール
   -> dotfilesをHTTPSでclone
+  -> hosts/<hostname>/ を追加
+  -> mise bootstrap --yes
   -> home-manager switch
   -> Secretiveで鍵を生成
   -> GitHubへAuthentication keyとSigning keyとして登録
-  -> host設定へ公開鍵パスを反映
+  -> hosts/<hostname>/git.nix を更新
   -> home-manager switch
   -> SSH認証とGit署名を確認
 ```

@@ -1,11 +1,8 @@
 {...}: {
   imports = [
-    ./config.nix
     ./env.nix
     ./git.nix
-    ./packages.nix
-    ./programs.nix
-    ./shell.nix
+    ./nix.nix
   ];
 
   xdg.enable = true;
