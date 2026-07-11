@@ -17,7 +17,9 @@ zshrc = "activate"
 "~/.config/bunfig.toml" = { source = "../config/bun/bunfig.toml", mode = "symlink" }
 "~/.config/ghostty" = { source = "../config/ghostty", mode = "symlink" }
 "~/.config/karabiner" = { source = "../config/karabiner", mode = "symlink" }
+"~/.config/home-manager" = { source = "../config/home-manager", mode = "symlink" }
 "~/.config/nvim" = { source = "../config/nvim", mode = "symlink" }
+"~/.config/nix" = { source = "../config/nix", mode = "symlink" }
 "~/.config/wezterm" = { source = "../config/wezterm", mode = "symlink" }
 "~/.config/zed" = { source = "../config/zed", mode = "symlink" }
 "~/.config/zsh/.p10k.zsh" = { source = "../config/zsh/.p10k.zsh", mode = "symlink" }
