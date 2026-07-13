@@ -67,9 +67,7 @@ home-manager switch --flake .#hal@$(hostname -s).local
 ```
 
 ### 6. macOS パッケージの更新
-
-- **cask（GUI アプリ）**: `config/homebrew/Brewfile` を編集 → `python3 scripts/brewfile-to-mise.py`
-- **formula（CLI）**: `scripts/brewfile-to-mise.py` の `FORMULAE` リストを編集 → 同上
+formulaはmise側で、caskはBrewfileで行う。
 
 ### 7. 手動セットアップ
 

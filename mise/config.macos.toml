@@ -6,6 +6,27 @@
 "~/.config/jj/config.toml" = { source = "../config/jj/config.toml", mode = "symlink" }
 "~/.config/nushell" = { source = "../config/nushell", mode = "symlink" }
 
+# macOS user defaults. Applied explicitly with `mise bootstrap macos defaults apply`.
+[bootstrap.macos.dock]
+autohide = true
+tilesize = 40
+show_recents = false
+mru_spaces = true
+
+[bootstrap.macos.finder]
+show_pathbar = true
+show_extensions_warning = false
+preferred_view_style = "column"
+
+[bootstrap.macos.keyboard]
+key_repeat = 2
+initial_key_repeat = 15
+fn_state = true
+
+[bootstrap.macos.trackpad]
+tap_to_click = false
+three_finger_drag = false
+
 [bootstrap.packages]
 "brew:act" = "latest"
 "brew:age" = "latest"

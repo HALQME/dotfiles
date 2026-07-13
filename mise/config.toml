@@ -5,8 +5,7 @@ dotfiles.root = "~/.dotfiles"
 login_shell = "/bin/zsh"
 
 [bootstrap.mise_shell_activate]
-zprofile = "shims"
-zshrc = "activate"
+zsh = true
 
 [dotfiles]
 "~/.gitignore_global" = { source = "../config/.gitignore_global", mode = "symlink" }
@@ -22,11 +21,16 @@ zshrc = "activate"
 "~/.config/wezterm" = { source = "../config/wezterm", mode = "symlink" }
 "~/.config/zed" = { source = "../config/zed", mode = "symlink" }
 "~/.config/zsh/.p10k.zsh" = { source = "../config/zsh/.p10k.zsh", mode = "symlink" }
+"~/.config/zsh/zprofile.zsh" = { source = "../config/zsh/zprofile.zsh", mode = "symlink" }
+"~/.config/zsh/zshrc.zsh" = { source = "../config/zsh/zshrc.zsh", mode = "symlink" }
 "~/.config/zsh/common" = { source = "../config/zsh/common", mode = "symlink" }
 "~/.config/zsh/lib" = { source = "../config/zsh/lib", mode = "symlink" }
 "~/.config/zsh/plugins" = { source = "../config/zsh/plugins", mode = "symlink" }
-"~/.zshrc" = { source = "../config/zsh/.zshrc", mode = "symlink" }
-"~/.zprofile" = { source = "../config/zsh/.zprofile", mode = "symlink" }
+"~/.zprofile/zsh-config" = { block = '''
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+source "$XDG_CONFIG_HOME/zsh/zprofile.zsh"
+''' }
+"~/.zshrc/zsh-config" = { block = 'source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zshrc.zsh"' }
 "~/.config/age/recipient.txt" = { source = "../config/age/recipient.txt", mode = "symlink" }
 "~/.config/mise/config.toml" = { source = "config.toml", mode = "symlink" }
 "~/.config/mise/miserc.toml" = { source = "miserc.toml", mode = "symlink" }
