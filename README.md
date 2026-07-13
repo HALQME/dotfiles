@@ -9,6 +9,8 @@
 
 ランタイムのバージョン管理（`[tools]`）はプロジェクト単位の `.mise.toml` で行う。グローバル CLI は brew/apt 経由。
 
+Zsh の入口ファイル（`~/.zprofile` / `~/.zshrc`）は mise の marker block で管理する。`zprofile` には shims、`zshrc` にはディレクトリ移動時の環境更新を有効化し、実際の設定は `~/.config/zsh/{zprofile,zshrc}.zsh` から読み込む。これにより、mise が shell activation を更新しても他の shell 設定を上書きしない。
+
 ## 構成
 
 - `config/`: 静的ドットファイル（Zsh, Tmux, Neovim, Ghostty 等）

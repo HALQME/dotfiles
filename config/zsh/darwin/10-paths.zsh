@@ -1,6 +1,7 @@
 export SSH_AUTH_SOCK="$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"
 
 path=(
+  "/opt/homebrew/bin"
   "$HOME/.local/bin"
   "$HOME/.modular/pkg/packages.modular.com_mojo/bin"
   "$HOME/.ghcup/bin"
