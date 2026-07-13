@@ -4,6 +4,7 @@
 [dotfiles]
 "~/.config/zsh/platform" = { source = "../config/zsh/darwin", mode = "symlink" }
 "~/.config/jj/config.toml" = { source = "../config/jj/config.toml", mode = "symlink" }
+"~/.config/nushell" = { source = "../config/nushell", mode = "symlink" }
 
 [bootstrap.packages]
 "brew:act" = "latest"

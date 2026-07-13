@@ -1,0 +1,5 @@
+# Nushell runtime state
+history.txt
+history.sqlite3
+plugin.msgpackz
+*.log
