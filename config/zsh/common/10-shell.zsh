@@ -2,7 +2,6 @@
 export SSH_CONNECTION="${SSH_CONNECTION-}"
 export SSH_CLIENT="${SSH_CLIENT-}"
 export SSH_TTY="${SSH_TTY-}"
-export GHQ_ROOT="$HOME/Projects"
 
 setopt AUTO_PUSHD
 setopt HIST_IGNORE_SPACE
