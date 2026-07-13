@@ -29,6 +29,7 @@
 "brew:jj" = "latest"
 "brew:lazygit" = "latest"
 "brew:neovim" = "latest"
+"brew:nushell" = "latest"
 "brew:nim" = "latest"
 "brew:powerlevel10k" = "latest"
 "brew:ripgrep" = "latest"
