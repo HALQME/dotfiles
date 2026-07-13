@@ -65,8 +65,8 @@ in {
     ${nixPathDarwin}
     eval "$(${pkgs.direnv}/bin/direnv hook zsh)"
 
-    if [ -f "$HOME/.nix-profile/etc/profile.d/nix-index.sh" ]; then
-      . "$HOME/.nix-profile/etc/profile.d/nix-index.sh"
+    if [ -f "$HOME/.nix-profile/etc/profile.d/command-not-found.sh" ]; then
+      . "$HOME/.nix-profile/etc/profile.d/command-not-found.sh"
     fi
   '';
 }

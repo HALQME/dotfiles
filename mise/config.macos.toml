@@ -1,6 +1,10 @@
 # macOS-specific bootstrap packages.
 # GUI applications and fonts are managed by ../Brewfile via `brew bundle`.
 
+[dotfiles]
+"~/.config/zsh/platform" = { source = "../config/zsh/darwin", mode = "symlink" }
+"~/.config/jj/config.toml" = { source = "../config/jj/config.toml", mode = "symlink" }
+
 [bootstrap.packages]
 "brew:act" = "latest"
 "brew:age" = "latest"
@@ -20,6 +24,7 @@
 "brew:htop" = "latest"
 "brew:jq" = "latest"
 "brew:just" = "latest"
+"brew:jj" = "latest"
 "brew:lazygit" = "latest"
 "brew:neovim" = "latest"
 "brew:nim" = "latest"

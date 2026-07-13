@@ -22,6 +22,7 @@ zshrc = "activate"
 "~/.config/wezterm" = { source = "../config/wezterm", mode = "symlink" }
 "~/.config/zed" = { source = "../config/zed", mode = "symlink" }
 "~/.config/zsh/.p10k.zsh" = { source = "../config/zsh/.p10k.zsh", mode = "symlink" }
+"~/.config/zsh/common" = { source = "../config/zsh/common", mode = "symlink" }
 "~/.zshrc" = { source = "../config/zsh/.zshrc", mode = "symlink" }
 "~/.zprofile" = { source = "../config/zsh/.zprofile", mode = "symlink" }
 "~/.config/age/recipient.txt" = { source = "../config/age/recipient.txt", mode = "symlink" }

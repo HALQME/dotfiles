@@ -15,6 +15,7 @@ in {
       fsmonitor = true;
       excludesfile = "~/.gitignore_global";
       untrackedCache = true;
+      pager = "delta";
     };
 
     branch.sort = "-committerdate";
@@ -45,6 +46,9 @@ in {
     };
 
     commit.verbose = true;
+
+    interactive.diffFilter = "delta --color-only";
+    pager.blame = "delta";
 
     rebase = {
       autoSquash = true;

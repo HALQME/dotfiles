@@ -1,5 +1,8 @@
 # Linux / CI — CLI packages via apt
 
+[dotfiles]
+"~/.config/zsh/platform" = { source = "../config/zsh/linux", mode = "symlink" }
+
 [bootstrap.packages]
 "apt:age" = "latest"
 "apt:aria2" = "latest"
