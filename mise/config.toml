@@ -1,5 +1,4 @@
 [settings]
-auto_env = true
 dotfiles.root = "~/.dotfiles"
 
 [bootstrap.user]
@@ -27,6 +26,7 @@ zshrc = "activate"
 "~/.zprofile" = { source = "../config/zsh/.zprofile", mode = "symlink" }
 "~/.config/age/recipient.txt" = { source = "../config/age/recipient.txt", mode = "symlink" }
 "~/.config/mise/config.toml" = { source = "config.toml", mode = "symlink" }
+"~/.config/mise/miserc.toml" = { source = "miserc.toml", mode = "symlink" }
 "~/.config/mise/config.macos.toml" = { source = "config.macos.toml", mode = "symlink" }
 "~/.config/mise/config.linux.toml" = { source = "config.linux.toml", mode = "symlink" }
 
@@ -46,7 +46,7 @@ description = "Post-bootstrap machine setup"
 run = '''
 set -euo pipefail
 
-if command -v gh >/dev/null 2>&1; then
-  gh auth status || true
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  brew bundle install --file "$HOME/.dotfiles/Brewfile"
 fi
 '''

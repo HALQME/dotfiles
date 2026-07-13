@@ -1,0 +1,2 @@
+# This file is loaded before config discovery. Keep platform config selection here.
+auto_env = true
