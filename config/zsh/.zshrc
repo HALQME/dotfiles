@@ -4,6 +4,7 @@
 export SSH_CONNECTION="${SSH_CONNECTION-}"
 export SSH_CLIENT="${SSH_CLIENT-}"
 export SSH_TTY="${SSH_TTY-}"
+export SSH_AUTH_SOCK=$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
 # Tool paths (mise handles most tools; these are for optional/manual installs)
 path=(
@@ -85,7 +86,7 @@ alias -s {png,jpg,PNG,JPG,jpeg,JPEG}='gat'
 alias -s {ts,js,tsx,jsx,html,md}='bun run'
 alias -s py='python3'
 alias -s python='python3'
-alias -s sh='bash'
+alias -s sh='zsh'
 alias -s swift='swift'
 alias -s cr='crystal'
 
