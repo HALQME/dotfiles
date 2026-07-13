@@ -1,5 +1,25 @@
-if [[ -o interactive ]] && [ -s "$HOME/.bun/_bun" ]; then
-  source "$HOME/.bun/_bun"
+# Load Bun completion only inside a Bun project. This avoids paying its compinit
+# cost in shells that never use Bun while preserving completion after `cd`.
+_load_bun_completion_for_project() {
+  [[ -n ${_bun_completion_loaded-} || ! -s "$HOME/.bun/_bun" ]] && return
+
+  local directory=$PWD
+  while [[ $directory != / ]]; do
+    if [[ -f "$directory/package.json" || -f "$directory/bunfig.toml" || -f "$directory/bun.lock" || -f "$directory/bun.lockb" ]]; then
+      source "$HOME/.bun/_bun"
+      typeset -g _bun_completion_loaded=1
+      autoload -Uz add-zsh-hook
+      add-zsh-hook -d chpwd _load_bun_completion_for_project
+      return
+    fi
+    directory=${directory:h}
+  done
+}
+
+if [[ -o interactive ]]; then
+  autoload -Uz add-zsh-hook
+  add-zsh-hook chpwd _load_bun_completion_for_project
+  _load_bun_completion_for_project
 fi
 
 if [ -s "$HOME/.vite-plus/env" ]; then

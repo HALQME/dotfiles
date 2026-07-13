@@ -9,7 +9,27 @@ if (( $+commands[eza] )); then
 fi
 
 if (( $+commands[zoxide] )); then
-  eval "$(zoxide init zsh)"
+  zoxide_zsh_cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
+  zoxide_zsh_cache_file="$zoxide_zsh_cache_dir/zoxide.zsh"
+
+  if [[ ! -r "$zoxide_zsh_cache_file" || "${commands[zoxide]}" -nt "$zoxide_zsh_cache_file" ]]; then
+    if mkdir -p -- "$zoxide_zsh_cache_dir" 2>/dev/null; then
+      zoxide_zsh_cache_tmp="$zoxide_zsh_cache_file.$$"
+      if command zoxide init zsh >| "$zoxide_zsh_cache_tmp"; then
+        mv -f -- "$zoxide_zsh_cache_tmp" "$zoxide_zsh_cache_file"
+      else
+        rm -f -- "$zoxide_zsh_cache_tmp"
+      fi
+    fi
+  fi
+
+  if [[ -r "$zoxide_zsh_cache_file" ]]; then
+    source "$zoxide_zsh_cache_file"
+  else
+    eval "$(command zoxide init zsh)"
+  fi
+
+  unset zoxide_zsh_cache_dir zoxide_zsh_cache_file zoxide_zsh_cache_tmp
 fi
 
 if (( $+commands[yazi] )); then
