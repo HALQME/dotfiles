@@ -690,7 +690,11 @@
       "speed": "fast"
     }
   },
-  "agent_servers": {},
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    }
+  },
   "context_servers": {},
   // DEVELOPMENT TOOLS
   // Debugger
