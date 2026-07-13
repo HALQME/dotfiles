@@ -1,5 +1,6 @@
 # Managed by mise dotfiles — see ~/.dotfiles/mise/config.toml
-typeset -g ZSH_CONFIG_ROOT="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+typeset -g ZSH_CONFIG_ROOT="$XDG_CONFIG_HOME/zsh"
 
 source "$ZSH_CONFIG_ROOT/lib/loader.zsh"
 source "$ZSH_CONFIG_ROOT/lib/defer.zsh"
