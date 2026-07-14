@@ -19,4 +19,3 @@ export PATH
 alias -g C='| tee >(pbcopy)'
 alias -g P='| pbpaste'
 alias -g Cloud="$HOME/Library/CloudStorage/"
-alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
