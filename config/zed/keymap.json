@@ -18,5 +18,10 @@
     "unbind": {
       "alt-cmd-shift-down": "editor::FindAllReferences"
     }
+  },
+  {
+    "unbind": {
+      "cmd-q": "zed::Quit"
+    }
   }
 ]
