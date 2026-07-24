@@ -1,7 +1,7 @@
 {
   // CORE EDITOR SETTINGS
   // Workspace & Session Management
-  "diff_view_style": "unified",
+  "diff_view_style": "split",
   "proxy": "",
   "cli_default_open_behavior": "new_window",
   "document_symbols": "on",
@@ -43,12 +43,12 @@
   "close_on_file_delete": true,
   // VISUAL APPEARANCE & THEMING
   // Theme & Color Scheme
-  "theme": "Flexoki Dark",
-  "icon_theme": {
+  "theme": {
     "mode": "system",
-    "light": "Catppuccin Frappé",
-    "dark": "Catppuccin Frappé"
+    "light": "Flexoki Light",
+    "dark": "Flexoki Dark"
   },
+  "icon_theme": "Catppuccin Frappé",
   // Font Configuration
   "buffer_font_family": "Moralerspace Argon",
   "buffer_font_features": {
@@ -665,6 +665,10 @@
   // AI AGENT & ASSISTANCE
   "disable_ai": false,
   "language_models": {
+    "opencode": {
+      "show_zen_models": false,
+      "show_go_models": false
+    },
     "zed.dev": {}
   },
   "agent": {
@@ -676,7 +680,7 @@
     },
     "sidebar_side": "right",
     "dock": "right",
-    "flexible": true,
+    "flexible": false,
     "default_profile": "write",
     "inline_assistant_model": {
       "provider": "zed.dev",
@@ -687,7 +691,8 @@
       "provider": "ollama",
       "model": "gemma4:12b-mlx",
       "enable_thinking": false,
-      "speed": "fast"
+      "speed": "fast",
+      "effort": "none"
     }
   },
   "agent_servers": {
