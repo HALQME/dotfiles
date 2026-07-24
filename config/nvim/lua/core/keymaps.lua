@@ -16,7 +16,6 @@ map('n', '<leader>]', ':bnext<CR>', { desc = 'Next Buffer' })
 map('n', '<leader>ww', ':bd<CR>', { desc = 'Close Buffer' })
 
 -- Quick actions
-map({ 'n', 'x' }, '<leader>f', '<cmd>lua vim.lsp.buf.format()<CR>', { desc = 'Format' })
 map('n', '<leader>ss', '<cmd>split<CR>', { desc = 'Split Horizontal' })
 map('n', '<leader>sv', '<cmd>vsplit<CR>', { desc = 'Split Vertical' })
 

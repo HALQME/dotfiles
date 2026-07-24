@@ -20,6 +20,31 @@ return {
 
       -- Extend and create a/i textobjects
       require('mini.bracketed').setup()
+
+      require('mini.files').setup({
+        windows = {
+          preview = true,
+          width_focus = 30,
+          width_preview = 60,
+        },
+        options = {
+          use_as_default_explorer = true,
+          permanent_delete = false,
+        },
+      })
+
+      vim.keymap.set('n', '<leader>e', function()
+        local files = require('mini.files')
+        if files.close() then
+          return
+        end
+
+        local path = vim.api.nvim_buf_get_name(0)
+        if vim.bo.buftype ~= '' or vim.fn.filereadable(path) == 0 then
+          path = vim.fn.getcwd()
+        end
+        files.open(path, true)
+      end, { desc = 'Toggle File Explorer' })
     end,
   },
 }

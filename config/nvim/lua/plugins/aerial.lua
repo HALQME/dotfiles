@@ -1,9 +1,9 @@
 return {
   'stevearc/aerial.nvim',
   keys = {
-    { '<leader>a', '<cmd>AerialToggle!<CR>' },
-    { 'n{',        '<cmd>AerialPrev<CR>' },
-    { 'n}',        '<cmd>AerialNext<CR>' },
+    { '<leader>a', '<cmd>AerialToggle!<CR>', desc = 'Toggle Symbols' },
+    { '<leader>ap', '<cmd>AerialPrev<CR>', desc = 'Previous Symbol' },
+    { '<leader>an', '<cmd>AerialNext<CR>', desc = 'Next Symbol' },
   },
   config = function()
     require('aerial').setup({

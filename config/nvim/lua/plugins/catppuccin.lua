@@ -15,7 +15,6 @@ return {
       color_overrides = {},
       default_integrations = true,
       integrations = {
-        nvimtree = true,
         treesitter = true,
         noice = true,
         telescope = {

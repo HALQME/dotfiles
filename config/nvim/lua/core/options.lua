@@ -1,5 +1,11 @@
 local opt = vim.opt
 
+-- This configuration uses Lua plugins only; disable unused remote providers.
+vim.g.loaded_node_provider = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
+
 -- line number
 opt.number = true
 opt.relativenumber = true
