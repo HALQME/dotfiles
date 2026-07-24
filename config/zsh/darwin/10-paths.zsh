@@ -15,6 +15,8 @@ path=(
 typeset -U path
 export PATH
 
+export EDITOR="nvim"
+
 alias -g C='| tee >(pbcopy)'
 alias -g P='| pbpaste'
 alias -g Cloud="$HOME/Library/CloudStorage/"

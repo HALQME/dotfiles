@@ -59,7 +59,3 @@ alias -s nu='nu'
 alias -s nim='nim'
 alias -s swift='swift'
 alias -s cr='crystal'
-
-mkcd() {
-  mkdir --parents "$1" && cd "$1"
-}
