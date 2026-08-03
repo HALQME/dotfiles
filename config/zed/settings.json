@@ -25,6 +25,7 @@
   },
   "colorize_brackets": false,
   "git_panel": {
+    "group_by": "none",
     "dock": "left",
     "tree_view": true
   },
@@ -688,8 +689,8 @@
       "enable_thinking": false
     },
     "commit_message_model": {
-      "provider": "ollama",
-      "model": "gemma4:12b-mlx",
+      "provider": "opencode",
+      "model": "zen/deepseek-v4-flash:free",
       "enable_thinking": false,
       "speed": "fast",
       "effort": "none"
