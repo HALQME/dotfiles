@@ -7,6 +7,7 @@ in {
 
     includes = [
       "~/.orbstack/ssh/config"
+      "~/.ssh/local_config"
     ];
 
     settings."*" = {
