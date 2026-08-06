@@ -2,6 +2,7 @@
 # mise activation runs immediately after this file, so its executable must be
 # reachable before the interactive-shell PATH configuration is loaded.
 path=(
+  "$HOME/.local/bin"
   "/opt/homebrew/bin"
   "/usr/local/bin"
   $path
