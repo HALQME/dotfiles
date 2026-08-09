@@ -15,7 +15,7 @@ zsh_completion_cache_is_stale() {
   return 1
 }
 
-if [[ -o interactive ]]; then
+_zsh_load_completion() {
   zsh_completion_dir=''
   zsh_fzf_tab_plugin=''
   zsh_homebrew_path zsh-completions . && zsh_completion_dir=$REPLY
@@ -39,6 +39,10 @@ if [[ -o interactive ]]; then
 
   zsh_source_if_exists "$zsh_fzf_tab_plugin"
   unset zsh_completion_dir zsh_fzf_tab_plugin zsh_completion_dump
+}
+
+if [[ -o interactive ]]; then
+  zsh_defer_on_first_input _zsh_load_completion
 fi
 
 return 0
