@@ -5,6 +5,7 @@
 "~/.config/zsh/platform" = { source = "../config/zsh/darwin", mode = "symlink" }
 "~/.config/jj/config.toml" = { source = "../config/jj/config.toml", mode = "symlink" }
 "~/.config/nushell" = { source = "../config/nushell", mode = "symlink" }
+"~/.config/homebrew/Brewfile" = { source = "../config/homebrew/Brewfile", mode = "symlink" }
 
 # macOS user defaults. Applied explicitly with `mise bootstrap macos defaults apply`.
 [bootstrap.macos.dock]
@@ -63,3 +64,13 @@ three_finger_drag = false
 "brew:zsh-autosuggestions" = "latest"
 "brew:zsh-completions" = "latest"
 "brew:zsh-fast-syntax-highlighting" = "latest"
+
+[tasks.bootstrap]
+description = "Post-bootstrap machine setup"
+run = '''
+set -euo pipefail
+
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  brew bundle install --file "$HOME/.config/homebrew/Brewfile"
+fi
+'''

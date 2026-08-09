@@ -1,5 +1,7 @@
 # macOS GUI applications and fonts.
-# Apply with: brew bundle --file=~/.dotfiles/Brewfile
+# Apply with: brew bundle --file=~/.config/homebrew/Brewfile
+
+tap "abue-ammar/tinycast", trusted: true
 
 cask "adguard"
 cask "affinity"
@@ -48,6 +50,7 @@ cask "secretive"
 cask "shottr"
 cask "steam"
 cask "suspicious-package"
+cask "abue-ammar/tinycast/tinycast", trusted: true
 cask "trex"
 cask "virtualbuddy"
 cask "vivaldi"
@@ -117,3 +120,4 @@ cask "font-poppins"
 cask "font-poprumcute"
 cask "font-simonetta"
 cask "font-zed-mono-nerd-font"
+cask "font-zen-old-mincho"

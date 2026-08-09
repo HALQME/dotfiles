@@ -47,13 +47,3 @@ GHQ_ROOT = "{{ env.HOME }}/Projects"
 _ZO_DATA_DIR = "{{ env.HOME }}/.local/share"
 OLLAMA_FLASH_ATTENTION = "1"
 OLLAMA_CONTEXT_LENGTH = "64000"
-
-[tasks.bootstrap]
-description = "Post-bootstrap machine setup"
-run = '''
-set -euo pipefail
-
-if [[ "$(uname -s)" == "Darwin" ]]; then
-  brew bundle install --file "$HOME/.dotfiles/Brewfile"
-fi
-'''
